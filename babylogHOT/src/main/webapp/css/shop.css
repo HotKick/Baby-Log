@@ -1,0 +1,84 @@
+#header {
+	height: 300px;
+	background-color: #ccc;
+}
+
+.shop {
+	overflow: hidden;
+	padding: 7% 5% 10% 5%
+}
+
+.shop h2 {
+	font-size: 3rem;
+	font-weight: 900;
+	display: block;
+	margin-top: 400px;
+}
+
+.shop .shop_diary {
+	text-align: center;
+	justify-items: center;
+	float: left;
+	width: 48%;
+	height: 600px;
+	margin: 1%;
+	border-radius: 30px;
+	background-color: #ccc;
+}
+
+.shop .shop_diary:hover {
+	background-color: pink;
+	color: #fff;
+}
+
+.shop .shop_photo {
+	text-align: center;
+	justify-items: center;
+	float: left;
+	width: 48%;
+	height: 600px;
+	margin: 1%;
+	border-radius: 30px;
+	background-color: #ccc;
+}
+
+.shop .shop_photo:hover {
+	background-color: pink;
+	color: #fff;
+}
+
+.shop .shop_diary a {
+	width: 100%;
+	height: 100%;
+}
+
+/* 버튼 디자이  */
+.shop_diary .btn, .shop_photo .btn {
+	font-size: 1.2rem;
+	font-weight: 500;
+	border-radius: 50px;
+	text-align: center;
+	background-color: #222;
+	width: 30%;
+	margin: 2% 35%;
+	height: 40px;
+	line-height: 40px;
+	display: block;
+}
+
+.shop_diary .btn:hover {
+	background-color: blue;
+}
+
+.shop_diary .btn a, .shop_photo .btn a {
+	display: block;
+	width: 100%;
+	height: 100%;
+	color: #fff;
+}
+
+.shop_photo .btn:hover {
+	background-color: blue;
+}
+
+/* align-items: center; -> 아이템 상-하 가운데 정렬  */
