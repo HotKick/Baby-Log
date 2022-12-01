@@ -10,6 +10,11 @@ public class CommentsVO {
 	
 	
 	
+	public CommentsVO() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
 	public CommentsVO(int cmt_seq, String cmt_content, String cmt_date, int community_seq, String mem_id) {
 		super();
 		this.cmt_seq = cmt_seq;

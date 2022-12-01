@@ -9,6 +9,14 @@ public class TradeVO {
 	private String trade_cnt;
 	private String trade_ing;
 	private String mem_id;
+	
+	
+	
+	
+	public TradeVO() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
 	public TradeVO(int trade_seq, String trade_title, String trade_content, String trade_date, String trade_file,
 			String trade_cnt, String trade_ing, String mem_id) {
 		super();

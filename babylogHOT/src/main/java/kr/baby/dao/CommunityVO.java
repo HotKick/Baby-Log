@@ -12,7 +12,11 @@ public class CommunityVO {
 	private String community_type;
 	private String mem_id;
 	
-	
+	// 디폴트 생성자
+	public CommunityVO() {
+	}
+
+
 	public CommunityVO(int community_seq, String community_title, String community_content, String community_date,
 			String community_file, String community_cnt, String community_type, String mem_id) {
 		super();

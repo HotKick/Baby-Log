@@ -10,6 +10,14 @@ public class NewsVO {
 	private String nn_cnt;
 	private String nn_type;
 	private String mem_id;
+	
+	
+	
+	
+	public NewsVO() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
 	public NewsVO(int nn_seq, String nn_title, String nn_content, String nn_date, String nn_file, String nn_cnt,
 			String nn_type, String mem_id) {
 		super();

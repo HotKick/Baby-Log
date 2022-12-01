@@ -10,6 +10,14 @@ public class QuestionVO {
 	private String q_file;
 	private String q_cnt;
 	private String mem_id;
+	
+	
+	
+	
+	public QuestionVO() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
 	public QuestionVO(int q_seq, String q_title, String q_content, String q_date, String q_updatedate, String q_file,
 			String q_cnt, String mem_id) {
 		super();

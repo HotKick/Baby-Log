@@ -12,6 +12,15 @@ public class MemberVO {
 	  private String mem_type;
 	  private String mem_prof;
 	  
+	  
+	  
+	  
+	  
+	public MemberVO() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
 	public MemberVO(String mem_id, String mem_pw, String mem_name, String mem_nick, String mem_gender, String mem_birth,
 			String mem_tel, String mem_joindate, String mem_type, String mem_prof) {
 		super();

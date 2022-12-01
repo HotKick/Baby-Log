@@ -13,6 +13,12 @@ public class DiaryVO {
 	private String mem_id;
 	
 	
+	public DiaryVO() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+
 	public DiaryVO(int diary_seq, String diary_title, String diary_content, String diary_date, String diary_file,
 			String diary_cnt, String diary_emo, String diary_with, String mem_id) {
 		super();

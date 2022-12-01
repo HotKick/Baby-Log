@@ -137,9 +137,9 @@ public class BabyMyBatisDAO {
 		}
 	
 	// 정보게시판 전체 리스트 가져오기
-	public List<CommunityVO> infoList(){
+	public List<CommunityVO> listInfo(){
 	    SqlSession session = sqlSessionFactory.openSession();
-	    List<CommunityVO> list = session.selectList("infoList");
+	    List<CommunityVO> list = session.selectList("listInfo");
 	    session.close();
 	    return list;
 	}
@@ -186,9 +186,9 @@ public class BabyMyBatisDAO {
 		
 	
 	// 거래게시판 전체 리스트 가져오기
-	public List<TradeVO> tradeList(){
+	public List<TradeVO> listTrade(){
 	    SqlSession session = sqlSessionFactory.openSession();
-	    List<TradeVO> list = session.selectList("tradeList");
+	    List<TradeVO> list = session.selectList("listTrade");
 	    session.close();
 	    return list;
 	}

@@ -9,6 +9,14 @@ public class BabyVO {
 	private String mem_id;
 	
 	
+	
+	
+	public BabyVO() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
+
 	public BabyVO(int baby_seq, String baby_name, String baby_birth, String baby_gender, String mem_id) {
 		super();
 		this.baby_seq = baby_seq;

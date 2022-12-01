@@ -11,6 +11,15 @@ public class AnswerVO {
 	private int q_seq;
 	private String mem_id;
 	
+	
+	
+	
+	
+	public AnswerVO() {
+		super();
+		// TODO Auto-generated constructor stub
+	}
+
 	public AnswerVO(int a_seq, String a_title, String a_content, String a_date, String a_file, String a_cnt,
 			int q_seq, String mem_id) {
 		super();
