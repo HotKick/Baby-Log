@@ -63,7 +63,7 @@ public class BabyMyBatisDAO {
 	}
 	
 	// 뉴스 게시판 조회수 증가 메소드
-	public void countnews(int nn_seq) {
+	public void countNews(int nn_seq) {
 		SqlSession session = sqlSessionFactory.openSession();
 		session.update("countnews",nn_seq);
 		session.commit();
@@ -81,19 +81,158 @@ public class BabyMyBatisDAO {
 	// 뉴스 게시판 삭제 메소드
 	public void deleteNews(int nn_seq) {
 		SqlSession session = sqlSessionFactory.openSession();
-		int vo = session.delete("newsDelete",nn_seq);
+		session.delete("deleteNews",nn_seq);
 		session.commit();
 		session.close();
 	}
 	
+
+	
 	// 자유게시판 전체 리스트 가져오기
-	public List<CommunityVO> FreeList(){
+	public List<CommunityVO> listFree(){
 	    SqlSession session = sqlSessionFactory.openSession();
-	    List<CommunityVO> list = session.selectList("FreeList");
+	    List<CommunityVO> list = session.selectList("listFree");
 	    session.close();
 	    return list;
 	}
 	
+	// 자유게시판 글쓰기 메소드
+		public void insertFree(CommunityVO vo) {
+			SqlSession session = sqlSessionFactory.openSession();
+			session.insert("insertFree",vo);
+			session.commit();
+			session.close();
+		}
+		
+		// 자유게시판 상세보기 메소드
+		public CommunityVO detailFree(int community_seq) {
+			SqlSession session = sqlSessionFactory.openSession();
+			CommunityVO vo = session.selectOne("detailFree",community_seq);
+			session.close();
+			return vo;
+		}
+		
+		// 자유게시판 조회수 증가 메소드
+		public void countFree(int community_seq) {
+			SqlSession session = sqlSessionFactory.openSession();
+			session.update("countFree",community_seq);
+			session.commit();
+			session.close();
+		}
+		
+		// 자유게시판 수정 메소드
+		public void updateFree(CommunityVO vo) {
+			SqlSession session = sqlSessionFactory.openSession();
+			session.update("updateFree",vo);
+			session.commit();
+			session.close();
+		}
+		
+		// 자유게시판 삭제 메소드
+		public void deleteFree(int community_seq) {
+			SqlSession session = sqlSessionFactory.openSession();
+			session.delete("deleteFree",community_seq);
+			session.commit();
+			session.close();
+		}
+	
+	// 정보게시판 전체 리스트 가져오기
+	public List<CommunityVO> infoList(){
+	    SqlSession session = sqlSessionFactory.openSession();
+	    List<CommunityVO> list = session.selectList("infoList");
+	    session.close();
+	    return list;
+	}
+	
+	// 정보게시판 글쓰기 메소드
+			public void insertInfo(CommunityVO vo) {
+				SqlSession session = sqlSessionFactory.openSession();
+				session.insert("insertInfo",vo);
+				session.commit();
+				session.close();
+			}
+			
+			// 정보게시판 상세보기 메소드
+			public CommunityVO detailInfo(int community_seq) {
+				SqlSession session = sqlSessionFactory.openSession();
+				CommunityVO vo = session.selectOne("detailInfo",community_seq);
+				session.close();
+				return vo;
+			}
+			
+			// 정보게시판 조회수 증가 메소드
+			public void countInfo(int community_seq) {
+				SqlSession session = sqlSessionFactory.openSession();
+				session.update("countInfo",community_seq);
+				session.commit();
+				session.close();
+			}
+			
+			// 정보게시판 수정 메소드
+			public void updateInfo(CommunityVO vo) {
+				SqlSession session = sqlSessionFactory.openSession();
+				session.update("updateInfo",vo);
+				session.commit();
+				session.close();
+			}
+			
+			// 정보게시판 삭제 메소드
+			public void deleteInfo(int community_seq) {
+				SqlSession session = sqlSessionFactory.openSession();
+				session.delete("deleteInfo",community_seq);
+				session.commit();
+				session.close();
+			}
+		
+	
+	// 거래게시판 전체 리스트 가져오기
+	public List<TradeVO> tradeList(){
+	    SqlSession session = sqlSessionFactory.openSession();
+	    List<TradeVO> list = session.selectList("tradeList");
+	    session.close();
+	    return list;
+	}
+	
+				// 거래게시판 글쓰기 메소드
+				public void insertTrade(TradeVO vo) {
+					SqlSession session = sqlSessionFactory.openSession();
+					session.insert("insertTrade",vo);
+					session.commit();
+					session.close();
+				}
+				
+				// 거래게시판 상세보기 메소드
+				public TradeVO detailTrade(int trade_seq) {
+					SqlSession session = sqlSessionFactory.openSession();
+					TradeVO vo = session.selectOne("detailTrade",trade_seq);
+					session.close();
+					return vo;
+				}
+				
+				// 거래게시판 조회수 증가 메소드
+				public void countTrade(int trade_seq) {
+					SqlSession session = sqlSessionFactory.openSession();
+					session.update("countTrade",trade_seq);
+					session.commit();
+					session.close();
+				}
+				
+				// 거래게시판 수정 메소드
+				public void updateTrade(TradeVO vo) {
+					SqlSession session = sqlSessionFactory.openSession();
+					session.update("updateTrade",vo);
+					session.commit();
+					session.close();
+				}
+				
+				// 거래게시판 삭제 메소드
+				public void deleteTrade(int trade_seq) {
+					SqlSession session = sqlSessionFactory.openSession();
+					session.delete("deleteTrade",trade_seq);
+					session.commit();
+					session.close();
+				}
+			
 	
 	
 	
