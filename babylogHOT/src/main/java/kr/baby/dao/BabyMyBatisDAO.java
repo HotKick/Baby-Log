@@ -37,6 +37,54 @@ public class BabyMyBatisDAO {
 		session.commit(); // 인서트는 commit 필수임
 		session.close();
 	}
+	
+	// 뉴스 전체 리스트 가져오기
+	public List<NewsVO> newsList(){
+		SqlSession session = sqlSessionFactory.openSession();
+		List<NewsVO> list = session.selectList("newsList");
+		session.close();
+		return list;
+	}
+	
+	// 뉴스 게시판 글쓰기 메소드
+	public void insertNews(NewsVO vo) {
+		SqlSession session = sqlSessionFactory.openSession();
+		session.insert("insertNews",vo);
+		session.commit();
+		session.close();
+	}
+	
+	// 뉴스 게시판 상세보기 메소드
+	public NewsVO newsDetail(int nn_seq) {
+		SqlSession session = sqlSessionFactory.openSession();
+		NewsVO vo = session.selectOne("newsDetail",nn_seq);
+		session.close();
+		return vo;
+	}
+	
+	// 뉴스 게시판 조회수 증가 메소드
+	public void countnews(int nn_seq) {
+		SqlSession session = sqlSessionFactory.openSession();
+		session.update("countnews",nn_seq);
+		session.commit();
+		session.close();
+	}
+	
+	// 뉴스 게시판 수정 메소드
+	public void newsUpdate(NewsVO vo) {
+		SqlSession session = sqlSessionFactory.openSession();
+		session.update("newsUpdate",vo);
+		session.commit();
+		session.close();
+	}
+	
+	// 뉴스 게시판 삭제 메소드
+	public void newsDelete(int nn_seq) {
+		SqlSession session = sqlSessionFactory.openSession();
+		int vo = session.delete("newsDelete",nn_seq);
+		session.commit();
+		session.close();
+	}
 
 //	public void Update(MemberVO vo) {
 //		SqlSession session = sqlSessionFactory.openSession();
@@ -77,6 +125,8 @@ public class BabyMyBatisDAO {
 //		session.close(); // 세션 반납 !반드시 close()해야 오류가 안난다 
 //		return list;
 //	}
+	
+
 
 	// 2) 인서트 기능 가져오기
 //	public void boardInsert(BoardVO vo) {
