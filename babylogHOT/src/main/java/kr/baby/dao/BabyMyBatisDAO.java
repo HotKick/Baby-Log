@@ -39,9 +39,9 @@ public class BabyMyBatisDAO {
 	}
 	
 	// 뉴스 전체 리스트 가져오기
-	public List<NewsVO> newsList(){
+	public List<NewsVO> listNews(){
 		SqlSession session = sqlSessionFactory.openSession();
-		List<NewsVO> list = session.selectList("newsList");
+		List<NewsVO> list = session.selectList("listNews");
 		session.close();
 		return list;
 	}
@@ -55,9 +55,9 @@ public class BabyMyBatisDAO {
 	}
 	
 	// 뉴스 게시판 상세보기 메소드
-	public NewsVO newsDetail(int nn_seq) {
+	public NewsVO detailNews(int nn_seq) {
 		SqlSession session = sqlSessionFactory.openSession();
-		NewsVO vo = session.selectOne("newsDetail",nn_seq);
+		NewsVO vo = session.selectOne("detailNews",nn_seq);
 		session.close();
 		return vo;
 	}
@@ -71,20 +71,32 @@ public class BabyMyBatisDAO {
 	}
 	
 	// 뉴스 게시판 수정 메소드
-	public void newsUpdate(NewsVO vo) {
+	public void updateNews(NewsVO vo) {
 		SqlSession session = sqlSessionFactory.openSession();
-		session.update("newsUpdate",vo);
+		session.update("updateNews",vo);
 		session.commit();
 		session.close();
 	}
 	
 	// 뉴스 게시판 삭제 메소드
-	public void newsDelete(int nn_seq) {
+	public void deleteNews(int nn_seq) {
 		SqlSession session = sqlSessionFactory.openSession();
 		int vo = session.delete("newsDelete",nn_seq);
 		session.commit();
 		session.close();
 	}
+	
+	// 자유게시판 전체 리스트 가져오기
+	public List<CommunityVO> FreeList(){
+	    SqlSession session = sqlSessionFactory.openSession();
+	    List<CommunityVO> list = session.selectList("FreeList");
+	    session.close();
+	    return list;
+	}
+	
+	
+	
+	
 
 //	public void Update(MemberVO vo) {
 //		SqlSession session = sqlSessionFactory.openSession();
