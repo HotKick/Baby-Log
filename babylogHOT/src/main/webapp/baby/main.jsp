@@ -41,7 +41,7 @@
 		<div class="container">
 			<div class="header_inner">
 				<div class="header_logo">
-					<a href="#">BABYLOG</a>
+					<a href="${cpath}/main.do">Baby LOG</a>
 				</div>
 				<nav class="header_menu">
 					<ul>
@@ -114,9 +114,9 @@
 
 		<section id="banner2">
 			<div class="container">
-				<div class="ban2_inner">
+				<div class="ban2_inner" href='#' onclick="location.href='${cpath}/diary.do'" >
 					<h2>글쓰기 목록으로 이동</h2>
-					<span>이곳을 누르면 글쓰기로 이동한다</span>
+					<span>이곳을 클릭하면 글쓰기 목록으로 이동한다</span>
 				</div>
 			</div>
 		</section>
@@ -142,7 +142,7 @@
 		<div class="container">
 			<div class="foot_inner mt30">
 				<div class="foot_logo">
-					<a href="main.html">logo</a>
+					<a href="${cpath}/main.do">Baby LOG</a>
 				</div>
 				<div class="foot_nav">
 					<ul>

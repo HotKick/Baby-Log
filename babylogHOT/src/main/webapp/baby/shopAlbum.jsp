@@ -16,7 +16,7 @@
 		<div class="container">
 			<div class="header_inner">
 				<div class="header_logo">
-					<a href="#">BABYLOG</a>
+					<a href="${cpath}/main.do">Baby LOG</a>
 				</div>
 				<nav class="header_menu">
 					<ul>

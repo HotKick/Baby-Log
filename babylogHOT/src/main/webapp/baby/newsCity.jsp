@@ -32,7 +32,7 @@
 		<div class="container">
 			<div class="header_inner">
 				<div class="header_logo">
-					<a href="#">BABYLOG</a>
+					<a href="${cpath}/main.do">Baby LOG</a>
 				</div>
 				<nav class="header_menu">
 					<ul>
@@ -203,7 +203,7 @@
 		<div class="container">
 			<div class="foot_inner mt30">
 				<div class="foot_logo">
-					<a href="main.html">logo</a>
+					<a href="${cpath}/main.do">Baby LOG</a>
 				</div>
 				<div class="foot_nav">
 					<ul>

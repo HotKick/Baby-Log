@@ -33,7 +33,7 @@
 		<div class="container">
 			<div class="header_inner">
 				<div class="header_logo">
-					<a href="#">BABYLOG</a>
+				<a href="${cpath}/main.do">Baby LOG</a>
 				</div>
 				<nav class="header_menu">
 					<ul>
@@ -67,9 +67,9 @@
 				<div class="board_title">
 					<strong>정보게시판</strong>
 					<ul>
-						<li><a href="cm_free.html">자유게시판</a></li>
-						<li><a href="cm_info.html">정보게시판</a></li>
-						<li><a href="cm_deal.html">중고게시판</a></li>
+						<li><a href="${cpath}/communityFree.do">자유게시판</a></li>
+						<li><a href="${cpath}/communityInfo.do">정보공유게시판</a></li>
+						<li><a href="${cpath}/communityTrade.do">중고거래게시판</a></li>
 					</ul>
 				</div>
 				<div class="board_list_wrap">
@@ -210,7 +210,7 @@
 		<div class="container">
 			<div class="foot_inner mt30">
 				<div class="foot_logo">
-					<a href="main.html">logo</a>
+					<a href="${cpath}/main.do">Baby LOG</a>
 				</div>
 				<div class="foot_nav">
 					<ul>

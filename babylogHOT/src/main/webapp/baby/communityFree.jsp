@@ -32,7 +32,7 @@
 		<div class="container">
 			<div class="header_inner">
 				<div class="header_logo">
-					<a href="#">BABYLOG</a>
+					<a href="${cpath}/main.do">Baby LOG</a>
 				</div>
 				<nav class="header_menu">
 					<ul>
@@ -66,9 +66,9 @@
 				<div class="board_title">
 					<strong>자유게시판</strong>
 					<ul class="tag">
-						<li><a href="cm_free.html">자유게시판</a></li>
-						<li><a href="cm_info.html">정보게시판</a></li>
-						<li><a href="cm_deal.html">중고게시판</a></li>
+						<li><a href="${cpath}/communityFree.do">자유게시판</a></li>
+						<li><a href="${cpath}/communityInfo.do">정보공유게시판</a></li>
+						<li><a href="${cpath}/communityTrade.do">중고거래게시판</a></li>
 					</ul>
 				</div>
 				<div class="board_list_wrap">
@@ -85,7 +85,7 @@
 						<div>
 							<div class="num">10</div>
 							<div class="title">
-								<a href="cm_view.html"> 자유게시판 ㅣ 글 제목이 들어갑니다</a>
+								<a href="${cpath}/detail.do"> 자유게시판 ㅣ 글 제목이 들어갑니다</a>
 							</div>
 							<div class="writer">지야누</div>
 							<div class="date">2022.1128</div>
@@ -95,7 +95,7 @@
 						<div>
 							<div class="num">9</div>
 							<div class="title">
-								<a href="cm_view.html"> 자유게시판 ㅣ 글 제목이 들어갑니다</a>
+								<a href="${cpath}/detail.do"> 자유게시판 ㅣ 글 제목이 들어갑니다</a>
 							</div>
 							<div class="writer">김대웅</div>
 							<div class="date">2022.1128</div>
@@ -105,7 +105,7 @@
 						<div>
 							<div class="num">8</div>
 							<div class="title">
-								<a href="cm_view.html"> 자유게시판 ㅣ 글 제목이 들어갑니다</a>
+								<a href="${cpath}/detail.do"> 자유게시판 ㅣ 글 제목이 들어갑니다</a>
 							</div>
 							<div class="writer">선경주</div>
 							<div class="date">2022.1128</div>
@@ -115,7 +115,7 @@
 						<div>
 							<div class="num">7</div>
 							<div class="title">
-								<a href="cm_view.html"> 자유게시판 ㅣ 글 제목이 들어갑니다</a>
+								<a href="${cpath}/detail.do"> 자유게시판 ㅣ 글 제목이 들어갑니다</a>
 							</div>
 							<div class="writer">김호전</div>
 							<div class="date">2022.1128</div>
@@ -125,7 +125,7 @@
 						<div>
 							<div class="num">6</div>
 							<div class="title">
-								<a href="cm_view.html"> 자유게시판 ㅣ 글 제목이 들어갑니다</a>
+								<a href="${cpath}/detail.do"> 자유게시판 ㅣ 글 제목이 들어갑니다</a>
 							</div>
 							<div class="writer">배미리칸</div>
 							<div class="date">2022.1128</div>
@@ -135,7 +135,7 @@
 						<div>
 							<div class="num">5</div>
 							<div class="title">
-								<a href="cm_view.html"> 자유게시판 ㅣ 글 제목이 들어갑니다</a>
+								<a href="${cpath}/detail.do"> 자유게시판 ㅣ 글 제목이 들어갑니다</a>
 							</div>
 							<div class="writer">박종규</div>
 							<div class="date">2022.1128</div>
@@ -145,7 +145,7 @@
 						<div>
 							<div class="num">4</div>
 							<div class="title">
-								<a href="cm_view.html"> 자유게시판 ㅣ 글 제목이 들어갑니다</a>
+								<a href="${cpath}/detail.do"> 자유게시판 ㅣ 글 제목이 들어갑니다</a>
 							</div>
 							<div class="writer">정연승</div>
 							<div class="date">2022.1128</div>
@@ -155,7 +155,7 @@
 						<div>
 							<div class="num">3</div>
 							<div class="title">
-								<a href="cm_view.html"> 자유게시판 ㅣ 글 제목이 들어갑니다</a>
+								<a href="${cpath}/detail.do"> 자유게시판 ㅣ 글 제목이 들어갑니다</a>
 							</div>
 							<div class="writer">장해라</div>
 							<div class="date">2022.1128</div>
@@ -165,7 +165,7 @@
 						<div>
 							<div class="num">2</div>
 							<div class="title">
-								<a href="cm_view.html"> 자유게시판 ㅣ 글 제목이 들어갑니다</a>
+								<a href="${cpath}/detail.do"> 자유게시판 ㅣ 글 제목이 들어갑니다</a>
 							</div>
 							<div class="writer">문짱</div>
 							<div class="date">2022.1128</div>
@@ -175,7 +175,7 @@
 						<div>
 							<div class="num">1</div>
 							<div class="title">
-								<a href="cm_view.html"> 자유게시판 ㅣ 글 제목이 들어갑니다</a>
+								<a href="${cpath}/detail.do"> 자유게시판 ㅣ 글 제목이 들어갑니다</a>
 							</div>
 							<div class="writer">김소정</div>
 							<div class="date">2022.1128</div>
@@ -209,7 +209,7 @@
 		<div class="container">
 			<div class="foot_inner mt30">
 				<div class="foot_logo">
-					<a href="main.html">logo</a>
+					<a href="${cpath}/main.do">Baby LOG</a>
 				</div>
 				<div class="foot_nav">
 					<ul>
