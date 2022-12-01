@@ -20,7 +20,6 @@ public class BabyMyBatisDAO {
 		try {
 			String resource = "kr/baby/dao/config.xml";
 			InputStream inputStream = Resources.getResourceAsStream(resource);
-
 			sqlSessionFactory = new SqlSessionFactoryBuilder().build(inputStream);
 
 		} catch (Exception e) {
