@@ -79,9 +79,8 @@
 							<div class="date">작성일</div>
 							<div class="count">조회</div>
 						</div>
-						<!-- //table_heade -->
-
-<%-- 						<div>
+						<!-- //table_header -->
+					<div>
 						<c:forEach var= "vo" items = "${list}">
 							<div class="num">${nn_seq}</div>
 							<div class="title">
@@ -91,7 +90,7 @@
 							<div class="date">${vo.nn_date}</div>
 							<div class="count">${vo.nn_cnt}</div>
 							</c:forEach>
-						</div> --%>
+						</div>
 						<!-- //1행 -->
 					
 

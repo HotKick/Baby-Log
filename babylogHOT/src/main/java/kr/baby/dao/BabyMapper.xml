@@ -53,8 +53,6 @@
 		update community set community_title=#{community_title},set community_content=#{community_content} where community_seq = #{community_seq}
 		</update>
 	
-	
-	
 
 <!-- info 1. 정보 게시판 전체 리스트  -->
 	<select id = "listInfo" resultType = "kr.baby.dao.CommunityVO">
@@ -80,8 +78,8 @@
 	
 <!-- free 5. 정보 게시판 글수정  -->	
 	<update id="updateInfo" parameterType="kr.baby.dao.CommunityVO">
-		update community set community_title=#{community_title},set community_content=#{community_content} where community_seq = #{community_seq}
-		</update>
+	update community set community_title=#{community_title},set community_content=#{community_content} where community_seq = #{community_seq}
+	</update>
 
 <!-- Trade 1. 거래 게시판 전체 리스트  -->
 	<select id = "listTrade" resultType = "kr.baby.dao.TradeVO">
@@ -97,7 +95,7 @@
 	
 <!-- Trade 3. 정보 게시판 카운트업데이트  -->
 	<update id="countTrade" parameterType="int">
-		update trade set count = count+1 where trade_seq = #{trade_seq}
+	update trade set count = count+1 where trade_seq = #{trade_seq}
 	</update>
 	
 <!-- Trade 4. 정보 게시판 글삭제  -->	
@@ -106,7 +104,7 @@
 	</delete>
 	
 <!-- Trade 5. 정보 게시판 글수정  -->	
-<update id="updateTrade" parameterType="kr.baby.dao.TradeVO">
-		update trade set trade_title=#{trade_title},set trade_content=#{trade_content} where trade_seq = #{trade_seq}
-		</update>
+	<update id="updateTrade" parameterType="kr.baby.dao.TradeVO">
+	update trade set trade_title=#{trade_title},set trade_content=#{trade_content} where trade_seq = #{trade_seq}
+	</update>
 </mapper>
