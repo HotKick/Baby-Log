@@ -10,6 +10,12 @@
 	 insert into member(mem_id, mem_pw, mem_name, mem_nick, mem_birth, mem_gender, mem_type, mem_tel, mem_prof, mem_joindate)
 	  values( #{mem_id},#{mem_pw},#{mem_name},#{mem_nick},#{mem_birth},#{mem_gender},#{mem_type},#{mem_tel}, #{mem_prof}, sysdate) <!--  ? >> 파라메터 매겨변수를 #{}로 표시-->
 	</insert>
+	
+	
+	<!-- 로그인 -->
+	<select id = "memberLogin" parameterType="kr.baby.dao.MemberVO" resultType="kr.baby.dao.MemberVO">
+	  select * from member where mem_id=#{mem_id} and mem_pw=#{mem_pw}
+	</select>
 
 <!--번호라도 붙여서 하는거 어떰 아니면 news 1. 이런식으로 구분 바로 되게 ㅇㅇ  -->
 
@@ -25,17 +31,82 @@
 	select * from community
 	order by community_seq desc
 	</select>
+	
+<!-- free 2. 자유 게시판 글쓰기  -->
+	<insert id="insertFree" parameterType="kr.baby.dao.CommunityVO">
+	insert into community(community_seq,community_title,community_content,community_date,community_file,community_cnt,community_type,mem_id)
+	values(community_seq.nextval,#{community_title},#{community_content},#{community_date},#{community_file},#{community_cnt},#{community_type},#{mem_id})
+	</insert>
+	
+<!-- free 3. 자유 게시판 카운트업데이트  -->
+	<update id="countFree" parameterType="int">
+		update community set count = count+1 where community_seq = #{community_seq}
+	</update>
+	
+<!-- free 4. 자유 게시판 글삭제  -->	
+	<delete id="deleteFree">
+	delete from community where community_seq=#{community_seq}
+	</delete>
+	
+<!-- free 5. 자유 게시판 글수정  -->	
+	<update id="updateFree" parameterType="kr.baby.dao.CommunityVO">
+		update community set community_title=#{community_title},set community_content=#{community_content} where community_seq = #{community_seq}
+		</update>
+	
+	
+	
 
 <!-- info 1. 정보 게시판 전체 리스트  -->
 	<select id = "listInfo" resultType = "kr.baby.dao.CommunityVO">
 	select * from community
 	order by community_seq desc
 	</select>
+	
+<!-- free 2. 정보 게시판 글쓰기  -->
+	<insert id="insertInfo" parameterType="kr.baby.dao.CommunityVO">
+	insert into community(community_seq,community_title,community_content,community_date,community_file,community_cnt,community_type,mem_id)
+	values(community_seq.nextval,#{community_title},#{community_content},#{community_date},#{community_file},#{community_cnt},#{community_type},#{mem_id})
+	</insert>
+	
+<!-- free 3. 정보 게시판 카운트업데이트  -->
+	<update id="countInfo" parameterType="int">
+		update community set count = count+1 where community_seq = #{community_seq}
+	</update>
+	
+<!-- free 4. 정보 게시판 글삭제  -->	
+	<delete id="deleteInfo">
+	delete from community where community_seq=#{community_seq}
+	</delete>
+	
+<!-- free 5. 정보 게시판 글수정  -->	
+	<update id="updateInfo" parameterType="kr.baby.dao.CommunityVO">
+		update community set community_title=#{community_title},set community_content=#{community_content} where community_seq = #{community_seq}
+		</update>
 
 <!-- Trade 1. 거래 게시판 전체 리스트  -->
 	<select id = "listTrade" resultType = "kr.baby.dao.TradeVO">
 	select * from trade
-	order by community_seq desc
+	order by trade_seq desc
 	</select>
 
+<!-- Trade 2. 정보 게시판 글쓰기  -->
+	<insert id="insertTrade" parameterType="kr.baby.dao.TradeVO">
+	insert into trade(trade_seq,trade_title,trade_content,trade_date,trade_file,trade_cnt,trade_type,mem_id)
+	values(trade_seq.nextval,#{trade_title},#{trade_content},#{trade_date},#{trade_file},#{trade_cnt},#{trade_type},#{mem_id})
+	</insert>
+	
+<!-- Trade 3. 정보 게시판 카운트업데이트  -->
+	<update id="countTrade" parameterType="int">
+		update trade set count = count+1 where trade_seq = #{trade_seq}
+	</update>
+	
+<!-- Trade 4. 정보 게시판 글삭제  -->	
+	<delete id="deleteTrade">
+	delete from trade where trade_seq=#{trade_seq}
+	</delete>
+	
+<!-- Trade 5. 정보 게시판 글수정  -->	
+<update id="updateTrade" parameterType="kr.baby.dao.TradeVO">
+		update trade set trade_title=#{trade_title},set trade_content=#{trade_content} where trade_seq = #{trade_seq}
+		</update>
 </mapper>
