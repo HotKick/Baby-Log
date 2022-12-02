@@ -54,7 +54,7 @@
 				<div class="header_member">
 					<ul>
 						<li><a href="${cpath}/login.do">로그인</a></li>
-						<li><a href="${cpath}/signup.do">회원가입</a></li>
+						<li><a href="${cpath}/signupform.do">회원가입</a></li>
 					</ul>
 				</div>
 			</div>
