@@ -108,4 +108,14 @@
 	<update id="updateTrade" parameterType="kr.baby.dao.TradeVO">
 	update trade set trade_title=#{trade_title},set trade_content=#{trade_content} where trade_seq = #{trade_seq}
 	</update>
+	
+
+<!-- Diary 2. 일기 게시판 글쓰기  -->
+	<insert id="insertDiary" parameterType="kr.baby.dao.DiaryVO">
+	insert into diary(trade_seq,trade_title,trade_content,trade_date,trade_file,trade_cnt,trade_type,mem_id)
+	values(trade_seq.nextval,#{trade_title},#{trade_content},#{trade_date},#{trade_file},#{trade_cnt},#{trade_type},#{mem_id})
+	</insert>
+	
+	
+	
 </mapper>

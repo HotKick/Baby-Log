@@ -121,9 +121,9 @@ public class BabyMyBatisDAO {
 		}
 		
 		// 자유게시판 조회수 증가 메소드
-		public void countFree(int community_seq) {
+		public void countFree(int community_cnt) {
 			SqlSession session = sqlSessionFactory.openSession();
-			session.update("countFree",community_seq);
+			session.update("countFree",community_cnt);
 			session.commit();
 			session.close();
 		}
@@ -169,9 +169,9 @@ public class BabyMyBatisDAO {
 			}
 			
 			// 정보게시판 조회수 증가 메소드
-			public void countInfo(int community_seq) {
+			public void countInfo(int community_cnt) {
 				SqlSession session = sqlSessionFactory.openSession();
-				session.update("countInfo",community_seq);
+				session.update("countInfo",community_cnt);
 				session.commit();
 				session.close();
 			}
@@ -218,9 +218,9 @@ public class BabyMyBatisDAO {
 				}
 				
 				// 거래게시판 조회수 증가 메소드
-				public void countTrade(int trade_seq) {
+				public void countTrade(int trade_cnt) {
 					SqlSession session = sqlSessionFactory.openSession();
-					session.update("countTrade",trade_seq);
+					session.update("countTrade",trade_cnt);
 					session.commit();
 					session.close();
 				}
@@ -241,6 +241,16 @@ public class BabyMyBatisDAO {
 					session.close();
 				}
 			
+				
+				// 일기 글쓰기 
+				public void insertDiary(DiaryVO vo) {
+					SqlSession session = sqlSessionFactory.openSession();
+					session.insert("insertDiary",vo);
+					session.commit();
+					session.close();
+				}
+				
+				
 	
 	
 	
