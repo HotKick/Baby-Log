@@ -1,0 +1,460 @@
+
+body {
+    font-family: "Montserrat", sans-serif;
+    background: #ccc;
+  }
+  
+  .login_wrap {
+    display: block;
+    max-width: 680px;
+    width: 70%;
+    margin: 120px auto;
+    border-radius: 50px;
+    box-shadow: 5px 15px 30px rgba(65, 66, 68, 0.36);
+    padding : 40px 30px 60px 30px;
+    background-color: #fff;
+  }
+  
+
+  .item {
+        margin: 26px 0 20px 0;
+        text-align: center;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        /* justify-content : 중심축에서 정렬해주기 
+        justify-content: flex-end; -> 끝으로 붙인다 
+        justify-content : space-evenly -> 똑같은 간격
+        justify-content : between-spacing -> 같은간격으로 넣어주기
+        */
+        /* align-item : 반대축(수직) 
+        align-items : center -> (반대축)가운데에 정렬해줘
+        align-items : baseline; -> div를 균등하게 해줘 
+        */
+         /* align-content : 반대축의 간격을 정해줘  
+        align-content : center 
+        */
+  }
+  .item > div {
+    font-size: 44px;
+    margin-right: 14px;
+  }
+
+  .item .logo {
+    width: 60px;
+    height: 60px;
+    background-color: #ccc;
+    border-radius: 40px;
+  }
+
+  .item .logo a {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+
+  .item .logo_title > a{
+    color: #ccc;
+    /* width: 100%;
+    height: 100%; */
+    transition: 0.2s linear;
+    font-weight: 700;
+
+  } 
+ 
+
+
+  /* 폼 */
+  form {
+    width: 100%;
+    max-width: 680px;
+    margin: 40px auto;
+  }
+  form .input__block {
+    margin: 16px auto;
+    display: block;
+    position: relative;
+  }
+
+
+  form .input__block input {
+    display: block;
+    width: 80%;
+    max-width: 100%;
+    height: 50px;
+    margin: 0 auto;
+    border-radius: 8px;
+    border: none;
+    background: rgba(15, 19, 42, 0.1);
+    color: rgba(15, 19, 42, 0.3);
+    padding: 0 0 0 15px;
+    font-size: 14px;
+    font-family: "Montserrat", sans-serif;
+  }
+
+  form .input__block input:focus, form .input__block input:active {
+    outline: none;
+    border: none;
+    background: #1e79e9;
+    opacity: 0.5;
+    color:white;
+    
+  } 
+
+  /* 클릭했을때 placeholder감추기  */
+  form .input__block .input:focus::placeholder{
+    color:transparent;
+}
+
+  form .input__block input.repeat__password {
+    opacity: 0;
+    display: none;
+    transition: 0.2s linear;
+  }
+  form .login_btn {
+    background: #e91e63;
+    color: white;
+    display: block;
+    width: 82%;
+    max-width: 100%;
+    height: 50px;
+    border-radius: 8px;
+    margin: 0 auto;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    font-family: "Montserrat", sans-serif;
+    transition: 0.2s linear;
+  }
+  form .login_btn:hover {
+    background: #1e79e9;
+  }
+  
+  .separator {
+    display: block;
+    margin: 0px auto 10px;
+    text-align: center;
+    height: 40px;
+    position: relative;
+    background: transparent;
+    /* color: rgba(15, 19, 42, 0.4); */
+    font-size: 13px;
+    width: 82%;
+    max-width: 100%;
+  }
+  .separator::before {
+    content: "";
+    position: absolute;
+    top: 8px;
+    left: 0;
+    background: rgba(15, 19, 42, 0.2);
+    height: 1px;
+    width: 45%;
+  }
+  .separator::after {
+    content: "";
+    position: absolute;
+    top: 8px;
+    right: 0;
+    background: rgba(15, 19, 42, 0.2);
+    height: 1px;
+    width: 45%;
+  }
+
+  /* 네이버, 카카오 api */
+  
+  .naver_btn,
+  .kakao_btn {
+    display: block;
+    width: 82%;
+    max-width: 100%;
+    margin: 16px auto;
+    height: 50px;
+    cursor: pointer;
+    font-size: 14px;
+    font-family: "Montserrat", sans-serif;
+    border-radius: 8px;
+    border: none;
+    line-height: 40px;
+    font-weight: bold;
+  }
+  /* .google__btn.google__btn,
+  .github__btn.google__btn {
+    background: #19ce60;
+    color: white;
+    transition: 0.2s linear;
+  } */
+
+.naver_btn{
+  background: #19ce60;
+  color: white;
+  transition: 0.2s linear;
+}
+.naver_btn:hover {
+  background: #015746;
+  color: white;
+  transition: 0.2s linear;
+}
+/* i태그 대신 다른 이미지 들어갈 예정  */
+/* .google__btn.google__btn .fa,
+.github__btn.google__btn .fa {
+  font-size: 20px;
+  padding: 0 5px 0 0;
+}
+.google__btn.google__btn:hover,
+.github__btn.google__btn:hover {
+  background-color: #15c654;
+} */
+.kakao_btn{
+  background: #FEE500;
+  color: #402325;
+  transition: 0.2s linear;
+}
+.kakao_btn:hover {
+  background: #402325;
+  color: #FEE500;
+}
+
+
+
+/* 로그인 회원가입 */
+.links {
+  list-style-type: none;
+  width: 80%;
+  margin: 0 auto;
+  text-align: center;
+}
+.links li {
+  /* width: 20%; */
+  margin: 0 2%;
+  display: inline-block;
+  transition: 0.2s linear;
+}
+
+/* 비밀번호 찾기 */
+.links li:first-child {
+  opacity: 0.6;
+}
+.links li:first-child:hover {
+  opacity: 1;
+}
+.links li:nth-child(2) {
+  opacity: 0.6;
+}
+.links li:nth-child(2):hover {
+  opacity: 1;
+}
+.links li:nth-child(3) {
+  opacity: 0.6;
+}
+.links li:nth-child(3):hover {
+  opacity: 1;
+}
+.links li a {
+  text-decoration: none;
+  color: #0f132a;
+  font-weight: bolder;
+  text-align: center;
+  cursor: pointer;
+}
+
+
+
+/* 회원가입영역=====================  */
+
+/* 회원가입 */
+form .input__block .name {
+  font-size: 1rem;
+  display: block;
+  width: 80%;
+  margin: 0 auto 8px;
+}
+
+form .attach {
+  width: 86%;
+  display: flex;
+  margin: 0 auto;
+  text-align: center;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+
+}
+
+form .input__block #attach {
+  width: 60%;
+}
+
+form .attach_btn {
+  background: #1e79e9;
+  color: white;
+  display: block;
+  width: 30%;
+  max-width: 100%;
+  height: 50px;
+  border-radius: 8px;
+  margin: 0 auto;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  font-family: "Montserrat", sans-serif;
+  transition: 0.2s linear;
+}
+
+/* 생년월일 */
+form .birth{
+width: 82%;
+}
+form .birth_name {
+width: 100%;
+display: flex;
+/* margin: 0 auto; */
+text-align: left;
+flex-direction: row;
+/* align-items: center; */
+/* justify-content: center; */
+}
+form .birth_form{
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  text-align: left;
+  flex-direction: row;
+}
+form .birth_form > div {
+  width: 33.3333%;
+}
+
+form .birth_form > div  select {
+  width: 84%;
+  margin-right: 3%;
+  height: 40px;
+  border-radius: 6px;
+  border: solid 1px #ccc;
+  padding-left: 10px;
+}
+
+
+/* 남자, 여자, 선택하지 않음 ================ */
+form .gender {
+width: 83%;
+display: flex;
+margin: 0 auto;
+/* text-align: center; */
+flex-direction: row;
+align-items: center;
+justify-content: center;
+justify-content: space-between;
+/* padding: 15px 10px; */
+}
+form  .gender > div{
+width: 33.333%;
+margin-right: 2%;
+height: 40px;
+}
+form  .gender > div:last-child {
+margin-right: 0;
+}
+form .gender > div > label {
+width: 100%;
+width: 100%;
+}
+
+.gender input[type=radio]{
+display: none;
+}
+.gender input[type=radio]+label{
+display: inline-block;
+cursor: pointer;
+height: 40px;
+border: 1px solid #ccc;
+line-height: 40px;
+text-align: center;
+font-weight:bold;
+font-size:13px;
+border-radius: 8px;
+}
+.gender input[type=radio]+label{
+background-color: #fff;
+color: #222;
+}
+
+.gender input[type=radio]:checked+label{
+background-color: #e91e63;
+color: #fff;
+border-style: none;
+}
+
+
+
+/* 가족관계 ============================= */
+form .family {
+width: 83%;
+display: flex;
+margin: 0 auto;
+/* text-align: center; */
+flex-direction: row;
+align-items: center;
+justify-content: center;
+justify-content: space-between;
+/* padding: 15px 10px; */
+}
+form  .family > div{
+width: 33.333%;
+margin-right: 2%;
+height: 40px;
+}
+form  .family > div:last-child {
+margin-right: 0;
+}
+form .family > div > label {
+width: 100%;
+width: 100%;
+}
+
+.family input[type=radio]{
+display: none;
+}
+.family input[type=radio]+label{
+display: inline-block;
+cursor: pointer;
+height: 40px;
+border: 1px solid #ccc;
+line-height: 40px;
+text-align: center;
+font-weight:bold;
+font-size:13px;
+border-radius: 8px;
+}
+.family input[type=radio]+label{
+background-color: #fff;
+color: #222;
+}
+
+.family input[type=radio]:checked+label{
+background-color: #1e79e9;
+color: #fff;
+border-style: none;
+}
+
+form .signup__btn {
+background: #e91e63;
+color: white;
+display: block;
+width: 82%;
+max-width: 100%;
+height: 50px;
+border-radius: 8px;
+margin: 0 auto 20px;
+border: none;
+cursor: pointer;
+font-size: 14px;
+font-family: "Montserrat", sans-serif;
+transition: 0.2s linear;
+text-transform: uppercase;
+}
+
+form .signup__btn:hover {
+background: #1e79e9;
+}
