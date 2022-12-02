@@ -90,10 +90,6 @@
 
 
 /* 보드 - 리스트 ======================= */
-.board_list {
-	/* 보드위에 */
-
-}
 
 .board_list .title a:hover {
 	color: #ccc;
@@ -131,12 +127,9 @@
 .board_list .num {
 	width: 10%;
 }
-.board_list .category {
-	width: 10%;
-}
 
 .board_list .title {
-	width: 50%;
+	width: 60%;
 	text-align: center;
 }
 

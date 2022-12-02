@@ -68,7 +68,7 @@
 
 		<!-- //게시판 영역 -->
 	</main>
-	<section id="board">
+	 <form>
 		<div class="container">
 			<div class="board_wrap">
 				<div class="board_title">
@@ -106,13 +106,13 @@
 						</div>
 					</div>
 					<div class="bt_wrap">
-						<a href="view.html" class="on">수정</a> <a href="view.html">취소</a>
-					</div>
+                            <button type="submit">등록</button>
+                            <button>취소</button>
+                        </div>
 				</div>
-				<!--  -->
 			</div>
 			<!-- //container -->
-	</section>
+		</form>
 
 
 		<footer id="footer">
