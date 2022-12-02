@@ -67,9 +67,9 @@
 				<div class="board_title">
 					<strong>자유게시판</strong>
 					<div class="tag">
-                        <div><a href="${cpath}/communityFree.html" class="free">자유게시판</a></div>
-                        <div><a href="${cpath}/communityInfo.html" class="info">정보게시판</a></div>
-                        <div><a href="${cpath}/communityTrade.html" class="trade">중고게시판</a></div>
+                        <div><a href="${cpath}/communityFree.do" class="free">자유게시판</a></div>
+                        <div><a href="${cpath}/communityInfo.do" class="info">정보게시판</a></div>
+                        <div><a href="${cpath}/communityTrade.do" class="trade">중고게시판</a></div>
                     </div>
 				</div>
 				<div class="board_list_wrap">
