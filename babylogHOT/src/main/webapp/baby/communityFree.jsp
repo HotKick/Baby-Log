@@ -106,7 +106,7 @@
 							href="#" class="bt last">>></a>
 					</div>
 					<div class="bt_wrap">
-						<a href="cm_write.html" class="on">등록</a>
+						<a href="${cpath}/communityWriteForm.do" class="on">등록</a>
 						<!--<a href="#">수정</a>-->
 					</div>
 				</div>

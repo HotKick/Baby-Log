@@ -83,105 +83,18 @@
 						<!-- //table_heade -->
 
 						<div>
-							<div class="num">10</div>
+						<c:forEach var= "vo" items = "${list}">
+							<div class="num">${trade_seq}</div>
 							<div class="title">
-								<a href="view.html">중고거래 ㅣ 중고거래게시판 글 제목이 들어갑니다</a>
+								<a href="news_view.html">${vo.trade_title}</a>
 							</div>
-							<div class="writer">지야누</div>
-							<div class="date">2022.1128</div>
-							<div class="count">33</div>
+							<div class="writer">${vo.trade_id}</div>
+							<div class="date">${vo.trade_date}</div>
+							<div class="count">${vo.trade_cnt}</div>
+							</c:forEach>
 						</div>
 						<!-- //1행 -->
-						<div>
-							<div class="num">9</div>
-							<div class="title">
-								<a href="view.html">중고거래 ㅣ 중고거래게시판 글 제목이 들어갑니다</a>
-							</div>
-							<div class="writer">김대웅</div>
-							<div class="date">2022.1128</div>
-							<div class="count">33</div>
-						</div>
-						<!-- //2행 -->
-						<div>
-							<div class="num">8</div>
-							<div class="title">
-								<a href="view.html">중고거래 ㅣ 중고거래게시판 글 제목이 들어갑니다</a>
-							</div>
-							<div class="writer">선경주</div>
-							<div class="date">2022.1128</div>
-							<div class="count">33</div>
-						</div>
-						<!-- //3행 -->
-						<div>
-							<div class="num">7</div>
-							<div class="title">
-								<a href="view.html">중고거래 ㅣ 중고거래게시판 글 제목이 들어갑니다</a>
-							</div>
-							<div class="writer">김호전</div>
-							<div class="date">2022.1128</div>
-							<div class="count">33</div>
-						</div>
-						<!-- //4행 -->
-						<div>
-							<div class="num">6</div>
-							<div class="title">
-								<a href="view.html">중고거래 ㅣ 중고거래게시판 글 제목이 들어갑니다</a>
-							</div>
-							<div class="writer">배미리칸</div>
-							<div class="date">2022.1128</div>
-							<div class="count">33</div>
-						</div>
-						<!-- //5행 -->
-						<div>
-							<div class="num">5</div>
-							<div class="title">
-								<a href="view.html">중고거래 ㅣ 중고거래게시판 글 제목이 들어갑니다</a>
-							</div>
-							<div class="writer">박종규</div>
-							<div class="date">2022.1128</div>
-							<div class="count">33</div>
-						</div>
-						<!-- //6행 -->
-						<div>
-							<div class="num">4</div>
-							<div class="title">
-								<a href="view.html">중고거래 ㅣ 중고거래게시판 글 제목이 들어갑니다</a>
-							</div>
-							<div class="writer">정연승</div>
-							<div class="date">2022.1128</div>
-							<div class="count">33</div>
-						</div>
-						<!-- //7행 -->
-						<div>
-							<div class="num">3</div>
-							<div class="title">
-								<a href="view.html">중고거래 ㅣ 중고거래게시판 글 제목이 들어갑니다</a>
-							</div>
-							<div class="writer">장해라</div>
-							<div class="date">2022.1128</div>
-							<div class="count">33</div>
-						</div>
-						<!-- //8행 -->
-						<div>
-							<div class="num">2</div>
-							<div class="title">
-								<a href="view.html">글 제목이 들어갑니다.</a>
-							</div>
-							<div class="writer">문짱</div>
-							<div class="date">2022.1128</div>
-							<div class="count">33</div>
-						</div>
-						<!-- //9행 -->
-						<div>
-							<div class="num">1</div>
-							<div class="title">
-								<a href="view.html">글 제목이 들어갑니다.</a>
-							</div>
-							<div class="writer">김소정</div>
-							<div class="date">2022.1128</div>
-							<div class="count">33</div>
-						</div>
-						<!-- //10행 -->
+
 
 
 					</div>
