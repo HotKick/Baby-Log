@@ -338,3 +338,32 @@
 	resize: vertical;
 	font-size: 1rem;
 }
+
+
+/* 버튼  */
+.bt_wrap {
+    margin-top: 30px;
+    text-align: center;
+    font-size: 0;
+}
+
+.bt_wrap button {
+    display: inline-block;
+    min-width: 80px;
+    margin-left: 10px;
+    padding: 10px;
+    border-radius: 2px;
+    font-size: 1.4rem;
+    background-color: #ccc;
+}
+.bt_wrap button:hover {
+    cursor: pointer;
+    background-color: #000;
+    color: #fff;
+    border: none;
+}
+
+.bt_wrap button:first-child {
+    margin-left: 0;
+}
+
