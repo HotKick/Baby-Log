@@ -44,12 +44,12 @@
                   <!-- 아이디 -->
                   <div class="input__block">
                      <label class="name" for="id">아이디</label>
-                     <input type="text" placeholder="id" class="input" id="id"/>
+                     <input type="text" placeholder="id" class="input" id="id" name = "mem_id"/>
                   </div>
                   <!-- 비밀번호 -->
                   <div class="input__block">
                     <label class="name" for="pwd">비밀번호</label>
-                     <input type="password" placeholder="Password" class="input" id="pwd"/>
+                     <input type="password" placeholder="Password" class="input" id="pwd" name = "mem_pw"/>
                   </div>
                   <!-- 비밀번호 재확인 -->
                   <div class="input__block">
@@ -59,12 +59,12 @@
                   <!-- 이름 -->
                   <div class="input__block">
                     <label class="name" for="name">이름</label>
-                    <input type="name" placeholder="name" class="input" id="name"/>
+                    <input type="name" placeholder="name" class="input" id="name" name = "mem_name"/>
                   </div>
                   <!-- 닉네임 -->
                   <div class="input__block">
                     <label class="name" for="nickname">닉네임</label>
-                    <input type="nickname" placeholder="nickname" class="input" id="nickname" />
+                    <input type="nickname" placeholder="nickname" class="input" id="nickname" name = "mem_nick" />
                   </div>
 
 
@@ -75,7 +75,7 @@
                     <label class="name" for="month">월</label>
                     <label class="name" for="day">일</label>
                   </div>
-                  <div class="birth_form">
+                  <div class="birth_form" name = "mem_birth">
                     <div class="year"><select name="yy" id="year"></select>년</div>
                     <div class="month"><select name="mm" id="month"></select>월</div>
                     <div class="day"><select name="dd" id="day"></select>일</div>
@@ -85,7 +85,7 @@
                 <!-- 성별 -->
                 <div class="input__block">
                   <label class="name" for="gender">성별</label>
-                  <div class="gender">
+                  <div class="gender" name = "mem_gender">
                     <div><input type="radio" id="gender1" name="gender"><label for="gender1">남자</label></div>
                     <div><input type="radio" id="gender2" name="gender"><label for="gender2">여자</label></div>
                     <div><input type="radio" id="gender3" name="gender"><label for="gender3">선택하지 않음</label></div>
@@ -95,7 +95,7 @@
                 <!-- 가족관계 -->
                 <div class="input__block">
                   <label class="name" for="family">관계</label>
-                  <div class="family">
+                  <div class="family" name = "mem_type">
                     <div><input type="radio" id="family1" name="family"><label for="family1">엄마 ㅣ 아빠 </label></div>
                     <div><input type="radio" id="family2" name="family"><label for="family2">이모 ㅣ 삼촌</label></div>
                     <div><input type="radio" id="family3" name="family"><label for="family3">할머니 ㅣ 할아버지</label></div>
@@ -107,7 +107,7 @@
                 <div class="input__block">
                   <label class="name" for="family">전화번호</label>
                   <div class="tel">
-                    <input type="tel" class="input" placeholder="+010"name="tel">
+                    <input type="tel" class="input" placeholder="+010" name="mem_tel">
                   </div>
                 </div>
 

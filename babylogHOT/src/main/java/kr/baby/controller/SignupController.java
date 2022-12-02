@@ -24,7 +24,10 @@ public class SignupController implements Controller {
 		   String mem_pw = request.getParameter("mem_pw");
 		   String mem_name = request.getParameter("mem_name");
 		   String mem_nick = request.getParameter("mem_nick");
+		  
+		   
 		   String mem_gender = request.getParameter("mem_gender");
+		   
 		   String mem_birth = request.getParameter("mem_birth");
 		   String mem_tel = request.getParameter("mem_tel");
 		   String mem_type = request.getParameter("mem_type");
