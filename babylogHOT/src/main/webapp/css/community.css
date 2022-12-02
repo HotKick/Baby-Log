@@ -3,40 +3,74 @@
 	background-color: #ccc;
 }
 
+
+/* 공통요소 ========================  */
 .board_wrap {
 	width: 100%;
-	/* margin: 0 auto; */
 	padding: 50px 0;
-	/* background-color: #999; */
 }
+
+.bt_wrap {
+	margin-top: 30px;
+	text-align: center;
+	font-size: 0;
+	overflow: hidden;
+	display: flex;
+	flex-direction: row-reverse;
+	gap: 1%;
+}
+
+.bt_wrap > a {
+	display: inline-block;
+	margin-left: 10px;
+	padding: 14px 40px;
+	border-radius: 10px;
+	font-size: 1rem;
+	float: right;
+    background-color: #ccc;
+}
+
+.bt_wrap a:hover {
+	background-color: #000;
+	color: #fff;
+    border: none;
+}
+
+
+
+
+
 
 /* 보드 - 분류버튼 */
-.board_title ul {
-	display: flex;
-	padding: 20px 0 36px 0;
+.board_title div {
+    display: flex;
+    flex-direction: row;
+    gap: 5%; /* flex의 주변 여분 의 공간 */
+    width: 50%;
+}
+.board_title div.tag {
+    margin : 20px 0;
+}
+.board_title div > div{
+    width: 100%;
+    height: 100%;
+    text-align: center;
 }
 
-.board_title ul>li {
-	
-}
-
-.board_title ul li:last-child {
-	margin-right: 0;
-}
-
-.board_title ul>li a {
-	width: 100%;
-	height: 100%;
-	padding: 16px 50px;
-	background-color: #ccc;
-	border-radius: 10px;
-	margin-right: 10px;
-	text-align: center;
+.board_title div > div > a {
+    display: block;
+    padding: 14px 6px;
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    text-align: center;
 	font-size: 1rem;
 	font-weight: 900;
+    background-color: #ccc;
 }
 
-.board_title ul>li a:hover {
+
+.board_title div > div a:hover {
 	background-color: #000;
 	color: #fff;
 }
@@ -54,75 +88,39 @@
 	font-size: 1.2rem;
 }
 
-/* button - 공통요소========================  */
-.bt_wrap {
-	margin-top: 30px;
-	text-align: center;
-	font-size: 0;
-	overflow: hidden;
-}
-
-.bt_wrap>a {
-	display: inline-block;
-	min-width: 80px;
-	margin-left: 10px;
-	padding: 10px 40px;
-	border: 1px solid #ccc;
-	border-radius: 10px;
-	font-size: 1rem;
-	float: right;
-}
-
-.bt_wrap a:hover {
-	background-color: #000;
-	color: #fff;
-}
-
-/* .bt_wrap a:first-child {
-    margin-left: 0;
-} */
-.bt_wrap a.on {
-	background: #000;
-	color: #fff;
-}
 
 /* 보드 - 리스트 ======================= */
-.board_list {
-	/* 보드위에 */
-	
-}
 
 .board_list .title a:hover {
-	color: palevioletred;
+	color: #ccc;
 	font-weight: 800;
 }
 
 /* 게시판 - 라인 */
-.board_list>div {
+.board_list > div {
 	border-bottom: 1px solid #ccc;
 	font-size: 0rem;
 	background-color: #fff;
 }
 
-.board_list>div.top {
+.board_list > div.top {
 	background-color: #000;
 	color: #fff;
-	border-radius: 8px;
 }
 
-.board_list>div:last-child {
+.board_list > div:last-child {
 	border-bottom: 1px solid #ccc;
 }
 
 /* 게시판 간격 */
-.board_list>div>div {
+.board_list > div > div {
 	display: inline-block;
 	padding: 10px 0;
 	text-align: center;
 	font-size: 18px;
 }
 
-.board_list>div.top>div {
+.board_list > div.top > div {
 	font-weight: 600;
 }
 
@@ -132,7 +130,7 @@
 
 .board_list .title {
 	width: 60%;
-	text-align: left;
+	text-align: center;
 }
 
 .board_list .top .title {
@@ -343,19 +341,20 @@
 /* boardWrite 버튼  */
 
 .bt_wrap button {
-    display: inline-block;
-    min-width: 80px;
-    margin-left: 10px;
-    padding: 10px;
-    border-radius: 2px;
-    font-size: 1.4rem;
-    background-color: #ccc;
+   padding: 14px 60px;
+   border-radius: 2px;
+   font-size: 1rem;
+   border-radius: 10px;
 }
 .bt_wrap button:hover {
     cursor: pointer;
     background-color: #000;
     color: #fff;
     border: none;
+}
+
+.bt_wrap button:hover a{
+	color: #fff;
 }
 
 .bt_wrap button:first-child {

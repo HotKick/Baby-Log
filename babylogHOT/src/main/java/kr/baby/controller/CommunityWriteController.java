@@ -17,7 +17,6 @@ public class CommunityWriteController implements Controller {
 		
 		BabyMyBatisDAO dao = new BabyMyBatisDAO();
 		
-		int community_seq= Integer.parseInt(request.getParameter("community_seq"));
 		String mem_id= request.getParameter("mem_id");
 		String community_title= request.getParameter("community_title");
 		String community_content= request.getParameter("community_content");
@@ -27,7 +26,6 @@ public class CommunityWriteController implements Controller {
 		
 		CommunityVO vo = new CommunityVO();
 		
-		vo.setCommunity_seq(community_seq);
 		vo.setMem_id(mem_id);
 		vo.setCommunity_title(community_title);
 		vo.setCommunity_content(community_content);
