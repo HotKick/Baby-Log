@@ -23,6 +23,7 @@
 <script src="https://kit.fontawesome.com/e76461f593.js"
 	crossorigin="anonymous"></script>
 
+  
 
 </head>
 <body>
@@ -61,6 +62,9 @@
                     <label class="name" for="name">이름</label>
                     <input type="name" placeholder="name" class="input" id="name" name = "mem_name"/>
                   </div>
+                  <script>
+                  		console.log("아이디"+name)
+                 </script>
                   <!-- 닉네임 -->
                   <div class="input__block">
                     <label class="name" for="nickname">닉네임</label>
@@ -76,9 +80,9 @@
                     <label class="name" for="day">일</label>
                   </div>
                   <div class="birth_form" name = "mem_birth">
-                    <div class="year"><select name="yy" id="year"></select>년</div>
-                    <div class="month"><select name="mm" id="month"></select>월</div>
-                    <div class="day"><select name="dd" id="day"></select>일</div>
+                    <div class="year" name = "year"><select name="year" id="year"></select>년</div>
+                    <div class="month"><select name="month" id="month"></select>월</div>
+                    <div class="day"><select name="day" id="day"></select>일</div>
                   </div>
                 </div>
 
@@ -86,9 +90,9 @@
                 <div class="input__block">
                   <label class="name" for="gender">성별</label>
                   <div class="gender" name = "mem_gender">
-                    <div><input type="radio" id="gender1" name="gender"><label for="gender1">남자</label></div>
-                    <div><input type="radio" id="gender2" name="gender"><label for="gender2">여자</label></div>
-                    <div><input type="radio" id="gender3" name="gender"><label for="gender3">선택하지 않음</label></div>
+                    <div><input type="radio" id="gender1" name="mem_gender" value = "남자"><label for="gender1">남자</label></div>
+                    <div><input type="radio" id="gender2" name="mem_gender" value="여자"><label for="gender2">여자</label></div>
+                    <div><input type="radio" id="gender3" name="mem_gender" value="선택하지 않음"><label for="gender3">선택하지 않음</label></div>
                   </div>
 
 
@@ -96,9 +100,9 @@
                 <div class="input__block">
                   <label class="name" for="family">관계</label>
                   <div class="family" name = "mem_type">
-                    <div><input type="radio" id="family1" name="family"><label for="family1">엄마 ㅣ 아빠 </label></div>
-                    <div><input type="radio" id="family2" name="family"><label for="family2">이모 ㅣ 삼촌</label></div>
-                    <div><input type="radio" id="family3" name="family"><label for="family3">할머니 ㅣ 할아버지</label></div>
+                    <div><input type="radio" id="family1" name="mem_type" value = "엄마 ㅣ 아빠"><label for="family1">엄마 ㅣ 아빠 </label></div>
+                    <div><input type="radio" id="family2" name="mem_type" value = "이모 ㅣ 삼촌"><label for="family2">이모 ㅣ 삼촌</label></div>
+                    <div><input type="radio" id="family3" name="mem_type" value = "할머니 ㅣ 할아버지"><label for="family3">할머니 ㅣ 할아버지</label></div>
                   </div>
                 </div>
 
@@ -171,13 +175,13 @@
 		</div>
 	</footer>
 	
+
+  	
    <!-- script -->
 <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 <script src="${cpath}/js/slick.min.js"></script>
 <!-- 생년월일  -->
 <script src="${cpath}/js/birth.js"></script>
-  
-
   
   
   
