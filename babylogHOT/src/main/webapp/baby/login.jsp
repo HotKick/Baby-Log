@@ -38,7 +38,7 @@
                     <a href="main.html"></a>
                   </div>
                   <div class="item logo_title">
-                    <a href="main.html">BabyLog</a> </div>
+                    <a href="${cpath}/main.do">BabyLog</a> </div>
                 </div>
                 
                 <!-- Form -->
@@ -85,7 +85,7 @@
                     <a href="#" id="find_id">아이디 찾기</a>
                   </li>
                   <li>
-                    <a href="${cpath}signUp.html" id="signup">회원가입</a>
+                    <a href="${cpath}/signUp.do" id="signup">회원가입</a>
                   </li>
                 </ul>
                 
