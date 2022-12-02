@@ -12,6 +12,7 @@ import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 
+
 public class BabyMyBatisDAO {
 	private static SqlSessionFactory sqlSessionFactory;
 	// database연결 >> config.xml과 MyBatis API연결
@@ -95,6 +96,14 @@ public class BabyMyBatisDAO {
 	    return list;
 	}
 	
+	// 자유게시판 글 번호로 가져오기
+	public CommunityVO getCommunity_seq(int community_seq) {
+		SqlSession session = sqlSessionFactory.openSession();
+		CommunityVO vo = session.selectOne("getCommunity_seq",community_seq);
+		session.close();
+		return vo;
+	}
+	
 	// 자유게시판 글쓰기 메소드
 		public void insertFree(CommunityVO vo) {
 			SqlSession session = sqlSessionFactory.openSession();
@@ -160,9 +169,9 @@ public class BabyMyBatisDAO {
 			}
 			
 			// 정보게시판 조회수 증가 메소드
-			public void countInfo(int community_seq) {
+			public void countInfo(int community_cnt) {
 				SqlSession session = sqlSessionFactory.openSession();
-				session.update("countInfo",community_seq);
+				session.update("countInfo",community_cnt);
 				session.commit();
 				session.close();
 			}
@@ -209,9 +218,9 @@ public class BabyMyBatisDAO {
 				}
 				
 				// 거래게시판 조회수 증가 메소드
-				public void countTrade(int trade_seq) {
+				public void countTrade(int trade_cnt) {
 					SqlSession session = sqlSessionFactory.openSession();
-					session.update("countTrade",trade_seq);
+					session.update("countTrade",trade_cnt);
 					session.commit();
 					session.close();
 				}
@@ -232,6 +241,38 @@ public class BabyMyBatisDAO {
 					session.close();
 				}
 			
+				
+				// 일기 글쓰기 
+				public void insertDiary(DiaryVO vo) {
+					SqlSession session = sqlSessionFactory.openSession();
+					session.insert("insertDiary",vo);
+					session.commit();
+					session.close();
+				}
+				
+				// 일기게시판 글 번호로 가져오기
+				public DiaryVO getDiary_seq(int diary_seq) {
+					SqlSession session = sqlSessionFactory.openSession();
+					DiaryVO vo = session.selectOne("getDiary_seq",diary_seq);
+					session.close();
+					return vo;
+				}
+				
+				// 일기게시판 수정 메소드
+				public void updateDiary(DiaryVO vo) {
+					SqlSession session = sqlSessionFactory.openSession();
+					session.update("updateDiary",vo);
+					session.commit();
+					session.close();
+				}
+				
+				// 일기게시판 조회수 증가 메소드
+				public void countDiary(int diary_seq) {
+					SqlSession session = sqlSessionFactory.openSession();
+					session.update("countDiary",diary_seq);
+					session.commit();
+					session.close();
+				}
 	
 	
 	

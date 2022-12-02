@@ -1,3 +1,4 @@
+<%@page import="kr.baby.dao.CommunityVO"%>
 <%@page import="java.util.List"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
 	pageEncoding="UTF-8"%>
@@ -5,6 +6,12 @@
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
 
 <c:set var="cpath" value="${pageContext.request.contextPath}" />
+
+ <%
+   
+    CommunityVO vo = (CommunityVO)request.getAttribute("vo");
+    
+    %>
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -74,7 +81,7 @@
 							<dl>
 								<dt>제목</dt>
 								<dd>
-									<input type="text" placeholder="제목 입력" value="글 제목이 들어갑니다">
+									<input type="text" placeholder="제목 입력" name="title" value="${vo.community_title }">
 								</dd>
 							</dl>
 						</div>
@@ -82,7 +89,7 @@
 							<dl>
 								<dt>글쓴이</dt>
 								<dd>
-									<input type="text" placeholder="글쓴이 입력" value="김이름">
+									<input type="text" placeholder="글쓴이 입력" name="writer" value="${vo.mem_id }">
 								</dd>
 							</dl>
 							<dl>
@@ -93,15 +100,8 @@
 							</dl>
 						</div>
 						<div class="cont">
-							<textarea placeholder="내용 입력">
-                            글 내용이 들어갑니다.
-                            글 내용이 들어갑니다.
-                            글 내용이 들어갑니다.
-                            글 내용이 들어갑니다.
-                            글 내용이 들어갑니다.
-                            글 내용이 들어갑니다.
-                            글 내용이 들어갑니다.
-                            글 내용이 들어갑니다.
+							<textarea placeholder="내용 입력" name = "content">
+                          ${vo.community_content}
                             </textarea>
 						</div>
 					</div>

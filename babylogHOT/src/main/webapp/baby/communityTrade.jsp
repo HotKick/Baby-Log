@@ -84,7 +84,7 @@
 
 						<div>
 						<c:forEach var= "vo" items = "${list}">
-							<div class="num">${trade_seq}</div>
+							<div class="num">${vo.trade_seq}</div>
 							<div class="title">
 								<a href="news_view.html">${vo.trade_title}</a>
 							</div>

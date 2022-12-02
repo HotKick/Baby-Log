@@ -41,7 +41,7 @@
 	
 <!-- free 3. 자유 게시판 카운트업데이트  -->
 	<update id="countFree" parameterType="int">
-		update community set count = count+1 where community_seq = #{community_seq}
+		update community set community_cnt = community_cnt+1 where community_seq = #{community_seq}
 	</update>
 	
 <!-- free 4. 자유 게시판 글삭제  -->	
@@ -69,7 +69,7 @@
 	
 <!-- free 3. 정보 게시판 카운트업데이트  -->
 	<update id="countInfo" parameterType="int">
-		update community set count = count+1 where community_seq = #{community_seq}
+		update community set community_cnt = community_cnt+1 where community_seq = #{community_seq}
 	</update>
 	
 <!-- free 4. 정보 게시판 글삭제  -->	
@@ -88,24 +88,56 @@
 	order by trade_seq desc
 	</select>
 
-<!-- Trade 2. 정보 게시판 글쓰기  -->
+<!-- Trade 2. 거래 게시판 글쓰기  -->
 	<insert id="insertTrade" parameterType="kr.baby.dao.TradeVO">
 	insert into trade(trade_seq,trade_title,trade_content,trade_date,trade_file,trade_cnt,trade_type,mem_id)
 	values(trade_seq.nextval,#{trade_title},#{trade_content},#{trade_date},#{trade_file},#{trade_cnt},#{trade_type},#{mem_id})
 	</insert>
 	
-<!-- Trade 3. 정보 게시판 카운트업데이트  -->
+<!-- Trade 3. 거래 게시판 카운트업데이트  -->
 	<update id="countTrade" parameterType="int">
-	update trade set count = count+1 where trade_seq = #{trade_seq}
+	update trade set trade_cnt = trade_cnt+1 where trade_seq = #{trade_seq}
 	</update>
 	
-<!-- Trade 4. 정보 게시판 글삭제  -->	
+<!-- Trade 4. 거래 게시판 글삭제  -->	
 	<delete id="deleteTrade">
 	delete from trade where trade_seq=#{trade_seq}
 	</delete>
 	
-<!-- Trade 5. 정보 게시판 글수정  -->	
+<!-- Trade 5. 거래 게시판 글수정  -->	
 	<update id="updateTrade" parameterType="kr.baby.dao.TradeVO">
 	update trade set trade_title=#{trade_title},set trade_content=#{trade_content} where trade_seq = #{trade_seq}
 	</update>
+	
+
+<!-- Diary 1. 일기 게시판 전체 리스트  -->
+	<select id = "listDiary" resultType = "kr.baby.dao.DiaryVO">
+	select * from diary
+	order by diary_seq desc
+	</select>
+
+<!-- Diary 2. 일기 게시판 글쓰기  -->
+	<insert id="insertDiary" parameterType="kr.baby.dao.DiaryVO">
+	insert into diary(diary_seq,diary_title,diary_content,diary_date,diary_file,diary_cnt,diary_type,mem_id)
+	values(diary_seq.nextval,#{diary_title},#{diary_content},#{diary_date},#{diary_file},#{diary_cnt},#{diary_type},#{mem_id})
+	</insert>
+	
+<!-- Diary 3. 일기 게시판 카운트업데이트  -->
+	<update id="countDiary" parameterType="int">
+	update diary set diary_cnt = diary_cnt+1 where diary_seq = #{diary_seq}
+	</update>
+	
+<!-- Diary 4. 일기게시판 글삭제  -->	
+	<delete id="deleteDiary">
+	delete from diary where diary_seq=#{diary_seq}
+	</delete>
+	
+<!-- Diary 5. 일기 게시판 글수정  -->	
+	<update id="updateDiary" parameterType="kr.baby.dao.DiaryVO">
+	update diary set diary_title=#{diary_title},set diarye_content=#{diary_content} where diary_seq = #{diary_seq}
+	</update>
+	
+	
+	
+	
 </mapper>
