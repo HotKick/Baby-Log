@@ -133,7 +133,7 @@
                     <a href="#" id="find_id">아이디 찾기</a>
                   </li>
                   <li>
-                    <a href="${cpath}/login.do"" id="login">이미 가입하셨나요?</a>
+                    <a href="${cpath}/login.do" id="login">이미 가입하셨나요?</a>
                   </li>
                 </ul>
                 
