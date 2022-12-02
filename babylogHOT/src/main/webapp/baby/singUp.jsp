@@ -171,7 +171,11 @@
 		</div>
 	</footer>
   
-  
+ <!-- script -->
+<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="${cpath}/js/slick.min.js"></script>
+<!-- 생년월일  -->
+<script src="${cpath}/js/birth.js"></script>
   
 
 
