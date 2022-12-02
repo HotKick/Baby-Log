@@ -11,7 +11,7 @@
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>커뮤니티_정보게시판</title>
+<title>커뮤니티 - 글작성</title>
 
 <!-- style -->
 <link rel="stylesheet" href="${cpath}/css/reset.css">
@@ -27,13 +27,14 @@
 	crossorigin="anonymous"></script>
 
 
+
 </head>
 <body>
 	<header id="header">
 		<div class="container">
 			<div class="header_inner">
 				<div class="header_logo">
-				<a href="${cpath}/main.do">Baby LOG</a>
+					<a href="${cpath}/main.do">Baby LOG</a>
 				</div>
 				<nav class="header_menu">
 					<ul>
@@ -65,57 +66,45 @@
 		<div class="container">
 			<div class="board_wrap">
 				<div class="board_title">
-					<strong>정보게시판</strong>
-					<ul>
-						<li><a href="${cpath}/communityFree.do">자유게시판</a></li>
-						<li><a href="${cpath}/communityInfo.do">정보공유게시판</a></li>
-						<li><a href="${cpath}/communityTrade.do">중고거래게시판</a></li>
-					</ul>
+					<strong>중고거래 게시판</strong>
+					<p>중고 물품 거래를 위한 공간입니다!</p>
 				</div>
-				<div class="board_list_wrap">
-					<div class="board_list">
-						<div class="top">
-							<div class="num">번호</div>
-							<div class="title">제목</div>
-							<div class="writer">글쓴이</div>
-							<div class="date">작성일</div>
-							<div class="count">조회</div>
+				<div class="board_write_wrap">
+					<div class="board_write">
+						<div class="title">
+							<dl>
+								<dt>제목</dt>
+								<dd>
+									<input type="text" placeholder="제목 입력" name = "trade_title">
+								</dd>
+							</dl>
 						</div>
-						<!-- //table_heade -->
-
-						<div>
-						<c:forEach var= "vo" items = "${list}">
-							<div class="num">${vo.community_seq}</div>
-							<div class="title">
-								<a href="news_view.html">${vo.community_title}</a>
-							</div>
-							<div class="writer">${vo.mem_id}</div>
-							<div class="date">${vo.community_date}</div>
-							<div class="count">${vo.community_cnt}</div>
-							</c:forEach>
+						<div class="info">
+							<dl>
+								<dt>글쓴이</dt>
+								<dd>
+									<input type="text" placeholder="글쓴이 입력" name = "mem_id" value = "${mvo.mem_id}"/>
+								</dd>
+							</dl>
+							<dl>
+								<dt>비밀번호</dt>
+								<dd>
+									<input type="password" placeholder="비밀번호 입력">
+								</dd>
+							</dl>
 						</div>
-						<!-- //1행 -->
-
-
-
-					</div>
-					<!-- 페이지 넘버 -->
-					<div class="board_page">
-						<a href="#" class="bt first"></a> <a href="#" class="bt prev"></a>
-						<a href="#" class="num on">1</a> <a href="#" class="num">2</a> <a
-							href="#" class="num">3</a> <a href="#" class="num">4</a> <a
-							href="#" class="num">5</a> <a href="#" class="bt next">></a> <a
-							href="#" class="bt last">>></a>
+						<div class="cont">
+							<textarea placeholder="내용 입력" name = "trade_content"></textarea>
+						</div>
 					</div>
 					<div class="bt_wrap">
-						<a href="write.html" class="on">등록</a>
-						<!--<a href="#">수정</a>-->
+						<a href="view.html" class="on">등록</a> <a href="list.html">취소</a>
 					</div>
 				</div>
+
+				<!--  -->
 			</div>
-			<!--  -->
-		</div>
-		<!-- //container -->
+			<!-- //container -->
 	</section>
 
 
@@ -154,12 +143,7 @@
 		src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 	<script src="${cpath}/js/slick.min.js"></script>
 
-	<script>
-    $('table').DataTable();
 
-// See:
-// http://www.sitepoint.com/responsive-data-tables-comprehensive-list-solutions
-</script>
 
 
 </body>

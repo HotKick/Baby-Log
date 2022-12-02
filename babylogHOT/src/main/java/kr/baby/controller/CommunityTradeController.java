@@ -1,6 +1,7 @@
 package kr.baby.controller;
 
 import java.io.IOException;
+import java.util.List;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
@@ -16,24 +17,10 @@ public class CommunityTradeController implements Controller {
 			throws ServletException, IOException {
 		
 		BabyMyBatisDAO dao = new BabyMyBatisDAO();
+		List<TradeVO> list = dao.listTrade();
+		request.setAttribute("list", list);
 		
-		String mem_id= request.getParameter("mem_id");
-		String community_title= request.getParameter("community_title");
-		String community_content= request.getParameter("community_content");
-		String community_file= request.getParameter("community_file");
-		String community_date= request.getParameter("community_date");
-		
-		TradeVO vo = new TradeVO();
-		
-		vo.setMem_id(mem_id);
-		vo.setTrade_title(community_title);
-		vo.setTrade_content(community_content);
-		vo.setTrade_file(community_file);
-		vo.setTrade_date(community_date);
-		
-		dao.insertTrade(vo);
-		
-		return "redirect:/communityTrade.do";
+		return "communityTrade";
 	}
 
 }

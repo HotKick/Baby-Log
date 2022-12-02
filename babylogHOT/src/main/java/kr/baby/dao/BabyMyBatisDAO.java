@@ -12,6 +12,7 @@ import org.apache.ibatis.session.SqlSession;
 import org.apache.ibatis.session.SqlSessionFactory;
 import org.apache.ibatis.session.SqlSessionFactoryBuilder;
 
+
 public class BabyMyBatisDAO {
 	private static SqlSessionFactory sqlSessionFactory;
 	// database연결 >> config.xml과 MyBatis API연결
@@ -93,6 +94,14 @@ public class BabyMyBatisDAO {
 	    List<CommunityVO> list = session.selectList("listFree");
 	    session.close();
 	    return list;
+	}
+	
+	// 자유게시판 글 번호로 가져오기
+	public CommunityVO getCommunity_seq(int community_seq) {
+		SqlSession session = sqlSessionFactory.openSession();
+		CommunityVO vo = session.selectOne("getCommunity_seq",community_seq);
+		session.close();
+		return vo;
 	}
 	
 	// 자유게시판 글쓰기 메소드

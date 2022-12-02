@@ -5,6 +5,7 @@ import java.util.HashMap;
 
 import kr.baby.controller.CommunityDetailController;
 import kr.baby.controller.CommunityEditController;
+import kr.baby.controller.CommunityEditFormController;
 import kr.baby.controller.CommunityFreeController;
 import kr.baby.controller.CommunityInfoController;
 import kr.baby.controller.CommunityTradeController;
@@ -35,6 +36,7 @@ import kr.baby.controller.SignupFormController;
 		mappings.put("/communityFree.do",new CommunityFreeController());
 		mappings.put("/communityDetail.do",new CommunityDetailController());
 		mappings.put("/communityEdit.do",new CommunityEditController());
+		mappings.put("/communityEditForm.do",new CommunityEditFormController());
 		mappings.put("/communityInfo.do",new CommunityInfoController());
 		mappings.put("/communityTrade.do",new CommunityTradeController());
 		mappings.put("/communityWrite.do",new CommunityWriteController());
