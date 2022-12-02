@@ -40,7 +40,7 @@
                 </div>
                 
                 <!-- Form -->
-                <form  action="" method="post">
+                <form  action="${cpath}/signup.do" method="post">
                   <!-- 아이디 -->
                   <div class="input__block">
                      <label class="name" for="email">아이디</label>
