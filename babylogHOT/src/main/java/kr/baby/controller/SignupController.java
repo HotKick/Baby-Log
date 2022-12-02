@@ -58,7 +58,7 @@ public class SignupController implements Controller {
 			response.setContentType("text/html; charset=UTF-8");
 			PrintWriter writer = response.getWriter();
 			writer.println("<script>alert('회원가입완료되었습니다.');"
-					+ "location.href='MainPage.do';</script>");
+					+ "location.href='main.do';</script>");
 			writer.flush();
 
 		return null;
