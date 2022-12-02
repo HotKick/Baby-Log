@@ -66,11 +66,11 @@
 			<div class="board_wrap">
 				<div class="board_title">
 					<strong>정보게시판</strong>
-					<ul>
-						<li><a href="${cpath}/communityFree.do">자유게시판</a></li>
-						<li><a href="${cpath}/communityInfo.do">정보공유게시판</a></li>
-						<li><a href="${cpath}/communityTrade.do">중고거래게시판</a></li>
-					</ul>
+					<div class="tag">
+                        <div><a href="${cpath}/communityFree.html" class="free">자유게시판</a></div>
+                        <div><a href="${cpath}/communityInfo.html" class="info">정보게시판</a></div>
+                        <div><a href="${cpath}/communityTrade.html" class="trade">중고게시판</a></div>
+                    </div>
 				</div>
 				<div class="board_list_wrap">
 					<div class="board_list">
@@ -110,9 +110,8 @@
 							href="#" class="bt last">>></a>
 					</div>
 					<div class="bt_wrap">
-						<a href="write.html" class="on">등록</a>
-						<!--<a href="#">수정</a>-->
-					</div>
+                        <button><a href="${cpath}/communityWriteForm.do">등록</a></button>
+                    </div>
 				</div>
 			</div>
 			<!--  -->

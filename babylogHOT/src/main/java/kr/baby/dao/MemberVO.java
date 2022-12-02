@@ -22,8 +22,8 @@ public class MemberVO {
 	}
 
 	public MemberVO(String mem_id, String mem_pw, String mem_name, String mem_nick, String mem_gender, String mem_birth,
-			String mem_tel, String mem_joindate, String mem_type, String mem_prof) {
-		super();
+			String mem_tel, String mem_joindate, String mem_type) {
+	
 		this.mem_id = mem_id;
 		this.mem_pw = mem_pw;
 		this.mem_name = mem_name;
@@ -33,7 +33,6 @@ public class MemberVO {
 		this.mem_tel = mem_tel;
 		this.mem_joindate = mem_joindate;
 		this.mem_type = mem_type;
-		this.mem_prof = mem_prof;
 	}
 
 	public String getMem_id() {
@@ -76,6 +75,7 @@ public class MemberVO {
 		this.mem_gender = mem_gender;
 	}
 
+	
 	public String getMem_birth() {
 		return mem_birth;
 	}
@@ -116,12 +116,6 @@ public class MemberVO {
 		this.mem_prof = mem_prof;
 	}
 
-	@Override
-	public String toString() {
-		return "MemberVO [mem_id=" + mem_id + ", mem_pw=" + mem_pw + ", mem_name=" + mem_name + ", mem_nick=" + mem_nick
-				+ ", mem_gender=" + mem_gender + ", mem_birth=" + mem_birth + ", mem_tel=" + mem_tel + ", mem_joindate="
-				+ mem_joindate + ", mem_type=" + mem_type + ", mem_prof=" + mem_prof + "]";
-	}
-	  
+
 	
 }

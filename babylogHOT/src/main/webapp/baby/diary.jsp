@@ -79,7 +79,7 @@
 					</ul>
 				</div>
 				<button>
-					<a href="#">글쓰기</a>
+					<a href="${cpath}/diaryWrite.do">글쓰기</a>
 				</button>
 			</div>
 		</section>

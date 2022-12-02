@@ -18,6 +18,7 @@
 <link rel="stylesheet" href="${cpath}/css/common.css">
 <link rel="stylesheet" href="${cpath}/css/community.css">
 
+
 <!-- 슬릭 -->
 <link rel="stylesheet" type="text/css" href="${cpath}/css/slick.css" />
 <link rel="stylesheet" type="text/css" href="${cpath}/css/slick-theme.css" />
@@ -95,13 +96,13 @@
 							내용이 들어갑니다<br> 글 내용이 들어갑니다
 						</div>
 					</div>
-					<div class="bt_wrap">
-						<a href="cm_free.html" class="on">목록</a> <a href="edit.html">수정</a>
-					</div>
+					 <div class="bt_wrap">
+                            <a href="${cpath}/communityFree.html" class="on">목록</a>
+                            <a href="${cpath}/communityEdit.html">수정</a>
+                        </div>
 				</div>
 			</div> 
 
-			<!--  -->
 		</div>
 		<!-- //container -->
 	</section>

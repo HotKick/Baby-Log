@@ -61,14 +61,14 @@
 
 
 		<!-- //게시판 영역 -->
-	</main>
+</main>
 	
-	<section id="board">
+<form action="">
 
 <div class="container">
     <div class="board_wrap">
         <div class="board_title">
-            <strong>글쓰기</strong>
+            <strong>글쓰 게시판</strong>
             <p>게시판 선택 후 글쓰기 작성 부탁드립니다.</p>
         </div>
         <!-- // board title  -->
@@ -113,7 +113,7 @@
     </div>
 </div>
 <!-- //container -->
-</section>
+</form>
 <!-- //board -->
 
 
