@@ -7,8 +7,9 @@
 
 	<!-- 회원가입시 인서트 -->
 	<insert id="signup" parameterType="kr.baby.dao.MemberVO" useGeneratedKeys="true">
-	 insert into member(mem_id, mem_pw, mem_name, mem_nick, mem_birth, mem_gender, mem_type, mem_tel, mem_prof, mem_joindate)
-	  values( #{mem_id},#{mem_pw},#{mem_name},#{mem_nick},#{mem_birth},#{mem_gender},#{mem_type},#{mem_tel}, #{mem_prof}, sysdate) <!--  ? >> 파라메터 매겨변수를 #{}로 표시-->
+	 insert into 
+	 member(mem_id, mem_pw, mem_name, mem_nick, mem_birth, mem_gender, mem_type, mem_tel, mem_prof, mem_joindate)
+	values( #{mem_id},#{mem_pw},#{mem_name},#{mem_nick},#{mem_birth},#{mem_gender},#{mem_type},#{mem_tel}, #{mem_prof}, sysdate) <!--  ? >> 파라메터 매겨변수를 #{}로 표시-->
 	</insert>
 	
 	
