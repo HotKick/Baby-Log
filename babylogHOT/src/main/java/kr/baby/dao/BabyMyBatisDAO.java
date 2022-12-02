@@ -250,6 +250,21 @@ public class BabyMyBatisDAO {
 					session.close();
 				}
 				
+				// 일기게시판 글 번호로 가져오기
+				public DiaryVO getDiary_seq(int diary_seq) {
+					SqlSession session = sqlSessionFactory.openSession();
+					DiaryVO vo = session.selectOne("getDiary_seq",diary_seq);
+					session.close();
+					return vo;
+				}
+				
+				// 일기게시판 수정 메소드
+				public void updateDiary(DiaryVO vo) {
+					SqlSession session = sqlSessionFactory.openSession();
+					session.update("updateDiary",vo);
+					session.commit();
+					session.close();
+				}
 				
 	
 	
