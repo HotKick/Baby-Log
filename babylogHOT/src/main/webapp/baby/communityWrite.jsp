@@ -67,7 +67,7 @@
 			<div class="board_wrap">
 				<div class="board_title">
 					<strong>자유게시판</strong>
-					<p>공지사항을 빠르고 정확하게 안내해드립니다.</p>
+					<p>자유로운 대화 공간입니다!</p>
 				</div>
 				<div class="board_write_wrap">
 					<div class="board_write">
@@ -75,7 +75,7 @@
 							<dl>
 								<dt>제목</dt>
 								<dd>
-									<input type="text" placeholder="제목 입력">
+									<input type="text" placeholder="제목 입력" name = "community_title">
 								</dd>
 							</dl>
 						</div>
@@ -83,7 +83,7 @@
 							<dl>
 								<dt>글쓴이</dt>
 								<dd>
-									<input type="text" placeholder="글쓴이 입력">
+									<input type="text" placeholder="글쓴이 입력" name = "mem_id" value = "${mvo.mem_id}"/>
 								</dd>
 							</dl>
 							<dl>
@@ -94,7 +94,7 @@
 							</dl>
 						</div>
 						<div class="cont">
-							<textarea placeholder="내용 입력"></textarea>
+							<textarea placeholder="내용 입력" name = "community_content"></textarea>
 						</div>
 					</div>
 					<div class="bt_wrap">
