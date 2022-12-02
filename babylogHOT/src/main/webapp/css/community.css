@@ -341,11 +341,6 @@
 
 
 /* 버튼  */
-.bt_wrap {
-    margin-top: 30px;
-    text-align: center;
-    font-size: 0;
-}
 
 .bt_wrap button {
     display: inline-block;
