@@ -121,9 +121,9 @@ public class BabyMyBatisDAO {
 		}
 		
 		// 자유게시판 조회수 증가 메소드
-		public void countFree(int community_cnt) {
+		public void countFree(int community_seq) {
 			SqlSession session = sqlSessionFactory.openSession();
-			session.update("countFree",community_cnt);
+			session.update("countFree",community_seq);
 			session.commit();
 			session.close();
 		}
@@ -266,6 +266,13 @@ public class BabyMyBatisDAO {
 					session.close();
 				}
 				
+				// 일기게시판 조회수 증가 메소드
+				public void countDiary(int diary_seq) {
+					SqlSession session = sqlSessionFactory.openSession();
+					session.update("countDiary",diary_seq);
+					session.commit();
+					session.close();
+				}
 	
 	
 	
