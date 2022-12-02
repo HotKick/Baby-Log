@@ -21,6 +21,8 @@ import kr.baby.controller.NewsGovController;
 import kr.baby.controller.ShopAlbumController;
 import kr.baby.controller.ShopController;
 import kr.baby.controller.ShopDiaryController;
+import kr.baby.controller.SignupController;
+import kr.baby.controller.SignupFormController;
 
 
 	public class HandlerMapping{
@@ -45,6 +47,9 @@ import kr.baby.controller.ShopDiaryController;
 		mappings.put("/shop.do",new ShopController());
 		mappings.put("/shopAlbum.do",new ShopAlbumController());
 		mappings.put("/shopDiary.do",new ShopDiaryController());
+		mappings.put("/signupform.do", new SignupFormController());
+		mappings.put("/signup.do",new SignupController());
+		
 		
 		
 	}
