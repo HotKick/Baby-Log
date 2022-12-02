@@ -83,7 +83,8 @@
 						<!-- //table_heade -->
 
 						<div>
-						<c:forEach var= "vo" items = "${list}">
+						<c:forEach var= "vo" items = "${list}" begin="1" end="10" step="1" varStatus="status">
+						<c:if test = "${vo.community_type eq '03' }">
 							<div class="num">${vo.trade_seq}</div>
 							<div class="title">
 								<a href="news_view.html">${vo.trade_title}</a>
@@ -91,6 +92,7 @@
 							<div class="writer">${vo.trade_id}</div>
 							<div class="date">${vo.trade_date}</div>
 							<div class="count">${vo.trade_cnt}</div>
+							</c:if>
 							</c:forEach>
 						</div>
 						<!-- //1행 -->

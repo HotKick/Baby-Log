@@ -99,7 +99,7 @@
 						<a href="cm_free.html" class="on">목록</a> <a href="edit.html">수정</a>
 					</div>
 				</div>
-			</div>
+			</div> 
 
 			<!--  -->
 		</div>
