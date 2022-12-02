@@ -8,9 +8,6 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 
-import com.oreilly.servlet.MultipartRequest;
-import com.oreilly.servlet.multipart.DefaultFileRenamePolicy;
-
 import kr.baby.dao.BabyMyBatisDAO;
 import kr.baby.dao.MemberVO;
 
@@ -23,26 +20,15 @@ public class SignupController implements Controller {
 	  request.setCharacterEncoding("UTF-8");
 	  BabyMyBatisDAO dao = new BabyMyBatisDAO();
 	 
-	  String realFolder = request.getServletContext().getRealPath("/img"); 
-	  System.out.println("실제폴더"+realFolder);
-	  
-	  int maxSize = 5*1024*1024;
-	  String encoding = "UTF-8";
-	  DefaultFileRenamePolicy policy = new DefaultFileRenamePolicy();
-	  
-	  MultipartRequest multi = new MultipartRequest(request,realFolder,maxSize,encoding,policy);
-		
-		
-		   String mem_id = multi.getParameter("mem_id");
-		   String mem_pw = multi.getParameter("mem_pw");
-		   String mem_name = multi.getParameter("mem_name");
-		   String mem_nick = multi.getParameter("mem_nick");
-		   String mem_gender = multi.getParameter("mem_gender");
-		   String mem_birth = multi.getParameter("mem_birth");
-		   String mem_tel = multi.getParameter("mem_tel");
-		   String mem_type = multi.getParameter("mem_type");
-		   String mem_prof = multi.getFilesystemName("mem_prof");
-		  
+		   String mem_id = request.getParameter("mem_id");
+		   String mem_pw = request.getParameter("mem_pw");
+		   String mem_name = request.getParameter("mem_name");
+		   String mem_nick = request.getParameter("mem_nick");
+		   String mem_gender = request.getParameter("mem_gender");
+		   String mem_birth = request.getParameter("mem_birth");
+		   String mem_tel = request.getParameter("mem_tel");
+		   String mem_type = request.getParameter("mem_type");
+
 		   MemberVO vo = new MemberVO();
 		   
 		   vo.setMem_id(mem_id);
@@ -53,10 +39,8 @@ public class SignupController implements Controller {
 		   vo.setMem_birth(mem_birth);
 		   vo.setMem_tel(mem_tel);
 		   vo.setMem_type(mem_type);
-		   vo.setMem_prof(mem_prof);
 		   
 		   //확인용 
-		   System.out.println("파일" + mem_prof);
 		   System.out.println("닉네임" +mem_nick);
 		   
 		   dao.signup(vo);
