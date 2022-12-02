@@ -43,8 +43,8 @@
                 <form  action="${cpath}/signup.do" method="post">
                   <!-- 아이디 -->
                   <div class="input__block">
-                     <label class="name" for="email">아이디</label>
-                     <input type="email" placeholder="Email" class="input" id="email"/>
+                     <label class="name" for="id">아이디</label>
+                     <input type="text" placeholder="id" class="input" id="id"/>
                   </div>
                   <!-- 비밀번호 -->
                   <div class="input__block">
