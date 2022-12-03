@@ -28,7 +28,8 @@
 
 </head>
 <body>
-
+	<%@ include file="header.jsp" %>
+	
 <!-- //게시판 영역 -->
 </main>
 	
