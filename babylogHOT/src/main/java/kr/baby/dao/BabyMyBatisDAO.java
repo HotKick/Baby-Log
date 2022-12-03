@@ -241,6 +241,13 @@ public class BabyMyBatisDAO {
 					session.close();
 				}
 			
+				// 일기 전체 리스트 조회 
+				public List<DiaryVO> listDiary(){
+				    SqlSession session = sqlSessionFactory.openSession();
+				    List<DiaryVO> list = session.selectList("listDiary");
+				    session.close();
+				    return list;
+				}
 				
 				// 일기 글쓰기 
 				public void insertDiary(DiaryVO vo) {

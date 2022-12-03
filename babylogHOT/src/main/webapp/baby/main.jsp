@@ -51,11 +51,18 @@
 						<li><a href="${cpath}/newsGov.do">뉴스</a></li>
 					</ul>
 				</nav>
+				
 				<div class="header_member">
+				<c:if test="${empty mvo}">
 					<ul>
 						<li><a href="${cpath}/loginform.do">로그인</a></li>
 						<li><a href="${cpath}/signupform.do">회원가입</a></li>
 					</ul>
+				</c:if>
+				<c:if test="${!empty mvo}">
+					${mvo.user_id}님 환영합니다.
+					<li><a href="#">로그아웃</a></li>
+					</c:if>
 				</div>
 			</div>
 			<!-- //header_inner -->

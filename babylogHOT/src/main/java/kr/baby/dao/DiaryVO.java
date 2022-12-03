@@ -19,21 +19,6 @@ public class DiaryVO {
 	}
 
 
-	public DiaryVO(int diary_seq, String diary_title, String diary_content, String diary_date, String diary_file,
-			String diary_cnt, String diary_emo, String diary_with, String mem_id) {
-		super();
-		this.diary_seq = diary_seq;
-		this.diary_title = diary_title;
-		this.diary_content = diary_content;
-		this.diary_date = diary_date;
-		this.diary_file = diary_file;
-		this.diary_cnt = diary_cnt;
-		this.diary_emo = diary_emo;
-		this.diary_with = diary_with;
-		this.mem_id = mem_id;
-	}
-
-
 	public int getDiary_seq() {
 		return diary_seq;
 	}
@@ -113,7 +98,6 @@ public class DiaryVO {
 		this.diary_with = diary_with;
 	}
 
-
 	public String getMem_id() {
 		return mem_id;
 	}
@@ -124,12 +108,19 @@ public class DiaryVO {
 	}
 
 
-	@Override
-	public String toString() {
-		return "DiaryVO [diary_seq=" + diary_seq + ", diary_title=" + diary_title + ", diary_content=" + diary_content
-				+ ", diary_date=" + diary_date + ", diary_file=" + diary_file + ", diary_cnt=" + diary_cnt
-				+ ", diary_emo=" + diary_emo + ", diary_with=" + diary_with + ", mem_id=" + mem_id + "]";
+	public DiaryVO(int diary_seq, String diary_title, String diary_content, String diary_date, String diary_file,
+			String diary_cnt, String diary_emo, String diary_with, String diary_type, String mem_id) {
+		super();
+		this.diary_seq = diary_seq;
+		this.diary_title = diary_title;
+		this.diary_content = diary_content;
+		this.diary_date = diary_date;
+		this.diary_file = diary_file;
+		this.diary_cnt = diary_cnt;
+		this.diary_emo = diary_emo;
+		this.diary_with = diary_with;
+		this.mem_id = mem_id;
 	}
-
 	
+
 }

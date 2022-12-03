@@ -36,7 +36,6 @@ public class LoginController implements Controller {
 				
 				if(mvo!=null) {
 					HttpSession session = request.getSession();
-					
 					//객체 바인딩
 					session.setAttribute("loginVO",mvo);
 				}
