@@ -85,7 +85,7 @@
                     <a href="#" id="find_id">아이디 찾기</a>
                   </li>
                   <li>
-                    <a href="${cpath}/signup.do" id="signup">회원가입</a>
+                    <a href="${cpath}/signupform.do" id="signup">회원가입</a>
                   </li>
                 </ul>
                 
