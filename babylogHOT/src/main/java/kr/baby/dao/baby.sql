@@ -1,3 +1,0 @@
-INSERT INTO community (community_title, community_content, community_date, community_file, community_cnt, community_type, mem_id) VALUES ('community_title 08', 'community_content 08', 'community_date 08', 'community_file 08', 08, '01', 'mem_id 0001');
-INSERT INTO community (community_title, community_content, community_date, community_file, community_cnt, community_type, mem_id) VALUES ('community_title 09', 'community_content 09', 'community_date 09', 'community_file 09', 09, '02', 'mem_id 0002');
-INSERT INTO community (community_title, community_content, community_date, community_file, community_cnt, community_type, mem_id) VALUES ('community_title 10', 'community_content 10', 'community_date 10', 'community_file 10', 10, '03', 'mem_id 0003');

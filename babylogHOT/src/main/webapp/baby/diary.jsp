@@ -62,81 +62,18 @@
 
 		<section id="content">
 			<div class="content_inner">
-			<c:forEach var = "vo" items = "${list }">
+		 <c:forEach var = "vo" items = "${list }"> 
 				<div class="cont1">
 					<ul class="cont_info">
-						<li><a href="#"><span>${vo.diary_file }</span></a></li>
-						<li><a href="${cpath }/diaryDetail.do?diary_seq=${vo.diary_seq}"><span>${vo.diary_title }</span></a></li>
-						<li><a href="#"><span>${vo.mem_id }</span></a></li>
+						<li><a href="#"><span>사진칸</span></a></li>
+						<li><a href="${cpath }/diaryDetail.do?diary_seq=${vo.diary_seq}"><span>${vo.diary_title}</span></a></li>
+						<li><a href="#"><span>${vo.mem_id}</span></a></li>
 						<li><a href="#"><span>하트</span></a></li>
 					</ul>
 				</div>
-				</c:forEach>
-				<div class="cont2">
-					<ul class="cont_info">
-						<li><a href="#"><span>프로필이미지</span></a></li>
-						<li><a href="#"><span>글제목</span></a></li>
-						<li><a href="#"><span>아이디</span></a></li>
-						<li><a href="#"><span>하트</span></a></li>
-					</ul>
+				</c:forEach> 
 				</div>
-				<div class="cont3">
-					<ul class="cont_info">
-						<li><a href="#"><span>프로필이미지</span></a></li>
-						<li><a href="#"><span>글제목</span></a></li>
-						<li><a href="#"><span>아이디</span></a></li>
-						<li><a href="#"><span>하트</span></a></li>
-					</ul>
-				</div>
-				<div class="cont4">
-					<ul class="cont_info">
-						<li><a href="#"><span>프로필이미지</span></a></li>
-						<li><a href="#"><span>글제목</span></a></li>
-						<li><a href="#"><span>아이디</span></a></li>
-						<li><a href="#"><span>하트</span></a></li>
-					</ul>
-				</div>
-				<div class="cont5">
-					<ul class="cont_info">
-						<li><a href="#"><span>프로필이미지</span></a></li>
-						<li><a href="#"><span>글제목</span></a></li>
-						<li><a href="#"><span>아이디</span></a></li>
-						<li><a href="#"><span>하트</span></a></li>
-					</ul>
-				</div>
-				<div class="cont6">
-					<ul class="cont_info">
-						<li><a href="#"><span>프로필이미지</span></a></li>
-						<li><a href="#"><span>글제목</span></a></li>
-						<li><a href="#"><span>아이디</span></a></li>
-						<li><a href="#"><span>하트</span></a></li>
-					</ul>
-				</div>
-				<div class="cont7">
-					<ul class="cont_info">
-						<li><a href="#"><span>프로필이미지</span></a></li>
-						<li><a href="#"><span>글제목</span></a></li>
-						<li><a href="#"><span>아이디</span></a></li>
-						<li><a href="#"><span>하트</span></a></li>
-					</ul>
-				</div>
-				<div class="cont8">
-					<ul class="cont_info">
-						<li><a href="#"><span>프로필이미지</span></a></li>
-						<li><a href="#"><span>글제목</span></a></li>
-						<li><a href="#"><span>아이디</span></a></li>
-						<li><a href="#"><span>하트</span></a></li>
-					</ul>
-				</div>
-				<div class="cont9">
-					<ul class="cont_info">
-						<li><a href="#"><span>프로필이미지</span></a></li>
-						<li><a href="#"><span>글제목</span></a></li>
-						<li><a href="#"><span>아이디</span></a></li>
-						<li><a href="#"><span>하트</span></a></li>
-					</ul>
-				</div>
-			</div>
+				
 		</section>
 
 
