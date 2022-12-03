@@ -60,7 +60,7 @@
 					</ul>
 				</c:if>
 				<c:if test="${!empty mvo}">
-					${mvo.user_id}님 환영합니다.
+					${mvo.mem_id}님 환영합니다.
 					<li><a href="#">로그아웃</a></li>
 					</c:if>
 				</div>
