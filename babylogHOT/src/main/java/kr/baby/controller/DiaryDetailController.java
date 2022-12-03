@@ -16,10 +16,11 @@ public class DiaryDetailController implements Controller {
 			throws ServletException, IOException {
 		
 		BabyMyBatisDAO dao = new BabyMyBatisDAO();
+		DiaryVO vo = new DiaryVO();
 		int diary_seq = Integer.parseInt(request.getParameter("diary_seq"));
-		DiaryVO vo=dao.getDiary_seq(diary_seq);
+		vo=dao.getDiary_seq(diary_seq);
 		request.setAttribute("vo", vo);
-		
+		System.out.println("다이어리번호" + diary_seq);
 		return "test";
 	
 	

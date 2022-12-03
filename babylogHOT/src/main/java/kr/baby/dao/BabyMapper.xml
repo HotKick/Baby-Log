@@ -139,10 +139,13 @@
 	
 <!-- Diary 5. 일기 게시판 글수정  -->	
 	<update id="updateDiary" parameterType="kr.baby.dao.DiaryVO">
-	update diary set diary_title=#{diary_title},set diarye_content=#{diary_content} where diary_seq = #{diary_seq}
+	update diary set diary_title=#{diary_title},set diary_content=#{diary_content} where diary_seq = #{diary_seq}
 	</update>
 	
-	
+	<!--Diary 6. 일기 게시판 상세 페이지   -->
+	<select id = "getDiary_seq" parameterType = "int" resultType="kr.baby.dao.DiaryVO">
+	select * from diary where diary_seq=#{diary_seq}
+	</select>
 	
 	
 </mapper>
