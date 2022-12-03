@@ -41,7 +41,7 @@
                 </div>
                 
                 <!-- Form -->
-                <form  action="${cpath}/signup.do" method="post">
+                <form action="${cpath}/signup.do" method="post">
                   <!-- 아이디 -->
                   <div class="input__block">
                      <label class="name" for="id">이메일</label>
