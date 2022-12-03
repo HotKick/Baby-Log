@@ -273,6 +273,16 @@ public class BabyMyBatisDAO {
 					session.commit();
 					session.close();
 				}
+				
+				// 로그인 메소드
+	
+				public MemberVO memberLogin(MemberVO vo) {
+					SqlSession session = sqlSessionFactory.openSession();
+					MemberVO mvo = session.selectOne("memberLogin", vo);
+					session.close();
+					return mvo;
+				}
+
 	
 	
 	
@@ -286,13 +296,6 @@ public class BabyMyBatisDAO {
 //	}
 //
 //
-//	// 로그인
-//	public MemberVO memberLogin(MemberVO vo) {
-//		SqlSession session = sqlSessionFactory.openSession();
-//		MemberVO mvo = session.selectOne("memberLogin", vo);
-//		session.close();
-//		return mvo;
-//	}
 
 	
 	
