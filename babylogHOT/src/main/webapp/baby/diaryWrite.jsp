@@ -1,18 +1,31 @@
+<%@page import="java.util.List"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
-    pageEncoding="UTF-8"%>
-
-
+	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
 
-<c:set var="cpath" value="${pageContext.request.contextPath}" />  
-    
+<c:set var="cpath" value="${pageContext.request.contextPath}" />
     
 <!DOCTYPE html>
 <html>
 <head>
 <meta charset="UTF-8">
 <title>다이어리 - 작성 </title>
+<!-- style -->
+<link rel="stylesheet" href="${cpath}/css/reset.css">
+<link rel="stylesheet" href="${cpath}/css/common.css">
+<link rel="stylesheet" href="${cpath}/css/diary.css">
+<link rel="stylesheet" href="${cpath}/css/diaryWrite.css">
+
+<!-- 슬릭 -->
+<link rel="stylesheet" type="text/css" href="${cpath}/css/slick.css" />
+<link rel="stylesheet" type="text/css" href="${cpath}/css/slick-theme.css" />
+
+<!-- 웹아이콘 -->
+<script src="https://kit.fontawesome.com/e76461f593.js"
+	crossorigin="anonymous"></script>
+
+
 </head>
 <body>
 

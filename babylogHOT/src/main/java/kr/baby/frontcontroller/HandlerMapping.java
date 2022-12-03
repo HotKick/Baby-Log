@@ -19,6 +19,7 @@ import kr.baby.controller.DiaryEditFormController;
 import kr.baby.controller.DiaryWriteController;
 import kr.baby.controller.DiaryWriteFormController;
 import kr.baby.controller.LoginController;
+import kr.baby.controller.LoginFormController;
 import kr.baby.controller.MainController;
 import kr.baby.controller.MypageController;
 import kr.baby.controller.NewsCityController;
@@ -38,6 +39,7 @@ import kr.baby.controller.SignupFormController;
 
 		mappings.put("/main.do",new MainController());
 		mappings.put("/login.do",new LoginController());
+		mappings.put("/loginform.do", new LoginFormController());
 		mappings.put("/communityFree.do",new CommunityFreeController());
 		mappings.put("/communityDetail.do",new CommunityDetailController());
 		mappings.put("/communityEdit.do",new CommunityEditController());

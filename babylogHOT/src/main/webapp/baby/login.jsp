@@ -42,18 +42,14 @@
                 </div>
                 
                 <!-- Form -->
-                <form  action="" method="post">
+                <form  action="${cpath}/login.do" method="post">
                   <!-- 이메일 -->
                   <div class="first-input input__block first-input__block">
-                     <input type="email" placeholder="Email" class="input" id="email"   />
+                     <input type="email" placeholder="Email" class="input" id="mem_id" name = "mem_id"  />
                   </div>
                   <!-- 비밀번호 -->
                   <div class="input__block">
-                     <input type="password" placeholder="Password" class="input" id="password"    />
-                  </div>
-                  <!-- 비밀번호 재확인 -->
-                  <div class="input__block">
-                     <input type="password" placeholder="Repeat password" class="input repeat__password" id="repeat__password"    />
+                     <input type="password" placeholder="Password" class="input" id="mem_pw" name="mem_pw" />
                   </div>
                   <!-- 로그인 버튼 -->
                   <button class="login_btn">
