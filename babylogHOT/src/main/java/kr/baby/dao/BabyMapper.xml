@@ -120,14 +120,17 @@
 
 <!-- Diary 2. 일기 게시판 글쓰기  -->
 	<insert id="insertDiary" parameterType="kr.baby.dao.DiaryVO">
-	insert into diary(diary_seq,diary_title,diary_content,diary_date,diary_file,diary_cnt,diary_type,mem_id)
-	values(diary_seq.nextval,#{diary_title},#{diary_content},#{diary_date},#{diary_file},#{diary_cnt},#{diary_type},#{mem_id})
+	insert into diary(diary_seq,diary_title,diary_content,diary_date,diary_file,mem_id)
+	values(diary_seq.nextval,#{diary_title},#{diary_content},sysdate,#{diary_file,jdbcType=VARCHAR},#{mem_id})
 	</insert>
 	
+
 <!-- Diary 3. 일기 게시판 카운트업데이트  -->
 	<update id="countDiary" parameterType="int">
 	update diary set diary_cnt = diary_cnt+1 where diary_seq = #{diary_seq}
 	</update>
+	
+
 	
 <!-- Diary 4. 일기게시판 글삭제  -->	
 	<delete id="deleteDiary">

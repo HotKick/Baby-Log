@@ -31,14 +31,12 @@ public class LoginController implements Controller {
 				
 				BabyMyBatisDAO dao = new BabyMyBatisDAO();
 				MemberVO mvo = dao.memberLogin(vo);
+				System.out.println(vo);
 						
-		
-				
 				if(mvo!=null) {
 					HttpSession session = request.getSession();
-					
 					//객체 바인딩
-					session.setAttribute("loginVO",mvo);
+					session.setAttribute("mvo",mvo);
 				}
 				return "redirect:/main.do";
 		

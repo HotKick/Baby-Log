@@ -32,7 +32,7 @@
 <!-- //게시판 영역 -->
 </main>
 	
-<form action="">
+<form  action="${cpath}/diaryWrite.do" method="post" enctype = "multipart/form-data">
 
 <div class="container">
     <div class="board_wrap">
@@ -46,7 +46,7 @@
                 <dl>
                     <dt>목록</dt>
                     <dd>
-                        <select name='community_type'>
+                        <select name='diary_type'>
                             <option selected>태그</option>
                             <option value='01'>미정</option>
                             <option value='02'>미정</option>
@@ -56,23 +56,23 @@
                 </dl>
                 <dl>
                     <dt>제목</dt>
-                    <dd><input type="text" placeholder="제목 입력" name ="community_title"></dd>
+                    <dd><input type="text" placeholder="제목 입력" name ="diary_title"></dd>
                 </dl>
             </div>
             <div class="info">
                 <dl>
                     <dt>글쓴이</dt>
-                    <dd><input type="text" name = "mem_id" value = "${mvo.mem_id }" readonly/></dd>
+                    <dd><input type="text" name = "mem_id" value = "${mvo.mem_id}" readonly/></dd>
                 </dl>
                 <dl>
                     <dt>첨부파일</dt>
-                    <dd><input type="file" name = "community_file"></dd>
+                    <dd><input type="file" name = "diary_file"></dd>
                 </dl>
 
                 
             </div>
             <div class="cont">
-                <textarea placeholder="내용 입력" name = "community_content"></textarea>
+                <textarea placeholder="내용 입력" name = "diary_content"></textarea>
             </div>
         </div>
         <div class="bt_wrap">
