@@ -38,7 +38,7 @@
 		<!-- //게시판 영역 -->
 </main>
 	
-<form action="">
+<form action= "${cpath}/communityWrite.do" method="post" enctype = "multipart/form-data">
 
 <div class="container">
     <div class="board_wrap">

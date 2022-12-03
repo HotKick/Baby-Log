@@ -3,8 +3,11 @@
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
+<%@page import="kr.baby.dao.CommunityVO" %>
 
 <c:set var="cpath" value="${pageContext.request.contextPath}" />
+<c:set var="type" value="${vo.community_type }"/>
+
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -42,39 +45,45 @@
 		<div class="container">
 			<div class="board_wrap">
 				<div class="board_title">
-					<strong>자유게시판</strong>
-					<p>공지사항을 빠르고 정확하게 안내해드립니다.</p>
+					<strong>
+					<c:choose>
+					<c:when test="${type eq '01' }">자유게시판</c:when>
+					<c:when test="${type eq '02' }">정보공유 게시판</c:when>
+					<c:when test="${type eq '03' }">중고거래 게시판</c:when>
+					<c:otherwise>응애</c:otherwise>
+					</c:choose>
+				
+					</strong>
+					<p></p>
 				</div>
 				<div class="board_view_wrap">
 					<div class="board_view">
-						<div class="title">글 제목이 들어갑니다.</div>
+						<div class="title">${vo.community_title}</div>
 						<div class="info">
 							<dl>
 								<dt>번호</dt>
-								<dd>1</dd>
+								<dd>${vo.community_seq}</dd>
 							</dl>
 							<dl>
 								<dt>글쓴이</dt>
-								<dd>김이름</dd>
+								<dd>${vo.mem_id}</dd>
 							</dl>
 							<dl>
 								<dt>작성일</dt>
-								<dd>2021.1.16</dd>
+								<dd>${vo.community_date}</dd>
 							</dl>
 							<dl>
 								<dt>조회</dt>
-								<dd>33</dd>
+								<dd>${vo.community_cnt}</dd>
 							</dl>
 						</div>
 						<div class="cont">
-							글 내용이 들어갑니다<br> 글 내용이 들어갑니다<br> 글 내용이 들어갑니다<br> 글
-							내용이 들어갑니다<br> 글 내용이 들어갑니다<br> 글 내용이 들어갑니다<br> 글
-							내용이 들어갑니다<br> 글 내용이 들어갑니다
+							${vo.community_content}
 						</div>
 					</div>
 					 <div class="bt_wrap">
-                            <a href="${cpath}/communityFree.html" class="on">목록</a>
-                            <a href="${cpath}/communityEdit.html">수정</a>
+                            <a href="${cpath}/communityFree.do" class="on">목록</a>
+                            <a href="${cpath}/communityEdit.do">수정</a>
                         </div>
 				</div>
 			</div> 
