@@ -18,10 +18,9 @@ public class DiaryDetailController implements Controller {
 		BabyMyBatisDAO dao = new BabyMyBatisDAO();
 		int diary_seq = Integer.parseInt(request.getParameter("diary_seq"));
 		DiaryVO vo=dao.getDiary_seq(diary_seq);
-		dao.countDiary(diary_seq);
 		request.setAttribute("vo", vo);
 		
-		return "diaryDetail";
+		return "test";
 	
 	
 	}
