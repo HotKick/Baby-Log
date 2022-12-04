@@ -7,6 +7,7 @@ import javax.servlet.http.HttpServletResponse;
 
 import kr.baby.dao.BabyMyBatisDAO;
 import kr.baby.dao.QuestionVO;
+
 public class QuestionEditController implements Controller {
 
 	
@@ -26,4 +27,5 @@ public class QuestionEditController implements Controller {
 		dao.updateQuestion(vo);
 		
 		return "redirect:/question.do";
+}
 }

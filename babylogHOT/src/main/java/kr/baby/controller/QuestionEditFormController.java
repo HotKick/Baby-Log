@@ -16,7 +16,7 @@ public class QuestionEditFormController implements Controller {
 		
 		BabyMyBatisDAO dao = new BabyMyBatisDAO();
 		int q_seq = Integer.parseInt(request.getParameter("q_seq"));
-		CommunityVO vo = dao.getCommunity_seq(q_seq);
+		QuestionVO vo = dao.getQ_seq(q_seq);
 		request.setAttribute("vo", vo);
 		
 		return "questionEdit";
