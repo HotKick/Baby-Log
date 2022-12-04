@@ -291,7 +291,45 @@ public class BabyMyBatisDAO {
 				}
 
 	
-	
+				// 질문 전체 리스트 조회 
+				public List<QuestionVO> listQuestion(){
+				    SqlSession session = sqlSessionFactory.openSession();
+				    List<QuestionVO> list = session.selectList("listQuestion");
+				    session.close();
+				    return list;
+				}
+				
+				// 질문 글쓰기 
+				public void insertDiary(QuestionVO vo) {
+					SqlSession session = sqlSessionFactory.openSession();
+					session.insert("insertQuestion",vo);
+					session.commit();
+					session.close();
+				}
+				
+				// 질문 게시판 글 번호로 가져오기
+				public QuestionVO getQ_seq(int q_seq) {
+					SqlSession session = sqlSessionFactory.openSession();
+					QuestionVO vo = session.selectOne("getQ_seq",q_seq);
+					session.close();
+					return vo;
+				}
+				
+				// 질문 게시판 수정 메소드
+				public void updateQuestion(QuestionVO vo) {
+					SqlSession session = sqlSessionFactory.openSession();
+					session.update("updateQuestiobn",vo);
+					session.commit();
+					session.close();
+				}
+				
+				// 질문 게시판 조회수 증가 메소드
+				public void countQuestion(int q_seq) {
+					SqlSession session = sqlSessionFactory.openSession();
+					session.update("countQuestion",q_seq);
+					session.commit();
+					session.close();
+				}
 	
 
 //	public void Update(MemberVO vo) {
