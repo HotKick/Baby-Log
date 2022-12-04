@@ -11,7 +11,7 @@
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>뉴스 게시판</title>
+<title>질문 작</title>
 
 <!-- style -->
 <link rel="stylesheet" href="${cpath}/css/reset.css">
@@ -26,6 +26,8 @@
 <script src="https://kit.fontawesome.com/e76461f593.js"
 	crossorigin="anonymous"></script>
 
+
+
 </head>
 <body>
 		<%@ include file="header.jsp" %>
@@ -34,56 +36,55 @@
 
 
 		<!-- //게시판 영역 -->
-	</main>
-	<section id="board">
-		<div class="container">
-			<div class="board_wrap">
-				<div class="board_title">
-					<strong>자유게시판</strong>
-					<ul class="tag">
-						<li><a href="news_gov.html">정부뉴스</a></li>
-						<li><a href="news_city.html">지자체</a></li>
-					</ul>
-				</div>
-				<div class="board_list_wrap">
-					<div class="board_list">
-						<div class="top">
-							<div class="num">번호</div>
-							<div class="title">제목</div>
-							<div class="writer">글쓴이</div>
-							<div class="date">작성일</div>
-							<div class="count">조회</div>
-						</div>
-						<!-- //table_header -->
-					<div>
-						<c:forEach var= "vo" items = "${list}">
-							<div class="num">${nn_seq}</div>
-							<div class="title">
-								<a href="news_view.html">${vo.nn_title}</a>
-							</div>
-							<div class="writer">${vo.mem_id}</div>
-							<div class="date">${vo.nn_date}</div>
-							<div class="count">${vo.nn_cnt}</div>
-							</c:forEach>
-						</div>
-						<!-- //1행 -->
-					
+</main>
+	
+<form action= "${cpath}/questionWrite.do" method="post" enctype = "multipart/form-data">
 
-					</div>
-					<!-- 페이지 넘버 -->
-					<div class="board_page">
-						<a href="#" class="bt first"></a> <a href="#" class="bt prev"></a>
-						<a href="#" class="num on">1</a> <a href="#" class="num">2</a> <a
-							href="#" class="num">3</a> <a href="#" class="num">4</a> <a
-							href="#" class="num">5</a> <a href="#" class="bt next">></a> <a
-							href="#" class="bt last">>></a>
-					</div>
-				</div>
-			</div>
-			<!--  -->
-		</div>
-		<!-- //container -->
-	</section>
+<div class="container">
+    <div class="board_wrap">
+        <div class="board_title">
+            <strong>글쓰 게시판</strong>
+            <p>게시판 선택 후 글쓰기 작성 부탁드립니다.</p>
+        </div>
+        <!-- // board title  -->
+        <div class="board_write">
+            <div class="title">
+                <dl>
+                    <dt>목록</dt>
+                    <dd>
+                    </dd>
+                </dl>
+                <dl>
+                    <dt>제목</dt>
+                    <dd><input type="text" placeholder="제목 입력" name ="q_title"></dd>
+                </dl>
+            </div>
+            <div class="info">
+                <dl>
+                    <dt>글쓴이</dt>
+                    <dd><input type="text" name = "mem_id" value = "${mvo.mem_id }" readonly/></dd>
+                </dl>
+                <dl>
+                    <dt>첨부파일</dt>
+                    <dd><input type="file" name = "q_file"></dd>
+                </dl>
+
+                
+            </div>
+            <div class="cont">
+                <textarea placeholder="내용 입력" name = "q_content"></textarea>
+            </div>
+        </div>
+        <div class="bt_wrap">
+            <button type="submit">등록</button>
+            <button type="reset">취소</button>
+        </div>
+    </div>
+</div>
+<!-- //container -->
+</form>
+<!-- //board -->
+
 
 
 		<footer id="footer">
@@ -99,6 +100,7 @@
 						<li><a href="${cpath}/shop.do">쇼핑몰</a></li>
 						<li><a href="${cpath}/newsGov.do">뉴스</a></li>
 						<li><a href="${cpath}/question.do">고객센터</a></li>
+
 					</ul>
 				</div>
 				<div class="foot_icon">
@@ -116,18 +118,12 @@
 		</div>
 	</footer>
 
-
 	<!-- script -->
 	<script type="text/javascript"
 		src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 	<script src="${cpath}/js/slick.min.js"></script>
 
-	<script>
-    $('table').DataTable();
 
-// See:
-// http://www.sitepoint.com/responsive-data-tables-comprehensive-list-solutions
-</script>
 
 
 </body>

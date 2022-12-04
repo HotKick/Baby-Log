@@ -11,12 +11,13 @@
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>뉴스 게시판</title>
+<title>Q&A 게시판 </title>
 
 <!-- style -->
 <link rel="stylesheet" href="${cpath}/css/reset.css">
 <link rel="stylesheet" href="${cpath}/css/common.css">
 <link rel="stylesheet" href="${cpath}/css/community.css">
+<link rel="stylesheet" href="${cpath}/css/communityMedia.css">
 
 <!-- 슬릭 -->
 <link rel="stylesheet" type="text/css" href="${cpath}/css/slick.css" />
@@ -29,7 +30,6 @@
 </head>
 <body>
 		<%@ include file="header.jsp" %>
-
 	<main>
 
 
@@ -39,11 +39,8 @@
 		<div class="container">
 			<div class="board_wrap">
 				<div class="board_title">
-					<strong>자유게시판</strong>
-					<ul class="tag">
-						<li><a href="news_gov.html">정부뉴스</a></li>
-						<li><a href="news_city.html">지자체</a></li>
-					</ul>
+					<strong>Q&A</strong>
+					
 				</div>
 				<div class="board_list_wrap">
 					<div class="board_list">
@@ -55,19 +52,20 @@
 							<div class="count">조회</div>
 						</div>
 						<!-- //table_header -->
-					<div>
-						<c:forEach var= "vo" items = "${list}">
-							<div class="num">${nn_seq}</div>
+
+						<div>
+						<c:forEach var= "vo" items = "${list}" begin="1" end="10" step="1" varStatus="status">
+							<div class="num">${vo.q_seq}</div>
 							<div class="title">
-								<a href="news_view.html">${vo.nn_title}</a>
+								<a href="communityDetail.do">${vo.q_title}</a>
 							</div>
 							<div class="writer">${vo.mem_id}</div>
-							<div class="date">${vo.nn_date}</div>
-							<div class="count">${vo.nn_cnt}</div>
+							<div class="date">${vo.q_date}</div>
+							<div class="count">${vo.q_cnt}</div>
 							</c:forEach>
 						</div>
 						<!-- //1행 -->
-					
+
 
 					</div>
 					<!-- 페이지 넘버 -->
@@ -78,6 +76,9 @@
 							href="#" class="num">5</a> <a href="#" class="bt next">></a> <a
 							href="#" class="bt last">>></a>
 					</div>
+					<div class="bt_wrap">
+                        <button><a href="${cpath}/questionWriteForm.do">등록</a></button>
+                    </div>
 				</div>
 			</div>
 			<!--  -->
@@ -115,8 +116,6 @@
 
 		</div>
 	</footer>
-
-
 	<!-- script -->
 	<script type="text/javascript"
 		src="//code.jquery.com/jquery-1.11.0.min.js"></script>
