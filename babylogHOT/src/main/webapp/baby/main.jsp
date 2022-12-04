@@ -61,7 +61,7 @@
 				</c:if>
 				<c:if test="${!empty mvo}">
 					${mvo.mem_name}님 환영합니다.
-					<li><a href="#">로그아웃</a></li>
+					<li><a href="${cpath}/logout.do">로그아웃</a></li>
 					</c:if>
 				</div>
 			</div>
