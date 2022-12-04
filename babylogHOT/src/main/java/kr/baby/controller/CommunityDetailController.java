@@ -18,7 +18,8 @@ public class CommunityDetailController implements Controller {
 		
 		BabyMyBatisDAO dao = new BabyMyBatisDAO();
 		int community_seq = Integer.parseInt(request.getParameter("community_seq"));
-		CommunityVO vo=dao.getCommunity_seq(community_seq);
+		CommunityVO vo= new CommunityVO();
+		vo = dao.getCommunity_seq(community_seq);
 		dao.countFree(community_seq);
 		request.setAttribute("vo", vo);
 		

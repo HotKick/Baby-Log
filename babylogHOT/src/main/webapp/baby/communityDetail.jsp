@@ -47,9 +47,9 @@
 				<div class="board_title">
 					<strong>
 					<c:choose>
-					<c:when test="${type eq '01' }">자유게시판</c:when>
-					<c:when test="${type eq '02' }">정보공유 게시판</c:when>
-					<c:when test="${type eq '03' }">중고거래 게시판</c:when>
+					<c:when test="${type eq 01 }">자유게시판</c:when>
+					<c:when test="${type eq 02 }">정보공유 게시판</c:when>
+					<c:when test="${type eq 03 }">중고거래 게시판</c:when>
 					<c:otherwise>응애</c:otherwise>
 					</c:choose>
 				
