@@ -11,7 +11,6 @@ import com.oreilly.servlet.multipart.DefaultFileRenamePolicy;
 
 import kr.baby.dao.BabyMyBatisDAO;
 import kr.baby.dao.CommunityVO;
-import kr.baby.dao.DiaryVO;
 
 public class CommunityWriteController implements Controller {
 

@@ -300,7 +300,7 @@ public class BabyMyBatisDAO {
 				}
 				
 				// 질문 글쓰기 
-				public void insertDiary(QuestionVO vo) {
+				public void insertQuestion(QuestionVO vo) {
 					SqlSession session = sqlSessionFactory.openSession();
 					session.insert("insertQuestion",vo);
 					session.commit();
