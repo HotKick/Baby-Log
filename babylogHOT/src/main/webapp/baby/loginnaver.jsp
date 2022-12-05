@@ -18,7 +18,7 @@
 			<div id="button_area">
 				<div id="naverIdLogin"></div>
 			</div>
-	
+	</body>
 	<script
 		src="https://static.nid.naver.com/js/naveridlogin_js_sdk_2.0.2.js"
 		charset="utf-8"></script>
