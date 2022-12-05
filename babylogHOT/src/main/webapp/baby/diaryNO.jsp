@@ -26,10 +26,51 @@
 <script src="https://kit.fontawesome.com/e76461f593.js"
 	crossorigin="anonymous"></script>
 
+
+
 </head>
 <body>
 	<%@ include file="header.jsp" %>
 
+	<main id="main" class="container">
+		<section id="tag">
+			<div class="tag_inner">
+				<div class="tag_icon">
+					<ul>
+						<li><a href="#"><i class="fa-solid fa-star"></i><span
+								class="ir_su">분류1</span></a></li>
+						<li><a href="#"><i class="fa-solid fa-star"></i><span
+								class="ir_su">분류2</span></a></li>
+						<li><a href="#"><i class="fa-solid fa-star"></i><span
+								class="ir_su">분류3</span></a></li>
+						<li><a href="#"><i class="fa-solid fa-star"></i><span
+								class="ir_su">분류4</span></a></li>
+					</ul>
+				</div>
+				<button>
+					<a href="${cpath}/diaryWriteForm.do">글쓰기</a>
+				</button>
+			</div>
+		</section>
+		<!-- //tag -->
+
+		<section id="content">
+			<div class="content_inner">
+		 <c:forEach var = "vo" items = "${list }"> 
+				<div class="cont1">
+					<ul class="cont_info">
+						<li><a href="${cpath }/diaryDetail.do?diary_seq=${vo.diary_seq}" onclick = "reload();">
+						<img class="diary_file"
+				src="${cpath}/img/${vo.diary_file}" style="width: 100%"></a></a></li>
+						<li><span>${vo.diary_title}</span></a></li>
+						<li><a href="#"><span>${vo.mem_id}</span></a></li>
+						<li><a href="#"><span>하트</span></a></li>
+						</ul>
+				</div>
+				</c:forEach> 
+				</div>
+		</section>
+	</main>
 	
 	    <main id="main" class="container">
           <div class="tag">
@@ -219,6 +260,14 @@
 
     </main>
 	
+	
+	
+	
+	
+	
+	
+
+
 		<footer id="footer">
 		<div class="container">
 			<div class="foot_inner mt30">
@@ -256,6 +305,5 @@ function reload(){
 	<script type="text/javascript"
 		src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 	<script src="${cpath}/js/slick.min.js"></script>
-	<script src="${cpath}/js/diary.js"></script>
 </body>
 </html>
