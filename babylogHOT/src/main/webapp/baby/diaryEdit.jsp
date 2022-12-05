@@ -58,7 +58,7 @@
 							<dl>
 								<dt>제목</dt>
 								<dd>
-									<input type="text" placeholder="제목 입력" name="title" value="${vo.community_title }">
+									<input type="text" placeholder="제목 입력" name="title" value="${vo.diary_title}">
 								</dd>
 							</dl>
 						</div>
@@ -66,7 +66,7 @@
 							<dl>
 								<dt>글쓴이</dt>
 								<dd>
-									<input type="text" placeholder="글쓴이 입력" name="writer" value="${vo.mem_id }">
+									<input type="text" placeholder="글쓴이 입력" name="writer" value="${vo.mem_id}">
 								</dd>
 							</dl>
 							<dl>
@@ -78,7 +78,7 @@
 						</div>
 						<div class="cont">
 							<textarea placeholder="내용 입력" name = "content">
-                          ${vo.community_content}
+                          ${vo.diary_content}
                             </textarea>
 						</div>
 					</div>
