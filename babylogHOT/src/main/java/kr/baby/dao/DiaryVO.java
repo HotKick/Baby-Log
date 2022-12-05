@@ -121,6 +121,16 @@ public class DiaryVO {
 		this.diary_with = diary_with;
 		this.mem_id = mem_id;
 	}
+
+
+	@Override
+	public String toString() {
+		return "DiaryVO [diary_seq=" + diary_seq + ", diary_title=" + diary_title + ", diary_content=" + diary_content
+				+ ", diary_date=" + diary_date + ", diary_file=" + diary_file + ", diary_cnt=" + diary_cnt
+				+ ", diary_emo=" + diary_emo + ", diary_with=" + diary_with + ", mem_id=" + mem_id + "]";
+	}
+	
+	
 	
 
 }
