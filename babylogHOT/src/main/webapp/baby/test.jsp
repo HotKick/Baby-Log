@@ -48,6 +48,7 @@
 
 						<button class="btn btn-sm btn-primary"
 							onclick="location.href='${cpath}/diary.do'">리스트</button>
+						<button>삭제</button>
 				</div>
 </body>
 </html>
