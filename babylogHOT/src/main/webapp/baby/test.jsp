@@ -5,7 +5,11 @@
 
 <c:set var="cpath" value="${pageContext.request.contextPath }" />
 <c:set var="newLine" value="<%='\n'%>" />
-
+<script type = "text/javascript">
+	function goDel(diary_seq){
+		location.href = "${cpath}/diarydelete.do?diary_seq="+diary_seq;
+	}
+</script>
 <!DOCTYPE html>
 <html>
 <head>
@@ -48,7 +52,7 @@
 
 						<button class="btn btn-sm btn-primary"
 							onclick="location.href='${cpath}/diary.do'">리스트</button>
-						<button>삭제</button>
+						<button onclick = "goDel(${vo.diary_seq})">삭제</button>
 				</div>
 </body>
 </html>

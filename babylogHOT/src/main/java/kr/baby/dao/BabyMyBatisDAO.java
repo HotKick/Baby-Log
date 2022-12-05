@@ -281,6 +281,15 @@ public class BabyMyBatisDAO {
 					session.close();
 				}
 				
+				// 일기 게시판 삭제 메소드 
+				public void deleteDiary(int diary_seq) {
+					SqlSession session = sqlSessionFactory.openSession();
+					session.delete("deleteDiary",diary_seq);
+					session.commit();
+					session.close();
+				}
+				
+				
 				// 로그인 메소드
 	
 				public MemberVO memberLogin(MemberVO vo) {
