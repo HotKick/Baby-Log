@@ -62,7 +62,7 @@
 						<c:if test = "${vo.community_type eq '03' }">
 							<div class="num">${vo.trade_seq}</div>
 							<div class="title">
-								<a href="communityDetail.do">${vo.trade_title}</a>
+								<a href="${cpath}/communityDetail.do?community_seq=${vo.community_seq}">${vo.trade_title}</a>
 							</div>
 							<div class="writer">${vo.trade_id}</div>
 							<div class="date">${vo.trade_date}</div>

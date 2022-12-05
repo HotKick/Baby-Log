@@ -27,3 +27,5 @@ public class CommunityDetailController implements Controller {
 	}
 
 }
+
+

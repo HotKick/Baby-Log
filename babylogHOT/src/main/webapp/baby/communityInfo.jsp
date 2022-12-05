@@ -63,7 +63,7 @@
 						<c:if test = "${vo.community_type eq '02' }">
 							<div class="num">${vo.community_seq}</div>
 							<div class="title">
-								<a href="communityDetail.do">${vo.community_title}</a>
+								<a href="${cpath}/communityDetail.do?community_seq=${vo.community_seq}">${vo.community_title}</a>
 							</div>
 							<div class="writer">${vo.mem_id}</div>
 							<div class="date">${vo.community_date}</div>

@@ -6,12 +6,6 @@
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
 
 <c:set var="cpath" value="${pageContext.request.contextPath}" />
-
- <%
-   
-    CommunityVO vo = (CommunityVO)request.getAttribute("vo");
-    
-    %>
 <!DOCTYPE html>
 <html lang="ko">
 <head>
