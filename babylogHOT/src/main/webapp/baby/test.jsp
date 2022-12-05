@@ -9,6 +9,10 @@
 	function goDel(diary_seq){
 		location.href = "${cpath}/diarydelete.do?diary_seq="+diary_seq;
 	}
+	
+	function goEdit(diary_seq){
+		location.href="${cpath}/diaryEditForm.do?diary_seq="+diary_seq;
+	}
 </script>
 <!DOCTYPE html>
 <html>
@@ -53,6 +57,7 @@
 						<button class="btn btn-sm btn-primary"
 							onclick="location.href='${cpath}/diary.do'">리스트</button>
 						<button onclick = "goDel(${vo.diary_seq})">삭제</button>
+						<button onclick = "goEdit(${vo.diary_seq})">수정</button>
 				</div>
 </body>
 </html>
