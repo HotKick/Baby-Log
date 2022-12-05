@@ -13,39 +13,12 @@
 <link rel="stylesheet" href="./login.css" />
 </head>
 <body>
-	<div>
-		<form action="/action_page.php">
-			<div class="mb-3 mt-3">
-				<label for="email" class="form-label">Email:</label> <input
-					type="email" class="form-control" id="email"
-					placeholder="Enter email" name="email">
-			</div>
-			<div class="mb-3">
-				<label for="pwd" class="form-label">Password:</label> <input
-					type="password" class="form-control" id="pwd"
-					placeholder="Enter password" name="pswd">
-			</div>
-			<div class="form-check mb-3">
-				<label class="form-check-label"> <input
-					class="form-check-input" type="checkbox" name="remember">
-					Remember me
-				</label>
-			</div>
-			<button type="submit" class="btn btn-primary">로그인</button>
-		</form>
 
-	</div>
-
-
-	<div class="container">
-		<h1>Naver Login API 사용하기</h1>
-		<div class="login-area">
-			<div id="message">로그인 버튼을 눌러 로그인 해주세요</div>
+	
 			<div id="button_area">
 				<div id="naverIdLogin"></div>
 			</div>
-		</div>
-	</div>
+	
 	<script
 		src="https://static.nid.naver.com/js/naveridlogin_js_sdk_2.0.2.js"
 		charset="utf-8"></script>
