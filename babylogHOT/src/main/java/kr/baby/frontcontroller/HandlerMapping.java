@@ -63,7 +63,7 @@ import kr.baby.controller.SignupFormController;
 		mappings.put("/diaryWriteForm.do",new DiaryWriteFormController());
 		mappings.put("/diaryEdit.do",new DiaryEditController());
 		mappings.put("/diaryEditForm.do",new DiaryEditFormController());
-		mappings.put("/diarydelete.do",new DiaryDeleteController());
+		mappings.put("/diaryDelete.do",new DiaryDeleteController());
 		mappings.put("/mypage.do",new MypageController());
 		mappings.put("/newsCity.do",new NewsCityController());
 		mappings.put("/newsGov.do",new NewsGovController());
