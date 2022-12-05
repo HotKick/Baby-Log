@@ -1,5 +1,3 @@
-@charset "UTF-8";
-
 
 main {
     width: 100%;
@@ -135,18 +133,19 @@ main {
 .t_tag {
     display: flex;
     align-items: center;
-    gap: 2%;
-    background-color: antiquewhite;
+    gap: 1%;
 }
-.t_tag div {
-    background-color: #ccc;
-    border-radius: 5px;
-    
-}
+.t_tag div {}
 .t_tag div a {
-    padding: 0.8rem 1.2rem;
+    background-color: #ccc; 
+    padding: 0.4rem 1rem;
     display: block;
+    border-radius: 5px;
 
+}
+.t_tag div a:hover {
+    background-color: #222;
+    color: #fff;
 }
 .day {
     padding: 20px 0;
@@ -156,6 +155,33 @@ main {
 .day span {
     margin-right: 10px;
     font-weight: 300;
+}
+
+/* feed- 수정, 삭제, 목록 btn */
+.feed_btn{
+    padding: 24px 0 0;
+    display: flex;
+    align-items: center;
+    justify-content: end;
+    gap: 1%;
+    border-top : solid 1px #ddd;
+}
+
+.feed_btn div {
+    background-color: #ccc;
+    border-radius: 5px;
+    
+}
+.feed_btn div button {
+    padding: 0.6rem 1.4rem;
+    border-radius: 0.3rem;
+    display: block;
+
+}
+
+.feed_btn div button:hover {
+    background-color: #222;
+    color: #fff;
 }
 
 
