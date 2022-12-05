@@ -41,7 +41,7 @@
                 </div>
                 
                 <!-- Form -->
-                <form  action="${cpath}/signup.do" method="post">
+                <form  class="validation-form" action="${cpath}/signup.do" method="post">
                   <!-- 아이디 -->
                   <div class="input__block">
                      <label class="name" for="id">이메일</label>
@@ -117,7 +117,7 @@
 
                 
                   <!-- sign up button -->
-                  <button class="signup__btn">
+                  <button type="submit" class="signup__btn">
                     sign up
                   </button>
                 </form>
@@ -143,6 +143,23 @@
         <!-- container -->
         </div>
         <!-- //login -->
+        <script>
+        	window.addEventListener('load', () => {
+      		const forms = document.getElementsByClassName('validation-form');
+      
+      		Array.prototype.filter.call(forms, (form) => {
+        		form.addEventListener('submit', function (event) {
+          			if (form.checkValidity() === false) {
+            			event.preventDefault();
+            			event.stopPropagation();
+          			}
+          			form.classList.add('was-validated');
+        			}, false);
+      			});
+    		}, false);
+		</script>
+		
+		
     </main>
   
    <footer id="footer">
