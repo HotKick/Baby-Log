@@ -27,7 +27,7 @@
 
 <script type = "text/javascript">
 	function goDel(diary_seq){
-		location.href = "${cpath}/diarydelete.do?diary_seq="+diary_seq;
+		location.href = "${cpath}/diaryDelete.do?diary_seq="+diary_seq;
 	}
 	
 	function goEdit(diary_seq){
@@ -112,7 +112,7 @@
                 
                  <div class="feed_btn">
                     <div class="edt_btn">
-                        <button type="button" onclick="location.href='$/diaryEdit.html'">수정</button>
+                        <button type="button" onclick="goEdit(${vo.diary_seq})">수정</button>
                     </div>
                     <div class="del_btn">
                        <button onclick = "goDel(${vo.diary_seq})">삭제</button>
