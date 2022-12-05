@@ -57,7 +57,11 @@
 
             <div class="photo">
                 <div class="photo_wrap">
+                	<c:if test="${vo.diary_file != null}">
                         <img src="${cpath}/img/${vo.diary_file}" alt="1번 다이어리">
+                        </c:if>
+                        
+                 
                 </div>
             </div>
             <!-- // photo -->
@@ -110,7 +114,7 @@
                         <button type="button" onclick="location.href='$/diaryEdit.html'">수정</button>
                     </div>
                     <div class="del_btn">
-                       <button type="submit" onclick = "goDel(${vo.diary_seq})">삭제</button>
+                       <button onclick = "goDel(${vo.diary_seq})">삭제</button>
                     </div>
                     <div class="list_btn">
                         <button type="button" onclick="location.href='${cpath}/diary.do'">목록</button>
