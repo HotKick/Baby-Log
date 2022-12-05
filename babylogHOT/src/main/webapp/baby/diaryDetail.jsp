@@ -24,7 +24,15 @@
 <script src="https://kit.fontawesome.com/e76461f593.js"
 	crossorigin="anonymous"></script>
 
-
+<script type = "text/javascript">
+	function goDel(diary_seq){
+		location.href = "${cpath}/diarydelete.do?diary_seq="+diary_seq;
+	}
+	
+	function goEdit(diary_seq){
+		location.href="${cpath}/diaryEditForm.do?diary_seq="+diary_seq;
+	}
+</script>
 </head>
 <body>
 
@@ -40,8 +48,8 @@
                 </div>
                 <div class="profile_info">
                     <div class="info_inner">
-                        <div class="id"><a href="">아이디</a></div>
-                        <div class="address">@ 누구누구 입니다 </div>
+                        <div class="id"><a href="">${vo.mem_id}</a></div>
+                        <div class="address">${mvo.mem_nick}입니다 </div>
                     </div>
                 </div>
             </div>
@@ -49,7 +57,11 @@
 
             <div class="photo">
                 <div class="photo_wrap">
-                        <img src="${cpath}/img/diary1.jpg" alt="1번 다이어리">
+                	<c:if test="${vo.diary_file != null}">
+                        <img src="${cpath}/img/${vo.diary_file}" alt="1번 다이어리">
+                        </c:if>
+                        
+                 
                 </div>
             </div>
             <!-- // photo -->
@@ -76,24 +88,11 @@
             <div class="feed_text">
                 <div class="text_wrap">
                     <div class="t_title">
-                        <h2>오늘 매우 기분이 좋으다</h2>
+                        <h2>${vo.diary_title}</h2>
                     </div>
                     <div class="t_text">
                         <p>
-                        I woke up pissed off today
-                        And lately everyone feels fake
-                        Somewhere, I lost a piece of me
-                        Smoking cigarettes on balconies
-                        But I can't do this alone
-                        Sometimes I just need a light
-                        If I call you on the phone
-                        Need you on the other side
-                        So when your tears roll down your pillow like a river
-                        I'll be there for you
-                        I'll be there for you
-                        When you're screaming, but they only hear you whisper
-                        I'll be loud for you
-                        But you gotta be there for me too</div>
+                        ${fn:replace(vo.diary_content,newLine,"<br>")}</div>
                     </p>
                 </div>
                 <!-- //text_wrap -->
@@ -115,10 +114,10 @@
                         <button type="button" onclick="location.href='$/diaryEdit.html'">수정</button>
                     </div>
                     <div class="del_btn">
-                       <button type="submit">삭제</button>
+                       <button onclick = "goDel(${vo.diary_seq})">삭제</button>
                     </div>
                     <div class="list_btn">
-                        <button type="button" onclick="location.href='diaryDetail.html'">목록</button>
+                        <button type="button" onclick="location.href='${cpath}/diary.do'">목록</button>
                     </div>
                 </div>
                 <!-- //feed_btn -->

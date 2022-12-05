@@ -76,10 +76,19 @@
                 <li>
                   <figure>
                     <div class="fit">
-
-                    <a href="${cpath }/diaryDetail.do"><img src="${cpath }/img/diary1.jpg" alt="다이어리"></a>
-
+                    
+                    <c:if test="${vo.diary_file != null}">
                     <a href="${cpath }/diaryDetail.do?diary_seq=${vo.diary_seq}" onclick = "reload();"><img src="${cpath }/img/${vo.diary_file}" alt="다이어리"></a>
+                        </c:if>
+                        
+                        
+                     <c:if test="${vo.diary_file == null}">
+                      <a href="${cpath }/diaryDetail.do?diary_seq=${vo.diary_seq}" onclick = "reload();"><img src="${cpath}/img/diary2.jpg" alt="1번 다이어리">
+                      </c:if>
+                      
+                      
+
+                  
                     </div>
                     <figcaption>
                       <p>${vo.diary_title}</p>
