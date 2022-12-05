@@ -39,7 +39,7 @@
                   <div class="tag3"><button>분류버튼3</button></div>
                 </div>
                 <div class="bt_wrap">
-                    <button type="button" onclick="location.href='diaryWrite.html'">글쓰기</a></button>
+                    <button type="button" onclick="location.href='${cpath}/diaryWriteForm.do'">글쓰기</a></button>
                 </div>
         </div>
         <!-- //tag -->
@@ -70,151 +70,26 @@
               <!-- //toolbar -->
              
               <ol class="image-list grid-view"> 
+            
+              <c:forEach var="vo" items = "${list}">
+             
                 <li>
                   <figure>
                     <div class="fit">
-                    <a href="diaryDetail.html"><img src="${cpath }/img/diary1.jpg" alt="다이어리"></a>
+                    <a href="${cpath }/diaryDetail.do?diary_seq=${vo.diary_seq}" onclick = "reload();"><img src="${cpath }/img/${vo.diary_file}" alt="다이어리"></a>
                     </div>
                     <figcaption>
-                      <p>다이어리1</p>
-                      <p>작성자 <a href="" target="_blank">야누</a></p>
+                      <p>${vo.diary_title}</p>
+                      <p>작성자 <a href="" target="_blank">${mvo.mem_name}</a></p>
                     </figcaption>
                   </figure>
                 </li>
+                </c:forEach>
                 <!-- 이미지1 -->
-                <li>
-                  <figure>
-                    <div class="fit">
-                    <a href="diaryDetail.html"><img src="img/diary2.jpg" alt="다이어리"></a>
-                    </div>
-                    <figcaption>
-                      <p>다이어리1</p>
-                      <p>작성자 <a href="" target="_blank">야누</a></p>
-                    </figcaption>
-                  </figure>
-                </li>
-                <!-- 이미지2 -->
-                <li>
-                  <figure>
-                    <div class="fit">
-                    <a href="diaryDetail.html"><img src="img/diary3.jpg" alt="다이어리"></a>
-                    </div>
-                    <figcaption>
-                      <p>다이어리1</p>
-                      <p>작성자 <a href="" target="_blank">야누</a></p>
-                    </figcaption>
-                  </figure>
-                </li>
-                <!-- 이미지3 -->
-                <li>
-                  <figure>
-                    <div class="fit">
-                    <a href="diaryDetail.html"><img src="img/diary4.jpg" alt="다이어리"></a>
-                    </div>
-                    <figcaption>
-                      <p>다이어리1</p>
-                      <p>작성자 <a href="" target="_blank">야누</a></p>
-                    </figcaption>
-                  </figure>
-                </li>
-                <!-- 이미지4 -->
-                <li>
-                  <figure>
-                    <div class="fit">
-                    <a href="diaryDetail.html"><img src="img/diary5.jpg" alt="다이어리"></a>
-                    </div>
-                    <figcaption>
-                      <p>다이어리1</p>
-                      <p>작성자 <a href="" target="_blank">야누</a></p>
-                    </figcaption>
-                  </figure>
-                </li>
-                <!-- 이미지5 -->
-                <li>
-                  <figure>
-                    <div class="fit">
-                    <a href="diaryDetail.html"><img src="img/diary6.jpg" alt="다이어리"></a>
-                    </div>
-                    <figcaption>
-                      <p>다이어리1</p>
-                      <p>작성자 <a href="" target="_blank">야누</a></p>
-                    </figcaption>
-                  </figure>
-                </li>
-                <!-- 이미지6 -->
-                <li>
-                  <figure>
-                    <div class="fit">
-                    <a href="diaryDetail.html"><img src="img/diary7.jpg" alt="다이어리"></a>
-                    </div>
-                    <figcaption>
-                      <p>다이어리1</p>
-                      <p>작성자 <a href="" target="_blank">야누</a></p>
-                    </figcaption>
-                  </figure>
-                </li>
-                <!-- 이미지7 -->
-                <li>
-                  <figure>
-                    <div class="fit">
-                    <a href="diaryDetail.html"><img src="img/diary8.jpg" alt="다이어리"></a>
-                    </div>
-                    <figcaption>
-                      <p>다이어리1</p>
-                      <p>작성자 <a href="" target="_blank">야누</a></p>
-                    </figcaption>
-                  </figure>
-                </li>
-                <!-- 이미지8 -->
-                <li>
-                  <figure>
-                    <div class="fit">
-                    <a href="diaryDetail.html"><img src="img/diary9.jpg" alt="다이어리"></a>
-                    </div>
-                    <figcaption>
-                      <p>다이어리1</p>
-                      <p>작성자 <a href="" target="_blank">야누</a></p>
-                    </figcaption>
-                  </figure>
-                </li>
-                <!-- 이미지9 -->
-                <li>
-                  <figure>
-                    <div class="fit">
-                    <a href="diaryDetail.html"><img src="img/diary10.jpg" alt="다이어리"></a>
-                    </div>
-                    <figcaption>
-                      <p>다이어리1</p>
-                      <p>작성자 <a href="" target="_blank">야누</a></p>
-                    </figcaption>
-                  </figure>
-                </li>
-                <!-- 이미지10 -->
-                <li>
-                  <figure>
-                    <div class="fit">
-                    <a href="diaryDetail.html"><img src="img/diary11.jpg" alt="다이어리"></a>
-                    </div>
-                    <figcaption>
-                      <p>다이어리1</p>
-                      <p>작성자 <a href="" target="_blank">야누</a></p>
-                    </figcaption>
-                  </figure>
-                </li>
-                <!-- 이미지11 -->
-                <li>
-                  <figure>
-                    <div class="fit">
-                    <a href="diaryDetail.html"><img src="img/diary12.jpg" alt="다이어리"></a>
-                    </div>
-                    <figcaption>
-                      <p>다이어리1</p>
-                      <p>작성자 <a href="" target="_blank">야누</a></p>
-                    </figcaption>
-                  </figure>
-                </li>
+   
                 <!-- 이미지12 -->
               </ol>
+          
           </section>
 
     </main>
