@@ -39,7 +39,7 @@
                   <div class="tag3"><button>분류버튼3</button></div>
                 </div>
                 <div class="bt_wrap">
-                    <button type="button" onclick="location.href='diaryWrite.html'">글쓰기</a></button>
+                    <button type="button" onclick="location.href='diaryWrite.do'">글쓰기</a></button>
                 </div>
         </div>
         <!-- //tag -->
@@ -73,7 +73,7 @@
                 <li>
                   <figure>
                     <div class="fit">
-                    <a href="diaryDetail.html"><img src="${cpath }/img/diary1.jpg" alt="다이어리"></a>
+                    <a href="${cpath }/diaryDetail.do"><img src="${cpath }/img/diary1.jpg" alt="다이어리"></a>
                     </div>
                     <figcaption>
                       <p>다이어리1</p>
@@ -85,7 +85,7 @@
                 <li>
                   <figure>
                     <div class="fit">
-                    <a href="diaryDetail.html"><img src="img/diary2.jpg" alt="다이어리"></a>
+                    <a href="${cpath }/diaryDetail.do"><img src="img/diary2.jpg" alt="다이어리"></a>
                     </div>
                     <figcaption>
                       <p>다이어리1</p>
@@ -97,7 +97,7 @@
                 <li>
                   <figure>
                     <div class="fit">
-                    <a href="diaryDetail.html"><img src="img/diary3.jpg" alt="다이어리"></a>
+                    <a href="${cpath }/diaryDetail.do"><img src="img/diary3.jpg" alt="다이어리"></a>
                     </div>
                     <figcaption>
                       <p>다이어리1</p>
@@ -109,7 +109,7 @@
                 <li>
                   <figure>
                     <div class="fit">
-                    <a href="diaryDetail.html"><img src="img/diary4.jpg" alt="다이어리"></a>
+                    <a href="${cpath }/diaryDetail.do"><img src="img/diary4.jpg" alt="다이어리"></a>
                     </div>
                     <figcaption>
                       <p>다이어리1</p>
@@ -121,7 +121,7 @@
                 <li>
                   <figure>
                     <div class="fit">
-                    <a href="diaryDetail.html"><img src="img/diary5.jpg" alt="다이어리"></a>
+                    <a href="${cpath }/diaryDetail.do"><img src="img/diary5.jpg" alt="다이어리"></a>
                     </div>
                     <figcaption>
                       <p>다이어리1</p>
@@ -133,7 +133,7 @@
                 <li>
                   <figure>
                     <div class="fit">
-                    <a href="diaryDetail.html"><img src="img/diary6.jpg" alt="다이어리"></a>
+                    <a href="${cpath }/diaryDetail.do"><img src="img/diary6.jpg" alt="다이어리"></a>
                     </div>
                     <figcaption>
                       <p>다이어리1</p>
@@ -145,7 +145,7 @@
                 <li>
                   <figure>
                     <div class="fit">
-                    <a href="diaryDetail.html"><img src="img/diary7.jpg" alt="다이어리"></a>
+                    <a href="${cpath }/diaryDetail.do"><img src="img/diary7.jpg" alt="다이어리"></a>
                     </div>
                     <figcaption>
                       <p>다이어리1</p>
@@ -157,7 +157,7 @@
                 <li>
                   <figure>
                     <div class="fit">
-                    <a href="diaryDetail.html"><img src="img/diary8.jpg" alt="다이어리"></a>
+                    <a href="${cpath }/diaryDetail.do"><img src="img/diary8.jpg" alt="다이어리"></a>
                     </div>
                     <figcaption>
                       <p>다이어리1</p>
@@ -169,7 +169,7 @@
                 <li>
                   <figure>
                     <div class="fit">
-                    <a href="diaryDetail.html"><img src="img/diary9.jpg" alt="다이어리"></a>
+                    <a href="${cpath }/diaryDetail.do"><img src="img/diary9.jpg" alt="다이어리"></a>
                     </div>
                     <figcaption>
                       <p>다이어리1</p>
@@ -181,7 +181,7 @@
                 <li>
                   <figure>
                     <div class="fit">
-                    <a href="diaryDetail.html"><img src="img/diary10.jpg" alt="다이어리"></a>
+                    <a href="${cpath }/diaryDetail.do"><img src="img/diary10.jpg" alt="다이어리"></a>
                     </div>
                     <figcaption>
                       <p>다이어리1</p>
@@ -193,7 +193,7 @@
                 <li>
                   <figure>
                     <div class="fit">
-                    <a href="diaryDetail.html"><img src="img/diary11.jpg" alt="다이어리"></a>
+                    <a href="${cpath }/diaryDetail.do"><img src="img/diary11.jpg" alt="다이어리"></a>
                     </div>
                     <figcaption>
                       <p>다이어리1</p>
@@ -205,7 +205,7 @@
                 <li>
                   <figure>
                     <div class="fit">
-                    <a href="diaryDetail.html"><img src="img/diary12.jpg" alt="다이어리"></a>
+                    <a href="${cpath }/diaryDetail.do"><img src="img/diary12.jpg" alt="다이어리"></a>
                     </div>
                     <figcaption>
                       <p>다이어리1</p>

@@ -14,7 +14,6 @@
 </head>
 <body>
 
-	
 			<div id="button_area">
 				<div id="naverIdLogin"></div>
 			</div>

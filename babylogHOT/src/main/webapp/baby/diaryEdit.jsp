@@ -9,7 +9,7 @@
 
  <%
    
-    CommunityVO vo = (CommunityVO)request.getAttribute("vo");
+    DiaryVO vo = (DiaryVO)request.getAttribute("vo");
     
     %>
 <!DOCTYPE html>
