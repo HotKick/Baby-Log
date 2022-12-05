@@ -21,7 +21,7 @@ public class DiaryDetailController implements Controller {
 		vo=dao.getDiary_seq(diary_seq);
 		request.setAttribute("vo", vo);
 		System.out.println("다이어리번호" + diary_seq);
-		return "test";
+		return "diaryDetail";
 	
 	
 	}
