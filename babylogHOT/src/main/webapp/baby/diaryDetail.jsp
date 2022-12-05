@@ -109,8 +109,23 @@
                     <span>am</span>
                 </div>
                 <!-- //day -->
-              </div>
-            <!-- // feed_text -->
+                
+                 <div class="feed_btn">
+                    <div class="edt_btn">
+                        <button type="button" onclick="location.href='$/diaryEdit.html'">수정</button>
+                    </div>
+                    <div class="del_btn">
+                       <button type="submit">삭제</button>
+                    </div>
+                    <div class="list_btn">
+                        <button type="button" onclick="location.href='diaryDetail.html'">목록</button>
+                    </div>
+                </div>
+                <!-- //feed_btn -->
+            </div>
+            <!-- //feed_text -->
+        </div>
+            <!-- // #feed_text -->
 
             <div class="feed_comment item">
                 <div class="comment_wrap">

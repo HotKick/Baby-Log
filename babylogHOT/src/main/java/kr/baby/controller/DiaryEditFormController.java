@@ -21,7 +21,7 @@ public class DiaryEditFormController implements Controller {
 		request.setAttribute("vo", vo);
 		
 		
-		return "diaryEdit";
+		return "test";
 	}
 
 }
