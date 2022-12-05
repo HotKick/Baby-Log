@@ -38,7 +38,7 @@
 		<!-- //게시판 영역 -->
 </main>
 	
-<form action="">
+<form action= "${cpath}/communityWrite.do" method="post" enctype = "multipart/form-data">
 
 <div class="container">
     <div class="board_wrap">
@@ -105,7 +105,8 @@
 						<li><a href="${cpath}/communityFree.do">커뮤니티</a></li>
 						<li><a href="${cpath}/shop.do">쇼핑몰</a></li>
 						<li><a href="${cpath}/newsGov.do">뉴스</a></li>
-						<li><a href="${cpath}/account.do">고객센터</a></li>
+						<li><a href="${cpath}/question.do">고객센터</a></li>
+
 					</ul>
 				</div>
 				<div class="foot_icon">

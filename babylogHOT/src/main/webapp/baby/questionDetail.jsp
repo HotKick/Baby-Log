@@ -3,20 +3,23 @@
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
+<%@page import="kr.baby.dao.QuestionVO" %>
 
 <c:set var="cpath" value="${pageContext.request.contextPath}" />
+
 <!DOCTYPE html>
 <html lang="ko">
 <head>
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>뉴스 게시판</title>
+<title>Q&A 디테</title>
 
 <!-- style -->
 <link rel="stylesheet" href="${cpath}/css/reset.css">
 <link rel="stylesheet" href="${cpath}/css/common.css">
 <link rel="stylesheet" href="${cpath}/css/community.css">
+
 
 <!-- 슬릭 -->
 <link rel="stylesheet" type="text/css" href="${cpath}/css/slick.css" />
@@ -26,10 +29,12 @@
 <script src="https://kit.fontawesome.com/e76461f593.js"
 	crossorigin="anonymous"></script>
 
+
+
 </head>
 <body>
 		<%@ include file="header.jsp" %>
-
+	<!-- //header -->
 	<main>
 
 
@@ -39,54 +44,48 @@
 		<div class="container">
 			<div class="board_wrap">
 				<div class="board_title">
-					<strong>자유게시판</strong>
-					<ul class="tag">
-						<li><a href="news_gov.html">정부뉴스</a></li>
-						<li><a href="news_city.html">지자체</a></li>
-					</ul>
+					<strong> 글 상세 보기 
+					</strong>
+					<p></p>
 				</div>
-				<div class="board_list_wrap">
-					<div class="board_list">
-						<div class="top">
-							<div class="num">번호</div>
-							<div class="title">제목</div>
-							<div class="writer">글쓴이</div>
-							<div class="date">작성일</div>
-							<div class="count">조회</div>
+				<div class="board_view_wrap">
+					<div class="board_view">
+						<div class="title">${vo.q_title}</div>
+						<div class="info">
+							<dl>
+								<dt>번호</dt>
+								<dd>${vo.q_seq}</dd>
+							</dl>
+							<dl>
+								<dt>글쓴이</dt>
+								<dd>${vo.mem_id}</dd>
+							</dl>
+							<dl>
+								<dt>작성일</dt>
+								<dd>${vo.q_date}</dd>
+							</dl>
+							<dl>
+								<dt>조회</dt>
+								<dd>${vo.q_cnt}</dd>
+							</dl>
 						</div>
-						<!-- //table_header -->
-					<div>
-						<c:forEach var= "vo" items = "${list}">
-							<div class="num">${nn_seq}</div>
-							<div class="title">
-								<a href="news_view.html">${vo.nn_title}</a>
-							</div>
-							<div class="writer">${vo.mem_id}</div>
-							<div class="date">${vo.nn_date}</div>
-							<div class="count">${vo.nn_cnt}</div>
-							</c:forEach>
+						<div class="cont">
+							${vo.q_content}
 						</div>
-						<!-- //1행 -->
-					
+					</div>
+					 <div class="bt_wrap">
+                            <a href="${cpath}/question.do" class="on">목록</a>
+                            <a href="${cpath}/questionEdit.do">수정</a>
+                        </div>
+				</div>
+			</div> 
 
-					</div>
-					<!-- 페이지 넘버 -->
-					<div class="board_page">
-						<a href="#" class="bt first"></a> <a href="#" class="bt prev"></a>
-						<a href="#" class="num on">1</a> <a href="#" class="num">2</a> <a
-							href="#" class="num">3</a> <a href="#" class="num">4</a> <a
-							href="#" class="num">5</a> <a href="#" class="bt next">></a> <a
-							href="#" class="bt last">>></a>
-					</div>
-				</div>
-			</div>
-			<!--  -->
 		</div>
 		<!-- //container -->
 	</section>
 
 
-		<footer id="footer">
+	<footer id="footer">
 		<div class="container">
 			<div class="foot_inner mt30">
 				<div class="foot_logo">
@@ -116,18 +115,12 @@
 		</div>
 	</footer>
 
-
 	<!-- script -->
 	<script type="text/javascript"
 		src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 	<script src="${cpath}/js/slick.min.js"></script>
 
-	<script>
-    $('table').DataTable();
 
-// See:
-// http://www.sitepoint.com/responsive-data-tables-comprehensive-list-solutions
-</script>
 
 
 </body>

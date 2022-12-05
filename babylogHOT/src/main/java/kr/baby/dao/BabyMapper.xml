@@ -55,6 +55,11 @@
 	<update id="updateFree" parameterType="kr.baby.dao.CommunityVO">
 		update community set community_title=#{community_title},set community_content=#{community_content} where community_seq = #{community_seq}
 		</update>
+		
+	<!-- free 6. 자유 게시판 상세 페이지   -->
+	<select id = "getCommunity_seq" parameterType = "int" resultType="kr.baby.dao.CommunityVO">
+	select * from community where community_seq=#{community_seq}
+	</select>
 	
 
 <!-- info 1. 정보 게시판 전체 리스트  -->
@@ -145,6 +150,41 @@
 	<!--Diary 6. 일기 게시판 상세 페이지   -->
 	<select id = "getDiary_seq" parameterType = "int" resultType="kr.baby.dao.DiaryVO">
 	select * from diary where diary_seq=#{diary_seq}
+	</select>
+	
+	<!-- Quesion 1. 질문 게시판 전체 리스트  -->
+	<select id = "listQuestion" resultType = "kr.baby.dao.QuestionVO">
+	select * from question
+	order by q_seq desc
+	</select>
+
+<!-- Quesion 2. 질문 게시판 글쓰기  -->
+	<insert id="insertQuestion" parameterType="kr.baby.dao.QuestionVO">
+	insert into question(q_seq,q_title,q_content,q_date,q_file,mem_id)
+	values(q_seq.nextval,#{q_title},#{q_content},sysdate,#{q_file,jdbcType=VARCHAR},#{mem_id})
+	</insert>
+	
+
+<!-- Quesion 3. 질문 게시판 카운트업데이트  -->
+	<update id="countQuestion" parameterType="int">
+	update question set q_cnt = q_cnt+1 where q_seq = #{q_seq}
+	</update>
+	
+
+	
+<!-- Quesion 4. 질문 게시판 글삭제  -->	
+	<delete id="deleteQuestion">
+	delete from question where q_seq=#{q_seq}
+	</delete>
+	
+<!-- Quesion 5. 질문 게시판 글수정  -->	
+	<update id="updateQuestion" parameterType="kr.baby.dao.QuestionVO">
+	update question set q_title=#{q_title},set q_content=#{q_content} where q_seq = #{q_seq}
+	</update>
+	
+	<!--Quesion 6. 질문 게시판 상세 페이지   -->
+	<select id = "getQ_seq" parameterType = "int" resultType="kr.baby.dao.QuestionVO">
+	select * from question where q_seq=#{q_seq}
 	</select>
 	
 	
