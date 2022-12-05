@@ -57,7 +57,7 @@
 						<c:forEach var= "vo" items = "${list}" begin="1" end="10" step="1" varStatus="status">
 							<div class="num">${vo.q_seq}</div>
 							<div class="title">
-								<a href="communityDetail.do">${vo.q_title}</a>
+								<a href="${cpath }/communityDetail.do?q_seq=${vo.q_seq}">${vo.q_title}</a>
 							</div>
 							<div class="writer">${vo.mem_id}</div>
 							<div class="date">${vo.q_date}</div>
