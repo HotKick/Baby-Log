@@ -65,11 +65,13 @@
 		 <c:forEach var = "vo" items = "${list }"> 
 				<div class="cont1">
 					<ul class="cont_info">
-						<li><a href="#"><span>사진칸</span></a></li>
-						<li><a href="${cpath }/diaryDetail.do?diary_seq=${vo.diary_seq}"><span>${vo.diary_title}</span></a></li>
+						<li><a href="${cpath }/diaryDetail.do?diary_seq=${vo.diary_seq}" onclick = "reload();">
+						<img class="diary_file"
+				src="${cpath}/img/${vo.diary_file}" style="width: 100%"></a></a></li>
+						<li><span>${vo.diary_title}</span></a></li>
 						<li><a href="#"><span>${vo.mem_id}</span></a></li>
 						<li><a href="#"><span>하트</span></a></li>
-					</ul>
+						</ul>
 				</div>
 				</c:forEach> 
 				</div>
@@ -109,7 +111,10 @@
 
 		</div>
 	</footer>
-
+<script type="text/javascript">
+function reload(){  
+       location.reload();
+}
 	<!-- script -->
 	<script type="text/javascript"
 		src="//code.jquery.com/jquery-1.11.0.min.js"></script>
