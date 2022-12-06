@@ -97,7 +97,7 @@
                   </figure>
                 </li>
                 </c:forEach>
-           
+                             
               </ol>
           
           </section>
@@ -142,5 +142,7 @@ function reload(){
 		src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 	<script src="${cpath}/js/slick.min.js"></script>
 	<script src="${cpath}/js/diary.js"></script>
+	
+
 </body>
 </html>
