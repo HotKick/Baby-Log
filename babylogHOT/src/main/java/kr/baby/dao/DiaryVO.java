@@ -11,6 +11,7 @@ public class DiaryVO {
 	private String diary_emo;
 	private String diary_with;
 	private String mem_id;
+	private String mem_nick;
 	
 	
 	public DiaryVO() {
@@ -108,8 +109,27 @@ public class DiaryVO {
 	}
 
 
+	public String getMem_nick() {
+		return mem_nick;
+	}
+
+
+	public void setMem_nick(String mem_nick) {
+		this.mem_nick = mem_nick;
+	}
+
+
+	@Override
+	public String toString() {
+		return "DiaryVO [diary_seq=" + diary_seq + ", diary_title=" + diary_title + ", diary_content=" + diary_content
+				+ ", diary_date=" + diary_date + ", diary_file=" + diary_file + ", diary_cnt=" + diary_cnt
+				+ ", diary_emo=" + diary_emo + ", diary_with=" + diary_with + ", mem_id=" + mem_id + ", mem_nick="
+				+ mem_nick + "]";
+	}
+
+
 	public DiaryVO(int diary_seq, String diary_title, String diary_content, String diary_date, String diary_file,
-			String diary_cnt, String diary_emo, String diary_with, String diary_type, String mem_id) {
+			String diary_cnt, String diary_emo, String diary_with, String mem_id, String mem_nick) {
 		super();
 		this.diary_seq = diary_seq;
 		this.diary_title = diary_title;
@@ -120,15 +140,11 @@ public class DiaryVO {
 		this.diary_emo = diary_emo;
 		this.diary_with = diary_with;
 		this.mem_id = mem_id;
+		this.mem_nick = mem_nick;
 	}
 
 
-	@Override
-	public String toString() {
-		return "DiaryVO [diary_seq=" + diary_seq + ", diary_title=" + diary_title + ", diary_content=" + diary_content
-				+ ", diary_date=" + diary_date + ", diary_file=" + diary_file + ", diary_cnt=" + diary_cnt
-				+ ", diary_emo=" + diary_emo + ", diary_with=" + diary_with + ", mem_id=" + mem_id + "]";
-	}
+	
 	
 	
 	

@@ -11,24 +11,26 @@ public class CommunityVO {
 	private String community_cnt;
 	private String community_type;
 	private String mem_id;
+	private String mem_nick;
 	
+	
+	
+	
+	public String getMem_nick() {
+		return mem_nick;
+	}
+
+
+	public void setMem_nick(String mem_nick) {
+		this.mem_nick = mem_nick;
+	}
+
+
 	// 디폴트 생성자
 	public CommunityVO() {
 	}
 
 
-	public CommunityVO(int community_seq, String community_title, String community_content, String community_date,
-			String community_file, String community_cnt, String community_type, String mem_id) {
-		super();
-		this.community_seq = community_seq;
-		this.community_title = community_title;
-		this.community_content = community_content;
-		this.community_date = community_date;
-		this.community_file = community_file;
-		this.community_cnt = community_cnt;
-		this.community_type = community_type;
-		this.mem_id = mem_id;
-	}
 
 
 	public int getCommunity_seq() {
@@ -116,10 +118,24 @@ public class CommunityVO {
 		return "CommunityVO [community_seq=" + community_seq + ", community_title=" + community_title
 				+ ", community_content=" + community_content + ", community_date=" + community_date
 				+ ", community_file=" + community_file + ", community_cnt=" + community_cnt + ", community_type="
-				+ community_type + ", mem_id=" + mem_id + "]";
+				+ community_type + ", mem_id=" + mem_id + ", mem_nick=" + mem_nick + "]";
 	}
-	
-	
+
+
+	public CommunityVO(int community_seq, String community_title, String community_content, String community_date,
+			String community_file, String community_cnt, String community_type, String mem_id, String mem_nick) {
+		super();
+		this.community_seq = community_seq;
+		this.community_title = community_title;
+		this.community_content = community_content;
+		this.community_date = community_date;
+		this.community_file = community_file;
+		this.community_cnt = community_cnt;
+		this.community_type = community_type;
+		this.mem_id = mem_id;
+		this.mem_nick = mem_nick;
+	}
+
 
 
 

@@ -10,6 +10,53 @@ public class AnswerVO {
 	private String a_cnt;
 	private int q_seq;
 	private String mem_id;
+	private String mem_name;
+	
+	
+	
+	
+	
+	
+	
+	
+	public AnswerVO(int a_seq, String a_title, String a_content, String a_date, String a_file, String a_cnt, int q_seq,
+			String mem_id, String mem_name) {
+		super();
+		this.a_seq = a_seq;
+		this.a_title = a_title;
+		this.a_content = a_content;
+		this.a_date = a_date;
+		this.a_file = a_file;
+		this.a_cnt = a_cnt;
+		this.q_seq = q_seq;
+		this.mem_id = mem_id;
+		this.mem_name = mem_name;
+	}
+
+
+
+
+
+	@Override
+	public String toString() {
+		return "AnswerVO [a_seq=" + a_seq + ", a_title=" + a_title + ", a_content=" + a_content + ", a_date=" + a_date
+				+ ", a_file=" + a_file + ", a_cnt=" + a_cnt + ", q_seq=" + q_seq + ", mem_id=" + mem_id + ", mem_nick="
+				+ mem_name + "]";
+	}
+
+	
+	
+	
+	
+	public String getMem_name() {
+		return mem_name;
+	}
+
+	public void setMem_name(String mem_name) {
+		this.mem_name = mem_name;
+	}
+
+	
 	
 	
 	
@@ -20,18 +67,6 @@ public class AnswerVO {
 		// TODO Auto-generated constructor stub
 	}
 
-	public AnswerVO(int a_seq, String a_title, String a_content, String a_date, String a_file, String a_cnt,
-			int q_seq, String mem_id) {
-		super();
-		this.a_seq = a_seq;
-		this.a_title = a_title;
-		this.a_content = a_content;
-		this.a_date = a_date;
-		this.a_file = a_file;
-		this.a_cnt = a_cnt;
-		this.q_seq = q_seq;
-		this.mem_id = mem_id;
-	}
 
 	public int getA_seq() {
 		return a_seq;
@@ -97,11 +132,7 @@ public class AnswerVO {
 		this.mem_id = mem_id;
 	}
 
-	@Override
-	public String toString() {
-		return "AnswerVO [a_seq=" + a_seq + ", a_title=" + a_title + ", a_content=" + a_content + ", a_date=" + a_date
-				+ ", a_file=" + a_file + ", a_cnt=" + a_cnt + ", q_seq=" + q_seq + ", mem_id=" + mem_id + "]";
-	}
+
 	
 	
 	

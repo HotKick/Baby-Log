@@ -7,23 +7,14 @@ public class CommentsVO {
 	private String cmt_date;
 	private int community_seq;
 	private String mem_id;
-	
+	private String mem_nick;
 	
 	
 	public CommentsVO() {
-		super();
-		// TODO Auto-generated constructor stub
+		
 	}
 
-	public CommentsVO(int cmt_seq, String cmt_content, String cmt_date, int community_seq, String mem_id) {
-		super();
-		this.cmt_seq = cmt_seq;
-		this.cmt_content = cmt_content;
-		this.cmt_date = cmt_date;
-		this.community_seq = community_seq;
-		this.mem_id = mem_id;
-	}
-	
+
 	public int getCmt_seq() {
 		return cmt_seq;
 	}
@@ -54,12 +45,34 @@ public class CommentsVO {
 	public void setMem_id(String mem_id) {
 		this.mem_id = mem_id;
 	}
-	
-	
+
+
+	public String getMem_nick() {
+		return mem_nick;
+	}
+
+
+	public void setMem_nick(String mem_nick) {
+		this.mem_nick = mem_nick;
+	}
+
+
 	@Override
 	public String toString() {
 		return "CommentsVO [cmt_seq=" + cmt_seq + ", cmt_content=" + cmt_content + ", cmt_date=" + cmt_date
-				+ ", community_seq=" + community_seq + ", mem_id=" + mem_id + "]";
+				+ ", community_seq=" + community_seq + ", mem_id=" + mem_id + ", mem_nick=" + mem_nick + "]";
+	}
+
+
+	public CommentsVO(int cmt_seq, String cmt_content, String cmt_date, int community_seq, String mem_id,
+			String mem_nick) {
+		super();
+		this.cmt_seq = cmt_seq;
+		this.cmt_content = cmt_content;
+		this.cmt_date = cmt_date;
+		this.community_seq = community_seq;
+		this.mem_id = mem_id;
+		this.mem_nick = mem_nick;
 	}
 	
 	

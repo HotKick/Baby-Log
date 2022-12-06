@@ -10,6 +10,7 @@ public class QuestionVO {
 	private String q_file;
 	private String q_cnt;
 	private String mem_id;
+	private String mem_name;
 	
 	
 	
@@ -18,18 +19,7 @@ public class QuestionVO {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public QuestionVO(int q_seq, String q_title, String q_content, String q_date, String q_updatedate, String q_file,
-			String q_cnt, String mem_id) {
-		super();
-		this.q_seq = q_seq;
-		this.q_title = q_title;
-		this.q_content = q_content;
-		this.q_date = q_date;
-		this.q_updatedate = q_updatedate;
-		this.q_file = q_file;
-		this.q_cnt = q_cnt;
-		this.mem_id = mem_id;
-	}
+
 	public int getQ_seq() {
 		return q_seq;
 	}
@@ -78,11 +68,34 @@ public class QuestionVO {
 	public void setMem_id(String mem_id) {
 		this.mem_id = mem_id;
 	}
+
+	public String getMem_name() {
+		return mem_name;
+	}
+
+	public void setMem_name(String mem_name) {
+		this.mem_name = mem_name;
+	}
+
 	@Override
 	public String toString() {
 		return "QuestionVO [q_seq=" + q_seq + ", q_title=" + q_title + ", q_content=" + q_content + ", q_date=" + q_date
 				+ ", q_updatedate=" + q_updatedate + ", q_file=" + q_file + ", q_cnt=" + q_cnt + ", mem_id=" + mem_id
-				+ "]";
+				+ ", mem_name=" + mem_name + "]";
+	}
+
+	public QuestionVO(int q_seq, String q_title, String q_content, String q_date, String q_updatedate, String q_file,
+			String q_cnt, String mem_id, String mem_name) {
+		super();
+		this.q_seq = q_seq;
+		this.q_title = q_title;
+		this.q_content = q_content;
+		this.q_date = q_date;
+		this.q_updatedate = q_updatedate;
+		this.q_file = q_file;
+		this.q_cnt = q_cnt;
+		this.mem_id = mem_id;
+		this.mem_name = mem_name;
 	}
 	
 	

@@ -9,26 +9,22 @@ public class TradeVO {
 	private String trade_cnt;
 	private String trade_ing;
 	private String mem_id;
+	private String mem_nick;
 	
 	
 	
 	
+	public String getMem_nick() {
+		return mem_nick;
+	}
+	public void setMem_nick(String mem_nick) {
+		this.mem_nick = mem_nick;
+	}
 	public TradeVO() {
 		super();
 		// TODO Auto-generated constructor stub
 	}
-	public TradeVO(int trade_seq, String trade_title, String trade_content, String trade_date, String trade_file,
-			String trade_cnt, String trade_ing, String mem_id) {
-		super();
-		this.trade_seq = trade_seq;
-		this.trade_title = trade_title;
-		this.trade_content = trade_content;
-		this.trade_date = trade_date;
-		this.trade_file = trade_file;
-		this.trade_cnt = trade_cnt;
-		this.trade_ing = trade_ing;
-		this.mem_id = mem_id;
-	}
+	
 	public int getTrade_seq() {
 		return trade_seq;
 	}
@@ -77,12 +73,26 @@ public class TradeVO {
 	public void setMem_id(String mem_id) {
 		this.mem_id = mem_id;
 	}
+	public TradeVO(int trade_seq, String trade_title, String trade_content, String trade_date, String trade_file,
+			String trade_cnt, String trade_ing, String mem_id, String mem_nick) {
+		super();
+		this.trade_seq = trade_seq;
+		this.trade_title = trade_title;
+		this.trade_content = trade_content;
+		this.trade_date = trade_date;
+		this.trade_file = trade_file;
+		this.trade_cnt = trade_cnt;
+		this.trade_ing = trade_ing;
+		this.mem_id = mem_id;
+		this.mem_nick = mem_nick;
+	}
 	@Override
 	public String toString() {
 		return "TradeVO [trade_seq=" + trade_seq + ", trade_title=" + trade_title + ", trade_content=" + trade_content
 				+ ", trade_date=" + trade_date + ", trade_file=" + trade_file + ", trade_cnt=" + trade_cnt
-				+ ", trade_ing=" + trade_ing + ", mem_id=" + mem_id + "]";
+				+ ", trade_ing=" + trade_ing + ", mem_id=" + mem_id + ", mem_nick=" + mem_nick + "]";
 	}
+	
 	
 	
 	
