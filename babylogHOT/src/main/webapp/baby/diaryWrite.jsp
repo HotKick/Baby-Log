@@ -63,7 +63,9 @@
             <div class="info">
                 <dl>
                     <dt>글쓴이</dt>
-                    <dd><input type="text" name = "mem_id" value = "${mvo.mem_id}" readonly/></dd>
+                    <dd><input type="text" name = "mem_nick" value = "${mvo.mem_nick}" readonly/></dd>
+                    <dd><input type="hidden" name = "mem_id" value = "${mvo.mem_id}" readonly/></dd>
+                    
                 </dl>
                 <dl>
                     <dt>첨부파일</dt>

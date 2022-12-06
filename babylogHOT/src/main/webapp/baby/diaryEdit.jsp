@@ -45,12 +45,16 @@
 
 		<!-- //게시판 영역 -->
 	</main>
-	 <form>
+	 <form action="${cpath}/diaryEdit.do" method="post" enctype = "multipart/form-data">
+		
+		<input type="hidden" name="diary_seq" value="${vo.diary_seq}">
+		<input type="hidden" name = "noupdate" value="${vo.diary_file}">
 		<div class="container">
+
 			<div class="board_wrap">
 				<div class="board_title">
-					<strong>다이어</strong>
-					<p>일기를 작성해 주세요</p>
+					<strong>다이어리 수정 </strong>
+					<p>수정 페이지 </p>
 				</div>
 				<div class="board_write_wrap">
 					<div class="board_write">
@@ -58,7 +62,7 @@
 							<dl>
 								<dt>제목</dt>
 								<dd>
-									<input type="text" placeholder="제목 입력" name="title" value="${vo.diary_title}">
+									<input type="text" placeholder="제목 입력" name="diary_title" value="${vo.diary_title}">
 								</dd>
 							</dl>
 						</div>
@@ -66,20 +70,22 @@
 							<dl>
 								<dt>글쓴이</dt>
 								<dd>
-									<input type="text" placeholder="글쓴이 입력" name="writer" value="${vo.mem_id}">
+									<input type="text" placeholder="글쓴이 입력" name="mem_nick" value="${vo.mem_nick}">
+									<input type="hidden" placeholder="글쓴이 아이디" name="mem_id" value="${vo.mem_id}">
 								</dd>
 							</dl>
 							<dl>
-								<dt>비밀번호</dt>
+								<dt>첨부파일</dt>
 								<dd>
-									<input type="password" placeholder="비밀번호 입력" value="1234">
+								 <!-- 추후 동일한 비번 입력했을 시 삭제할 수 있게 수정  -->
+									<input type="file" name = "diary_file">
 								</dd>
 							</dl>
-						</div>
+							</div>
+							
+					
 						<div class="cont">
-							<textarea placeholder="내용 입력" name = "content">
-                          ${vo.diary_content}
-                            </textarea>
+							<textarea placeholder="내용 입력" name = "diary_content">${vo.diary_content}</textarea>
 						</div>
 					</div>
 					<div class="bt_wrap">
