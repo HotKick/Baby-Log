@@ -50,7 +50,7 @@
                 <div class="profile_info">
                     <div class="info_inner">
                         <div class="id"><a href="">${vo.mem_id}</a></div>
-                        <div class="address">${mvo.mem_nick}입니다 </div>
+                        <div class="address">${vo.mem_nick}입니다 </div>
                     </div>
                 </div>
             </div>
@@ -127,20 +127,24 @@
         </div>
             <!-- // #feed_text -->
             	<div class="container">
+            	<c:if test="${!empty mvo}">
 				<form action="${cpath}/diaryComment.do" class="form-horizontal"
 					method="post">
 					<input type="hidden" name="diary_seq" value="${vo.diary_seq}">
 
 					<div class="input-group flex-nowrap">
-						<input type="hidden" name="mem_id" value="${vo.mem_id}">
-						<input type="hidden" name="mem_nick" value="${vo.mem_nick}">
+						<input type="hidden" name="mem_id" value="${mvo.mem_id}">
+						<input type="hidden" name="mem_nick" value="${mvo.mem_nick}">
 						<span class="input-group-text" id="addon-wrapping">${mvo.mem_nick}</span>
 						<input type="text" class="form-control" placeholder="댓글 입력"
 							name="diary_cmt_content" aria-label="title"
 							aria-describedby="addon-wrapping">
 						<button type="submit" class="btn btn-sm btn-primary">등록</button>
-					</div>
+					
+					
+				</div>
 				</form>
+				</c:if>
 		
 		</div>
 		
@@ -149,7 +153,7 @@
         <c:forEach var = "cvo" items = "${list}">
 		<c:if test = "${cvo.diary_seq eq vo.diary_seq}">
                     <div class="coment1">
-                    <input type="hidden" name="cmt_seq" value="${cvo.diary_cmt_seq}">
+                    <input type="hidden" name="diary_cmt_seq" value="${cvo.diary_cmt_seq}">
                         <div class="co_profile">${cvo.mem_nick}</div>
                             <div class="co_text">
                                 <p>${cvo.diary_cmt_content}</p>
