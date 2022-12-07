@@ -126,6 +126,23 @@
             <!-- //feed_text -->
         </div>
             <!-- // #feed_text -->
+            	<div class="container">
+				<form action="${cpath}/diaryComment.do" class="form-horizontal"
+					method="post">
+					<input type="hidden" name="diary_seq" value="${vo.diary_seq}">
+
+					<div class="input-group flex-nowrap">
+						<input type="hidden" name="mem_id" value="${vo.mem_id}">
+						<input type="hidden" name="mem_nick" value="${vo.mem_nick}">
+						<span class="input-group-text" id="addon-wrapping">${mvo.mem_nick}</span>
+						<input type="text" class="form-control" placeholder="댓글 입력"
+							name="diary_cmt_content" aria-label="title"
+							aria-describedby="addon-wrapping">
+						<button type="submit" class="btn btn-sm btn-primary">등록</button>
+					</div>
+				</form>
+		
+		</div>
 
             <div class="feed_comment item">
                 <div class="comment_wrap">

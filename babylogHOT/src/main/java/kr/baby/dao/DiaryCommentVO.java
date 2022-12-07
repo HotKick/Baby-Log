@@ -7,23 +7,32 @@ public class DiaryCommentVO {
 	private String diary_cmt_content;
 	private String diary_cmt_date;
 	private String mem_id;
+	private String mem_nick;
 	
+	public DiaryCommentVO() {}
 	
-	@Override
-	public String toString() {
-		return "Diary_commentVO [diary_cmt_seq=" + diary_cmt_seq + ", diary_seq=" + diary_seq + ", diary_cmt_content="
-				+ diary_cmt_content + ", diary_cmt_date=" + diary_cmt_date + ", mem_id=" + mem_id + "]";
-	}
-	
-	
+
 	public DiaryCommentVO(int diary_cmt_seq, int diary_seq, String diary_cmt_content, String diary_cmt_date,
-			String mem_id) {
+			String mem_id, String mem_nick) {
 		super();
 		this.diary_cmt_seq = diary_cmt_seq;
 		this.diary_seq = diary_seq;
 		this.diary_cmt_content = diary_cmt_content;
 		this.diary_cmt_date = diary_cmt_date;
 		this.mem_id = mem_id;
+		this.mem_nick = mem_nick;
+	}
+	@Override
+	public String toString() {
+		return "DiaryCommentVO [diary_cmt_seq=" + diary_cmt_seq + ", diary_seq=" + diary_seq + ", diary_cmt_content="
+				+ diary_cmt_content + ", diary_cmt_date=" + diary_cmt_date + ", mem_id=" + mem_id + ", mem_nick="
+				+ mem_nick + "]";
+	}
+	public String getMem_nick() {
+		return mem_nick;
+	}
+	public void setMem_nick(String mem_nick) {
+		this.mem_nick = mem_nick;
 	}
 	public int getDiary_cmt_seq() {
 		return diary_cmt_seq;

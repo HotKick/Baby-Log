@@ -289,6 +289,13 @@ public class BabyMyBatisDAO {
 					session.close();
 				}
 				
+				// 일기 게시판 댓글 쓰기 메소드
+				public void insertDiaryComment(DiaryCommentVO vo) {
+					SqlSession session = sqlSessionFactory.openSession();
+					session.insert("insertDiaryComment",vo);
+					session.commit();
+					session.close();
+				}
 				
 				// 로그인 메소드
 	
@@ -339,6 +346,8 @@ public class BabyMyBatisDAO {
 					session.commit();
 					session.close();
 				}
+				
+				
 	
 
 //	public void Update(MemberVO vo) {

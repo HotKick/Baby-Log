@@ -156,10 +156,10 @@
 	</select>
 	
 	<!-- Diary 7. 일기 게시판 댓글 등록 -->
-	<insert id = "insertDiaryComment" parameterType = "kr.baby.dao.DiaryCommnetVO">
+	<insert id = "insertDiaryComment" parameterType="kr.baby.dao.DiaryCommentVO">
 	insert into
-	diary_comment(diary_cmt_seq,diary_seq,diary_cmt_content,diary_cmt_date,mem_id)
-	values(diary_cmt_seq.nextval,dairy_seq =#{diary_seq},diary_cmt_content=#{diary_cmt_content},sysdate,mem_id=#{mem_id})
+	diary_comment(diary_cmt_seq,diary_seq,diary_cmt_content,diary_cmt_date,mem_id,mem_nick)
+	values(diary_comments_seq.nextval,#{diary_seq},#{diary_cmt_content},sysdate,#{mem_id},#{mem_nick})
 	</insert>
 	
 	<!-- Quesion 1. 질문 게시판 전체 리스트  -->
