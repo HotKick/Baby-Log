@@ -165,9 +165,12 @@
 	<select id = "ListDiaryComment" resultType="kr.baby.dao.DiaryCommentVO">
 		select * from diary_comment
 		order by diary_cmt_seq desc
-	
 	</select>
 	
+	<!-- Diary 9. 일기 게시판 댓글 삭제  -->
+	<delete id="deleteDiaryComment">
+	delete from diary_comment where diary_cmt_seq=#{diary_cmt_seq}
+	</delete>
 	
 	<!-- Quesion 1. 질문 게시판 전체 리스트  -->
 	<select id = "listQuestion" resultType = "kr.baby.dao.QuestionVO">

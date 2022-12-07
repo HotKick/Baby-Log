@@ -33,6 +33,12 @@
 	function goEdit(diary_seq){
 		location.href="${cpath}/diaryEditForm.do?diary_seq="+diary_seq;
 	}
+	
+	function goCDel(diary_cmt_seq,diary_seq){
+		console.log("댓글번호", diary_cmt_seq)
+		console.log("글번호",diary_seq)
+		location.href="${cpath}/diaryCommentDelete.do?diary_cmt_seq=" +diary_cmt_seq +"&diary_seq="+diary_seq;
+	}
 </script>
 </head>
 <body>
@@ -161,6 +167,9 @@
                         <div class="co_time">
                             <span>${cvo.diary_cmt_date}</span>
                         </div>
+                       
+							<button type="button" class="btn float-end" onclick="goCDel(${cvo.diary_cmt_seq},${vo.diary_seq})">삭제</button>
+						
                     </div>
                     
                     </c:if>

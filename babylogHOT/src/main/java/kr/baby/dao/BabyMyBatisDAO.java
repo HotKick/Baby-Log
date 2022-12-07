@@ -305,6 +305,13 @@ public class BabyMyBatisDAO {
 					return list;
 				}
 				
+				// 일기 댓글 삭제 메소드
+				public void deleteDiaryComment(int diary_cmt_seq) {
+					SqlSession session = sqlSessionFactory.openSession();
+					int vo = session.delete("deleteDiaryComment", diary_cmt_seq);
+					session.commit();
+					session.close();
+				}
 				
 				// 로그인 메소드
 	
