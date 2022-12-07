@@ -155,6 +155,13 @@
 	select * from diary where diary_seq=#{diary_seq}
 	</select>
 	
+	<!-- Diary 7. 일기 게시판 댓글 등록 -->
+	<insert id = "insertDiaryComment" parameterType = "kr.baby.dao.DiaryCommnetVO">
+	insert into
+	diary_comment(diary_cmt_seq,diary_seq,diary_cmt_content,diary_cmt_date,mem_id)
+	values(diary_cmt_seq.nextval,dairy_seq =#{diary_seq},diary_cmt_content=#{diary_cmt_content},sysdate,mem_id=#{mem_id})
+	</insert>
+	
 	<!-- Quesion 1. 질문 게시판 전체 리스트  -->
 	<select id = "listQuestion" resultType = "kr.baby.dao.QuestionVO">
 	select * from question
