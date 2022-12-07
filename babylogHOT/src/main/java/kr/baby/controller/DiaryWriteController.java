@@ -38,10 +38,11 @@ public class DiaryWriteController implements Controller {
 		String diary_title= multi.getParameter("diary_title");
 		String diary_content= multi.getParameter("diary_content");
 		String diary_file = multi.getFilesystemName("diary_file");
-
+		String mem_nick = multi.getParameter("mem_nick");
 		//String diary_cnt= multi.getParameter("diary_cnt");
 		//String diary_emo= multi.getParameter("diary_emo");
 		//String diary_with= multi.getParameter("diary_with");
+		System.out.println(mem_nick);
 		
 		DiaryVO vo = new DiaryVO();
 		
@@ -49,6 +50,7 @@ public class DiaryWriteController implements Controller {
 		vo.setDiary_title(diary_title);
 		vo.setDiary_content(diary_content);
 		vo.setDiary_file(diary_file);
+		vo.setMem_nick(mem_nick);
 
 
 		//vo.setDiary_emo(diary_emo);

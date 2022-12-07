@@ -297,6 +297,15 @@ public class BabyMyBatisDAO {
 					session.close();
 				}
 				
+				// 일기 댓글 전체 보기 메소드
+				public List<DiaryCommentVO> ListDiaryComment(){
+					SqlSession session = sqlSessionFactory.openSession();
+					List<DiaryCommentVO> list =session.selectList("ListDiaryComment");
+					session.close();
+					return list;
+				}
+				
+				
 				// 로그인 메소드
 	
 				public MemberVO memberLogin(MemberVO vo) {

@@ -143,27 +143,24 @@
 				</form>
 		
 		</div>
-
+		
             <div class="feed_comment item">
                 <div class="comment_wrap">
+        <c:forEach var = "cvo" items = "${list}">
+		<c:if test = "${cvo.diary_seq eq vo.diary_seq}">
                     <div class="coment1">
-                        <div class="co_profile">여기</div>
+                    <input type="hidden" name="cmt_seq" value="${cvo.diary_cmt_seq}">
+                        <div class="co_profile">${cvo.mem_nick}</div>
                             <div class="co_text">
-                                <p>좋은 댓글만 달아주세요</p>
+                                <p>${cvo.diary_cmt_content}</p>
                             </div>
                         <div class="co_time">
-                            <span>5:30 pm</span>
+                            <span>${cvo.diary_cmt_date}</span>
                         </div>
                     </div>
-                    <div class="coment1">
-                        <div class="co_profile">여기</div>
-                        <div class="co_text">
-                            <p>좋은 댓글만 달아주세요</p>
-                        </div>
-                        <div class="co_time">
-                            <span>5:30 pm</span>
-                        </div>
-                    </div>
+                    
+                    </c:if>
+                    </c:forEach>
                 </div>
             </div>
             <!-- //feed_comment -->

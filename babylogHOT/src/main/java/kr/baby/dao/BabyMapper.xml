@@ -125,8 +125,8 @@
 
 <!-- Diary 2. 일기 게시판 글쓰기  -->
 	<insert id="insertDiary" parameterType="kr.baby.dao.DiaryVO">
-	insert into diary(diary_seq,diary_title,diary_content,diary_date,diary_file,mem_id)
-	values(diary_seq.nextval,#{diary_title},#{diary_content},sysdate,#{diary_file,jdbcType=VARCHAR},#{mem_id})
+	insert into diary(diary_seq,diary_title,diary_content,diary_date,diary_file,mem_id,mem_nick)
+	values(diary_seq.nextval,#{diary_title},#{diary_content},sysdate,#{diary_file,jdbcType=VARCHAR},#{mem_id},#{mem_nick})
 	</insert>
 	
 
@@ -161,6 +161,13 @@
 	diary_comment(diary_cmt_seq,diary_seq,diary_cmt_content,diary_cmt_date,mem_id,mem_nick)
 	values(diary_comments_seq.nextval,#{diary_seq},#{diary_cmt_content},sysdate,#{mem_id},#{mem_nick})
 	</insert>
+	<!-- Diary 8. 일기 게시판 댓글 목록 -->
+	<select id = "ListDiaryComment" resultType="kr.baby.dao.DiaryCommentVO">
+		select * from diary_comment
+		order by diary_cmt_seq desc
+	
+	</select>
+	
 	
 	<!-- Quesion 1. 질문 게시판 전체 리스트  -->
 	<select id = "listQuestion" resultType = "kr.baby.dao.QuestionVO">
