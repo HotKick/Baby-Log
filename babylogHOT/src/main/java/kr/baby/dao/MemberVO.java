@@ -20,6 +20,12 @@ public class MemberVO {
 		super();
 		// TODO Auto-generated constructor stub
 	}
+	
+	public MemberVO(String mem_id, String mem_pw,String mem_name) {
+		this.mem_id= mem_id;
+		this.mem_pw = mem_pw;
+		this.mem_name = mem_name;
+	}
 
 	public MemberVO(String mem_id, String mem_pw, String mem_name, String mem_nick, String mem_gender, String mem_birth,
 			String mem_tel, String mem_joindate, String mem_type) {

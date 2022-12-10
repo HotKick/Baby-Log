@@ -313,6 +313,24 @@ public class BabyMyBatisDAO {
 					session.close();
 				}
 				
+				
+				//일기 댓글 수정 메소드
+				public void updateDiaryComment(DiaryCommentVO vo) {
+					SqlSession session = sqlSessionFactory.openSession();
+					session.update("updateDiaryComment",vo);
+					session.commit();
+					session.close();
+		
+				}
+				
+				// 일기 댓글 번호 가져오기 메소드
+				public DiaryCommentVO getDiary_cmt_seq(int diary_cmt_seq) {
+					SqlSession session = sqlSessionFactory.openSession();
+					DiaryCommentVO vo = session.selectOne("getDiary_cmt_seq",diary_cmt_seq);
+					session.close();
+					return vo;
+				}
+				
 				// 로그인 메소드
 	
 				public MemberVO memberLogin(MemberVO vo) {

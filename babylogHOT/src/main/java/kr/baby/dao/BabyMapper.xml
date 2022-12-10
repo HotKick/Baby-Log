@@ -172,6 +172,16 @@
 	delete from diary_comment where diary_cmt_seq=#{diary_cmt_seq}
 	</delete>
 	
+	<!-- Diary 10. 일기 게시판 댓글 수정 -->
+	<update id = "updateDiaryComment" parameterType = "kr.baby.dao.DiaryCommentVO">
+	update diary_comment set
+	diary_cmt_content=#{diary_cmt_content}
+	where diary_cmt_seq = #{diary_cmt_seq}
+	</update>
+	<!-- Diary11. 일기 게시판 댓글 번호  -->
+	<select id = "getDiary_cmt_seq" parameterType="int" resultType="kr.baby.dao.DiaryCommentVO">
+		select * from diary_comment where diary_cmt_seq = #{diary_cmt_seq}
+	</select>
 	<!-- Quesion 1. 질문 게시판 전체 리스트  -->
 	<select id = "listQuestion" resultType = "kr.baby.dao.QuestionVO">
 	select * from question

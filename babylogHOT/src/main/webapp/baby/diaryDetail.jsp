@@ -9,6 +9,7 @@
 <!DOCTYPE html>
 <html>
 <head>
+<script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
 <meta charset="UTF-8">
 <title>Insert title here</title>
 
@@ -39,6 +40,43 @@
 		console.log("글번호",diary_seq)
 		location.href="${cpath}/diaryCommentDelete.do?diary_cmt_seq=" +diary_cmt_seq +"&diary_seq="+diary_seq;
 	}
+	
+	function goCDel(diary_cmt_seq,diary_seq){
+		$.ajax({
+			url : "${cpath}/diaryCommentDelete.do?diary_seq="+diary_seq+"&diary_cmt_seq="+diary_cmt_seq,
+			type : "get",
+			data : {"diary_cmt_seq":diary_cmt_seq,"diary_seq":diary_seq},
+			success : function(){
+				location.href="${cpath}/diaryDetail.do?diary_seq="+diary_seq;
+			},
+			error : function(){alert("error!")}
+		});
+	}
+	
+	function goCUpdteform(diary_cmt_seq,diary_seq){
+  		//readonly로 되어있던 textarea false로 만들기(attr 속성)
+ 			var tempContent = $("#ct"+diary_cmt_seq).text();
+ 			var newContent = "<input type = 'text' id ='nt"+diary_cmt_seq+"' class = 'form-control' value = '"+tempContent+"'/>";
+ 			$("#ct"+diary_cmt_seq).html(newContent);
+ 			var newBtn = "<button onclick = 'goCUpdate("+diary_cmt_seq+","+diary_seq+")'>수정하기</button>";
+ 			$("#b"+diary_cmt_seq).html(newBtn);
+  		};
+  		
+  	  function goCUpdate(diary_cmt_seq,diary_seq){
+  	  		var diary_cmt_content = $("#nt"+diary_cmt_seq).val();
+  	  		
+  	  		$.ajax({
+  	  			url : "${cpath}/diaryCommentUpdate.do",
+  	  			type : "post",
+  	  			data : {"diary_cmt_seq":diary_cmt_seq,"diary_cmt_content":diary_cmt_content,"diary_seq":diary_seq},
+  	  			success : function(){
+  	  				location.href= "${cpath}/diaryDetail.do?diary_seq="+diary_seq;
+  	  			},
+  	  			error : function(){alert("error!");}
+  	  		});
+  	  		
+  	  	}
+  		
 </script>
 </head>
 <body>
@@ -162,16 +200,19 @@
                     <input type="hidden" name="diary_cmt_seq" value="${cvo.diary_cmt_seq}">
                         <div class="co_profile">${cvo.mem_nick}</div>
                             <div class="co_text">
-                                <p>${cvo.diary_cmt_content}</p>
+                                 <p id= "ct${cvo.diary_cmt_seq}">${cvo.diary_cmt_content}</p>
                             </div>
                         <div class="co_time">
                             <span>${cvo.diary_cmt_date}</span>
                         </div>
-                       
+                        
+                        <c:if test="${!empty mvo && cvo.mem_id eq mvo.mem_id}">
+                      
 							<button type="button" class="btn float-end" onclick="goCDel(${cvo.diary_cmt_seq},${vo.diary_seq})">삭제</button>
-						
+							<span id = "b${cvo.diary_cmt_seq}"><button type="button" class="btn float-end" onclick="goCUpdteform(${cvo.diary_cmt_seq},${vo.diary_seq})">수정</button></span>
+                
                     </div>
-                    
+                    </c:if>
                     </c:if>
                     </c:forEach>
                 </div>
