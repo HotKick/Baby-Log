@@ -15,7 +15,7 @@ import com.google.gson.Gson;
 import kr.baby.dao.BabyMyBatisDAO;
 import kr.baby.dao.DiaryVO;
 
-@WebServlet("/dirary")
+@WebServlet("/diary")
 public class diary extends HttpServlet {
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
@@ -27,7 +27,7 @@ public class diary extends HttpServlet {
 		
 		List<DiaryVO> list = dao.listDiary(); 
 		
-		String diary_json = gson.toJson(diary);
+		String diary_json = gson.toJson(list);
 		
 		writer.print(diary_json);
 		
