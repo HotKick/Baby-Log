@@ -29,9 +29,13 @@
 <!-- 웹아이콘 -->
 <script src="https://kit.fontawesome.com/e76461f593.js"
 	crossorigin="anonymous"></script>
+	
+<script type = "text/javascript">
+	function goDel(community_seq){
+		location.href = "${cpath}/communityDelete.do?community_seq="+community_seq;
+	}
 
-
-
+</script>
 </head>
 <body>
 		<%@ include file="header.jsp" %>
@@ -55,6 +59,7 @@
 						<div class="info">
 							<dl>
 								<dt>번호</dt>
+								<input type="hidden" name="community_seq" value="${vo.community_seq}"/>
 								<dd>${vo.community_seq}</dd>
 							</dl>
 							<dl>
@@ -77,7 +82,10 @@
 					 <div class="bt_wrap">
                             <a href="${cpath}/communityFree.do" class="on">목록</a>
                             <a href="${cpath}/communityEdit.do">수정</a>
-                            <a href="${cpath}/communityDelete.do">삭제</a>
+                            <button onclick = "goDel(${vo.community_seq})">삭제</button>
+                          
+                
+	}
                         </div>
 				</div>
 			</div> 
