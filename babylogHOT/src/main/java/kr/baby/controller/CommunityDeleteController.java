@@ -15,7 +15,8 @@ public class CommunityDeleteController implements Controller {
 			throws ServletException, IOException {
 		BabyMyBatisDAO dao = new BabyMyBatisDAO();
 		int community_seq = Integer.parseInt(request.getParameter("community_seq"));
-		System.out.println(community_seq);
+		System.out.println("외 안나와.."+community_seq);
+		
 		dao.deleteFree(community_seq);
 		return "redirect:/communityFree.do";
 	}

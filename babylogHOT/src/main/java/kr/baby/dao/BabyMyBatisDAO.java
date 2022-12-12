@@ -203,7 +203,7 @@ public class BabyMyBatisDAO {
 				// 거래게시판 글쓰기 메소드
 				public void insertTrade(CommunityVO vo2) {
 					SqlSession session = sqlSessionFactory.openSession();
-					session.insert("insertCommunity",vo2);
+					session.insert("insertTrade",vo2);
 					session.commit();
 					session.close();
 				}
@@ -233,9 +233,9 @@ public class BabyMyBatisDAO {
 				}
 				
 				// 거래게시판 삭제 메소드
-				public void deleteTrade(int Community_seq) {
+				public void deleteTrade(int community_seq) {
 					SqlSession session = sqlSessionFactory.openSession();
-					session.delete("deleteCommunity",Community_seq);
+					session.delete("deleteCommunity",community_seq);
 					session.commit();
 					session.close();
 				}
