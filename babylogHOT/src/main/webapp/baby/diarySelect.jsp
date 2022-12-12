@@ -6,12 +6,11 @@
 
 <c:set var="cpath" value="${pageContext.request.contextPath}" />
 <!DOCTYPE html>
-<html lang="ko">
+<html>
 <head>
 <meta charset="UTF-8">
-<meta http-equiv="X-UA-Compatible" content="IE=edge">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>육아일기</title>
+<title>다이어리 사진 선택하기</title>
+
 
 <!-- style -->
 <link rel="stylesheet" href="${cpath}/css/reset.css">
@@ -26,21 +25,17 @@
 <script src="https://kit.fontawesome.com/e76461f593.js"
 	crossorigin="anonymous"></script>
 
+
+
 </head>
 <body>
-	<%@ include file="header.jsp" %>
-
-	
-	    <main id="main" class="container">
+<%@ include file="header.jsp" %>
+  <main id="main" class="container">
           <div class="tag">
             <div class="tag_icon">
               <div class="tag1"><button>감정1</button></div>
               <div class="tag2"><button>감정2</button></div>
               <div class="tag3"><button>감정3</button></div>
-              <div class="tag4"><button>감정4</button></div>
-            </div>
-            <div class="bt_wrap">
-                <button type="button" onclick="location.href='${cpath}diaryWrite.html'">글쓰기</a></button>
             </div>
           </div>
         <!-- //tag -->
@@ -104,50 +99,16 @@
            
                 </c:forEach>        
               </ol>
+              <div class="order">
+              <a href="#">결제하기</a>
+          </div>
           
           </section>
 
-    </main>
-	
-		<footer id="footer">
-		<div class="container">
-			<div class="foot_inner mt30">
-				<div class="foot_logo">
-					<a href="${cpath}/main.do">Baby LOG</a>
-				</div>
-				<div class="foot_nav">
-					<ul>
-						<li><a href="${cpath}/diary.do">육아일기</a></li>
-						<li><a href="${cpath}/communityFree.do">커뮤니티</a></li>
-						<li><a href="${cpath}/shop.do">쇼핑몰</a></li>
-						<li><a href="${cpath}/newsGov.do">뉴스</a></li>
-						<li><a href="${cpath}/question.do">고객센터</a></li>
-					</ul>
-				</div>
-				<div class="foot_icon">
-					<ul>
-						<li><a href="#"> <i class="fa-brands fa-twitter"></i> <span>트위터</span>
-						</a></li>
-						<li><a href="#"> <i class="fa-brands fa-instagram"></i> <span>인스타그램</span>
-						</a></li>
-						<li><a href="#"> <i class="fa-brands fa-facebook"></i> <span>페이스북</span>
-						</a></li>
-					</ul>
-				</div>
-			</div>
 
-		</div>
-	</footer>
-<script type="text/javascript">
-function reload(){  
-       location.reload();
-}
-	<!-- script -->
-	<script type="text/javascript"
-		src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-	<script src="${cpath}/js/slick.min.js"></script>
-	<script src="${cpath}/js/diary.js"></script>
-	
+    </main>
+
+
 
 </body>
 </html>

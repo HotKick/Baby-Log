@@ -15,43 +15,13 @@
 <!-- style -->
 <link rel="stylesheet" href="${cpath}/css/reset.css">
 <link rel="stylesheet" href="${cpath}/css/common.css">
+<!-- 웹아이콘 -->
+<script src="https://kit.fontawesome.com/e76461f593.js"
+	crossorigin="anonymous"></script>
 
 </head>
 <body>
 
-	<header id="header">
-		<div class="container">
-			<div class="header_inner">
-				<div class="header_logo">
-					<a href="${cpath}/main.do">Baby LOG</a>
-				</div>
-				<nav class="header_menu">
-					<ul>
-						<li><a href="${cpath}/diary.do">육아일기</a></li>
-						<li><a href="${cpath}/communityFree.do">커뮤니티</a></li>
-						<li><a href="${cpath}/shop.do">쇼핑몰</a></li>
-						<li><a href="${cpath}/newsGov.do">뉴스</a></li>
-					</ul>
-				</nav>
-				
-				<div class="header_member">
-				<c:if test="${empty mvo}">
-					<ul>
-						<li><a href="${cpath}/loginform.do">로그인</a></li>
-						<li><a href="${cpath}/signupform.do">회원가입</a></li>
-					</ul>
-				</c:if>
-				<c:if test="${!empty mvo}">
-					${mvo.mem_name}님 환영합니다.
-					<li><a href="#">로그아웃</a></li>
-					</c:if>
-				</div>
-			</div>
-			<!-- //header_inner -->
-		</div>
-		<!-- //container -->
-	</header>
-	
 	<!-- !!new header ------------------------------------------------->
 	<div id="nav">
 	  <div class="container">
@@ -69,10 +39,9 @@
 	          </ul>
 	          <ul class="navbar_icons">
 	          <c:if test="${empty mvo}">
-	              <ul>
 		              <li><a href="${cpath}login.html"><i class="fab fa-facebook-square"></i></a></li>
 	              	  <li><a href="${cpath}signUp.html"><i class="fab fa-instagram"></i></a></li>
-				 </ul>
+			  </ul>
 	          </c:if>
 	          <c:if test="${!empty mvo}">
 					${mvo.mem_name}님 환영합니다.
