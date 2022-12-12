@@ -8,7 +8,8 @@ import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import kr.baby.dao.BabyMyBatisDAO;
-import kr.baby.dao.TradeVO;
+import kr.baby.dao.CommunityVO;
+
 
 public class CommunityTradeController implements Controller {
 
@@ -17,7 +18,7 @@ public class CommunityTradeController implements Controller {
 			throws ServletException, IOException {
 		
 		BabyMyBatisDAO dao = new BabyMyBatisDAO();
-		List<TradeVO> list = dao.listTrade();
+		List<CommunityVO> list = dao.listTrade();
 		request.setAttribute("list", list);
 		
 		return "communityTrade";

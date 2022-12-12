@@ -27,10 +27,13 @@
 <script src="https://kit.fontawesome.com/e76461f593.js"
 	crossorigin="anonymous"></script>
 
+
+
 </head>
 <body>
 		<%@ include file="header.jsp" %>
 	<main>
+
 
 
 		<!-- //게시판 영역 -->
@@ -41,7 +44,7 @@
 				<div class="board_title">
 					<strong>자유게시판</strong>
 					<div class="tag">
-                        <div><a href="${cpath}/communityFree.do" class="free">자유게시판</a></div>
+                        <div><a href="${cpath}/communityFree.do" id = "free" class="free">자유게시판</a></div>
                         <div><a href="${cpath}/communityInfo.do" class="info">정보게시판</a></div>
                         <div><a href="${cpath}/communityTrade.do" class="trade">중고게시판</a></div>
                     </div>
@@ -58,13 +61,13 @@
 						<!-- //table_header -->
 
 						<div>
-						<c:forEach var= "vo" items = "${list}" begin="1" end="10" step="1" varStatus="status">
+						<c:forEach var= "vo" items = "${list}">
 						<c:if test = "${vo.community_type eq '01' }">
 							<div class="num">${vo.community_seq}</div>
 							<div class="title">
 								<a href="${cpath }/communityDetail.do?community_seq=${vo.community_seq}">${vo.community_title}</a>
 							</div>
-							<div class="writer">${vo.mem_id}</div>
+							<div class="writer">${vo.mem_nick}</div>
 							<div class="date">${vo.community_date}</div>
 							<div class="count">${vo.community_cnt}</div>
 							</c:if>
@@ -83,7 +86,9 @@
 							href="#" class="bt last">>></a>
 					</div>
 					<div class="bt_wrap">
-                        <button><a href="${cpath}/communityWriteForm.do">등록</a></button>
+                     
+                        <button type = "button" onclick="location.href='${cpath}/communityWriteForm.do'">등록</button>
+                   
                     </div>
 				</div>
 			</div>

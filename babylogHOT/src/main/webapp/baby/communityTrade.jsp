@@ -58,19 +58,21 @@
 						<!-- //table_heade -->
 
 						<div>
-						<c:forEach var= "vo" items = "${list}" begin="1" end="10" step="1" varStatus="status">
+					 <c:forEach var= "vo" items = "${list}" >
 						<c:if test = "${vo.community_type eq '03' }">
-							<div class="num">${vo.trade_seq}</div>
+							<div class="num">${vo.community_seq}</div>
 							<div class="title">
-								<a href="${cpath}/communityDetail.do?community_seq=${vo.community_seq}">${vo.trade_title}</a>
+								<a href="${cpath}/communityDetail.do?community_seq=${vo.community_seq}">${vo.community_title}</a>
 							</div>
-							<div class="writer">${vo.trade_id}</div>
-							<div class="date">${vo.trade_date}</div>
-							<div class="count">${vo.trade_cnt}</div>
+							<div class="writer">${vo.mem_nick}</div>
+							<div class="date">${vo.community_date}</div>
+							<div class="count">${vo.community_cnt}</div>
 							</c:if>
 							</c:forEach>
+
+	
 						</div>
-						<!-- //1행 -->
+						</div>
 
 
 
@@ -84,7 +86,8 @@
 							href="#" class="bt last">>></a>
 					</div>
 					<div class="bt_wrap">
-                        <button><a href="${cpath}/communityWriteForm.do">등록</a></button>
+					 
+                        <button type = "button" onclick="location.href='${cpath}/communityWriteForm.do'">등록</button>
                     </div>
 				</div>
 			</div>
@@ -129,9 +132,9 @@
 		src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 	<script src="${cpath}/js/slick.min.js"></script>
 
-	<script>
+<!-- 	<script>
     $('table').DataTable();
-
+ -->
 // See:
 // http://www.sitepoint.com/responsive-data-tables-comprehensive-list-solutions
 </script>

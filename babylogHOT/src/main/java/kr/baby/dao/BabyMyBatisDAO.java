@@ -153,9 +153,9 @@ public class BabyMyBatisDAO {
 	}
 	
 	// 정보게시판 글쓰기 메소드
-			public void insertInfo(CommunityVO vo) {
+			public void insertInfo(CommunityVO vo1) {
 				SqlSession session = sqlSessionFactory.openSession();
-				session.insert("insertInfo",vo);
+				session.insert("insertInfo",vo1);
 				session.commit();
 				session.close();
 			}
@@ -194,49 +194,49 @@ public class BabyMyBatisDAO {
 		
 	
 	// 거래게시판 전체 리스트 가져오기
-	public List<TradeVO> listTrade(){
+	public List<CommunityVO> listTrade(){
 	    SqlSession session = sqlSessionFactory.openSession();
-	    List<TradeVO> list = session.selectList("listTrade");
+	    List<CommunityVO> list = session.selectList("listTrade");
 	    session.close();
 	    return list;
 	}
 	
 				// 거래게시판 글쓰기 메소드
-				public void insertTrade(TradeVO vo) {
+				public void insertTrade(CommunityVO vo2) {
 					SqlSession session = sqlSessionFactory.openSession();
-					session.insert("insertTrade",vo);
+					session.insert("insertCommunity",vo2);
 					session.commit();
 					session.close();
 				}
 				
 				// 거래게시판 상세보기 메소드
-				public TradeVO detailTrade(int trade_seq) {
+				public CommunityVO detailTrade(int Community_seq) {
 					SqlSession session = sqlSessionFactory.openSession();
-					TradeVO vo = session.selectOne("detailTrade",trade_seq);
+					CommunityVO vo = session.selectOne("detailCommunity",Community_seq);
 					session.close();
 					return vo;
 				}
 				
 				// 거래게시판 조회수 증가 메소드
-				public void countTrade(int trade_cnt) {
+				public void countTrade(int Community_cnt) {
 					SqlSession session = sqlSessionFactory.openSession();
-					session.update("countTrade",trade_cnt);
+					session.update("countCommunity",Community_cnt);
 					session.commit();
 					session.close();
 				}
 				
 				// 거래게시판 수정 메소드
-				public void updateTrade(TradeVO vo) {
+				public void updateTrade(CommunityVO vo) {
 					SqlSession session = sqlSessionFactory.openSession();
-					session.update("updateTrade",vo);
+					session.update("updateCommunity",vo);
 					session.commit();
 					session.close();
 				}
 				
 				// 거래게시판 삭제 메소드
-				public void deleteTrade(int trade_seq) {
+				public void deleteTrade(int Community_seq) {
 					SqlSession session = sqlSessionFactory.openSession();
-					session.delete("deleteTrade",trade_seq);
+					session.delete("deleteCommunity",Community_seq);
 					session.commit();
 					session.close();
 				}

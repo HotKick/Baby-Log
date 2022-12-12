@@ -43,7 +43,7 @@
 <div class="container">
     <div class="board_wrap">
         <div class="board_title">
-            <strong>글쓰 게시판</strong>
+            <strong>글쓰기 게시판</strong>
             <p>게시판 선택 후 글쓰기 작성 부탁드립니다.</p>
         </div>
         <!-- // board title  -->
@@ -54,21 +54,22 @@
                     <dd>
                         <select name='community_type'>
                             <option selected>게시판 선택</option>
-                            <option value='01'>자유게시판</option>
-                            <option value='02'>정보게시판</option>
-                            <option value='03'>중고게시판</option>
+                            <option name = "community_type" value='01'>자유게시판</option>
+                            <option name = "community_type" value='02'>정보게시판</option>
+                            <option name = "community_type" value='03'>중고게시판</option>
                         </select>
                     </dd>
                 </dl>
                 <dl>
                     <dt>제목</dt>
-                    <dd><input type="text" placeholder="제목 입력" name ="community_title"></dd>
+                    <dd><input type="text" placeholder="제목 입력" name ="comuunity_title"></dd>
                 </dl>
             </div>
             <div class="info">
                 <dl>
                     <dt>글쓴이</dt>
-                    <dd><input type="text" name = "mem_id" value = "${mvo.mem_id }" readonly/></dd>
+                    <input type = "hidden" name = "mem_id" value = "${mvo.mem_id}"/>
+                    <dd><input type="text" name = "mem_nick" value = "${mvo.mem_nick }" readonly/></dd>
                 </dl>
                 <dl>
                     <dt>첨부파일</dt>
