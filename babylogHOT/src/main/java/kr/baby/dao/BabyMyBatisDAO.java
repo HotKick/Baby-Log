@@ -87,7 +87,6 @@ public class BabyMyBatisDAO {
 	}
 	
 
-	
 	// 자유게시판 전체 리스트 가져오기
 	public List<CommunityVO> listFree(){
 	    SqlSession session = sqlSessionFactory.openSession();
