@@ -35,10 +35,10 @@
                 <div class="shop_wrap">
                     <div class="root">
                         <div class="root1">
-                            <span><a href="${cpath}main.do"> home > </a></span>
+                            <span><a href="${cpath}/main.do"> home > </a></span>
                         </div>
                         <div class="root2">
-                            <span><a href="${cpath}shop.do"> shop > </a></span>
+                            <span><a href="${cpath}/shop.do"> shop > </a></span>
                         </div>
                         <div class="root3">
                             <select name="diary" id="order">
