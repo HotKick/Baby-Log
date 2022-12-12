@@ -77,6 +77,7 @@
 					 <div class="bt_wrap">
                             <a href="${cpath}/communityFree.do" class="on">목록</a>
                             <a href="${cpath}/communityEdit.do">수정</a>
+                            <a href="${cpath}/communityDelete.do">삭제</a>
                         </div>
 				</div>
 			</div> 

@@ -69,7 +69,7 @@
 							</div>
 							<div class="writer">${vo.mem_nick}</div>
 							<div class="date">${vo.community_date}</div>
-							<div class="count">${vo.community_cnt}</div>
+							<div class="count" name = "community_seq">${vo.community_cnt}</div>
 							</c:if>
 							</c:forEach>
 						</div>
