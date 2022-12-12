@@ -3,6 +3,7 @@ package kr.baby.frontcontroller;
 
 import java.util.HashMap;
 
+import kr.baby.controller.CommunityDeleteController;
 import kr.baby.controller.CommunityDetailController;
 import kr.baby.controller.CommunityEditController;
 import kr.baby.controller.CommunityEditFormController;
@@ -60,6 +61,7 @@ import kr.baby.controller.SignupFormController;
 		mappings.put("/communityTrade.do",new CommunityTradeController());
 		mappings.put("/communityWrite.do",new CommunityWriteController());
 		mappings.put("/communityWriteForm.do",new CommunityWriteFormController());
+		mappings.put("/communityDelete.do",new CommunityDeleteController());
 		mappings.put("/diary.do",new DiaryController());
 		mappings.put("/diaryDetail.do",new DiaryDetailController());
 		mappings.put("/diaryWrite.do",new DiaryWriteController());
