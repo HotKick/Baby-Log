@@ -1,3 +1,4 @@
+/* MQ----------------------------------- */
 @media (max-width: 1000px) {
     .board_wrap {
         width: 100%;
@@ -58,6 +59,11 @@
         font-size: 1.2rem;
     }
 
+
+
+/* board_write */
+
+
     .board_write .info dl {
         width: 49%;
     }
@@ -91,6 +97,10 @@
         width: 70%;
     }
 
+	.board_title .tag_news{
+		width: 70%
+	}
+
 }
 @media(max-width: 768px) {
 
@@ -98,6 +108,10 @@
         gap: 5%; /* flex의 주변 여분 의 공간 */
         width: 80%;
     }
+
+	.board_title .tag_news{
+		width: 80%
+	}
 
 }
 
@@ -107,6 +121,10 @@
         gap: 5%; /* flex의 주변 여분 의 공간 */
         width: 90%;
     }
+
+	.board_title .tag_news{
+		width: 90%
+	}
 
 }
 
@@ -120,6 +138,9 @@
         width: 100%;
         margin-bottom: 1%;
     }
+	.board_title .tag_news{
+		width: 100%
+	}
 
 }
 

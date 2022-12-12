@@ -48,6 +48,9 @@
     gap: 5%; /* flex의 주변 여분 의 공간 */
     width: 50%;
 }
+.board_title .tag_news{
+	width: 40%
+}
 .board_title div.tag {
     margin : 20px 0;
 }
@@ -235,6 +238,10 @@
 	padding-left: 0;
 }
 
+
+
+
+
 /* 바 */
 .board_view .info dl::before {
 	content: "";
@@ -272,22 +279,23 @@
 	font-size: 1.2rem;
 }
 
+/* borderwrite ------------------------------------------------ */
 .board_write {
 	border-top: 2px solid #ccc;
 }
 
-.board_write .title, .board_write .info {
+.board_write .title, .board_write .info, .emotion{
 	padding: 15px;
 }
 
-.board_write .info {
-	border-top: 1px dashed #ddd;
-	border-bottom: 1px solid #000;
+.board_write .info, .emotion{
+	border-top: 1px solid #ddd;
 	font-size: 0;
 }
 
 .board_write .title dl {
 	font-size: 0;
+	display: flex;
 }
 
 .board_write .info dl {
@@ -296,34 +304,45 @@
 	vertical-align: middle;
 }
 
-.board_write .title dt, .board_write .title dd, .board_write .info dt,
-	.board_write .info dd {
+.board_write .title dt, 
+.board_write .title dd, 
+.board_write .info dt,
+.board_write .info dd,
+.board_write .emotion dt,
+.board_write .emotion dd
+ {
 	display: inline-block;
 	vertical-align: middle;
 	font-size: 1.2rem;
 }
 
-.board_write .title dt, .board_write .info dt {
-	width: 100px;
+
+.board_write .title dt, 
+.board_write .info dt,
+.board_write .emotion dt{
+	width: 120px;
+	text-align: left;
 }
 
 .board_write .title dd {
-	width: calc(100% - 100px);
+	width: calc(100% - 16%);
 }
 
 .board_write .title input[type="text"], .board_write .info input[type="text"],
-	.board_write .info input[type="password"] {
+.board_write .info input[type="password"] {
 	padding: 10px;
 	box-sizing: border-box;
 }
 
 .board_write .title input[type="text"] {
-	width: 80%;
+	width: 100%;
 }
 
 .board_write .cont {
 	border-bottom: 1px solid #ccc;
 }
+
+
 
 /* 글씨 입력창 */
 .board_write .cont textarea {
@@ -345,6 +364,7 @@
    border-radius: 2px;
    font-size: 1rem;
    border-radius: 10px;
+   background-color: #ccc;
 }
 .bt_wrap button:hover {
     cursor: pointer;
@@ -360,4 +380,5 @@
 .bt_wrap button:first-child {
     margin-left: 0;
 }
+
 

@@ -33,15 +33,16 @@
 	
 	    <main id="main" class="container">
           <div class="tag">
-                <div class="tag_icon">
-                  <div class="tag1"><button>분류버튼1</button></div>
-                  <div class="tag2"><button>분류버튼2</button></div>
-                  <div class="tag3"><button>분류버튼3</button></div>
-                </div>
-                <div class="bt_wrap">
-                    <button type="button" onclick="location.href='${cpath}/diaryWriteForm.do'">글쓰기</a></button>
-                </div>
-        </div>
+            <div class="tag_icon">
+              <div class="tag1"><button>감정1</button></div>
+              <div class="tag2"><button>감정2</button></div>
+              <div class="tag3"><button>감정3</button></div>
+              <div class="tag4"><button>감정4</button></div>
+            </div>
+            <div class="bt_wrap">
+                <button type="button" onclick="location.href='${cpath}diaryWrite.html'">글쓰기</a></button>
+            </div>
+          </div>
         <!-- //tag -->
 
         <section class="gallery">
@@ -69,6 +70,7 @@
               </div>
               <!-- //toolbar -->
              
+             
               <ol class="image-list grid-view"> 
             
               <c:forEach var="vo" items = "${list}">
@@ -76,30 +78,31 @@
                 <li>
                   <figure>
                     <div class="fit">
-                 
-                      
                       <c:choose>
                       	<c:when test="${vo.diary_file != null}">
                       	<a href="${cpath }/diaryDetail.do?diary_seq=${vo.diary_seq}" onclick = "reload();"><img src="${cpath }/img/${vo.diary_file}" alt="다이어리"></a>
                        </c:when>
                        <c:otherwise>
                          <a href="${cpath }/diaryDetail.do?diary_seq=${vo.diary_seq}" onclick = "reload();"><img src="${cpath}/img/diary2.jpg" alt="1번 다이어리">
-                  
                        </c:otherwise>
                        </c:choose>
-                       
-            
-
-                  
                     </div>
                     <figcaption>
-                      <p>${vo.diary_title}</p>
-                      <p>작성자 <a href="" target="_blank">${vo.mem_nick}</a></p>
+                      <div class="title"><p>${vo.diary_title}</p></div>
+                      <div class="diary_info">
+                      <span>작성자 <a href="" target="_blank">${vo.mem_nick}</a></span>
+                      <span>22.12.09</span>
+                      </div>
+                      <p class="emotion">#중립</p>
                     </figcaption>
+                     <div class="on">
+                  	<a class="off" href="#"><i class="fa-solid fa-heart"></i></a>
+                	</div>
                   </figure>
                 </li>
-                </c:forEach>
-                             
+                
+           
+                </c:forEach>        
               </ol>
           
           </section>
