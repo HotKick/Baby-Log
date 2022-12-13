@@ -88,6 +88,12 @@
 </form>
 <!-- //board -->
 
+<jsp:include page="footer.jsp" flush="true"/>
 
+<!-- script -->	
+<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="${cpath}/js/slick.min.js"></script>
+<script src="${cpath}/js/diary.js"></script>
+<script src="${cpath}/js/nav.js"></script>
 </body>
 </html>
