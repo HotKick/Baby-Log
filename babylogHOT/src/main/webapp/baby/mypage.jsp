@@ -16,6 +16,7 @@
 <!-- style -->
 <link rel="stylesheet" href="${cpath}/css/reset.css">
 <link rel="stylesheet" href="${cpath}/css/common.css">
+<link rel="stylesheet" href="${cpath}/css/mypage.css">
 
 <!-- 슬릭 -->
 <link rel="stylesheet" type="text/css" href="${cpath}/css/slick.css" />
@@ -34,7 +35,7 @@
 		<form action="">
         <div class="profile_wrap">
             <div class="pro_img">
-                <img src="img/diary12.jpg" alt="프로필이미지">
+                <img src="${cpath}/img/diary12.jpg" alt="프로필이미지">
                 <input type="button" value="+">
             </div>
             <div class="pro_info">
@@ -116,7 +117,7 @@
                     </figcaption>
                   </figure>
                 </li>
-
+				</c:forEach>
 
 	<jsp:include page="footer.jsp" flush="true"/>
 
