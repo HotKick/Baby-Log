@@ -20,6 +20,7 @@
 <link rel="stylesheet" href="${cpath}/css/reset.css">
 <link rel="stylesheet" href="${cpath}/css/common.css">
 <link rel="stylesheet" href="${cpath}/css/community.css">
+<link rel="stylesheet" href="${cpath}/css/communityMedia.css">
 
 
 <!-- 슬릭 -->
