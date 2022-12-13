@@ -25,6 +25,14 @@
 <!-- 웹아이콘 -->
 <script src="https://kit.fontawesome.com/e76461f593.js"
 	crossorigin="anonymous"></script>
+	
+	<!-- 파일 선택 가리기 -->
+	<style>
+        #my-input {
+            visibility: hidden;
+        }
+    </style>
+    
 </head>
 <body>
 
@@ -36,12 +44,15 @@
         <div class="profile_wrap">
             <div class="pro_img">
                 <img src="${cpath}/img/diary12.jpg" alt="프로필이미지">
-                <input type="button" value="+">
+               <input type="button" onclick="onClickUpload();" value="+">
+       		
+
             </div>
             <div class="pro_info">
                 <div class="info_wrap">
-                <div class="pro_name"><input type="text" value="지야누"></div>
-                <div class="pro_id">@yanoo</div>
+                <div class="pro_name"><input type="text" value="${mvo.mem_nick}"></div>
+                <div class="pro_id">${mvo.mem_id}</div>
+                <input id="my-input" name = "mem_prof" type="file" />
                 <div class="pro_desc">광주에사는 용용이 엄마입니다</div>
                 <div class="pro_desc">소통 ㅣ 친목 ㅣ 아기자랑 모두 환영이요 ^^</div>
                 <div class="pro_edit"><input type="button" value="프로필 수정"></div>
@@ -54,7 +65,7 @@
                       <div class="tag4"><button>감정4</button></div>
                     </div>
                     <div class="bt_wrap">
-                        <button type="button" onclick="location.href='${cpath}/diaryWrite.do'">글쓰기</a></button>
+                        <button type="button" onclick="location.href='${cpath}/diaryWriteForm.do'">글쓰기</a></button>
                     </div>
                   </div>
                 <!-- //tag -->
@@ -119,7 +130,7 @@
                 </li>
 				</c:forEach>
 
-	<jsp:include page="footer.jsp" flush="true"/>
+
 
 	
 	<!-- script -->
@@ -127,5 +138,14 @@
 	<script src="${cpath}/js/slick.min.js"></script>
 	<script src="${cpath}/js/diary.js"></script>
 	<script src="${cpath}/js/nav.js"></script>
+	
+	 <script>
+        function onClickUpload() {
+            let myInput = document.getElementById("my-input");
+            myInput.click();
+        }
+    </script>
+	
+	
 </body>
 </html>

@@ -45,6 +45,7 @@
 	          </c:if>
 	          <c:if test="${!empty mvo}">
 					${mvo.mem_name}님 환영합니다.
+					<li><a href="${cpath}/mypage.do">마이페이지</a></li>
 					<li><a href="#">로그아웃</a></li>
 			  </c:if>
 	          <a href="#" class="navbar_toggleBtn">

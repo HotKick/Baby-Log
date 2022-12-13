@@ -87,6 +87,7 @@ import kr.baby.controller.SignupFormController;
 		mappings.put("/questionDetail.do",new QuestionDetailController());
 		mappings.put("/questionEdit.do",new QuestionEditController());
 		mappings.put("/questionEditForm.do",new QuestionEditFormController());
+
 	}
 	
 	public Controller getController(String key) {
