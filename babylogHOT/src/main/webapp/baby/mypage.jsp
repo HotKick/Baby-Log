@@ -116,7 +116,7 @@
                     </figcaption>
                   </figure>
                 </li>
-
+				</c:forEach>
 
 	<jsp:include page="footer.jsp" flush="true"/>
 
