@@ -19,12 +19,6 @@
 @media(max-width: 1220px){
     .container{width: 100%;}
     .row {padding: 0 15px;}
-    /* .header_inner {width: 100%;}
-    .banner {width: 100%;}
-    .slider {width: 100%;}
-    .banner2 {width: 100%;}
-    .cont_inner {width: 100%;}
-    .foot_inner {width: 100%;} */
 }
 
 @media(max-width: 768px){
@@ -42,15 +36,6 @@
 
 
 /* 헤더 ====================================== */
-
-
-@font-face{
-    font-family: 'GangwonEduPowerExtraBoldA';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/GangwonEduPowerExtraBoldA.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
 
 
 .navbar{

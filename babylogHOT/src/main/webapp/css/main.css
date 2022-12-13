@@ -1,5 +1,13 @@
 
-#header{}
+#header{
+    position: sticky;
+    background-color: white;
+    /* position: fixed;
+    top: 0;
+    left: 0;
+    right: 0; */
+    color: #222;
+}
 #banner{background-color: #eee;}
 #slider{}
 #banner2{background-color: #eee;}
@@ -7,66 +15,201 @@
 #main{}
 
 
-/* 미디어 쿼리 */
+/* 헤더 ====================================== */
 
-@media(max-width: 1220px){
-    .container{width: 100%;}
-    .row {padding: 0 15px;}
-    /* .header_inner {width: 100%;}
-    .banner {width: 100%;}
-    .slider {width: 100%;}
-    .banner2 {width: 100%;}
-    .cont_inner {width: 100%;}
-    .foot_inner {width: 100%;} */
+.container{
+    width: 1200px;
+    margin: 0 auto;
 }
 
-@media(max-width: 768px){
-    .container{width: 100%;}
-    .row {padding: 0 15px;}
-    .cont_inner {height: 500px;}
-    .cont_inner .cont1 {height: 100%;}
-    .cont_inner .cont2 {height: 48%; margin-bottom: 2%;}
-    .cont_inner .cont3 {height: 48%;}
-}
-
-@media(max-width: 480px){
+.navbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2% 0;
 
 }
+
+.navbar_logo{
+    font-size: 1.4rem;
+    color: #fff;
+}
+
+.navbar_logo i {
+    color: aqua;
+}
+
+/* 네브바 메뉴 */
+.navbar_menu{
+    display: flex;
+    font-size: 0.8rem;
+    
+}
+ .navbar_menu li {
+    
+    
+}
+
+.navbar_menu li a{
+    padding: 8px 24px;
+    display: block;
+}
+.navbar_menu li a:hover{
+    background-color: #222;
+    border-radius: 20px;
+    color: #fff;
+}
+
+
+.navbar_icons{
+    display: flex;
+    color: #fff;
+    font-size: 1.4rem;
+    justify-content: center;
+    text-align: center;
+
+}
+
+.navbar_icons li a {
+    padding: 8px;
+    border-radius: 8px;
+}
+.navbar_icons li a:hover{
+    background-color: #222;
+    color: #fff;
+}
+
+
+
+
+
+
+/* 햄버거 버튼 */
+.navbar_toggleBtn {
+    position: absolute;
+    right: 32px;
+    font-size: 1.2rem;
+    display: none;
+
+}
+
+
 
 
 /* 메인 - 스크롤 기능 넣기 */
 /* 메뉴 선택  */
 
 .menu{
-  width: 300px; height:100px;
-  position: fixed; 
-  bottom: 50px;
-  left : 50%;
-  border-radius: 0 0 30px 30px;
-  background-color:rgba(0,0,0,0.6);
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
-  color : white;
-}
-.menu > span:hover {
-  border-bottom: 3px solid white;
-  cursor:pointer;
-}
+    width: 300px; height:100px;
+    position: fixed; 
+    bottom: 50px;
+    left : 50%;
+    border-radius: 0 0 30px 30px;
+    background-color:rgba(0,0,0,0.6);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color : white;
+  }
+  .menu > span:hover {
+    border-bottom: 3px solid white;
+    cursor:pointer;
+  }
+  
+  /* 콘엔츠영역 */
+  .content{
+    height: 100vmax;
+    width: 100vmax;
+    display:flex;
+    justify-content: center;
+    align-items: center;
+  }
+  div:nth-child(2){background-color: coral}
+  div:nth-child(3){background-color: violet}
+  div:nth-child(4){background-color: teal}
+  
 
-/* 콘엔츠영역 */
-.content{
-  height: 100vmax;
-  width: 100vmax;
-  display:flex;
-  justify-content: center;
-  align-items: center;
+
+/* 헤더 - MQ */
+
+@media screen and (max-width:768px){
+
+    #header{
+        position: sticky;
+        background-color: white;
+        color: #222;
+    }
+    .navbar {
+        padding: 3%;
+        flex-direction: column;
+        align-items: flex-start;
+
+    }
+
+    .navbar_logo {
+        display: flex;
+        align-items: flex-start;
+    }
+    .navbar_menu {
+        display: none;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        height: 100%;
+    }
+
+    .navbar_menu li{
+        width: 100%;
+        text-align: center;
+    }
+    .navbar_menu li a{
+        padding: 8px 0;
+        height: 100%;
+        display: block;
+    }
+    .navbar_menu li a:hover{
+        background-color: #222;
+        border-radius:0;
+        color: #fff;
+    }
+
+    /* 아이콘 영역  */
+    .navbar_icons {
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        flex-direction: column;
+        display: none;
+        /* justify-content: center;
+        align-items: center; */
+    }
+    .navbar_icons li {
+        width: 100%;
+    }
+
+    .navbar_icons li a {
+        padding: 8px 0;
+        display: block;
+        height: 100%;
+
+    }
+    .navbar_icons li a:hover{
+        background-color: #222;
+        border-radius:0;
+        color: #fff;
+    }
+
+    .navbar_toggleBtn {
+        display: block;
+    }
+
+    /* active일때 */
+    .navbar_menu.active,
+    .navbar_icons.active{
+        display: flex;
+    }
+
 }
-div:nth-child(2){background-color: coral}
-div:nth-child(3){background-color: violet}
-div:nth-child(4){background-color: teal}
-
-
 
 
 /* 푸터 ======================================  */

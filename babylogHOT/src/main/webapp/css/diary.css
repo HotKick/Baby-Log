@@ -134,7 +134,11 @@ margin: right 1.2rem;
 .image-list li figcaption .title p{
   font-size: 1.7rem;
 }
-.image-list li p:first-child{
+/* .image-list li p:first-child{
+  font-weight: bold;
+  font-size: 1rem;
+} */
+.image-list li .emotion{
   font-weight: bold;
   font-size: 1rem;
 }
@@ -235,14 +239,14 @@ margin: right 1.2rem;
   object-fit: cover;
 }
 
-.on{
+.on, .off{
   position: absolute;
   top: 10px;
   right: 10px;
   /* display: none; */
 }
 
-.on a {
+.off{
   width: 50px;
   height: 50px;
   display: block;
@@ -251,21 +255,23 @@ margin: right 1.2rem;
   align-items: center;
   border-radius: 50px;
   font-size: 20px;
-  border: 3px solid white;
   color: white;
   opacity: 0.5;
-  /* background-color: white; */
+  background-color: white;
 }
 
 
-.on a.active {
-  opacity: 1;
+.on{
+  width: 50px;
+  height: 50px;
   display: block;
   display: flex;
   justify-content: center;
   align-items: center;
-  border: 3px solid red;
-  color: red;
+  border-radius: 50px;
+  font-size: 20px;
+  background-color: red;
+  opacity: 0.5;
 }
 
 
@@ -286,51 +292,5 @@ margin: right 1.2rem;
   color: #fff;
 }
 
-/* MQ
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-/* @media screen and(max-width:900px){
-  .toolbar input[type="range"]{
 
-    display: none;
-  }
-} */
-@media(max-width:900px){
-  .toolbar input[type="range"]{
-    display: none;
-  }
-}
-
-@media (max-width:600px){
-  .toolbar {
-    flex-direction: column;
-    /* display: none; */
-  }
-  .search-wrapper {
-    width: 100%;
-    flex-direction: column;
-  }
-  .view-options {
-    display: none;
-  }
-
-
-.tag {
-  width: 100%;
-}
-.tag > div {
-  width: 100%;
-  flex-direction: column;
-}
-
-.tag_icon > div button{
-  width: 100%;
-  padding: 0.8rem 0;
-  margin-right: 0;
-  margin-bottom: 1%;
-  background-color: #ccc;
-  border-radius: 10px;
-}
-
-
-}
 

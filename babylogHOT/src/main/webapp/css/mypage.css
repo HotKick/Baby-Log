@@ -1,0 +1,359 @@
+.profile_wrap{
+    display: flex;
+    gap: 5%;
+    padding-top: 2%;
+    align-items: center;
+    border-bottom: solid 1px #eee;
+}
+
+.pro_img {
+    position: relative;
+    width: 380px;
+    height: 380px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+}
+.pro_img img{
+    width: 260px;
+    height: 260px;
+    border-radius: 200px;
+    background-color: #ccc;
+}
+
+.pro_img img:hover{
+    border: 8px solid red;
+}
+
+.pro_img input[type="button"] {
+    background-color: red;
+    width: 50px;
+    height: 50px;
+    border-radius: 40px;
+    border: none;
+    cursor: pointer;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: 700;
+    position: absolute;
+    top: 60%;
+    right: 2%;
+    display: block;
+}
+
+
+.pro_info {
+    width: 100%;
+}
+.pro_info .info_wrap{
+    padding-bottom: 1%;
+}
+.pro_info div{
+    padding: 3px 0;
+}
+.pro_info div input[type ="text"]{
+    border-style: none;
+    font-size: 1.5rem;
+    background: transparent;
+    font-weight: bold;
+}
+.pro_info div input[type ="button"]{
+    border-style: none;
+    padding: 1.5% 10%;
+    border-radius: 10px;
+    background-color: pink;
+    cursor: pointer;
+}
+
+
+
+
+/* RESET RULES
+–––––––––––––––––––––––––––––––––––––––––––––––––– */
+:root {
+    --black: #1a1a1a;
+    --white: #fff;
+    --gray: #ccc;
+    --darkgreen: skyblue;
+    --lightbrown: antiquewhite;
+    --darkblack: rgba(0,0,0,0.8);
+    --minRangeValue: 280px;
+  }
+  
+  .d-none {
+    display: none;
+  }
+  
+  
+  
+  /* 분류버튼
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+  
+  
+  .tag {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    
+  }
+  
+  
+  .tag > div {
+    display: flex;
+  }
+
+  
+  .tag_icon > div button{
+    padding: 0.8rem 2rem;
+    margin-right: 0.6rem;
+    background-color: #ccc;
+    border-radius: 10px;
+  }
+  
+  .tag_icon > div button:hover{
+    background-color: #1a1a1a;
+    color: #fff;
+  }
+  
+  .bt_wrap > button{
+    padding: 0.8rem 2rem;
+    background-color: #ccc;
+    border-radius: 10px;
+    right: 0;
+  }
+  
+  .bt_wrap > button:hover{
+    background-color: #1a1a1a;
+    color: #fff;
+  }
+  
+  /* TOOLBAR
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+  .toolbar{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-sizing: border-box;
+    padding: 40px 0 30px;
+  }
+  
+  .view-options{
+    display: flex;
+    align-items: center;
+  }
+  .view-options li {
+    margin-right: 0.7rem;
+  }
+  
+  .view-options li:not(:last-child){
+  margin: right 1.2rem;
+  
+  }
+  
+  .view-options button{
+    padding: 2px;
+    border:3px solid transparent;
+  
+  }
+  
+  .view-options .active button{
+    border-color: var(--darkgreen);
+  }
+  
+  .search-wrapper {
+    display: flex;
+    align-items: center;
+  }
+  .search-wrapper input {
+    margin-right: 1rem;
+    width: 24rem;
+    padding: 10px;
+    border-radius: 10px;
+    border: solid 1px #ccc;
+  }
+  
+  /* IMAGE LIST
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+  .image-list{
+    margin-bottom: 3rem;
+  }
+  
+  .image-list li{
+    /* background : var(--lightbrown);
+    color: var(--darkblack); */
+    background-color: #fff;
+    color: #333;
+    border: 1px solid #ddd;
+  }
+  .image-list li:hover{
+    box-shadow:5px 5px 15px rgba(0, 0, 0, 0.3);
+    border: 1px solid #fff;
+  }
+  
+  .image-list li > a {
+    width: 100%;
+    height: 100%;
+  }
+  
+  .image-list li figcaption {
+    padding: 3%;
+  }
+  
+  .image-list li figcaption .title p{
+    font-size: 1.7rem;
+  }
+  .image-list li p:first-child{
+    font-weight: bold;
+    font-size: 1rem;
+  }
+  /* .image-list li p:last-child{
+    margin-top: 0.5rem;
+    
+  } */
+  
+  .image-list li span{
+    margin-top: 0.5rem;
+    
+  }
+  
+  .diary_info {
+    color: #222;
+    display: flex;
+    gap: 3%;
+  }
+  
+  .diary_info strong {
+    color: #333;
+  }
+  
+  .emotion {
+    text-align: center;
+    display: block;
+    background-color: #ccc;
+    color: #222;
+    display: inline-block;
+    padding: 2% 5%;
+    border-radius: 5px;
+    margin: 0.6rem 0;
+  }
+  
+  
+  /* GRID VIEW
+  /* 그리드  */
+  /* –––––––––––––––––––––––––––––––––––––––––––––––––– */
+  .grid-view{
+    display: grid;
+    grid-gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(var(--minRangeValue),1fr));
+  }
+  .grid-view li {
+    position: relative;
+  }
+  .grid-view .fit {
+    width: 100%;
+    height: 300px;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .grid-view .fit img {
+    position: absolute;
+    width: 100%;
+    height: 300px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+  
+  }
+  
+  
+  
+  /* LIST VIEW
+  –––––––––––––––––––––––––––––––––––––––––––––––––– */
+  .list-view li{
+    margin-bottom : 1.5rem;
+  }
+  .list-view figure{
+    display: grid;
+    grid-gap: 0.5rem;
+    grid-template-columns: 200px 1fr;
+    align-items: center;
+    overflow: hidden;
+  }
+  .list-view figcaption .emotion{
+    width: 90px;
+    text-align: center;
+  }
+  
+  .list-view figure .fit{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    position: relative;
+  }
+  
+  .list-view figure .fit img{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    object-fit: cover;
+  }
+  
+  .on{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    /* display: none; */
+  }
+  
+  .on a {
+    width: 50px;
+    height: 50px;
+    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50px;
+    font-size: 20px;
+    border: 3px solid white;
+    color: white;
+    opacity: 0.5;
+    /* background-color: white; */
+  }
+  
+  
+  .on a.active {
+    opacity: 1;
+    display: block;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 3px solid red;
+    color: red;
+  }
+  
+  
+  .order {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 40px;
+  }
+  .order a {
+    padding: 2% 6%;
+    background-color: #ccc;
+    color: #222;
+    border-radius: 14px;
+  }
+  .order a:hover {
+    background-color: #1a1a1a;
+    color: #fff;
+  }
+  
+
+  

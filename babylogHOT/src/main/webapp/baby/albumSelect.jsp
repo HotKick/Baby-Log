@@ -16,6 +16,7 @@
 <link rel="stylesheet" href="${cpath}/css/reset.css">
 <link rel="stylesheet" href="${cpath}/css/common.css">
 <link rel="stylesheet" href="${cpath}/css/diary.css">
+<link rel="stylesheet" href="${cpath}css/diaryMQ.css">
 
 <!-- 슬릭 -->
 <link rel="stylesheet" type="text/css" href="${cpath}/css/slick.css" />
@@ -85,17 +86,18 @@
                     <figcaption>
                       <div class="title"><p>${vo.diary_title}</p></div>
                       <div class="diary_info">
-                      <span>작성자 <a href="" target="_blank">${vo.mem_nick}</a></span>
+                      <span>작성자 <a href="#" target="_blank">${vo.mem_nick}</a></span>
                       <span>22.12.09</span>
                       </div>
                       <p class="emotion">#중립</p>
                     </figcaption>
-                     <div class="on">
-                  	<a class="off" href="#"><i class="fa-solid fa-heart"></i></a>
-                	</div>
+                      <div class="on">
+                        <a class="off" href="#"><i class="fa-solid fa-heart"></i></a>
+                      </div>
                   </figure>
                 </li>
                 
+               
            
                 </c:forEach>        
               </ol>
@@ -105,10 +107,13 @@
           
           </section>
 
-
     </main>
 
-
+	<!-- script -->	
+	<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script src="${cpath}/js/slick.min.js"></script>
+	<script src="${cpath}/js/diary.js"></script>
+	<script src="${cpath}/js/nav.js"></script>
 
 </body>
 </html>

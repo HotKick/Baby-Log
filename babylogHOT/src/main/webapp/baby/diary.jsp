@@ -17,6 +17,7 @@
 <link rel="stylesheet" href="${cpath}/css/reset.css">
 <link rel="stylesheet" href="${cpath}/css/common.css">
 <link rel="stylesheet" href="${cpath}/css/diary.css">
+<link rel="stylesheet" href="${cpath}/css/diaryMQ.css">
 
 <!-- 슬릭 -->
 <link rel="stylesheet" type="text/css" href="${cpath}/css/slick.css" />
@@ -95,9 +96,6 @@
                       </div>
                       <p class="emotion">#중립</p>
                     </figcaption>
-                     <div class="on">
-                  	<a class="off" href="#"><i class="fa-solid fa-heart"></i></a>
-                	</div>
                   </figure>
                 </li>
                 
@@ -109,44 +107,15 @@
 
     </main>
 	
-		<footer id="footer">
-		<div class="container">
-			<div class="foot_inner mt30">
-				<div class="foot_logo">
-					<a href="${cpath}/main.do">Baby LOG</a>
-				</div>
-				<div class="foot_nav">
-					<ul>
-						<li><a href="${cpath}/diary.do">육아일기</a></li>
-						<li><a href="${cpath}/communityFree.do">커뮤니티</a></li>
-						<li><a href="${cpath}/shop.do">쇼핑몰</a></li>
-						<li><a href="${cpath}/newsGov.do">뉴스</a></li>
-						<li><a href="${cpath}/question.do">고객센터</a></li>
-					</ul>
-				</div>
-				<div class="foot_icon">
-					<ul>
-						<li><a href="#"> <i class="fa-brands fa-twitter"></i> <span>트위터</span>
-						</a></li>
-						<li><a href="#"> <i class="fa-brands fa-instagram"></i> <span>인스타그램</span>
-						</a></li>
-						<li><a href="#"> <i class="fa-brands fa-facebook"></i> <span>페이스북</span>
-						</a></li>
-					</ul>
-				</div>
-			</div>
+<jsp:include page="footer.jsp" flush="true"/>
 
-		</div>
-	</footer>
-<script type="text/javascript">
-function reload(){  
-       location.reload();
-}
-	<!-- script -->
-	<script type="text/javascript"
-		src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-	<script src="${cpath}/js/slick.min.js"></script>
-	<script src="${cpath}/js/diary.js"></script>
+
+
+<!-- script -->	
+<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="${cpath}/js/slick.min.js"></script>
+<script src="${cpath}/js/diary.js"></script>
+<script src="${cpath}/js/nav.js"></script>
 	
 
 </body>

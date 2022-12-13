@@ -29,42 +29,102 @@
 
 	<%@ include file="header.jsp" %>
 
-	<main>마이페이지 영역입니다</main>
+	  <main class="container">
+          
+		<form action="">
+        <div class="profile_wrap">
+            <div class="pro_img">
+                <img src="img/diary12.jpg" alt="프로필이미지">
+                <input type="button" value="+">
+            </div>
+            <div class="pro_info">
+                <div class="info_wrap">
+                <div class="pro_name"><input type="text" value="지야누"></div>
+                <div class="pro_id">@yanoo</div>
+                <div class="pro_desc">광주에사는 용용이 엄마입니다</div>
+                <div class="pro_desc">소통 ㅣ 친목 ㅣ 아기자랑 모두 환영이요 ^^</div>
+                <div class="pro_edit"><input type="button" value="프로필 수정"></div>
+                </div>
+                <div class="tag">
+                    <div class="tag_icon">
+                      <div class="tag1"><button>감정1</button></div>
+                      <div class="tag2"><button>감정2</button></div>
+                      <div class="tag3"><button>감정3</button></div>
+                      <div class="tag4"><button>감정4</button></div>
+                    </div>
+                    <div class="bt_wrap">
+                        <button type="button" onclick="location.href='${cpath}/diaryWrite.do'">글쓰기</a></button>
+                    </div>
+                  </div>
+                <!-- //tag -->
+            </div>
+            
+            
+        </div>
+        </form>
+        <!-- //tag -->
+
+        <section class="gallery">
+              <div class="toolbar">
+                <div class="search-wrapper">
+                  <input type="search" placeholder="Search for photos">
+                  <div class="counter">
+                    Total photos: <span>0</span></div>
+                </div>
+                <ul class="view-options">
+                  <li class="zoom">
+                    <input type="range" min="180" max="380" value="280">
+                  </li>
+                  <li class="show-grid active">
+                    <button>
+                      <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/grid-view.svg" alt="grid view">
+                    </button>
+                  </li>
+                  <li class="show-list">
+                    <button>
+                      <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/list-view.svg" alt="list view">
+                    </button>
+                  </li>
+                </ul>
+              </div>
+              <!-- //toolbar -->
+             
+             
+              <ol class="image-list grid-view"> 
+            
+              <c:forEach var="vo" items = "${list}">
+             
+                <li>
+                  <figure>
+                    <div class="fit">
+                      <c:choose>
+                      	<c:when test="${vo.diary_file != null}">
+                      	<a href="${cpath }/diaryDetail.do?diary_seq=${vo.diary_seq}" onclick = "reload();"><img src="${cpath }/img/${vo.diary_file}" alt="다이어리"></a>
+                       </c:when>
+                       <c:otherwise>
+                         <a href="${cpath }/diaryDetail.do?diary_seq=${vo.diary_seq}" onclick = "reload();"><img src="${cpath}/img/diary2.jpg" alt="1번 다이어리">
+                       </c:otherwise>
+                       </c:choose>
+                    </div>
+                    <figcaption>
+                      <div class="title"><p>${vo.diary_title}</p></div>
+                      <div class="diary_info">
+                      <span>작성자 <a href="" target="_blank">${vo.mem_nick}</a></span>
+                      <span>22.12.09</span>
+                      </div>
+                      <p class="emotion">#중립</p>
+                    </figcaption>
+                  </figure>
+                </li>
 
 
-		<footer id="footer">
-		<div class="container">
-			<div class="foot_inner mt30">
-				<div class="foot_logo">
-					<a href="${cpath}/main.do">Baby LOG</a>
-				</div>
-				<div class="foot_nav">
-					<ul>
-						<li><a href="${cpath}/diary.do">육아일기</a></li>
-						<li><a href="${cpath}/communityFree.do">커뮤니티</a></li>
-						<li><a href="${cpath}/shop.do">쇼핑몰</a></li>
-						<li><a href="${cpath}/newsGov.do">뉴스</a></li>
-						<li><a href="${cpath}/question.do">고객센터</a></li>
-					</ul>
-				</div>
-				<div class="foot_icon">
-					<ul>
-						<li><a href="#"> <i class="fa-brands fa-twitter"></i> <span>트위터</span>
-						</a></li>
-						<li><a href="#"> <i class="fa-brands fa-instagram"></i> <span>인스타그램</span>
-						</a></li>
-						<li><a href="#"> <i class="fa-brands fa-facebook"></i> <span>페이스북</span>
-						</a></li>
-					</ul>
-				</div>
-			</div>
+	<jsp:include page="footer.jsp" flush="true"/>
 
-		</div>
-	</footer>
-
+	
 	<!-- script -->
-	<script type="text/javascript"
-		src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 	<script src="${cpath}/js/slick.min.js"></script>
+	<script src="${cpath}/js/diary.js"></script>
+	<script src="${cpath}/js/nav.js"></script>
 </body>
 </html>

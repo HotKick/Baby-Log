@@ -39,8 +39,8 @@
 	          </ul>
 	          <ul class="navbar_icons">
 	          <c:if test="${empty mvo}">
-		              <li><a href="${cpath}login.html"><i class="fab fa-facebook-square"></i></a></li>
-	              	  <li><a href="${cpath}signUp.html"><i class="fab fa-instagram"></i></a></li>
+		              <li><a href="${cpath}/loginform.do"><i class="fab fa-facebook-square"></i></a></li>
+	              	  <li><a href="${cpath}/signupform.do"><i class="fab fa-instagram"></i></a></li>
 			  </ul>
 	          </c:if>
 	          <c:if test="${!empty mvo}">
