@@ -69,7 +69,7 @@
               <ol class="image-list grid-view"> 
             
               <c:forEach var="vo" items = "${list}">
-             
+                
                 <li>
                   <figure>
                     <div class="fit">
@@ -85,14 +85,14 @@
                     <figcaption>
                       <div class="title"><p>${vo.diary_title}</p></div>
                       <div class="diary_info">
-                      <span>작성자 <a href="" target="_blank">${vo.mem_nick}</a></span>
+                      <span>작성자 <a href="#" target="_blank">${vo.mem_nick}</a></span>
                       <span>22.12.09</span>
                       </div>
                       <p class="emotion">#중립</p>
                     </figcaption>
-                     <div class="on">
-                  	<a class="off" href="#"><i class="fa-solid fa-heart"></i></a>
-                	</div>
+                      <div class="on">
+                        <a class="off" href="#"><i class="fa-solid fa-heart"></i></a>
+                      </div>
                   </figure>
                 </li>
                 

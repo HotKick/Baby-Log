@@ -95,9 +95,6 @@
                       </div>
                       <p class="emotion">#중립</p>
                     </figcaption>
-                     <div class="on">
-                  	<a class="off" href="#"><i class="fa-solid fa-heart"></i></a>
-                	</div>
                   </figure>
                 </li>
                 
