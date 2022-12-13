@@ -24,6 +24,8 @@ public class DiaryWriteController implements Controller {
 		
 		String realFolder= request.getServletContext().getRealPath("/img");   //storage 폴더의 실제 주소
 		System.out.println("실제폴더"+realFolder);
+		System.out.println("배미리칸");
+		
 		
 		
 		int maxSize = 5*1024*1024;
@@ -45,6 +47,8 @@ public class DiaryWriteController implements Controller {
 		System.out.println(mem_nick);
 		
 		DiaryVO vo = new DiaryVO();
+		
+
 		
 		vo.setMem_id(mem_id);
 		vo.setDiary_title(diary_title);

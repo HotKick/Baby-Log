@@ -41,7 +41,7 @@
               <div class="tag4"><button>감정4</button></div>
             </div>
             <div class="bt_wrap">
-                <button type="button" onclick="location.href='${cpath}/diaryWrite.do'">글쓰기</a></button>
+                <button type="button" onclick="location.href='${cpath}/diaryWriteForm.do'">글쓰기</a></button>
             </div>
           </div>
         <!-- //tag -->
