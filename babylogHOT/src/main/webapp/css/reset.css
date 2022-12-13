@@ -8,10 +8,67 @@ body, div, ul, li, dl, dd, dt, ol, h1, h2, h3, h4, h5, h6, input, fieldset, lege
 a {color: #222; text-decoration: none;}
 a:hover {color: #2698cb;}
 
-/* 폰트 초기화 */
-body, input, textarea, select, button, table {
+/* 내부 - 폰트 초기화 */
+/* body, input, textarea, select, button, table {
     font-family: 'Nanum Gothic', AppleSDGothicNeo-Regular,'Malgun Gothic','맑은 고딕',dotum,'돋움',sans-serif; 
-    color: #222; font-size: 13px; line-height: 1.5;}
+    color: #222; font-size: 13px; line-height: 1.5;
+} */
+/* 외부 폰트 ------------------------------------------------------------------- */
+/* (기본)Gothic A1 */
+@import url('https://fonts.googleapis.com/css2?family=Gothic+A1:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+/* font-family: 'Gothic A1', sans-serif; */
+
+/* 강조체 */
+/* (강조)여기어때체 - yg-jalnan */
+@font-face {
+    font-family: 'yg-jalnan';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_four@1.2/JalnanOTF00.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* (강조)테다나 - Tenada */
+@font-face {
+    font-family: 'Tenada';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2210-2@1.0/Tenada.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* (강조) - Ricks 이누 아리드*/
+@font-face {
+    font-family: 'RixInooAriDuriR';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2207-01@1.0/RixInooAriDuriR.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* 손글씨 */
+
+/* 손글씨 - 범석체 */
+@font-face {
+    font-family: 'Humanbumsuk';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2210-2@1.0/Humanbumsuk.woff2') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* 손글씨 혜민체 */
+@font-face {
+    font-family: 'IM_Hyemin-Bold';
+    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2106@1.1/IM_Hyemin-Bold.woff2') format('woff');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* 베이직 폰트 지정 */
+body{
+    font-family: 'Gothic A1', sans-serif;
+}
+
+
+/* 외부 폰트 ------------------------------------------------------------------- */
 
 /* 폰트 스타일 초기화 */
 em, address {font-style: normal;}
