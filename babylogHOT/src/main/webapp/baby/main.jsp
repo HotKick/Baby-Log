@@ -31,112 +31,22 @@
 </head>
 <body>
 
-	<header id="header">
-		<div class="container">
-			<div class="header_inner">
-				<div class="header_logo">
-					<a href="${cpath}/main.do">Baby LOG</a>
-				</div>
-				<nav class="header_menu">
-					<ul>
-						<li><a href="${cpath}/diary.do">육아일기</a></li>
-						<li><a href="${cpath}/communityFree.do">커뮤니티</a></li>
-						<li><a href="${cpath}/shop.do">쇼핑몰</a></li>
-						<li><a href="${cpath}/newsGov.do">뉴스</a></li>
-					</ul>
-				</nav>
-				
-				<div class="header_member">
-				<c:if test="${empty mvo}">
-					<ul>
-						<li><a href="${cpath}/loginform.do">로그인</a></li>
-						<li><a href="${cpath}/signupform.do">회원가입</a></li>
-					</ul>
-				</c:if>
-				<c:if test="${!empty mvo}">
-					${mvo.mem_name}님 환영합니다.
-					<li><a href="${cpath}/logout.do">로그아웃</a></li>
-					</c:if>
-				</div>
-			</div>
-			<!-- //header_inner -->
-		</div>
-		<!-- //container -->
-	</header>
-	<!-- //header -->
+		<%@ include file="header.jsp" %>
 
-	<main id="main">
-		<section id="banner">
-			<div class="container">
-				<div class="banner_inner"></div>
-			</div>
-		</section>
-		<!-- //banner -->
+	<main>
+    <div class="menu">
+        <span>1번</span>
+        <span>2번</span>
+        <span>3번</span>
+    </div>
+    <!-- 메뉴 탭 -->
+    <div class="content">
 
-
-		<section id="slider">
-			<div class="container">
-				<article class="slider_inner">
-					<h2>슬라이더</h2>
-					<p>아이들의 사랑스러운 모습을 기록해보세요!</p>
-					<div class="slider_img">
-						<div class="ban1">
-							<a href=""><img src="${cpath}/img/slide1.jpeg" alt="이미지1"></a>
-						</div>
-						<div class="ban1">
-							<a href=""><img src="${cpath}/img/slide2.jpeg" alt="이미지2"></a>
-						</div>
-						<div class="ban1">
-							<a href=""><img src="${cpath}/img/slide3.jpeg" alt="이미지3"></a>
-						</div>
-						<div class="ban1">
-							<a href=""><img src="${cpath}/img/slide1.jpeg" alt="이미지1"></a>
-						</div>
-						<div class="ban1">
-							<a href=""><img src="${cpath}/img/slide2.jpeg" alt="이미지2"></a>
-						</div>
-						<div class="ban1">
-							<a href=""><img src="${cpath}/img/slide3.jpeg" alt="이미지3"></a>
-						</div>
-						<div class="ban1">
-							<a href=""><img src="${cpath}/img/slide1.jpeg" alt="이미지1"></a>
-						</div>
-						<div class="ban1">
-							<a href=""><img src="${cpath}/img/slide2.jpeg" alt="이미지2"></a>
-						</div>
-						<div class="ban1">
-							<a href=""><img src="${cpath}/img/slide3.jpeg" alt="이미지3"></a>
-						</div>
-					</div>
-				</article>
-			</div>
-		</section>
-		<!-- //slider -->
-
-		<section id="banner2">
-			<div class="container">
-				<div class="ban2_inner" href='#' onclick="location.href='${cpath}/diary.do'" >
-					<h2>글쓰기 목록으로 이동</h2>
-					<span>이곳을 클릭하면 글쓰기 목록으로 이동한다</span>
-				</div>
-			</div>
-		</section>
-		<!-- //banner2 -->
-
-
-		<section id="content">
-			<div class="container">
-				<div class="cont_inner mt30">
-					<div class="cont1">콘텐츠1</div>
-					<div class="cont2">콘텐츠2</div>
-					<div class="cont3">콘텐츠3</div>
-				</div>
-			</div>
-		</section>
-		<!-- //container -->
-
-	</main>
-	<!-- main -->
+    </div>
+    <div class="content">2</div>
+    <div class="content">3</div>
+      
+</main>
 
 
 <jsp:include page="footer.jsp" flush="true"/>
