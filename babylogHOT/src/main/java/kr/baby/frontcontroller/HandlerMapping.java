@@ -40,6 +40,8 @@ import kr.baby.controller.QuestionWriteFormController;
 import kr.baby.controller.ShopAlbumController;
 import kr.baby.controller.ShopController;
 import kr.baby.controller.ShopDiaryController;
+
+import kr.baby.controller.ShopSelectController;
 import kr.baby.controller.SignupController;
 import kr.baby.controller.SignupFormController;
 
@@ -79,6 +81,7 @@ import kr.baby.controller.SignupFormController;
 		mappings.put("/shop.do",new ShopController());
 		mappings.put("/shopAlbum.do",new ShopAlbumController());
 		mappings.put("/shopDiary.do",new ShopDiaryController());
+		mappings.put("/shopSelect.do",new ShopSelectController());
 		mappings.put("/signupform.do", new SignupFormController());
 		mappings.put("/signup.do",new SignupController());
 		mappings.put("/question.do",new QuestionController());
@@ -87,7 +90,6 @@ import kr.baby.controller.SignupFormController;
 		mappings.put("/questionDetail.do",new QuestionDetailController());
 		mappings.put("/questionEdit.do",new QuestionEditController());
 		mappings.put("/questionEditForm.do",new QuestionEditFormController());
-
 	}
 	
 	public Controller getController(String key) {

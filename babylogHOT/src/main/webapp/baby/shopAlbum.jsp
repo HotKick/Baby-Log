@@ -25,6 +25,7 @@
 <!-- 웹아이콘 -->
 <script src="https://kit.fontawesome.com/e76461f593.js"
 	crossorigin="anonymous"></script>
+
 </head>
 <body>
 	<%@ include file="header.jsp" %>
@@ -131,7 +132,7 @@
                         <!-- //count_wrap : 카운트 함수  -->
 
                         <div class="order">
-                            <button type="button" onclick="location.href='DiarySelect.html'">주문하기</button>
+                            <button type="button" onclick="location.href='shopSelect.do'">주문하기</button>
                         </div>
 
                     </div>
@@ -269,11 +270,10 @@
 
 <jsp:include page="footer.jsp" flush="true"/>
 
-	
+
 	<!-- script -->
-	<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script type="text/javascript"
+		src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 	<script src="${cpath}/js/slick.min.js"></script>
-	<script src="${cpath}/js/common.js"></script>
-	<script src="${cpath}/js/nav.js"></script>
 </body>
 </html>
