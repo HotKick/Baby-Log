@@ -21,7 +21,7 @@ import kr.baby.dao.MemberVO;
 public class login extends HttpServlet {
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 
-		response.setContentType("text/json;charset=UTF-8");
+		// response.setContentType("text/json;charset=UTF-8");
 		PrintWriter writer = response.getWriter();
 		
 		BabyMyBatisDAO dao = new BabyMyBatisDAO();
