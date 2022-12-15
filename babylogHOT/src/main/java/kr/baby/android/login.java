@@ -34,6 +34,7 @@ public class login extends HttpServlet {
 		vo.setMem_pw(pw);
 		
 		writer.print(id);
+		writer.print(pw);
 		
 		MemberVO mvo = dao.Login(vo);
 		
