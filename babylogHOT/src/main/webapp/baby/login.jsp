@@ -152,6 +152,8 @@
 	location.replace("http://localhost:8083/babylog/main.do");
       })
     }
+    
+   
    
 
   </script>
