@@ -94,7 +94,13 @@
                       <span>작성자 <a href="" target="_blank">${vo.mem_nick}</a></span>
                       <span>22.12.09</span>
                       </div>
-                      <p class="emotion">#중립</p>
+                      <c:choose>
+                      	<c:when test="${vo.diary_emo==0}">
+                      		<p class="emotion">#기쁨</p>  </c:when>
+                       <c:otherwise>
+                        	<p class="emotion">#슬픔</p>   </c:otherwise>
+                       </c:choose>
+                 
                     </figcaption>
                   </figure>
                 </li>
