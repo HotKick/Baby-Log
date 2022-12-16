@@ -38,6 +38,15 @@ public class BabyMyBatisDAO {
 		session.close();
 	}
 	
+	// 로그인 메소드
+	
+	public MemberVO memberLogin(MemberVO vo) {
+		SqlSession session = sqlSessionFactory.openSession();
+		MemberVO mvo = session.selectOne("memberLogin", vo);
+		session.close();
+		return mvo;
+	}
+	
 	// 뉴스 전체 리스트 가져오기
 	public List<NewsVO> listNews(){
 		SqlSession session = sqlSessionFactory.openSession();
@@ -330,14 +339,7 @@ public class BabyMyBatisDAO {
 					return vo;
 				}
 				
-				// 로그인 메소드
-	
-				public MemberVO memberLogin(MemberVO vo) {
-					SqlSession session = sqlSessionFactory.openSession();
-					MemberVO mvo = session.selectOne("memberLogin", vo);
-					session.close();
-					return mvo;
-				}
+				
 
 	
 				// 질문 전체 리스트 조회 
@@ -380,7 +382,13 @@ public class BabyMyBatisDAO {
 					session.close();
 				}
 				
-				
+				// 안드로이드 로그인 메소드 
+				public MemberVO Login(MemberVO vo) {
+					SqlSession session = sqlSessionFactory.openSession();
+					MemberVO mvo = session.selectOne("Login", vo);
+					session.close();
+					return mvo;
+				}
 	
 
 //	public void Update(MemberVO vo) {
