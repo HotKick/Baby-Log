@@ -97,8 +97,14 @@
                       <c:choose>
                       	<c:when test="${vo.diary_emo==0}">
                       		<p class="emotion">#기쁨</p>  </c:when>
+                      	<c:when test="${vo.diary_emo==1}">
+                      		<p class="emotion">#슬픔</p>  </c:when>
+                      	<c:when test="${vo.diary_emo==2}">
+                      		<p class="emotion">#분노</p>  </c:when>
+                      	<c:when test="${vo.diary_emo==3}">
+                      		<p class="emotion">#당황</p>  </c:when>
                        <c:otherwise>
-                        	<p class="emotion">#슬픔</p>   </c:otherwise>
+                        	<p class="emotion">#중립</p>   </c:otherwise>
                        </c:choose>
                  
                     </figcaption>
