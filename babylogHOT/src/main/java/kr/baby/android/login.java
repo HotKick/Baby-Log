@@ -33,13 +33,10 @@ public class login extends HttpServlet {
 		vo.setMem_id(id);
 		vo.setMem_pw(pw);
 		
-		writer.print(id);
-		writer.print(pw);
-		
 		MemberVO mvo = dao.Login(vo);
 		
+		writer.print(mvo);
 		
-
 		
 
 	}
