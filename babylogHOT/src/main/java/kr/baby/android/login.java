@@ -35,7 +35,12 @@ public class login extends HttpServlet {
 		
 		MemberVO mvo = dao.Login(vo);
 		
-		writer.print(mvo);
+		
+		if(mvo!=null) {
+			writer.print(mvo);
+		
+			
+		}
 		
 		
 
