@@ -25,6 +25,8 @@
 <script src="https://kit.fontawesome.com/e76461f593.js"
 	crossorigin="anonymous"></script>
 
+
+<!-- AJAX 관련 JS -->
 <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
 <script type="text/javascript">
 $(document).ready(function(){
@@ -88,7 +90,15 @@ $(document).ready(function(){
 	
 })
 
+ 
+
+  function move_page(){
+	setTimeout("location.href='${cpath}/diary.do'", 1000); //2초후에 move_page함수실행
+  }
+
 </script>
+
+<!-- AJAX 관련 JS  -->
 </head>
 <body>
 	<%@ include file="header.jsp" %>
@@ -142,7 +152,7 @@ $(document).ready(function(){
             </div>
         </div>
         <div class="bt_wrap">
-            <button type="button" id = 'btn' onclick ="location.href='${cpath}/diary.do'"  >등록</button>
+            <button type="button" id = 'btn' onclick = "move_page()"  >등록</button>
             <button type="reset">취소</button>
         </div>
     </div>
