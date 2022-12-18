@@ -24,7 +24,7 @@
 <script type="text/javascript">
 function diary_member(){
 	 if(${empty mvo}){
-		 alert("로그인해 주세요");
+		 alert("로그인 후 이용가능합니다.");
 		 document.location.href= "${cpath}/loginform.do";
 	 }else{
 		 location.href="${cpath}/diary.do";
@@ -38,7 +38,7 @@ function diary_member(){
 <script type="text/javascript">
 function shop_member(){
 	 if(${empty mvo}){
-		 alert("로그인해 주세요");
+		 alert("로그인 후 이용가능합니다.");
 		 document.location.href= "${cpath}/loginform.do";
 	 }else{
 		 location.href="${cpath}/shop.do";
