@@ -77,6 +77,9 @@
 							</dl>
 						</div>
 						<div class="cont">
+						<c:if test="${vo.diary_file != null}">
+                      		<img src="${cpath}/img/${vo.diary_file}" >
+                        </c:if>
 							${vo.community_content}
 						</div>
 					</div>
