@@ -103,8 +103,7 @@
             <div class="photo">
                 <div class="photo_wrap">
                 	<c:if test="${vo.diary_file != null}">
-                       <%--  <img src="${cpath}/img/${vo.diary_file}" alt="1번 다이어리"> --%>
-                       <img src="C:\\Users\\smhrd\\git\\HotKick1234\\babylogHOT\\src\\main\\webapp\\img\\${vo.diary_file}">
+                       <img src="${cpath}/img/${vo.diary_file}" alt="1번 다이어리"> 
                         </c:if>
                         
                  

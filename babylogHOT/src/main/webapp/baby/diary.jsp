@@ -29,6 +29,16 @@
 	
 <script type="text/javascript">
 $(document).ready(function(){
+	
+	function emo_happy()  {
+		  const row = document.getElementById('orange');
+		  row.style.display = 'none';
+		}
+	
+	
+	
+	
+	
 	var emo_happy = $("#emo_happy").val();
 	var emo_sad = $("#emo_sad").val();
 	var emo_angry = $("#emo_angry").val();
@@ -41,19 +51,36 @@ $(document).ready(function(){
 	$("#emo1").click(function(){
 		if(emotion != emo_happy){
 			$('#fig').css("display","none");
-			
 		}
-		
-		
-		
-		
-		
 	})
+	
+	$("#emo2").click(function(){
+		if(emotion != emo_sad){
+			$('#fig').css("display","none");
+		}
+	})
+	
+	$("#emo3").click(function(){
+		if(emotion != emo_angry){
+			$('#fig').css("display","none");
+		}
+	})
+	
+	$("#emo4").click(function(){
+		if(emotion != emo_emb){
+			$('#fig').css("display","none");
+		}
+	})
+	
+	$("#emo5").click(function(){
+		if(emotion != emo_neu){
+			$('#fig').css("display","none");
+		}
+	})
+	
+	
+	
 }
-
-
-
-
 
 
 )
@@ -69,10 +96,10 @@ $(document).ready(function(){
 	    <main id="main" class="container">
           <div class="tag">
             <div class="tag_icon">
-              <div class="tag1"><button id = emo1>기쁨</button></div>
-              <div class="tag2"><button id = emo2>슬픔</button></div>
-              <div class="tag3"><button id = emo3>화남</button></div>
-              <div class="tag4"><button id = emo4>안정</button></div>
+              <div class="tag1"><button id = emo1 onclick="emo_happy()">기쁨</button></div>
+              <div class="tag2"><button id = emo2 onclick="emo_sad()">슬픔</button></div>
+              <div class="tag3"><button id = emo3 onclick="emo_angry()">화남</button></div>
+              <div class="tag4"><button id = emo4 onclick="emo_neu()">안정</button></div>
             </div>
             <div class="bt_wrap">
                 <button type="button" onclick="location.href='${cpath}/diaryWriteForm.do'">글쓰기</a></button>
@@ -130,15 +157,15 @@ $(document).ready(function(){
                       </div>
                       <c:choose>
                       	<c:when test="${vo.diary_emo==0}">
-                      		<p class="emotion" id = emo_happy value ="${vo.diary_emo }">#기쁨</p>  </c:when>
+                      		<p class="emotion" id = emo_happy value ="0">#기쁨</p>  </c:when>
                       	<c:when test="${vo.diary_emo==1}">
-                      		<p class="emotion" id = emo_sad value= "${vo.diary_emo }">#슬픔</p>  </c:when>
+                      		<p class="emotion" id = emo_sad value= "1">#슬픔</p>  </c:when>
                       	<c:when test="${vo.diary_emo==2}">
-                      		<p class="emotion" id = emo_angry value= "${vo.diary_emo }">#분노</p>  </c:when>
+                      		<p class="emotion" id = emo_angry value= "2">#분노</p>  </c:when>
                       	<c:when test="${vo.diary_emo==3}">
-                      		<p class="emotion" id = emo_emb value= "${vo.diary_emo }">#당황</p>  </c:when>
+                      		<p class="emotion" id = emo_emb value= "3">#당황</p>  </c:when>
                        <c:otherwise>
-                        	<p class="emotion" id = emo_neu value= "${vo.diary_emo }">#중립</p>   </c:otherwise>
+                        	<p class="emotion" id = emo_neu value= "4">#중립</p>   </c:otherwise>
                        </c:choose>
                        
                  
