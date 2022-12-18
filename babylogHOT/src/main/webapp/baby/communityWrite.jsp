@@ -27,6 +27,12 @@
 <!-- 웹아이콘 -->
 <script src="https://kit.fontawesome.com/e76461f593.js"
 	crossorigin="anonymous"></script>
+	
+<script type="text/javascript">
+$(function(){
+	$("#community_type").val("${param.community_type}").attr("selected","selected");
+});
+</script>
 
 
 
@@ -54,11 +60,11 @@
                 <dl>
                     <dt>목록</dt>
                     <dd>
-                        <select name='community_type'>
+                        <select name='community_type' id='community_type'>
                             <option selected>게시판 선택</option>
-                            <option name = "community_type" value='01'>자유게시판</option>
-                            <option name = "community_type" value='02'>정보게시판</option>
-                            <option name = "community_type" value='03'>중고게시판</option>
+                            <option value='01'>자유게시판</option>
+                            <option value='02'>정보게시판</option>
+                            <option value='03'>중고게시판</option>
                         </select>
                     </dd>
                 </dl>

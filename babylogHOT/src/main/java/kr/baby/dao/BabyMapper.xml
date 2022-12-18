@@ -53,7 +53,7 @@
 	
 <!-- free 5. 자유 게시판 글수정  -->	
 	<update id="updateFree" parameterType="kr.baby.dao.CommunityVO">
-		update community set community_title=#{community_title},set community_content=#{community_content} where community_seq = #{community_seq}
+		update community set community_title=#{community_title},community_content=#{community_content},community_file=#{community_file,jdbcType=VARCHAR} where community_seq = #{community_seq}
 		</update>
 		
 	<!-- free 6. 자유 게시판 상세 페이지   -->

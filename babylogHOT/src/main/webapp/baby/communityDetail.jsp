@@ -81,8 +81,8 @@
 						</div>
 					</div>
 					 <div class="bt_wrap">
-                            <a href="${cpath}/communityFree.do" class="on">목록</a>
-                            <a href="${cpath}/communityEdit.do">수정</a>
+					 		<button onclick="location.href='${cpath}/communityFree.do'" class ="on">목록</button>
+                            <button onclick="location.href='${cpath}/communityEditForm.do'">수정</button>
                             <button onclick = "goDel(${vo.community_seq})">삭제</button>
                           
                 
