@@ -23,8 +23,6 @@
 <script src="https://kit.fontawesome.com/e76461f593.js"
 	crossorigin="anonymous"></script>
 
-  
-
 </head>
 <body>
  <main>
@@ -50,13 +48,17 @@
                   <!-- 비밀번호 -->
                   <div class="input__block">
                     <label class="name" for="pwd">비밀번호</label>
-                     <input type="password" placeholder="Password" class="input" id="pwd" name = "mem_pw"/>
+                     <input type="password" placeholder="Password" class="input" id="mem_pw" name = "mem_pw"/>
+                     
+
                   </div>
                   <!-- 비밀번호 재확인 -->
                   <div class="input__block">
                     <label class="name" for="re_pwd">비밀번호 재확인</label>
-                    <input type="password" placeholder="Password" class="input" id="re_pwd"/>
+                    <input type="password" placeholder="Password"  class="input" id="re_pwd" name="re_pwd" onKeyUp="fn_compare_pwd()"/>
+                  <font id="chkNotice" size="2"></font>
                   </div>
+                  
                   <!-- 이름 -->
                   <div class="input__block">
                     <label class="name" for="name">이름</label>
@@ -157,11 +159,10 @@
         			}, false);
       			});
     		}, false);
+	
 		</script>
-		
-		
-    </main>
-  
+
+  </main>
 <jsp:include page="footer.jsp" flush="true"/>
 
   	
@@ -170,6 +171,27 @@
 <script src="${cpath}/js/slick.min.js"></script>
 <!-- 생년월일  -->
 <script src="${cpath}/js/birth.js"></script>
+
+<script>
+
+$(function(){
+    $('#mem_pw').keyup(function(){
+      $('#chkNotice').html('');
+    });
+
+    $('#re_pwd').keyup(function(){
+
+        if($('#mem_pw').val() != $('#re_pwd').val()){
+          $('#chkNotice').html('비밀번호 일치하지 않음<br><br>');
+          $('#chkNotice').attr('color', '#f82a2aa3');
+        } else{
+          $('#chkNotice').html('비밀번호 일치함<br><br>');
+          $('#chkNotice').attr('color', '#199894b3');
+        }
+
+    });
+});
+</script>
   
   
   
