@@ -31,68 +31,83 @@
 
 <script type="text/javascript">
 
+var dw1 = document.getElementsByClassName('dw1');
+var dw2 = document.getElementsByClassName('dw2');
+var dw3 = document.getElementsByClassName('dw3');
+var dw4 = document.getElementsByClassName('dw4');
+
 
     /* 기쁨 버튼 */
-	function emo_happy() {
-		var dw1 = document.getElementById('dw1');
-		var dw2 = document.getElementById('dw2');
-		var dw3 = document.getElementById('dw3');
-		var dw4 = document.getElementById('dw4');
-		var dw5 = document.getElementById('dw5');
-
-		
-		if (${vo.diary_emo}==0) {
- 			dw2.style.display = 'none';
-			dw3.style.display = 'none';
-			dw4.style.display = 'none';
-			dw5.style.display = 'none';
+	function emo_happy(){
+    	
+		for(var i =0; i<dw1.length;i++){
+			dw1[i].style.display = 'block';
 		}
+		for(var i =0; i<dw2.length;i++){
+			dw2[i].style.display = 'none';
+		}
+		for(var i =0; i<dw3.length;i++){
+			dw3[i].style.display = 'none';
+		}
+		for(var i =0; i<dw4.length;i++){
+			dw4[i].style.display = 'none';
+		}
+		
 	}
     
     /* 슬픔 버튼  */
-	function emo_sad() {
-		if (${vo.diary_emo==1}) {
-			dw1.style.display = 'none';
-			dw3.style.display = 'none';
-			dw4.style.display = 'none';
-			dw5.style.display = 'none';
+	function emo_sad(){
+    	
+		for(var i =0; i<dw1.length;i++){
+			dw1[i].style.display = 'none';
 		}
+		for(var i =0; i<dw2.length;i++){
+			dw2[i].style.display = 'block';
+		}
+		for(var i =0; i<dw3.length;i++){
+			dw3[i].style.display = 'none';
+		}
+		for(var i =0; i<dw4.length;i++){
+			dw4[i].style.display = 'none';
+		}
+		
 	}
     
     /* 분노 버튼 */
-	function emo_angry() {
-		
-		
-		if (${vo.diary_emo==2}) {
-			dw1.style.display = 'none';
-			dw2.style.display = 'none';
-			dw4.style.display = 'none';
-			dw5.style.display = 'none';
+	function emo_angry(){
+    	
+		for(var i =0; i<dw1.length;i++){
+			dw1[i].style.display = 'none';
 		}
+		for(var i =0; i<dw2.length;i++){
+			dw2[i].style.display = 'none';
+		}
+		for(var i =0; i<dw3.length;i++){
+			dw3[i].style.display = 'block';
+		}
+		for(var i =0; i<dw4.length;i++){
+			dw4[i].style.display = 'none';
+		}
+	
 	}
     
-    /* 당황 버튼 */
-	function emo_emb() {
-		
-		
-		if (${vo.diary_emo==3}) {
-			dw1.style.display = 'none';
-			dw2.style.display = 'none';
-			dw3.style.display = 'none';
-			dw5.style.display = 'none';
+   
+    /* 안정 버튼 */
+	function emo_neu(){
+    	
+		for(var i =0; i<dw1.length;i++){
+			dw1[i].style.display = 'none';
 		}
-	}
-    
-    /* 중립 버튼 */
-	function emo_neu() {
-		
-		
-		if (${vo.diary_emo==4}) {
-			dw1.style.display = 'none';
-			dw2.style.display = 'none';
-			dw3.style.display = 'none';
-			dw4.style.display = 'none';
+		for(var i =0; i<dw2.length;i++){
+			dw2[i].style.display = 'none';
 		}
+		for(var i =0; i<dw3.length;i++){
+			dw3[i].style.display = 'none';
+		}
+		for(var i =0; i<dw4.length;i++){
+			dw4[i].style.display = 'block';
+		}
+		
 	}
 	
 	
@@ -166,7 +181,7 @@
 				<c:forEach var="vo" items="${list}">
 					<c:choose>
 						<c:when test="${vo.diary_emo==0}">
-							<li id="dw1">
+							<li class="dw1">
 								<figure>
 									<div class="fit">
 										<c:choose>
@@ -190,13 +205,13 @@
 											<span>작성자 <a href="" target="_blank">${vo.mem_nick}</a></span>
 											<span>${vo.diary_date}</span>
 										</div>
-										<p class="emotion" id=emo_happy value="0">#기쁨</p>
+										<p class="emotion">#기쁨</p>
 									</figcaption>
 								</figure>
 							</li>
 						</c:when>
 						<c:when test="${vo.diary_emo==1}">
-							<li id="dw2">
+							<li class="dw2">
 								<figure>
 									<div class="fit">
 										<c:choose>
@@ -226,7 +241,7 @@
 							</li>
 						</c:when>
 						<c:when test="${vo.diary_emo==2}">
-							<li id="dw3">
+							<li class="dw3">
 								<figure>
 									<div class="fit">
 										<c:choose>
@@ -255,38 +270,8 @@
 								</figure>
 							</li>
 						</c:when>
-						<c:when test="${vo.diary_emo==3}">
-							<li id="dw4">
-								<figure>
-									<div class="fit">
-										<c:choose>
-											<c:when test="${vo.diary_file != null}">
-												<a href="${cpath }/diaryDetail.do?diary_seq=${vo.diary_seq}"
-													onclick="reload();"><img
-													src="${cpath }/img/${vo.diary_file}" alt="다이어리"></a>
-											</c:when>
-											<c:otherwise>
-												<a href="${cpath }/diaryDetail.do?diary_seq=${vo.diary_seq}"
-													onclick="reload();"><img src="${cpath}/img/diary2.jpg"
-													alt="1번 다이어리"></a>
-											</c:otherwise>
-										</c:choose>
-									</div>
-									<figcaption id="fig">
-										<div class="title">
-											<p>${vo.diary_title}</p>
-										</div>
-										<div class="diary_info">
-											<span>작성자 <a href="" target="_blank">${vo.mem_nick}</a></span>
-											<span>${vo.diary_date}</span>
-										</div>
-										<p class="emotion">#당황</p>
-									</figcaption>
-								</figure>
-							</li>
-						</c:when>
 						<c:otherwise>
-							<li id="dw5">
+							<li class="dw4">
 								<figure>
 									<div class="fit">
 										<c:choose>
@@ -310,7 +295,7 @@
 											<span>작성자 <a href="" target="_blank">${vo.mem_nick}</a></span>
 											<span>${vo.diary_date}</span>
 										</div>
-										<p class="emotion" id=emo_neu value="4">#중립</p>
+										<p class="emotion">#안정</p>
 									</figcaption>
 								</figure>
 							</li>
