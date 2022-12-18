@@ -40,7 +40,7 @@
 
 		<!-- //게시판 영역 -->
 	</main>
-	 <form>
+	 <form action="${cpath}/communityFree.do" method="post" enctype = "multipart/form-data" >
 		<div class="container">
 			<div class="board_wrap">
 				<div class="board_title">
@@ -53,7 +53,8 @@
 							<dl>
 								<dt>제목</dt>
 								<dd>
-									<input type="text" placeholder="제목 입력" name="title" value="${vo.community_title }">
+							     	<input type="hidden" name="community_seq" value="${vo.community_seq}">
+									<input type="text" placeholder="제목 입력" name="community_title" value="${vo.community_title }">
 								</dd>
 							</dl>
 						</div>
@@ -61,25 +62,25 @@
 							<dl>
 								<dt>글쓴이</dt>
 								<dd>
-									<input type="text" placeholder="글쓴이 입력" name="writer" value="${vo.mem_id }">
+									<input type="text" placeholder="글쓴이 입력" name="mem_id" value="${vo.mem_id }">
 								</dd>
 							</dl>
 							<dl>
-								<dt>비밀번호</dt>
+								<dt>첨부파일</dt>
 								<dd>
-									<input type="password" placeholder="비밀번호 입력" value="1234">
+									<input type="file" name = "community_file">
 								</dd>
 							</dl>
 						</div>
 						<div class="cont">
-							<textarea placeholder="내용 입력" name = "content">
+							<textarea placeholder="내용 입력" name = "community_content">
                           ${vo.community_content}
                             </textarea>
 						</div>
 					</div>
 					<div class="bt_wrap">
                             <button type="submit">등록</button>
-                            <button>취소</button>
+                            <button onclick="location.href='${cpath}/communityFree.do'">취소</button>
                         </div>
 				</div>
 			</div>

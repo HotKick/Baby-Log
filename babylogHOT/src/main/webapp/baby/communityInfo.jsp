@@ -27,6 +27,20 @@
 <!-- 웹아이콘 -->
 <script src="https://kit.fontawesome.com/e76461f593.js"
 	crossorigin="anonymous"></script>
+	
+<!-- 비 로그인 자 로그인 알림 -->
+<script type="text/javascript">
+function community_member(){
+	 if(${empty mvo}){
+		 alert("로그인해 주세요");
+		 document.location.href= "${cpath}/loginform.do";
+	 }else{
+		 location.href="${cpath}/communityWriteForm.do";
+		 
+	 }
+	 }
+</script>
+<!-- /비 로그인 자 로그인 알림  -->
 
 
 </head>
@@ -88,7 +102,7 @@
 					</div>
 					<div class="bt_wrap">
                        
-                        <button type = "button" onclick="location.href='${cpath}/communityWriteForm.do'">등록</button>
+                        <button type = "button" onclick="community_member()">등록</button>
                            </div>
 				</div>
 			</div>

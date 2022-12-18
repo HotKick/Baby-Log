@@ -22,9 +22,10 @@ public class CommunityWriteController implements Controller {
 			
 			BabyMyBatisDAO dao = new BabyMyBatisDAO();
 			
-			/* String realFolder= request.getServletContext().getRealPath("/img"); */
-			//storage 폴더의 실제 주소
-			String realFolder = "C:\\Users\\smhrd\\git\\HotKick1234\\babylogHOT\\src\\main\\webapp\\img";
+			// String realFolder= request.getServletContext().getRealPath("/img"); 
+			
+			// 내꺼 파일 저장경로로 설정 해보겠음
+			String realFolder = "C:/Users/smhrd/git/repository7/babylogHOT/src/main/webapp/img";
 			System.out.println("실제폴더"+realFolder);
 			//절대경로를 넣자 
 			

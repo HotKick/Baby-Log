@@ -26,6 +26,40 @@
 <!-- 웹아이콘 -->
 <script src="https://kit.fontawesome.com/e76461f593.js"
 	crossorigin="anonymous"></script>
+	
+<script type="text/javascript">
+$(document).ready(function(){
+	var emo_happy = $("#emo_happy").val();
+	var emo_sad = $("#emo_sad").val();
+	var emo_angry = $("#emo_angry").val();
+	var emo_emb = $("#emo_emb").val();
+	var emo_neu = $("#emo_neu").val();
+	
+	var emotion = $(".emotion").val();
+	
+	
+	$("#emo1").click(function(){
+		if(emotion != emo_happy){
+			$('#fig').css("display","none");
+			
+		}
+		
+		
+		
+		
+		
+	})
+}
+
+
+
+
+
+
+)
+
+
+</script>
 
 </head>
 <body>
@@ -35,10 +69,10 @@
 	    <main id="main" class="container">
           <div class="tag">
             <div class="tag_icon">
-              <div class="tag1"><button>감정1</button></div>
-              <div class="tag2"><button>감정2</button></div>
-              <div class="tag3"><button>감정3</button></div>
-              <div class="tag4"><button>감정4</button></div>
+              <div class="tag1"><button id = emo1>기쁨</button></div>
+              <div class="tag2"><button id = emo2>슬픔</button></div>
+              <div class="tag3"><button id = emo3>화남</button></div>
+              <div class="tag4"><button id = emo4>안정</button></div>
             </div>
             <div class="bt_wrap">
                 <button type="button" onclick="location.href='${cpath}/diaryWriteForm.do'">글쓰기</a></button>
@@ -88,24 +122,25 @@
                        </c:otherwise>
                        </c:choose>
                     </div>
-                    <figcaption>
+                    <figcaption id = "fig">
                       <div class="title"><p>${vo.diary_title}</p></div>
                       <div class="diary_info">
                       <span>작성자 <a href="" target="_blank">${vo.mem_nick}</a></span>
-                      <span>22.12.09</span>
+                      <span>${vo.diary_date}</span>
                       </div>
                       <c:choose>
                       	<c:when test="${vo.diary_emo==0}">
-                      		<p class="emotion">#기쁨</p>  </c:when>
+                      		<p class="emotion" id = emo_happy value ="${vo.diary_emo }">#기쁨</p>  </c:when>
                       	<c:when test="${vo.diary_emo==1}">
-                      		<p class="emotion">#슬픔</p>  </c:when>
+                      		<p class="emotion" id = emo_sad value= "${vo.diary_emo }">#슬픔</p>  </c:when>
                       	<c:when test="${vo.diary_emo==2}">
-                      		<p class="emotion">#분노</p>  </c:when>
+                      		<p class="emotion" id = emo_angry value= "${vo.diary_emo }">#분노</p>  </c:when>
                       	<c:when test="${vo.diary_emo==3}">
-                      		<p class="emotion">#당황</p>  </c:when>
+                      		<p class="emotion" id = emo_emb value= "${vo.diary_emo }">#당황</p>  </c:when>
                        <c:otherwise>
-                        	<p class="emotion">#중립</p>   </c:otherwise>
+                        	<p class="emotion" id = emo_neu value= "${vo.diary_emo }">#중립</p>   </c:otherwise>
                        </c:choose>
+                       
                  
                     </figcaption>
                   </figure>

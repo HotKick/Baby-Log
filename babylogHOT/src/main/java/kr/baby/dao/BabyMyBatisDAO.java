@@ -123,7 +123,7 @@ public class BabyMyBatisDAO {
 		// 자유게시판 상세보기 메소드
 		public CommunityVO detailFree(int community_seq) {
 			SqlSession session = sqlSessionFactory.openSession();
-			CommunityVO vo = session.selectOne("detailFree",community_seq);
+			CommunityVO vo = session.selectOne("getCommunity_seq",community_seq);
 			session.close();
 			return vo;
 		}
