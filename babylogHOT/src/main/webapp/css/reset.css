@@ -1,75 +1,69 @@
 /* 박스 사이징 */
-*{box-sizing: border-box;}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
 
 /* 여백 초기화 */
-body, div, ul, li, dl, dd, dt, ol, h1, h2, h3, h4, h5, h6, input, fieldset, legend, p, select, table, th, td, tr, textarea, button, form, figure, figcaption {margin:0; padding:0;}
+body,main, img, section,article, div, ul, li, dl, dd, dt, ol, h1, h2, h3, h4, h5, h6, input, fieldset, legend, p, select, table, th, td, tr, textarea, button, form, figure, figcaption {margin:0; padding:0;}
 
 /* a 링크 초기화 */
 a {color: #222; text-decoration: none;}
 a:hover {color: #2698cb;}
 
-/* 내부 - 폰트 초기화 */
-/* body, input, textarea, select, button, table {
-    font-family: 'Nanum Gothic', AppleSDGothicNeo-Regular,'Malgun Gothic','맑은 고딕',dotum,'돋움',sans-serif; 
-    color: #222; font-size: 13px; line-height: 1.5;
-} */
-/* 외부 폰트 ------------------------------------------------------------------- */
-/* (기본)Gothic A1 */
-@import url('https://fonts.googleapis.com/css2?family=Gothic+A1:wght@100;200;300;400;500;600;700;800;900&display=swap');
+/* 메인컬러는 400 */
+:root {
+    --pink100 : #FFF2F6;
+    --pink200 : #FFE2EC;
+    --pink300 : #FF9FBF;
+    --pink400 : #FB3D7E; 
+    --pink500 : #D12660;
+    --pink600 : #6C3D4D;
 
-/* font-family: 'Gothic A1', sans-serif; */
+    --blue100: #EFF5FF;
+    --blue200: #C8DEFD;
+    --blue300: #6BAAFA;
+    --blue400: #2E88FE;
+    --blue500: #0F53AF;
+    --blue600: #112A4B;
 
-/* 강조체 */
-/* (강조)여기어때체 - yg-jalnan */
-@font-face {
-    font-family: 'yg-jalnan';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_four@1.2/JalnanOTF00.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
+    --green100: #F4FFF9;
+    --green200: #D5FDE9;
+    --green300: #55F7A6;
+    --green400: #2BD982;
+    --green500: #10AA5D;
+    --green600: #06743D;
+    --green600: #004A25;
 
-/* (강조)테다나 - Tenada */
-@font-face {
-    font-family: 'Tenada';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2210-2@1.0/Tenada.woff2') format('woff2');
-    font-weight: normal;
-    font-style: normal;
-}
+    --yello100: #FFFAEF;
+    --yello200: #FFF2D5;
+    --yello300: #FFD374;
+    --yello400: #FCCB27;
+    --yello500: #FCA227;
+    --yello600: #FD5A05;
+    --yello700: #3B2620;
 
-/* (강조) - Ricks 이누 아리드*/
-@font-face {
-    font-family: 'RixInooAriDuriR';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2207-01@1.0/RixInooAriDuriR.woff2') format('woff2');
-    font-weight: normal;
-    font-style: normal;
-}
+    --black100: #F2F2F2;
+    --black200: #E8E8E8;
+    --black300: #D3D3D3;
+    --black400: #A8A8A8;
+    --black500: #747373;
+    --black600: #4D4D4D;
+    --black700: #242424;
 
-/* 손글씨 */
+    --white: #fff;
+    --trans:rgba(255, 255, 255, 0.7);
 
-/* 손글씨 - 범석체 */
-@font-face {
-    font-family: 'Humanbumsuk';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2210-2@1.0/Humanbumsuk.woff2') format('woff2');
-    font-weight: normal;
-    font-style: normal;
-}
-
-/* 손글씨 혜민체 */
-@font-face {
-    font-family: 'IM_Hyemin-Bold';
-    src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2106@1.1/IM_Hyemin-Bold.woff2') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
-/* 베이직 폰트 지정 */
-body{
-    font-family: 'Gothic A1', sans-serif;
-}
+    --minRangeValue: 280px;
 
 
-/* 외부 폰트 ------------------------------------------------------------------- */
+  }
 
+  .d-none {
+    display: none;
+  }
+  
 /* 폰트 스타일 초기화 */
 em, address {font-style: normal;}
 
@@ -96,6 +90,48 @@ button {
     cursor: pointer;
     background: none;
     }
+
+
+/* font */
+/* GothicA1 - 베이직 폰트 */
+@font-face {
+    font-family: 'GA';
+    src:url(../fonts/GothicA1-Thin.ttf) format('truetype') 100,
+        url(../fonts/GothicA1-ExtraLight.ttf) format('truetype') 200,
+        url(../fonts/GothicA1-Light.ttf) format('truetype') 300,
+        url(../fonts/GothicA1-Regular.ttf) format('truetype') 400,
+        url(../fonts/GothicA1-Medium.ttf) format('truetype') 500,
+        url(../fonts/GothicA1-SemiBold.ttf) format('truetype') 600,
+        url(../fonts/GothicA1-Bold.ttf) format('truetype') 700,
+        url(../fonts/GothicA1-ExtraBold.ttf) format('truetype') 800,
+        url(../fonts/GothicA1-Black.ttf) format('truetype') 800;
+}
+
+
+/* Maple - 메인강조 폰트 */
+
+@font-face {
+    font-family: 'Maple100';
+    src:url(../fonts/Maplestory\ Light.ttf) format('truetype');  
+    }
+@font-face {
+    font-family: 'Maple200';
+    src:url(../fonts/Maplestory\ Bold.ttf) format('truetype');  
+    }
+
+
+
+/* 양진폰트 - 강조 폰트 */
+@font-face {
+    font-family: 'YJ';
+    src:url(../fonts/양진체v0.9_ttf.ttf) format('truetype');  
+    }
+
+body{
+    font-family: 'GA';
+    font-weight: 400;
+    color: var(--black600);
+}
 
 
 

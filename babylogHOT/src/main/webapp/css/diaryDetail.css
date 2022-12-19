@@ -1,4 +1,14 @@
-
+/* 공통------------------------------------ */
+.d-none {
+    display: none;
+  }
+  
+  /* 배너영역 */
+  .banner{
+    height: 6rem;
+  }
+  
+  /* 공통------------------------------------ */
 main {
     width: 100%;
 }
@@ -14,12 +24,10 @@ main {
     width: 68%;
     display: flex;
     flex-direction: column;
-    /* gap: 10px; */
     justify-items: center;
     background-color: #fff;
     box-sizing: border-box;
     border-radius: 30px;
-    border: 1px solid #ddd;
     padding: 3%;
     box-shadow:5px 5px 30px rgba(0, 0, 0, 0.3); ;
    
@@ -33,33 +41,38 @@ main {
 .profile {
     display: flex;
     width: 100%;
-    background-color: #fff;
+    background-color: var(--white);
     margin-bottom: 3%;
 }
 .profile .profile_img{
     width: 100px;
     height: 100px;
-    background-color: #222;
-    border-radius: 50px;
 }
 .profile .profile_img a{
-    display: block;
-    display: flex;
     width: 100%;
     height: 100%;
-    color: #fff;
+    display: block;
+    display: flex;
     justify-content: center;
     align-items: center;
 }
+.profile .profile_img a:hover img{
+    border: 3px solid var(--pink300);
+}
+
+.profile .profile_img a img{
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+}
 .profile .profile_info{
     padding: 20px 0;
-    background-color: #ccc;
 }
 .profile .profile_info > div{
     gap: 1%;
 }
 .profile .profile_info .id{
-    font-size: 1.2rem;
+    font-size: 2rem;
     font-weight: bold;
 }
 
@@ -85,7 +98,6 @@ main {
 .icon_wrap{
     display: flex;
     justify-content: space-between;
-    background-color: #ccc;
     display: flex;
     align-items: center;
 }
@@ -93,20 +105,28 @@ main {
 /* 왼쪽 아이콘 */
 .icon_wrap .left_icon {
     width: auto;
-    background-color: #ccc;
     display: flex;
     gap: 18%;
     font-size: 2rem;
-    color: #222;
     align-items: center;
     margin-left: 24px;
 }
+.icon_wrap .left_icon a {
+    color: var(--black300);
+}
+.icon_wrap .left_icon .l_icon1 a{
+    color: var(--pink400);
+}
+/* 오른쪽 아이콘 */
 
 .icon_wrap .right_icon{
     width: auto;
     justify-content: center;
     font-size: 2rem;
     margin-right: 20px;
+}
+.icon_wrap .right_icon a{
+    color: var(--blue400);
 }
 
 /* 피드 - 텍스트 영역 */
@@ -129,24 +149,8 @@ main {
     font-size: 0.8rem;
 }
 
-/* 피드 - 태그 */
-.t_tag {
-    display: flex;
-    align-items: center;
-    gap: 1%;
-}
-.t_tag div {}
-.t_tag div a {
-    background-color: #ccc; 
-    padding: 0.4rem 1rem;
-    display: block;
-    border-radius: 5px;
 
-}
-.t_tag div a:hover {
-    background-color: #222;
-    color: #fff;
-}
+
 .day {
     padding: 20px 0;
     display: inline-block;
@@ -159,45 +163,63 @@ main {
 
 /* feed- 수정, 삭제, 목록 btn */
 .feed_btn{
-    padding: 24px 0 0;
+    padding: 1rem 0 2.4rem;
     display: flex;
     align-items: center;
-    justify-content: end;
-    gap: 1%;
-    border-top : solid 1px #ddd;
+    border-bottom: 1px solid var(--blue200);
+    
 }
 
 .feed_btn div {
-    background-color: #ccc;
-    border-radius: 5px;
-    
+    margin-right:0.5rem ;
 }
-.feed_btn div button {
-    padding: 0.6rem 1.4rem;
-    border-radius: 0.3rem;
+.feed_btn div > button {
+    padding: 0.8rem 3rem;
+    border-radius: 0.7rem;
     display: block;
-
+    background-color: var(--white);
+}
+/* 각 버튼 스타일 주기 */
+.feed_btn .edt_btn button{
+    border: 1px solid var(--pink400);
+    color: var(--pink500);
+}
+.feed_btn .del_btn button{
+    border: 1px solid var(--blue400);
+    color: var(--blue500);
+}
+.feed_btn .list_btn button{
+    border: 1px solid var(--green400);
+    color: var(--green500);
 }
 
-.feed_btn div button:hover {
-    background-color: #222;
-    color: #fff;
+/* 각 버튼 - 호버 */
+.feed_btn .edt_btn button:hover{
+    background-color: var(--pink400);
+    color: var(--white);
 }
+.feed_btn .del_btn button:hover{
+    background-color:  var(--blue400);
+    color: var(--white);
+}
+.feed_btn .list_btn button:hover{
+    background-color: var(--green400);
+    color: var(--white);
+}
+
+
 
 
 /* 코멘트 영역 ========================= */
-.feed_comment{
-    background-color: #d1e8ee;
-}
 
 .comment_wrap {
-    padding: 40px 20px;
+    padding: 1rem 1.8rem;
 }
 .comment_wrap > div{
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 4%;   
+    margin-bottom: 4%;
 
 }
 .comment_wrap > div > div {
@@ -205,17 +227,26 @@ main {
     align-items: center;
 }
 .comment_wrap > div .co_profile{
-    width: 50px;
-    height: 50px;
-    border-radius: 50px;
+    width: 5rem;
+    height: 5rem;
+    border-radius: 5rem;
+    margin-right: 0.5rem;
+}
+.comment_wrap > div .co_profile img {
+    width: 100%;
+    height: 100%;
+    border-radius: 5rem;
+}
+.comment_wrap > div .co_profile img:hover{
+    border: 2px solid var(--pink300);
 }
 .comment_wrap > div .co_text{
-    width: 80%;
+    width: 74%;
     height: 50px;
     border-radius: 10px;
+    border: 1px solid var(--blue200);
 }
 .comment_wrap > div .co_text p {
-
     padding-left: 10px;
 }
 .comment_wrap > div .co_time {
@@ -226,7 +257,53 @@ main {
     justify-content: flex-start;
 }
 
-.comment_wrap div > div{
-    height: 20px;
-    background-color: #ccc;
+/* 코멘트 */
+
+
+/* 태그 -------------------------------------*/
+.tag_icon > div button{
+display: flex;
+align-items: center;
+padding: 0.8rem 2rem;
+margin-right: 0.6rem;
+background-color: var(--blue200);
+border-radius: 10px;
+color: var(--white);
+}
+
+.tag_icon > div button img {
+width: 1.2rem;
+margin-right: 0.2rem;
+}
+.tag_icon > div button p {
+font-size: 1rem;
+line-height: 1.2rem;
+text-shadow: 1px 1px 1px var(--black500);
+}
+
+/* 각 태그별 속성  */
+.tag_icon > .tag1 button{
+background-color: var(--green400) ;
+}
+.tag_icon > .tag2 button{
+background-color: var(--pink400) ;
+}
+.tag_icon > .tag3 button{
+background-color: var(--blue400) ;
+}
+.tag_icon > .tag4 button{
+background-color: var(--yello400) ;
+}
+/* 각 태그별 오버  */
+.tag_icon > .tag1 button:hover{
+background-color: var(--green500) ;
+}
+.tag_icon > .tag2 button:hover{
+background-color: var(--pink500) ;
+}
+.tag_icon > .tag3 button:hover{
+background-color: var(--blue500) ;
+}
+.tag_icon > .tag4 button:hover{
+background-color: var(--yello500) ;
 }

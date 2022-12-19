@@ -1,10 +1,16 @@
-#header {
-	height: 300px;
-	background-color: #ccc;
+
+/* 공통------------------------------------ */
+
+/* 배너영역 */
+.banner{
+height: 20rem;
+background-color: var(--black300);
 }
-
-
-/* 공통요소 ========================  */
+  
+body{
+	font-weight: 400;
+	color: var(--black600);
+}
 .board_wrap {
 	width: 100%;
 	padding: 50px 0;
@@ -19,23 +25,6 @@
 	flex-direction: row-reverse;
 	gap: 1%;
 }
-
-.bt_wrap > a {
-	display: inline-block;
-	margin-left: 10px;
-	padding: 14px 40px;
-	border-radius: 10px;
-	font-size: 1rem;
-	float: right;
-    background-color: #ccc;
-}
-
-.bt_wrap a:hover {
-	background-color: #000;
-	color: #fff;
-    border: none;
-}
-
 
 
 
@@ -69,14 +58,33 @@
     text-align: center;
 	font-size: 1rem;
 	font-weight: 900;
-    background-color: #ccc;
+	background-color: var(--blue100);
+	color: var(--blue400);
+	border: 1px solid var(--blue200);
+}
+.board_title strong{
+	color: var(--blue500);
 }
 
-
-.board_title div > div a:hover {
-	background-color: #000;
-	color: #fff;
+.board_title div > div > a:hover{
+	background-color: var(--blue400);
+	color: var(--white);
 }
+
+/* 각게시판 on 주기 */
+.board_title .tag .free.on a{
+	background-color: var(--blue400);
+	color: var(--white);
+}
+.board_title .tag .info.on a{
+	background-color: var(--blue400);
+	color: var(--white);
+}
+.board_title .tag .trade.on a{
+	background-color: var(--blue400);
+	color: var(--white);
+}
+
 
 .board_title {
 	margin-bottom: 30px;
@@ -92,35 +100,33 @@
 }
 
 
-/* 보드 - 리스트 ======================= */
+/* 보드 - 리스트(list) ======================= */
 
 .board_list .title a:hover {
-	color: #ccc;
-	font-weight: 800;
+	color: var(--black400);
+	font-weight: 600;
 }
 
 /* 게시판 - 라인 */
 .board_list > div {
-	border-bottom: 1px solid #ccc;
+	border-bottom: 1px var(--blue300);
 	font-size: 0rem;
-	background-color: #fff;
+	background-color: var(--white);
 }
 
 .board_list > div.top {
-	background-color: #000;
-	color: #fff;
+	background-color: var(--blue300);
+	color: var(--white);
 }
 
-.board_list > div:last-child {
-	border-bottom: 1px solid #ccc;
-}
 
 /* 게시판 간격 */
 .board_list > div > div {
 	display: inline-block;
-	padding: 10px 0;
+	padding: 0.8rem 0;
 	text-align: center;
 	font-size: 18px;
+	border-bottom: solid 1px var(--blue200);
 }
 
 .board_list > div.top > div {
@@ -134,6 +140,9 @@
 .board_list .title {
 	width: 60%;
 	text-align: center;
+}
+.board_list .title a{
+	color: var(--black600);
 }
 
 .board_list .top .title {
@@ -162,25 +171,31 @@
 .board_page a {
 	display: inline-block;
 	margin: 0 3px;
-	line-height: 15px;
 }
 
 /* 보드 - 버튼 */
 .board_page a.bt {
-	padding: 10px;
-	font-size: 0.5rem;
+	text-align: center;
+	padding: 0.8rem;
+	font-size: 0.8rem;
 	letter-spacing: -1px;
-	background-color: #ccc;
-	width: 20px;
-	height: 20px;
+	background-color: var(--blue600);
+	color: var(--white);
+	width: 1.5rem;
+	height: 1.5rem;
 	border-radius: 50%;
 	box-sizing: border-box;
 	vertical-align: middle;
-	line-height: 3px;
+	position: relative;
+}
+.board_page a.bt i{
+	position: absolute;
+	top: 0.4rem;
+	left: 0.4rem;
 }
 
 .board_page a:hover.bt {
-	background: #000;
+	background-color: var(--blue400);
 	color: #fff;
 }
 
@@ -194,23 +209,22 @@
 	vertical-align: middle;
 	border-left: 0;
 	line-height: 100%;
-	background: #ccc;
+	background: var(--blue300);
 	color: #fff;
 	border-radius: 5px;
 }
 
 .board_page a:hover.num {
-	background: #000;
+	background:var(--blue400);
 	color: #fff;
 }
 
 .board_page a.num.on {
-	border-color: #000;
-	background: #000;
+	background: var(--blue400);
 	color: #fff;
 }
 
-/* board-view ============================ */
+/* board-Detail--------------------------------------- */
 .board_view {
 	width: 100%;
 }
@@ -218,13 +232,13 @@
 .board_view .title {
 	padding: 20px 15px;
 	font-size: 1.5rem;
-	background-color: rgb(128, 128, 129);
-	color: #fff;
+	background-color:var(--blue300);
+	color:var(--white);
 }
 
 .board_view .info {
 	padding: 15px;
-	background-color: rgb(233, 233, 236);
+	background-color:var(--blue200);
 	font-size: 0;
 }
 
@@ -239,19 +253,16 @@
 }
 
 
-
-
-
 /* 바 */
 .board_view .info dl::before {
 	content: "";
 	position: absolute;
-	top: 8px;
+	top: 0.2rem;
 	left: 0;
 	display: block;
-	width: 1px;
+	width: 2px;
 	height: 20px;
-	background: #222;
+	background: var(--blue100);
 }
 
 .board_view .info dl:first-child::before {
@@ -269,27 +280,33 @@
 
 .board_view .info dl dd {
 	margin-left: 10px;
-	color: #777;
+	color: var(--black800);
 }
 
 .board_view .cont {
 	padding: 60px 20px;
-	border-bottom: 1px solid #ccc;
+	border-bottom: 1px solid var(--blue200);
 	line-height: 160%;
 	font-size: 1.2rem;
 }
 
-/* borderwrite ------------------------------------------------ */
+
+
+
+
+
+/* borderwrite / edit (글쓰기 / 수정) --------------------------------------------------- */
 .board_write {
-	border-top: 2px solid #ccc;
+	border-top: 2px solid var(--blue200);
 }
 
 .board_write .title, .board_write .info, .emotion{
 	padding: 15px;
+	color: var(--blue400);
 }
 
 .board_write .info, .emotion{
-	border-top: 1px solid #ddd;
+	border-top: 1px solid var(--blue200);
 	font-size: 0;
 }
 
@@ -332,14 +349,17 @@
 .board_write .info input[type="password"] {
 	padding: 10px;
 	box-sizing: border-box;
+	border: 1px solid var(--blue300);
 }
+
 
 .board_write .title input[type="text"] {
 	width: 100%;
+	border: 1px solid var(--blue300);
 }
 
 .board_write .cont {
-	border-bottom: 1px solid #ccc;
+	border-bottom: 1px solid var(--blue200);
 }
 
 
@@ -358,27 +378,30 @@
 
 
 /* boardWrite 버튼  */
-
 .bt_wrap button {
-   padding: 14px 60px;
+   padding: 1rem 4rem;
    border-radius: 2px;
    font-size: 1rem;
    border-radius: 10px;
-   background-color: #ccc;
-}
-.bt_wrap button:hover {
-    cursor: pointer;
-    background-color: #000;
-    color: #fff;
-    border: none;
 }
 
-.bt_wrap button:hover a{
-	color: #fff;
+/* 에디트-리스트 각버튼에 컬러주기  */
+.bt_wrap button:nth-child(1) {
+	border:1px solid var(--pink400);
+	color: var(--pink500);
+	margin-left: 0;
 }
+.bt_wrap button:nth-child(2){
+	border:1px solid var(--green400);
+	color: var(--green500);
+} 
 
-.bt_wrap button:first-child {
-    margin-left: 0;
+/* 에디트-리스트 각 버튼 마우스 오버  */
+.bt_wrap button:nth-child(1):hover {
+	background-color:var(--pink400);
+	color: var(--white);
 }
-
-
+.bt_wrap button:nth-child(2):hover{
+	background-color: var(--green400);
+	color: var(--white);
+} 
