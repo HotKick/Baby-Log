@@ -49,43 +49,39 @@
                   <!-- 주문자성함 -->
                   <div class="input__block">
                      <label class="name" for="id">주문자 성함</label>
-                     <input type="text" placeholder="성함을 입력해주세요" id="id"/>
+                     <div class="input" id="id">sdsdsd </div>
                   </div>
                   <!-- 전화번호 -->
                   <div class="input__block">
                     <label class="name" for="tel">전화번호</label>
-                     <input type="tel" placeholder="010" id="tel"/>
+                    <div class="input" id="tel"></div>
                   </div>
                   <!-- 배송지 입력 -->
                   <div class="input__block">
-                    <label class="name" for="re_pwd">배송지 입력</label>
-                    <input type="text" placeholder="배송지를 입력하세요"  id="re_pwd"/>
+                    <label class="name" for="re_pwd">배송지</label>
+                    <div class = "input" id="re_pewd"></div>
                   </div>
                   <!-- 주소검색 -->
                   <div class="input__block">
-                    <label class="name" for="name">우편번호 검색</label>
+                    <label class="name" for="name">우편번호</label>
+                    <div></div>
                     <input type="button" onclick="sample6_execDaumPostcode()" value="주소 검색">
                   </div>
                   
                   <!-- 우편번호 -->
                   <div class="input__block">
                     <label class="name" for="name">우편번호</label>
-                    <input type="text" placeholder="우편번호"  id="sample6_postcode"/>
+                    <input type="text" placeholder="우편번호" class="input" id="sample6_postcode"/>
                   </div>
                   <!-- 주소 -->
                   <div class="input__block">
                     <label class="name" for="nickname">주소</label>
-                    <input type="text" placeholder="주소"  id="sample6_address" />
+                    <input type="text" placeholder="주소" class="input" id="sample6_address" />
                   </div>
                   <!-- 상세주소 -->
                   <div class="input__block">
                     <label class="name" for="nickname">상세주소</label>
-                    <input type="text" placeholder="상세주소"  id="sample6_extraAddress" />
-                  </div>
-                  <!-- 뭔지 모를 -->
-                   <div class="input__block">
-                    <label class="name" for="nickname">추가주소</label>
-                    <input type="text" placeholder="추가주소"  id="sample6_detailAddress" />
+                    <input type="text" placeholder="상세주소" class="input" id="sample6_extraAddress" />
                   </div>
 
                   <!-- 결제방법 -->
@@ -240,7 +236,7 @@
                 msg += '상점 거래ID : ' + rsp.merchant_uid;
                 msg += '결제 금액 : ' + rsp.paid_amount;
                 msg += '카드 승인번호 : ' + rsp.apply_num;
-                document.location.href= "${cpath}/shopOrderFinish.do";
+                document.location.href= "${cpath}/main.do";
             } else {
                 var msg = '결제에 실패하였습니다.';
                 msg += '에러내용 : ' + rsp.error_msg;

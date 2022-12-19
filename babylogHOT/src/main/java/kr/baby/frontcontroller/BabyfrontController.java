@@ -12,9 +12,6 @@ import javax.servlet.http.HttpServletResponse;
 import kr.baby.controller.Controller;
 
 
-
-
-
 @WebServlet("*.do")
 public class BabyfrontController extends HttpServlet {
 	protected void service(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
@@ -40,6 +37,7 @@ public class BabyfrontController extends HttpServlet {
 		nextPath=controller.requestHandler(request, response);
 			
 
+		
 	// 3. 다음페이지로 이동하기(forward, redirect)
 	  if(nextPath!=null) {
 		  if(nextPath.indexOf("redirect:")==-1){
