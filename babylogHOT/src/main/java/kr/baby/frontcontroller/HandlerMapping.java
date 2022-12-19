@@ -41,7 +41,7 @@ import kr.baby.controller.QuestionWriteFormController;
 import kr.baby.controller.ShopAlbumController;
 import kr.baby.controller.ShopController;
 import kr.baby.controller.ShopDiaryController;
-
+import kr.baby.controller.ShopOrderController;
 import kr.baby.controller.ShopSelectController;
 import kr.baby.controller.SignupController;
 import kr.baby.controller.SignupFormController;
@@ -86,6 +86,7 @@ import kr.baby.controller.UpdateProfController;
 		mappings.put("/shopAlbum.do",new ShopAlbumController());
 		mappings.put("/shopDiary.do",new ShopDiaryController());
 		mappings.put("/shopSelect.do",new ShopSelectController());
+		mappings.put("/shoporder.do", new ShopOrderController());
 		mappings.put("/signupform.do", new SignupFormController());
 		mappings.put("/signup.do",new SignupController());
 		mappings.put("/question.do",new QuestionController());

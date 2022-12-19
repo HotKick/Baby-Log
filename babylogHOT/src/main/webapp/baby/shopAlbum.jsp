@@ -132,7 +132,7 @@
                         <!-- //count_wrap : 카운트 함수  -->
 
                         <div class="order">
-                            <button type="button" onclick="location.href='shoporder.do'">주문하기</button>
+                            <button type="button" onclick="location.href='shopSelect.do'">주문하기</button>
                         </div>
 
                     </div>
