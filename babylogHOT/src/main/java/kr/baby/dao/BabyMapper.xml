@@ -47,6 +47,11 @@
 	values(news_seq.nextval,#{nn_title},#{nn_content},#{nn_file,jdbcType=VARCHAR},sysdate,'admin@babylog.com')
 </select>
 
+<!-- news 3. 뉴스 디테일   -->
+<select id = "detailNews" parameterType = "int" resultType="kr.baby.dao.NewsVO">
+	select * from news where nn_seq=#{nn_seq}
+</select>
+
 <!-- free 1. 자유 게시판 전체 리스트  -->
 	<select id = "listFree" resultType = "kr.baby.dao.CommunityVO">
 	select * from community
