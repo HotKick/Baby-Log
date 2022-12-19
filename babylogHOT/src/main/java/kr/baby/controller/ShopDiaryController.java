@@ -11,7 +11,7 @@ public class ShopDiaryController implements Controller {
 	@Override
 	public String requestHandler(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		// TODO Auto-generated method stub
+		
 		return "shopDiary";
 	}
 

@@ -10,7 +10,7 @@ import javax.servlet.http.HttpServletResponse;
 import kr.baby.dao.BabyMyBatisDAO;
 import kr.baby.dao.DiaryVO;
 
-public class SelectDiaryController implements Controller {
+public class MakeAlbumController implements Controller {
 
 	@Override
 	public String requestHandler(HttpServletRequest request, HttpServletResponse response)
@@ -19,8 +19,7 @@ public class SelectDiaryController implements Controller {
 				BabyMyBatisDAO dao = new BabyMyBatisDAO();
 				List<DiaryVO> list =dao.listDiary();
 				request.setAttribute("list",list);
-				
-		return "selectDiary";
+		return "makeAlbum";
 	}
 
 }
