@@ -7,7 +7,8 @@ const gridView = 'grid-view';
 const dNone = 'd-none';
 
 
-// 버튼 활성화
+
+// 버튼 활성화 ------------------------------------------
 for(const btn of btns){
     btn.addEventListener('click', function(){
         const parent = this.parentElement;
@@ -41,8 +42,8 @@ rangeInput.addEventListener('input', function(){
 });
 
 // 검색키워드로 필터 적용
-
-const captions = document.querySelectorAll('.image-list figcaption p:first-child');
+// const captions = document.querySelectorAll('.image-list figcaption p:first-child');
+const captions = document.querySelectorAll('.image-list figcaption .emotion');
 const myArray = [];
 let counter = 1;
 
@@ -65,10 +66,12 @@ searchInput.addEventListener('keyup', keyupHandler);
 
 function keyupHandler(){
 
+    // 클릭했을때 안보이게 
     for(const item of imageListItems){
         item.classList.add(dNone);
     }
 
+    // 키워드 매치하는것을 보이게  
     const keywords = this.value;
 
     const filteredArray = myArray.filter(el => el.text.toLowerCase().includes(keywords.toLowerCase()));
@@ -77,7 +80,7 @@ function keyupHandler(){
     if(filteredArray.length > 0){
         for(const el of filteredArray){
 
-            document.querySelector(`.image-list li:nth-child(${el.id}))`).classList.remove(dNone);
+            document.querySelector(`.image-list li:nth-child(${el.id})`).classList.remove(dNone);
         }
 
     }
@@ -111,3 +114,48 @@ console.log(arr2);
 
 
 
+// // 
+// const item = document.querySelector('.item');
+// const onBtn = document.querySelector('.on a');
+// const offBtn = document.querySelector('.off');
+// // const links = document.querySelector('.navbar_icons');
+
+//     // 클릭이 될때마다 호출해줘
+//     item.addEventListener('click', () => {
+//     //메뉴를 클릭했을때 엑티브가 있다면 엑티브를 해줄것이다 
+//     onBtn.classList.toggle('active');
+// })
+
+//     offBtn.addEventListener('click',() =>{
+//     offBtn.classList.toggle('active');
+//     })
+
+const items = document.getElementsByClassName("item");
+
+console.log(items);
+
+for(let i=0; i<items.length; i++){
+    items[i].addEventListener("click",function(event){
+        likeCheck(event);
+    });
+}
+
+function likeCheck(event){
+    const itemEle = event.target.parentElement;
+    const fitEle = itemEle.parentElement;
+    const likeBox = fitEle.nextElementSibling.nextElementSibling;
+    console.log(likeBox.firstElementChild);
+
+
+    likeBox.className = likeBox.className=="off"?"on":"off";
+}
+
+
+// 버튼을 눌렀을때 a태그 위로 이동금지
+window.onload = function(){
+    const btn = document.querySelector('#btn_link');
+    btn.onclick = function(e){
+        // 버튼을 클릭하면, a태그의 href 속성을 제거
+        document.querySelector(".disableLink").removeAttribute('href');
+    }
+}

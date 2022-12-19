@@ -125,3 +125,13 @@ const init = () => {
 }
 
 init();
+
+
+// 슬릭
+$('.p_img').slick({
+  dots: true,
+  infinite: true,
+  speed: 500,
+  fade: true,
+  cssEase: 'linear'
+});
