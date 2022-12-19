@@ -1,97 +1,86 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-    
+
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
 <c:set var="cpath" value="${pageContext.request.contextPath}" />
-    
+
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
-    <title>결제하기</title>
-
+<meta charset="UTF-8">
+<title>결제하기</title>
 <!-- style -->
 <link rel="stylesheet" href="${cpath}/css/reset.css">
 <link rel="stylesheet" href="${cpath}/css/common.css">
-<link rel="stylesheet" href="${cpath}/css/shopOrder.css">
-
+<link rel="stylesheet" href="${cpath}/css/login.css">
 
 <!-- 슬릭 -->
 <link rel="stylesheet" type="text/css" href="${cpath}/css/slick.css" />
 <link rel="stylesheet" type="text/css" href="${cpath}/css/slick-theme.css" />
 
 <!-- 웹아이콘 -->
-<script src="https://kit.fontawesome.com/e76461f593.js" crossorigin="anonymous"></script>
+<script src="https://kit.fontawesome.com/e76461f593.js"
+	crossorigin="anonymous"></script>
 
 <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
 <script type="text/javascript" src="https://cdn.iamport.kr/js/iamport.payment-1.1.5.js"></script>
+  
 
 </head>
 <body>
-    
-    <main>
+ <main>
        <div id="login">
         <div class="container">
             <div class="login_wrap">
                 <!-- Heading -->
                 <div class="item logo">
                   <div class="logo">
-                    <a href="${cpath}/main.do">
-                      <img src="icon/logo_1.png" alt="">
-                    </a>
+                    <a href="${cpath}/main.do"></a>
                   </div>
-                
+                  <div class="item logo_title">
+                    <a href="${cpath}/main.do">BabyLog</a> </div>
                 </div>
                 
                 <!-- Form -->
-                <form  action="" method="post">
-                  <!-- 주문자성함 -->
+                <form  class="validation-form" action="#" method="post">
+                 <!-- 주문자   -->
                   <div class="input__block">
                      <label class="name" for="id">주문자 성함</label>
-                     <input type="text" placeholder="성함을 입력해주세요" class="input" id="id"/>
+                     <input type="text" placeholder="성함" class="input" id="id" name = "mem_id"/>
                   </div>
-                  <!-- 전화번호 -->
-                  <div class="input__block">
-                    <label class="name" for="tel">전화번호</label>
-                     <input type="tel" placeholder="010" class="input" id="tel"/>
+              
+                <!-- 전화번호 -->
+                <div class="input__block">
+                  <label class="name" for="family">전화번호</label>
+                  <div class="tel">
+                    <input type="tel" class="input" placeholder="+010" name="mem_tel">
                   </div>
-                  <!-- 배송지 입력 -->
-                  <div class="input__block">
-                    <label class="name" for="re_pwd">배송지 입력</label>
-                    <input type="text" placeholder="배송지를 입력하세요" class="input" id="re_pwd"/>
-                  </div>
-                  <!-- 주소검색 -->
-                  <div class="input__block">
-                    <label class="name" for="name">우편번호</label>
-                    <input type="button" onclick="sample6_execDaumPostcode()" value="주소 검색">
-                  </div>
+                </div>
+                  <!-- 배송지 -->
                   
-                  <!-- 우편번호 -->
                   <div class="input__block">
-                    <label class="name" for="name">우편번호</label>
-                    <input type="text" placeholder="우편번호" class="input" id="sample6_postcode"/>
-                  </div>
-                  <!-- 주소 -->
-                  <div class="input__block">
-                    <label class="name" for="nickname">주소</label>
-                    <input type="text" placeholder="주소" class="input" id="sample6_address" />
-                  </div>
-                  <!-- 상세주소 -->
-                  <div class="input__block">
-                    <label class="name" for="nickname">상세주소</label>
-                    <input type="text" placeholder="상세주소" class="input" id="sample6_extraAddress" />
-                  </div>
+                  <label class="name" for="family">배송지 입력</label>
+                 	<input type="button" onclick="sample6_execDaumPostcode()" value="주소 검색"><br>
+                    <input type="text" id="sample6_postcode" placeholder="우편번호"><br>
+					<input type="text" id="sample6_address" placeholder="주소"><br>
+					<input type="text" id="sample6_extraAddress" placeholder="상세주소"><br>
+					
+					
+                      </div>
+                  
 
-                  <!-- 결제방법 -->
+         
 
-                    <button type = "button" class="order__btn" id = "check_module" onclick="paypay()">
-                      결제 하기
-                    </button>
-
+                <!-- 결제 방법 -->
+                <div class="input__block">
+                  <label class="name" for="gender">결제방법</label>
+                  <div class="gender" name = "mem_gender">
+                    <div><input type="radio" id="gender2" name="mem_gender" value="여자"><label for="gender2">카카오페이 결제</label></div>
+                  </div>
                 </form>
-
-
+               <button id="check_module" onclick="paypay()" type="button">결제하기</button>
+  
               </div>
             
         </div>
@@ -113,11 +102,14 @@
       			});
     		}, false);
 		</script>
+		
+		
     </main>
   
 <jsp:include page="footer.jsp" flush="true"/>
 
-<!-- script -->
+  	
+   <!-- script -->
 <script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 <script src="${cpath}/js/slick.min.js"></script>
 <!-- 생년월일  -->
@@ -247,6 +239,7 @@
     	
         }); */
 </script>
+  
 
 
 </body>

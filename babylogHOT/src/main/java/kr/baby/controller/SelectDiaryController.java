@@ -19,6 +19,7 @@ public class SelectDiaryController implements Controller {
 				BabyMyBatisDAO dao = new BabyMyBatisDAO();
 				List<DiaryVO> list =dao.listDiary();
 				request.setAttribute("list",list);
+				
 		return "selectDiary";
 	}
 
