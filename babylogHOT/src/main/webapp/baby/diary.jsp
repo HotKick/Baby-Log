@@ -37,7 +37,7 @@ var dw3 = document.getElementsByClassName('dw3');
 var dw4 = document.getElementsByClassName('dw4');
 
 
-    /* 기쁨 버튼 */
+    /* 행복 버튼 */
 	function emo_happy(){
     	
 		for(var i =0; i<dw1.length;i++){
@@ -73,7 +73,7 @@ var dw4 = document.getElementsByClassName('dw4');
 		
 	}
     
-    /* 분노 버튼 */
+    /* 화남 버튼 */
 	function emo_angry(){
     	
 		for(var i =0; i<dw1.length;i++){
@@ -125,7 +125,7 @@ var dw4 = document.getElementsByClassName('dw4');
 		<div class="tag">
 			<div class="tag_icon">
 				<div class="tag1">
-					<button id=emo1 onclick="emo_happy()">기쁨</button>
+					<button id=emo1 onclick="emo_happy()">행복</button>
 				</div>
 				<div class="tag2">
 					<button id=emo2 onclick="emo_sad()">슬픔</button>
@@ -205,7 +205,7 @@ var dw4 = document.getElementsByClassName('dw4');
 											<span>작성자 <a href="" target="_blank">${vo.mem_nick}</a></span>
 											<span>${vo.diary_date}</span>
 										</div>
-										<p class="emotion">#기쁨</p>
+										<p class="emotion">#행복</p>
 									</figcaption>
 								</figure>
 							</li>
@@ -265,7 +265,7 @@ var dw4 = document.getElementsByClassName('dw4');
 											<span>작성자 <a href="" target="_blank">${vo.mem_nick}</a></span>
 											<span>${vo.diary_date}</span>
 										</div>
-										<p class="emotion">#분노</p>
+										<p class="emotion">#화남</p>
 									</figcaption>
 								</figure>
 							</li>
