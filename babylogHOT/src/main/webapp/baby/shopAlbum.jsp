@@ -65,7 +65,7 @@
                         <div class="p_right">
                         <div class="p_logo">
                             <div class="simbole"></div>
-                            <div class="logo"><a href="main.html">babylog</a></div>
+                            <div class="logo"><a href="${cpath}/main.do">babylog</a></div>
                         </div>
                         <!-- //p_logo -->
                         <div class="title_wrap">

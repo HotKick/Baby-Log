@@ -84,7 +84,7 @@
                       	<a href="${cpath }/diaryDetail.do?diary_seq=${vo.diary_seq}" onclick = "reload();"><img src="${cpath }/img/${vo.diary_file}" alt="다이어리"></a>
                        </c:when>
                        <c:otherwise>
-                         <a href="${cpath }/diaryDetail.do?diary_seq=${vo.diary_seq}" onclick = "reload();"><img src="${cpath}/img/diary2.jpg" alt="1번 다이어리">
+                         <a href="${cpath }/diaryDetail.do?diary_seq=${vo.diary_seq}" onclick = "reload();"><img src="${cpath}/img/diary2.jpg" alt="1번 다이어리"></a>
                        </c:otherwise>
                        </c:choose>
                     </div>
@@ -106,7 +106,7 @@
                 </c:forEach>        
               </ol>
                <div class="order">
-              <button type="button" onclick="location.href='shoporder.do'">결제 하기</button>
+              <button type="button" onclick="location.href='${cpath }/shopOrder.do'">결제 하기</button>
            
           </div>
           

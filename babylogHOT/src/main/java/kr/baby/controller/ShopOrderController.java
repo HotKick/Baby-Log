@@ -12,7 +12,7 @@ public class ShopOrderController implements Controller {
 	public String requestHandler(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		
-		return "orderpage";
+		return "shopOrder";
 	}
 
 }

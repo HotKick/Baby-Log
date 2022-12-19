@@ -36,11 +36,11 @@
 					<div class="shop">
 					 <div class="shop_diary">
 	                    <h2>일기</h2>
-	                    <div class="btn"><a href="${cpath}/shopDiary.do">바로가기</a></button></div>
+	                    <div class="btn"><a href="${cpath}/shopDiary.do">바로가기</a></div>
 	                </div>
 	                <div class="shop_photo">
 	                    <h2>다이어리</h2>
-	                    <div class="btn"><a href="${cpath}/shopAlbum.do">바로가기</a></button></div>
+	                    <div class="btn"><a href="${cpath}/shopAlbum.do">바로가기</a></div>
 	                </div>
 				</div>
 			</div>
