@@ -8,6 +8,7 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
+
 <meta charset="UTF-8">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -26,12 +27,76 @@
 <script src="https://kit.fontawesome.com/e76461f593.js"
 	crossorigin="anonymous"></script>
 	
+    
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+	
 	<!-- 파일 선택 가리기 -->
 	<style>
         #my-input {
             visibility: hidden;
         }
     </style>
+    
+    <script type = "text/javascript">
+   
+    let userData = ''
+    
+    function updateform(res){
+    	console.log('update form function',res)
+    	userData = res
+    	
+    	console.log('mem id : ',mem_id)
+    	var mem_id = $("#mem_id").text();
+    	var temp = $("#ment").text();
+    	var newMent = "<input type = 'text' id = 'ment2' class = 'form-control' value = '"+temp+"'/>";
+    	$("#ment").html(newMent);
+    	var newMentBtn = "<button onclick= 'updateprof()'>수정하기</button>";
+    	console.log(newMentBtn)
+    	$("#profBtn").html(newMentBtn);
+    	
+    	
+    }
+    
+    function updateprof(){
+    	console.log('update prof function',userData)
+    	var mem_id = $("#mem_id").text();
+    	var mem_prof = $("#mem_prof").val();
+       	var mem_ment = $("#ment2").val();
+       	
+       	
+       	$(document).ready(function() { 
+       	
+       		
+       	console.log('ajax 통신')
+       	
+
+       	
+    	 $("#updateform").ajaxSubmit({
+    		url : "${cpath}/updateprof.do",
+    		type : "POST",
+    		processData: false,
+            contentType: false,
+    		data : {"mem_id": mem_id,"mem_prof":mem_prof,"mem_ment":mem_ment},
+    		success : function(){
+    			console.log('success')
+    			//location.reload()
+    			location.href= "${cpath}/mypage.do";
+    		},
+    		error : function(){alert("에러!")}	
+    	}); 
+    	
+    	
+    });
+    
+    };
+    
+    </script>
+    
+    
+    
+    
+    
+    
     
 </head>
 <body>
@@ -40,23 +105,29 @@
 
 	  <main class="container">
           
-		<form action="">
+		<form id = "updateform" method="post" enctype="multipart/form-data">
+		
         <div class="profile_wrap">
             <div class="pro_img">
-                <img src="${cpath}/img/diary12.jpg" alt="프로필이미지">
-               <input type="button" onclick="onClickUpload();" value="+">
+                <img src="${cpath}/img/${mvo.mem_prof}" alt="프로필이미지">
+               <input id = prof_btn type="button" onclick="onClickUpload();" value="+">
        		
 
             </div>
             <div class="pro_info">
                 <div class="info_wrap">
                 <div class="pro_name"><input type="text" value="${mvo.mem_nick}"></div>
-                <div class="pro_id">${mvo.mem_id}</div>
-                <input id="my-input" name = "mem_prof" type="file" />
-                <div class="pro_desc">광주에사는 용용이 엄마입니다</div>
-                <div class="pro_desc">소통 ㅣ 친목 ㅣ 아기자랑 모두 환영이요 ^^</div>
-                <div class="pro_edit"><input type="button" value="프로필 수정"></div>
-                </div>
+                <div id = "mem_id" class="pro_id" >${mvo.mem_id}</div>
+                <input id="mem_prof" name = "mem_prof" type="file" value="mem_prof" />
+                <div class="pro_desc">
+                <p id = "ment" >${mvo.mem_ment}</p></div>
+                
+                <div class="pro_edit">
+                s
+              <!--  <input onclick ="updateform()" id = "profBtn" type="button" value="프로필 수정"/> -->
+               <button type="button" onclick = "updateform('${mvo.mem_id}')" id ="profBtn">프로필 수정</button></div>
+                </div></div>
+                
                 <div class="tag">
                     <div class="tag_icon">
                       <div class="tag1"><button>감정1</button></div>
@@ -114,7 +185,7 @@
                       	<a href="${cpath }/diaryDetail.do?diary_seq=${vo.diary_seq}" onclick = "reload();"><img src="${cpath }/img/${vo.diary_file}" alt="다이어리"></a>
                        </c:when>
                        <c:otherwise>
-                         <a href="${cpath }/diaryDetail.do?diary_seq=${vo.diary_seq}" onclick = "reload();"><img src="${cpath}/img/diary2.jpg" alt="1번 다이어리">
+                         <a href="${cpath }/diaryDetail.do?diary_seq=${vo.diary_seq}" onclick = "reload();"><img src="${cpath}/img/diary2.jpg" alt="1번 다이어리"></a>
                        </c:otherwise>
                        </c:choose>
                     </div>
@@ -134,10 +205,14 @@
 
 	
 	<!-- script -->
-	<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+
 	<script src="${cpath}/js/slick.min.js"></script>
 	<script src="${cpath}/js/diary.js"></script>
 	<script src="${cpath}/js/nav.js"></script>
+	<script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+	
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.7/jquery.js"></script> 
+    <script src="https://malsup.github.io/jquery.form.js"></script> 
 	
 	 <script>
         function onClickUpload() {
@@ -145,77 +220,6 @@
             myInput.click();
         }
     </script>
-    
-    <script>
-	function paypay(){
-		console.log("ck")
-        var IMP = window.IMP; // 생략가능
-        IMP.init('imp73015381'); 
-        // 'iamport' 대신 부여받은 "가맹점 식별코드"를 사용
-        // i'mport 관리자 페이지 -> 내정보 -> 가맹점식별코드
-        IMP.request_pay({
-            pg: 'kakaopay.TC0ONETIME', // version 1.1.0부터 지원.
-            /* 
-                'kakao':카카오페이, 
-                html5_inicis':이니시스(웹표준결제)
-                    'nice':나이스페이
-                    'jtnet':제이티넷
-                    'uplus':LG유플러스
-                    'danal':다날
-                    'payco':페이코
-                    'syrup':시럽페이
-                    'paypal':페이팔
-                */
-            pay_method: 'card',
-            /* 
-                'samsung':삼성페이, 
-                'card':신용카드, 
-                'trans':실시간계좌이체,
-                'vbank':가상계좌,
-                'phone':휴대폰소액결제 
-            */
-            merchant_uid: 'ORD20180131-0000011' + new Date().getTime(),
-            /* 
-                merchant_uid에 경우 
-                https://docs.iamport.kr/implementation/payment
-                위에 url에 따라가시면 넣을 수 있는 방법이 있습니다.
-                참고하세요. 
-                나중에 포스팅 해볼게요.
-             */
-            name: '일기 제작',
-            //결제창에서 보여질 이름
-            amount: '42,000', 
-            //가격 
-            buyer_email: 'iamport@siot.do',
-            buyer_name: '선경주',
-            buyer_tel: '010-1234-5678',
-            buyer_addr: '서울특별시 강남구 삼성동',
-            buyer_postcode: '123-456',
-          /*   m_redirect_url: 'tㅇ' */
-            /*  
-                모바일 결제시,
-                결제가 끝나고 랜딩되는 URL을 지정 
-                (카카오페이, 페이코, 다날의 경우는 필요없음. PC와 마찬가지로 callback함수로 결과가 떨어짐) 
-                */
-        }, function (rsp) {
-            console.log(rsp);
-            if (rsp.success) {
-                var msg = '결제가 완료되었습니다.';
-                msg += '고유ID : ' + rsp.imp_uid;
-                msg += '상점 거래ID : ' + rsp.merchant_uid;
-                msg += '결제 금액 : ' + rsp.paid_amount;
-                msg += '카드 승인번호 : ' + rsp.apply_num;
-            } else {
-                var msg = '결제에 실패하였습니다.';
-                msg += '에러내용 : ' + rsp.error_msg;
-            }
-            alert(msg);
-	});
-        };
-   /*  $("#check_module").click(function () {
-    	
-        }); */
-</script>
 	
 	
 </body>

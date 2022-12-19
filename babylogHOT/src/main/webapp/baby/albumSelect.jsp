@@ -102,7 +102,7 @@
                 </c:forEach>        
               </ol>
               <div class="order">
-              <a href="#">결제하기</a>
+              <a href="${cpath}/shoporder.do">결제하기</a>
           </div>
           
           </section>

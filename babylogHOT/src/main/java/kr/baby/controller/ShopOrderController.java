@@ -11,8 +11,8 @@ public class ShopOrderController implements Controller {
 	@Override
 	public String requestHandler(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		// TODO Auto-generated method stub
-		return "signup4";
+		
+		return "orderpage";
 	}
 
 }

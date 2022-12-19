@@ -23,6 +23,7 @@ import kr.baby.controller.DiaryEditController;
 import kr.baby.controller.DiaryEditFormController;
 import kr.baby.controller.DiaryWriteController;
 import kr.baby.controller.DiaryWriteFormController;
+import kr.baby.controller.KakaoLoginController;
 import kr.baby.controller.LoginController;
 import kr.baby.controller.LoginFormController;
 import kr.baby.controller.LogoutController;
@@ -44,6 +45,7 @@ import kr.baby.controller.ShopOrderController;
 import kr.baby.controller.ShopSelectController;
 import kr.baby.controller.SignupController;
 import kr.baby.controller.SignupFormController;
+import kr.baby.controller.UpdateProfController;
 
 
 	public class HandlerMapping{
@@ -55,6 +57,7 @@ import kr.baby.controller.SignupFormController;
 		mappings.put("/login.do",new LoginController());
 		mappings.put("/loginform.do", new LoginFormController());
 		mappings.put("/logout.do", new LogoutController());
+		mappings.put("/kakaologin.do",new KakaoLoginController());
 		mappings.put("/communityFree.do",new CommunityFreeController());
 		mappings.put("/communityDetail.do",new CommunityDetailController());
 		mappings.put("/communityEdit.do",new CommunityEditController());
@@ -75,6 +78,7 @@ import kr.baby.controller.SignupFormController;
 		mappings.put("/diaryCommentDelete.do",new DiaryCommentDeleteController());
 		mappings.put("/diaryCommentUpdate.do",new DiaryCommentUpdateController());
 		mappings.put("/mypage.do",new MypageController());
+		mappings.put("/updateprof.do", new UpdateProfController());
 		mappings.put("/newsCity.do",new NewsCityController());
 		mappings.put("/newsGov.do",new NewsGovController());
 		mappings.put("/newsDetail.do",new NewsDetailController());
@@ -82,6 +86,7 @@ import kr.baby.controller.SignupFormController;
 		mappings.put("/shopAlbum.do",new ShopAlbumController());
 		mappings.put("/shopDiary.do",new ShopDiaryController());
 		mappings.put("/shopSelect.do",new ShopSelectController());
+		mappings.put("/shoporder.do", new ShopOrderController());
 		mappings.put("/signupform.do", new SignupFormController());
 		mappings.put("/signup.do",new SignupController());
 		mappings.put("/question.do",new QuestionController());
@@ -90,7 +95,6 @@ import kr.baby.controller.SignupFormController;
 		mappings.put("/questionDetail.do",new QuestionDetailController());
 		mappings.put("/questionEdit.do",new QuestionEditController());
 		mappings.put("/questionEditForm.do",new QuestionEditFormController());
-		mappings.put("/shoporder.do", new ShopOrderController());
 	}
 	
 	public Controller getController(String key) {
