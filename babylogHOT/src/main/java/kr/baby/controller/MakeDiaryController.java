@@ -16,10 +16,10 @@ public class MakeDiaryController implements Controller {
 	public String requestHandler(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		// 일기 목록 불러오기
-				BabyMyBatisDAO dao = new BabyMyBatisDAO();
-				List<DiaryVO> list =dao.listDiary();
-				request.setAttribute("list",list);
-				
+//				BabyMyBatisDAO dao = new BabyMyBatisDAO();
+//				List<DiaryVO> list =dao.listDiary();
+//				request.setAttribute("list",list);
+//				
 		return "makeDiary";
 	}
 

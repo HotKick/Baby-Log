@@ -32,12 +32,13 @@ public class BabyfrontController extends HttpServlet {
 	String nextPath=null;
 	Controller controller = null;
 
-	
 	// HandlerMapping
-	HandlerMapping mappings=new HandlerMapping();
-	controller=mappings.getController(command);
-	nextPath=controller.requestHandler(request, response);
-	
+		HandlerMapping mappings=new HandlerMapping();
+		controller=mappings.getController(command);	
+		
+//		System.out.println(mappings.getController(command));
+		nextPath=controller.requestHandler(request, response);
+			
 
 	// 3. 다음페이지로 이동하기(forward, redirect)
 	  if(nextPath!=null) {
