@@ -1,18 +1,25 @@
 package kr.baby.controller;
 
 import java.io.IOException;
+import java.util.List;
 
 import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
-public class ShopAlbumController implements Controller {
+import kr.baby.dao.BabyMyBatisDAO;
+import kr.baby.dao.DiaryVO;
+
+public class SelectDiaryController implements Controller {
 
 	@Override
 	public String requestHandler(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		
-		return "shopAlbum";
+		// 일기 목록 불러오기
+				BabyMyBatisDAO dao = new BabyMyBatisDAO();
+				List<DiaryVO> list =dao.listDiary();
+				request.setAttribute("list",list);
+		return "selectDiary";
 	}
 
 }

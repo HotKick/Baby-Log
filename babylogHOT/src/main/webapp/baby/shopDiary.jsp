@@ -64,7 +64,7 @@
                         <div class="p_right">
                         <div class="p_logo">
                             <div class="simbole"></div>
-                            <div class="logo"><a href="main.html">babylog</a></div>
+                            <div class="logo"><a href="${cpath}/main.do">babylog</a></div>
                         </div>
                         <!-- //p_logo -->
                         <div class="title_wrap">
@@ -79,7 +79,7 @@
                                     <span class="rank"><i class="fa-solid fa-star"></i></span>
                                     <span class="rank"><i class="fa-solid fa-star"></i></span>
                                     <span class="rank"><i class="fa-solid fa-star"></i></span>
-                                    <span class="rank"><i class="fa-solid fa-star"></i></spans>
+                                    <span class="rank"><i class="fa-solid fa-star"></i></span>
                                     <span class="rank"><i class="fa-solid fa-star"></i></span>
                                 </div>
                                 <span>(100+)</span>
@@ -131,7 +131,7 @@
                         <!-- //count_wrap : 카운트 함수  -->
 
                         <div class="order">
-                             <button type="button" onclick="location.href='${cpath}/shopSelect.do'">주문하기</button>
+                             <button type="button" onclick="location.href='${cpath}/selectDiary.do'">주문하기</button>
                         </div>
 
                     </div>

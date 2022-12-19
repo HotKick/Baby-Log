@@ -9,7 +9,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>회원가입</title>
+<title>결제하기</title>
 <!-- style -->
 <link rel="stylesheet" href="${cpath}/css/reset.css">
 <link rel="stylesheet" href="${cpath}/css/common.css">
@@ -39,7 +39,7 @@
                 <!-- Heading -->
                 <div class="item logo">
                   <div class="logo">
-                    <a href="main.html"></a>
+                    <a href="${cpath}/main.do"></a>
                   </div>
                   <div class="item logo_title">
                     <a href="${cpath}/main.do">BabyLog</a> </div>
@@ -47,10 +47,10 @@
                 
                 <!-- Form -->
                 <form  class="validation-form" action="#" method="post">
-                  <!-- 아이디 -->
+                 <!-- 주문자   -->
                   <div class="input__block">
-                     <label class="name" for="id">이름</label>
-                     <input type="text" placeholder="id" class="input" id="id" name = "mem_id"/>
+                     <label class="name" for="id">주문자 성함</label>
+                     <input type="text" placeholder="성함" class="input" id="id" name = "mem_id"/>
                   </div>
               
                 <!-- 전화번호 -->
@@ -60,46 +60,30 @@
                     <input type="tel" class="input" placeholder="+010" name="mem_tel">
                   </div>
                 </div>
-                  <script>
-                  		console.log("아이디"+name)
-                 </script>
-                  <!-- 닉네임 -->
+                  <!-- 배송지 -->
                   
                   <div class="input__block">
-                    <input type="text" id="sample6_postcode" placeholder="우편번호">
-					 <input type="button" onclick="sample6_execDaumPostcode()" value="우편번호 찾기"><br>
-				
+                  <label class="name" for="family">배송지 입력</label>
+                 	<input type="button" onclick="sample6_execDaumPostcode()" value="주소 검색"><br>
+                    <input type="text" id="sample6_postcode" placeholder="우편번호"><br>
 					<input type="text" id="sample6_address" placeholder="주소"><br>
-					<input type="text" id="sample6_detailAddress" placeholder="상세주소">
-					<input type="text" id="sample6_extraAddress" placeholder="참고항목">
+					<input type="text" id="sample6_extraAddress" placeholder="상세주소"><br>
+					
+					
                       </div>
                   
 
          
 
-                <!-- 성별 -->
+                <!-- 결제 방법 -->
                 <div class="input__block">
                   <label class="name" for="gender">결제방법</label>
                   <div class="gender" name = "mem_gender">
-                    <div><input type="radio" id="gender2" name="mem_gender" value="여자"><label for="gender2">카드 결제</label></div>
+                    <div><input type="radio" id="gender2" name="mem_gender" value="여자"><label for="gender2">카카오페이 결제</label></div>
                   </div>
-
-
-
-                  
-                
-
-                
-                  <!-- sign up button -->
-                 
-  
                 </form>
-
-
-              
                <button id="check_module" onclick="paypay()" type="button">결제하기</button>
   
-                
               </div>
             
         </div>
