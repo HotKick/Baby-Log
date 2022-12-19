@@ -11,13 +11,29 @@ public class MemberVO {
 	  private String mem_joindate;
 	  private String mem_type;
 	  private String mem_prof;
+	  private String mem_ment;
 	  
 	  
 	  
 	  
 	  
+	public String getMem_ment() {
+		return mem_ment;
+	}
+
+	public void setMem_ment(String mem_ment) {
+		this.mem_ment = mem_ment;
+	}
+
+	@Override
+	public String toString() {
+		return "MemberVO [mem_id=" + mem_id + ", mem_pw=" + mem_pw + ", mem_name=" + mem_name + ", mem_nick=" + mem_nick
+				+ ", mem_gender=" + mem_gender + ", mem_birth=" + mem_birth + ", mem_tel=" + mem_tel + ", mem_joindate="
+				+ mem_joindate + ", mem_type=" + mem_type + ", mem_prof=" + mem_prof + ", mem_ment=" + mem_ment + "]";
+	}
+
 	public MemberVO() {
-		super();
+		
 		// TODO Auto-generated constructor stub
 	}
 	
@@ -27,20 +43,7 @@ public class MemberVO {
 		this.mem_name = mem_name;
 	}
 
-	public MemberVO(String mem_id, String mem_pw, String mem_name, String mem_nick, String mem_gender, String mem_birth,
-			String mem_tel, String mem_joindate, String mem_type) {
 	
-		this.mem_id = mem_id;
-		this.mem_pw = mem_pw;
-		this.mem_name = mem_name;
-		this.mem_nick = mem_nick;
-		this.mem_gender = mem_gender;
-		this.mem_birth = mem_birth;
-		this.mem_tel = mem_tel;
-		this.mem_joindate = mem_joindate;
-		this.mem_type = mem_type;
-	}
-
 	public String getMem_id() {
 		return mem_id;
 	}

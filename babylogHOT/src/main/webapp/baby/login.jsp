@@ -24,6 +24,8 @@
 <script src="https://kit.fontawesome.com/e76461f593.js"
 	crossorigin="anonymous"></script>
 
+<script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
+
 
 </head>
 <body>
@@ -69,7 +71,7 @@
                   NAVER로 로그인 하기
                 </button>
                 <!-- 카카오버튼 -->
-                <button class="kakao_btn">
+                <button onclick = "location.href = 'javascript:kakaoLogin()' " class="kakao_btn">
                   KAKAO로 로그인 하기
                 </button>
 
@@ -101,58 +103,61 @@
   
 </body>
 
-<script
-		src="https://static.nid.naver.com/js/naveridlogin_js_sdk_2.0.2.js"
-		charset="utf-8"></script>
-	<script type="text/javascript">
-  
-  const naverLogin = new naver.LoginWithNaverId(
-   {
-    clientId: "d39F9T4jdVTpalRLfjli",
-    callbackUrl: "http://localhost:8083/babylog/main.do"
- 
-    }
-   );
-  
-
-    naverLogin.init();
-    naverLogin.getLoginStatus(function (status) {
-      if (status) {
-          const nickName=naverLogin.user.getNickName();
-          const age=naverLogin.user.getAge();
-          const birthday=naverLogin.user.getBirthday();
-
-          if(nickName===null||nickName===undefined ){
-            alert("별명이 필요합니다. 정보제공을 동의해주세요.");
-            naverLogin.reprompt();
-            return ;  
-         }else{
-          setLoginStatus();
-         }
-	}
-    });
-    console.log(naverLogin);
-
-    function setLoginStatus(){
+<script src="https://t1.kakaocdn.net/kakao_js_sdk/2.0.1/kakao.min.js"
+  integrity="sha384-eKjgHJ9+vwU/FCSUG3nV1RKFolUXLsc6nLQ2R1tD0t4YFPCvRmkcF8saIfOZNWf/" crossorigin="anonymous"></script>
+    <script src="https://developers.kakao.com/sdk/js/kakao.js"></script>
     
-      const message_area=document.getElementById('message');
-      message_area.innerHTML=`
-      <h3> Login 성공 </h3>
-      <div>user Nickname : ${naverLogin.user.nickname}</div>
-      <div>user Age(범위) : ${naverLogin.user.age}</div>
-      <div>user Birthday : ${naverLogin.user.birthday}</div>
-      `;
-     
-      const button_area=document.getElementById('button_area');
-      button_area.innerHTML="<button id='btn_logout'>로그아웃</button>";
+    <script>
+      Kakao.init("041c9a4f7fa9b853690614f237b898f7");
 
-      const logout=document.getElementById('btn_logout');
-      logout.addEventListener('click',(e)=>{
-        naverLogin.logout();
-	location.replace("http://localhost:8083/babylog/main.do");
-      })
-    }
-    
+
+      function kakaoLogin() {
+        window.Kakao.Auth.login({
+          scope: "profile_nickname,account_email",
+          success: (authObj) => {
+            console.log("authObj : ");
+            console.log(authObj);
+
+            // 백한테 authobj 속 access토큰만 줌
+            // 그 후 authorize를 통해 확인
+            window.Kakao.API.request({
+              url: "/v2/user/me",
+              success: (res) => {
+                console.log("success: ");
+                console.log(res);
+                
+               
+                var email = res.kakao_account.email;
+                var name = res.properties.nickname;
+               
+                console.log(name);
+                
+                $.ajax({
+                	url : "${cpath}/kakaologin.do",
+                	type: 'POST',
+                	data : {"mem_id":email,"mem_nick":name},
+                	success : function(){
+                		location.href="${cpath}/main.do";
+                	},
+                	error : function(){
+                		alert("이 동 실 패 ! ! ! ");
+                	}
+                });
+          
+                                
+              },
+              fail: (res) => {
+                console.log(res);
+              },
+           
+         
+        });
+      }
+
+        });
+      };
+          
+          
    
    
 

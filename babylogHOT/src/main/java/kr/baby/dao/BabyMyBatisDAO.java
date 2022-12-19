@@ -38,6 +38,13 @@ public class BabyMyBatisDAO {
 		session.close();
 	}
 	
+	// 카카오 로그인/회원가입
+	public void kakaosignup(MemberVO vo) {
+		SqlSession session = sqlSessionFactory.openSession();
+		session.insert("kakaosignup", vo); // >> 인서트를 메서드 이름으로
+		session.commit(); // 인서트는 commit 필수임
+		session.close();
+	}
 	// 로그인 메소드
 	
 	public MemberVO memberLogin(MemberVO vo) {
@@ -45,6 +52,21 @@ public class BabyMyBatisDAO {
 		MemberVO mvo = session.selectOne("memberLogin", vo);
 		session.close();
 		return mvo;
+	}
+	
+	// 프로필 사진 업데이트 메소드
+	public void updateprof(MemberVO vo) {
+		SqlSession session = sqlSessionFactory.openSession();
+		session.update("updateprof",vo);
+		session.commit();
+		session.close();
+	}
+	
+	public MemberVO getMember(String mem_id) {
+		SqlSession session = sqlSessionFactory.openSession();
+		MemberVO vo=session.selectOne("getMember",mem_id);		
+		session.close();
+		return vo;
 	}
 	
 	// 뉴스 전체 리스트 가져오기
@@ -123,7 +145,7 @@ public class BabyMyBatisDAO {
 		// 자유게시판 상세보기 메소드
 		public CommunityVO detailFree(int community_seq) {
 			SqlSession session = sqlSessionFactory.openSession();
-			CommunityVO vo = session.selectOne("getCommunity_seq",community_seq);
+			CommunityVO vo = session.selectOne("detailFree",community_seq);
 			session.close();
 			return vo;
 		}
