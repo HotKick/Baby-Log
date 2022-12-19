@@ -37,6 +37,8 @@
 
 		<!-- //게시판 영역 -->
 	</main>
+	<form action = "${cpath}/newswriteform.do" enctype = "multipart/form-data">
+	
 	<section id="board">
 		<div class="container">
 			<div class="board_wrap">
@@ -50,24 +52,27 @@
 				<div class="board_list_wrap">
 					<div class="board_list">
 						<div class="top">
-							<div class="num">번호</div>
+							
 							<div class="title">제목</div>
 							<div class="writer">글쓴이</div>
 							<div class="date">작성일</div>
-							<div class="count">조회</div>
+							
 						</div>
 						<!-- //table_header -->
 					<div>
 						<c:forEach var= "vo" items = "${list}">
-							<div class="num">${nn_seq}</div>
+							
 							<div class="title">
 								<a href="news_view.html">${vo.nn_title}</a>
 							</div>
-							<div class="writer">${vo.mem_id}</div>
+							<div class="writer">관리자</div>
 							<div class="date">${vo.nn_date}</div>
-							<div class="count">${vo.nn_cnt}</div>
+							
 							</c:forEach>
 						</div>
+						<button type = "submit">글쓰기</button>
+						</form>
+						
 						<!-- //1행 -->
 					
 

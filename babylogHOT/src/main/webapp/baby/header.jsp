@@ -18,13 +18,14 @@
 <!-- 웹아이콘 -->
 <script src="https://kit.fontawesome.com/e76461f593.js"
 	crossorigin="anonymous"></script>
+<script src = "https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
 	
 	
 <!-- 비 로그인자 로그인 알림 다이어리 -->	
 <script type="text/javascript">
 function diary_member(){
 	 if(${empty mvo}){
-		 alert("로그인 후 이용가능합니다.");
+		 swal("로그인 필요! ","로그인 후 이용가능합니다.", warning);
 		 document.location.href= "${cpath}/loginform.do";
 	 }else{
 		 location.href="${cpath}/diary.do";
@@ -38,7 +39,7 @@ function diary_member(){
 <script type="text/javascript">
 function shop_member(){
 	 if(${empty mvo}){
-		 alert("로그인 후 이용가능합니다.");
+		 swal("로그인 후 이용가능합니다.");
 		 document.location.href= "${cpath}/loginform.do";
 	 }else{
 		 location.href="${cpath}/shop.do";
