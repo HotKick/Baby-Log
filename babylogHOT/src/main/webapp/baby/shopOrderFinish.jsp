@@ -49,45 +49,35 @@
                   <!-- 주문자성함 -->
                   <div class="input__block">
                      <label class="name" for="id">주문자 성함</label>
-                     <div class="input" id="id">sdsdsd </div>
+                     <div class="input" id="id">김대웅 </div>
                   </div>
                   <!-- 전화번호 -->
                   <div class="input__block">
                     <label class="name" for="tel">전화번호</label>
-                    <div class="input" id="tel"></div>
+                    <div class="input" id="tel">01012345678</div>
                   </div>
                   <!-- 배송지 입력 -->
                   <div class="input__block">
                     <label class="name" for="re_pwd">배송지</label>
-                    <div class = "input" id="re_pewd"></div>
+                    <div class = "input" id="re_pewd">sdsdsdsd</div>
                   </div>
                   <!-- 주소검색 -->
                   <div class="input__block">
                     <label class="name" for="name">우편번호</label>
-                    <div></div>
-                    <input type="button" onclick="sample6_execDaumPostcode()" value="주소 검색">
+                    <div>500-102</div>
                   </div>
                   
-                  <!-- 우편번호 -->
-                  <div class="input__block">
-                    <label class="name" for="name">우편번호</label>
-                    <input type="text" placeholder="우편번호" class="input" id="sample6_postcode"/>
-                  </div>
                   <!-- 주소 -->
                   <div class="input__block">
                     <label class="name" for="nickname">주소</label>
-                    <input type="text" placeholder="주소" class="input" id="sample6_address" />
-                  </div>
-                  <!-- 상세주소 -->
-                  <div class="input__block">
-                    <label class="name" for="nickname">상세주소</label>
-                    <input type="text" placeholder="상세주소" class="input" id="sample6_extraAddress" />
+                    <div>매곡동 대주피오레</div> <br>
+                    <div>105동 1902호</div>
                   </div>
 
                   <!-- 결제방법 -->
 
-                    <button type = "button" class="order__btn" id = "check_module" onclick="paypay()">
-                      결제 하기
+                    <button type = "button" class="order__btn" id = "check_module" onclick="location.href='${cpath}/main.do'">
+                      확인
                     </button>
 
                 </form>
