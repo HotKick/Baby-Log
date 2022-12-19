@@ -42,8 +42,8 @@
 		<div class="container">
 			<div class="board_wrap">
 				<div class="board_title">
-					<strong>자유게시판</strong>
-					<p>공지사항을 빠르고 정확하게 안내해드립니다.</p>
+					<strong>뉴스게시판</strong>
+					<p>육아 정보에 관한 최신 뉴스를 볼 수 있습니다.</p>
 				</div>
 				<div class="board_view_wrap">
 					<div class="board_view">
@@ -51,25 +51,20 @@
 						<div class="info">
 							<dl>
 								<dt>번호</dt>
-								<dd>1</dd>
+								<dd>{vo.nn_seq}</dd>
 							</dl>
 							<dl>
 								<dt>글쓴이</dt>
-								<dd>김이름</dd>
+								<dd>관리자</dd>
 							</dl>
 							<dl>
 								<dt>작성일</dt>
-								<dd>2021.1.16</dd>
+								<dd>{vo.nn_date}</dd>
 							</dl>
-							<dl>
-								<dt>조회</dt>
-								<dd>33</dd>
-							</dl>
+							
 						</div>
 						<div class="cont">
-							글 내용이 들어갑니다<br> 글 내용이 들어갑니다<br> 글 내용이 들어갑니다<br> 글
-							내용이 들어갑니다<br> 글 내용이 들어갑니다<br> 글 내용이 들어갑니다<br> 글
-							내용이 들어갑니다<br> 글 내용이 들어갑니다
+							{vo.nn_content}
 						</div>
 					</div>
 				</div>

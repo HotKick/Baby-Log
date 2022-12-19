@@ -42,8 +42,7 @@ import kr.baby.controller.QuestionEditController;
 import kr.baby.controller.QuestionEditFormController;
 import kr.baby.controller.QuestionWriteController;
 import kr.baby.controller.QuestionWriteFormController;
-import kr.baby.controller.SelectAlbumController;
-import kr.baby.controller.SelectDiaryController;
+
 import kr.baby.controller.ShopAlbumController;
 import kr.baby.controller.ShopController;
 import kr.baby.controller.ShopDiaryController;
