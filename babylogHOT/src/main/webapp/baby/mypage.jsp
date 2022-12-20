@@ -38,16 +38,23 @@
     let userData = ''
     
     function updateform(res){
+    	
     	$("#fileDiv").css("display","block");
+    	
     	console.log('update form function',res)
     	userData = res
+    	
     	console.log('mem id : ',mem_id)
     	var mem_id = $("#mem_id").text();
     	var temp = $("#ment").text();
     	var newMent = "<input type = 'text' id = 'ment2' class = 'form-control' value = '"+temp+"'/>";
     	$("#ment").html(newMent);
     	var newMentBtn = "<button onclick= 'updateprof()'>수정하기</button>";
+    
+    	console.log(newMentBtn)
     	$("#profBtn").html(newMentBtn);
+    	
+    	
     }
     
     function updateprof(){
@@ -55,8 +62,15 @@
     	var mem_id = $("#mem_id").text();
     	var mem_prof = $("#mem_prof").val();
        	var mem_ment = $("#ment2").val();
-
+       	
+       	
        	$(document).ready(function() { 
+       	
+       		
+       	console.log('ajax 통신')
+       	
+
+       	
     	 $("#updateform").ajaxSubmit({
     		url : "${cpath}/updateprof.do",
     		type : "POST",
@@ -192,8 +206,8 @@ var dw4 = document.getElementsByClassName('dw4');
             <div class="pro_info">
                 <div class="info_wrap">
                   <div class="pro_name"><input type="text" value="지야누"></div>
-                  <div class="pro_id">@yanoo</div>
-                  <div class="pro_desc">광주에사는 용용이 엄마입니다</div>
+                  <div class="pro_id">응애맘</div>
+                  <div class="pro_desc">광주에 사는 용용</div>
                   <div class="pro_desc">소통 ㅣ 친목 ㅣ 아기자랑 모두 환영이요 ^^</div>
                   <div class="pro_edit"><input type="button" value="프로필 수정"></div>
                 </div>

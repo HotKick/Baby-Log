@@ -82,6 +82,36 @@ function shop_member(){
 
 <!-- / 비 로그인자 로그인 알림  -->
 
+<!-- 비 로그인자 로그인 알림 마이페이지 -->
+<script type="text/javascript">
+function mypage_member(){
+	 if(${empty mvo}){
+			Swal.fire({
+				  title: "로그인 후 이용가능합니다",
+				  icon: 'error',
+				  showCancelButton: false,
+				  confirmButtonColor: '#3085d6',
+				  cancelButtonColor: '#d33',
+				  confirmButtonText: '로그인',
+				  cancelButtonText: '취소'
+				}).then((result) => {
+				  if (result.value) {
+					  location.href="${cpath}/loginform.do";
+				  }
+				})
+			
+	 }else{
+		 location.href="${cpath}/mypage.do";
+		 
+	 }
+	 }
+
+</script>
+
+
+<!-- / 비 로그인자 로그인 알림  -->
+
+
 </head>
 <body>
 
@@ -90,18 +120,18 @@ function shop_member(){
     <div class="container">
         <nav class="navbar">
             <div class="navbar_logo">
-                <div><a href="main.html"><img src="icon/logo_1.png" alt="가로형로고"></a></div>
+                <div><a href="${cpath }/main.do"><img src="${cpath }/icon/logo_1.png" alt="가로형로고"></a></div>
             </div>
             <ul class="navbar_menu">
-                <li><a href="diary.html">육아일기</a></li>
-                <li><a href="communityFree.html">커뮤니티</a></li>
-                <li><a href="shop.html">쇼핑몰</a></li>
-                <li><a href="newsGov.html">뉴스</a></li>
-                <li><a href="mypage.html">마이페이지</a></li>
+                <li><a onclick = "diary_member()">육아일기</a></li>
+                <li><a href="${cpath }/communityFree.do">커뮤니티</a></li>
+                <li><a onclick = "shop_member()">쇼핑몰</a></li>
+                <li><a href="${cpath }/newsGov.do">뉴스</a></li>
+                <li><a onclick = "mypage_member()">마이페이지</a></li>
             </ul>
             <ul class="navbar_icons">
-                <li><a href="login.html" class="login"><i class="fa-solid fa-right-to-bracket"></i></a></li>
-                <li><a href="signUp.html" class="sign"><i class="fa-solid fa-user-plus"></i></a></li>
+                <li><a href="${cpath }/loginform.do" class="login"><i class="fa-solid fa-right-to-bracket"></i></a></li>
+                <li><a href="${cpath }/signUp.do" class="sign"><i class="fa-solid fa-user-plus"></i></a></li>
             </ul>
     
             <a href="#" class="navbar_toggleBtn">

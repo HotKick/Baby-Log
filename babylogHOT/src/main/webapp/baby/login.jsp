@@ -37,7 +37,8 @@
                 <!-- Heading -->
                 <div class="item logo">
                   <div class="logo">
-                    <a href="${cpath}/main.do"><img src="icon/logo_1.png" alt=""></a>
+                    <a href="${cpath}/main.do"><img src="${cpath }/icon/logo_1.png" alt=""></a>
+                  </div>
                   </div>
                 
                 
