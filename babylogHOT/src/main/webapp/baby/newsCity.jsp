@@ -44,12 +44,12 @@
                     <strong><i class="fa-solid fa-building"></i> 지·자체 게시판</strong>
                     <div class="tag tag_news">
                         <div class="gov">
-                            <a href="newsGov.html" class="free">
+                            <a href="${cpath }/newsGov.do" class="free">
                                 <i class="fa-solid fa-city"></i>
                                 정부뉴스
                             </a></div>
                         <div class="city on">
-                            <a href="newsCity.html" class="info">
+                            <a href="${cpath }/newsCity.do" class="info">
                                 <i class="fa-solid fa-building"></i>
                                 지자체</a>
                             </div>
