@@ -130,10 +130,17 @@ function mypage_member(){
                 <li><a onclick = "mypage_member()">마이페이지</a></li>
             </ul>
             <ul class="navbar_icons">
+            <c:if test="${empty mvo}">
                 <li><a href="${cpath }/loginform.do" class="login"><i class="fa-solid fa-right-to-bracket"></i></a></li>
                 <li><a href="${cpath }/signupform.do" class="sign"><i class="fa-solid fa-user-plus"></i></a></li>
             </ul>
-    
+    		</c:if>
+    		 <c:if test="${!empty mvo}">
+    		 <!--여기가 로그인 후 보이는 아이콘 -->
+    		  <li><a href="${cpath }/logout.do" class="login"><i class="fa-solid fa-right-to-bracket"></i></a></li> 
+    		  <li><a href="${cpath }/mypage.do" class="sign"><i class="fa-solid fa-user-plus"></i></a></li>
+    		  <!-- 여기까지 -->
+    		 </c:if>
             <a href="#" class="navbar_toggleBtn">
                 <i class="fa-solid fa-burger"></i>
             </a>

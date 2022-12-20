@@ -206,8 +206,8 @@ var dw4 = document.getElementsByClassName('dw4');
             <div class="pro_info">
                 <div class="info_wrap">
                   <div class="pro_name"><input type="text" value="지야누"></div>
-                  <div class="pro_id">응애맘</div>
-                  <div class="pro_desc">광주에 사는 용용</div>
+                  <div class="pro_id">용용맘</div>
+                  <div class="pro_desc">광주에 사는 용용이 엄마예요 </div>
                   <div class="pro_desc">소통 ㅣ 친목 ㅣ 아기자랑 모두 환영이요 ^^</div>
                   <div class="pro_edit"><input type="button" value="프로필 수정"></div>
                 </div>
@@ -234,7 +234,7 @@ var dw4 = document.getElementsByClassName('dw4');
                     <div class="tag4">
                       <button>
                       <div><img src="${cpath }/icon/normal.png" alt="안정"></div>
-                      <p>안정</p>
+                      <p>편안</p>
                       </button>
                     </div>
                   </div>
@@ -414,8 +414,8 @@ var dw4 = document.getElementsByClassName('dw4');
 										</div>
 										<div class="emotion">                
                       <button class="normal">
-                      <div><img src="${cpath }/icon/normal.png" alt="안정"></div>
-                      <p>안정</p>
+                      <div><img src="${cpath }/icon/normal.png" alt="편안"></div>
+                      <p>편안</p>
                       </button>
                     </div>
 									</figcaption>
