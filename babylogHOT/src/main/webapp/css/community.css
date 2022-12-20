@@ -9,13 +9,13 @@
 	background-repeat: no-repeat;
 }
 .banner.free{
-	background-image:url('../img/free.png');
+	background:url('../img/free.png');
 }
 .banner.info{
-	background-image:url('../img/info.png');
+	background:url('../img/info.png');
 }
 .banner.trade{
-	background-image:url('../img/trade.png');
+	background:url('../img/trade.png');
 }
 
 body{
