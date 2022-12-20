@@ -71,7 +71,8 @@
                 <button class="naver_btn">
                 <i class="fa-solid fa-comment"></i>
                  <div class="naver">NAVER로 로그인 하기</div>
-                </button>
+                </button> 
+                <br>
                 <!-- 카카오버튼 -->
                 <button onclick = "location.href = 'javascript:kakaoLogin()' " class="kakao_btn">
                 <i class="fa-solid fa-comment"></i>
