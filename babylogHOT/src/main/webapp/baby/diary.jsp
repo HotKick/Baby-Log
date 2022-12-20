@@ -276,8 +276,8 @@ var dw4 = document.getElementsByClassName('dw4');
 										</div>
 										<div class="emotion">                
                       <button class="angry">
-                      <div><img src="${cpath }/icon/angry.png" alt="분노"></div>
-                      <p>분노</p>
+                      <div><img src="${cpath }/icon/angry.png" alt="화남"></div>
+                      <p>화남</p>
                       </button>
                     </div>
 									</figcaption>
