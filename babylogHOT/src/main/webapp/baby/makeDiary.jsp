@@ -97,13 +97,11 @@
 									<div class="fit">
 										<c:choose>
 											<c:when test="${vo.diary_file != null}">
-												<a class="item" class="disable" href="${cpath }/diaryDetail.do?diary_seq=${vo.diary_seq}"
-													onclick="reload();"><img
+												<a class="item" class="disable"><img
 													src="${cpath }/img/${vo.diary_file}" alt="다이어리"></a>
 											</c:when>
 											<c:otherwise>
-												<a class="item" class="disable" href="${cpath }/diaryDetail.do?diary_seq=${vo.diary_seq}"
-													onclick="reload();"><img src="${cpath}/img/diary2.jpg"
+												<a class="item" class="disable"><img src="${cpath}/img/diary2.jpg"
 													alt="1번 다이어리"></a>
 											</c:otherwise>
 										</c:choose>
@@ -113,7 +111,7 @@
 											<p>${vo.diary_title}</p>
 										</div>
 										<div class="diary_info">
-											<span>작성자 <a href="" target="_blank">${vo.mem_nick}</a></span>
+											<span>작성자 <a href="" target="_blank"><strong>${vo.mem_nick}</strong></a></span>
 											<span>${vo.diary_date}</span>
 										</div>
 										<div class="emotion">                
@@ -124,22 +122,22 @@
                     </div>
 										
 									</figcaption>
+									<div class="off"></div>
 								</figure>
 							</li>
 						</c:when>
+						
 						<c:when test="${vo.diary_emo==1}">
 							<li class="dw2">
 								<figure>
 									<div class="fit">
 										<c:choose>
 											<c:when test="${vo.diary_file != null}">
-												<a href="${cpath }/diaryDetail.do?diary_seq=${vo.diary_seq}"
-													onclick="reload();"><img
+												<a class="item" class = "disable"><img
 													src="${cpath }/img/${vo.diary_file}" alt="다이어리"></a>
 											</c:when>
 											<c:otherwise>
-												<a href="${cpath }/diaryDetail.do?diary_seq=${vo.diary_seq}"
-													onclick="reload();"><img src="${cpath}/img/diary2.jpg"
+												<a class="item" class = "disable"><img src="${cpath}/img/diary2.jpg"
 													alt="1번 다이어리"></a>
 											</c:otherwise>
 										</c:choose>
@@ -149,7 +147,7 @@
 											<p>${vo.diary_title}</p>
 										</div>
 										<div class="diary_info">
-											<span>작성자 <a href="" target="_blank">${vo.mem_nick}</a></span>
+											<span>작성자 <a href="" target="_blank"><strong>${vo.mem_nick}</strong></a></span>
 											<span>${vo.diary_date}</span>
 										</div>
 										<div class="emotion">                
@@ -159,6 +157,7 @@
                       </button>
                     </div>
 									</figcaption>
+									<div class="off"></div>
 								</figure>
 							</li>
 						</c:when>
@@ -168,13 +167,11 @@
 									<div class="fit">
 										<c:choose>
 											<c:when test="${vo.diary_file != null}">
-												<a href="${cpath }/diaryDetail.do?diary_seq=${vo.diary_seq}"
-													onclick="reload();"><img
+												<a class="item" class = "disable"><img
 													src="${cpath }/img/${vo.diary_file}" alt="다이어리"></a>
 											</c:when>
 											<c:otherwise>
-												<a href="${cpath }/diaryDetail.do?diary_seq=${vo.diary_seq}"
-													onclick="reload();"><img src="${cpath}/img/diary2.jpg"
+												<a class="item" class = "disable"><img src="${cpath}/img/diary2.jpg"
 													alt="1번 다이어리"></a>
 											</c:otherwise>
 										</c:choose>
@@ -184,7 +181,7 @@
 											<p>${vo.diary_title}</p>
 										</div>
 										<div class="diary_info">
-											<span>작성자 <a href="" target="_blank">${vo.mem_nick}</a></span>
+											<span>작성자 <a href="" target="_blank"><strong>${vo.mem_nick}</strong></a></span>
 											<span>${vo.diary_date}</span>
 										</div>
 										<div class="emotion">                
@@ -194,6 +191,7 @@
                       </button>
                     </div>
 									</figcaption>
+									<div class="off"></div>
 								</figure>
 							</li>
 						</c:when>
@@ -203,13 +201,11 @@
 									<div class="fit">
 										<c:choose>
 											<c:when test="${vo.diary_file != null}">
-												<a href="${cpath }/diaryDetail.do?diary_seq=${vo.diary_seq}"
-													onclick="reload();"><img
+												<a class="item" class = "disable"><img
 													src="${cpath }/img/${vo.diary_file}" alt="다이어리"></a>
 											</c:when>
 											<c:otherwise>
-												<a href="${cpath }/diaryDetail.do?diary_seq=${vo.diary_seq}"
-													onclick="reload();"><img src="${cpath}/img/diary2.jpg"
+												<a class="item" class = "disable"><img src="${cpath}/img/diary2.jpg"
 													alt="1번 다이어리"></a>
 											</c:otherwise>
 										</c:choose>
@@ -219,7 +215,7 @@
 											<p>${vo.diary_title}</p>
 										</div>
 										<div class="diary_info">
-											<span>작성자 <a href="" target="_blank">${vo.mem_nick}</a></span>
+											<span>작성자 <a href="" target="_blank"><strong>${vo.mem_nick}</strong></a></span>
 											<span>${vo.diary_date}</span>
 										</div>
 										<div class="emotion">                
@@ -229,6 +225,7 @@
                       </button>
                     </div>
 									</figcaption>
+									<div class="off"></div>
 								</figure>
 							</li>
 						</c:otherwise>
@@ -249,7 +246,11 @@
 
 	</main>
     
-
+<!-- script -->
+<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+<script src="js/slick.min.js"></script>
+<script src="js/diary.js"></script>
+<script src="js/nav.js"></script>
 
 </body>
 </html>
