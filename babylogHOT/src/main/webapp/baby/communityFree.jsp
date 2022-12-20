@@ -64,7 +64,7 @@ function community_member(){
 		<%@ include file="header.jsp" %>
 	<main>
 
-	<div class="banner"></div>
+	<div class="banner free"></div>
 	<!-- //공백  -->
 	
 	<section id="board">

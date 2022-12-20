@@ -42,7 +42,7 @@
 		<%@ include file="header.jsp" %>
 	<!-- //header -->
 
-<div class="banner"></div>
+<div class="banner free"></div>
 <!-- //공백  -->
 
 	<section id="board">

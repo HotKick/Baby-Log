@@ -3,10 +3,21 @@
 
 /* 배너영역 */
 .banner{
-height: 20rem;
-background-color: var(--black300);
+	height: 24rem;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
 }
-  
+.banner.free{
+	background-image:url('../img/free.png');
+}
+.banner.info{
+	background-image:url('../img/info.png');
+}
+.banner.trade{
+	background-image:url('../img/trade.png');
+}
+
 body{
 	font-weight: 400;
 	color: var(--black600);
