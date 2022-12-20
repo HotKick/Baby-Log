@@ -69,14 +69,14 @@
     line-height: 0.5rem;
     }
     
-    .navbar_icons li .lgoin{
+    .navbar_icons li .login{
         color: var(--pink400);
     }
     .navbar_icons li .sign{
         color: var(--blue400);
     }
     
-    .navbar_icons li .lgoin:hover{
+    .navbar_icons li .login:hover{
     background-color:var(--pink400);
     color: var(--white);
     }

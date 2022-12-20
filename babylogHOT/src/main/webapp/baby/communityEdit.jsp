@@ -35,16 +35,14 @@
 		<%@ include file="header.jsp" %>
 	<!-- //header -->
 
-	<main>
+<div class="banner"></div>
+<!-- //공백  -->
 
-
-		<!-- //게시판 영역 -->
-	</main>
 	 <form action="${cpath}/communityFree.do" method="post" enctype = "multipart/form-data" >
 		<div class="container">
 			<div class="board_wrap">
 				<div class="board_title">
-					<strong>자유게시판</strong>
+					<strong><i class="fa-solid fa-comment-dots"></i> 자유게시판</strong>
 					<p>공지사항을 빠르고 정확하게 안내해드립니다.</p>
 				</div>
 				<div class="board_write_wrap">
@@ -79,20 +77,30 @@
 						</div>
 					</div>
 					<div class="bt_wrap">
-                            <button type="submit">등록</button>
-                            <button onclick="location.href='${cpath}/communityFree.do'">취소</button>
-                        </div>
-				</div>
-			</div>
-			<!-- //container -->
+                       <button type="submit">등록</button>
+                       <button onclick="location.href='${cpath}/communityFree.do'">취소</button>
+                    </div>
+                   <!-- //bt_wrap -->
+                    </div>
+                    <!-- board_write_wrap -->
+                </div>
+                <!-- board_wrap -->
+        </div>
+        <!-- //container -->
 		</form>
 <jsp:include page="footer.jsp" flush="true"/>
 
 
 	<!-- script -->	
+	<!-- 슬 -->
 	<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 	<script src="${cpath}/js/slick.min.js"></script>
+	
+	<!-- js -->
+	<script src="${cpath}/js/common.js"></script>
 	<script src="${cpath}/js/nav.js"></script>
+	<script src="${cpath}/js/shop.js"></script>
 
 
 

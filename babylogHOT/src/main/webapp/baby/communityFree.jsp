@@ -46,21 +46,39 @@ function community_member(){
 		<%@ include file="header.jsp" %>
 	<main>
 
-
-
-		<!-- //게시판 영역 -->
-	</main>
+	<div class="banner"></div>
+	<!-- //공백  -->
+	
 	<section id="board">
 		<div class="container">
 			<div class="board_wrap">
 				<div class="board_title">
-					<strong>자유게시판</strong>
-					<div class="tag">
-                        <div><a href="${cpath}/communityFree.do" id = "free" class="free">자유게시판</a></div>
-                        <div><a href="${cpath}/communityInfo.do" class="info">정보게시판</a></div>
-                        <div><a href="${cpath}/communityTrade.do" class="trade">중고게시판</a></div>
+					<strong><i class="fa-solid fa-comment-dots"></i> 자유게시판</strong>
+                    <div class="tag">
+                        <div class="free on">
+                            <a href="${cpath}/communityFree.do" class="free">
+                                <i class="fa-solid fa-comment-dots"></i> 
+                            자유게시판
+                            </a>
+                        </div>
+                        <div class="info on">
+                            <a href="${cpath}/communityInfo.do" class="info">
+                                <i class="fa-solid fa-folder-plus"></i>
+                                정보게시판
+                            </a>
+                        </div>
+                        <div class="trade">
+                            <a href="${cpath}/communityTrade.do" class="trade">
+                                <i class="fa-solid fa-handshake-simple"></i>
+                                중고게시판
+                            </a>
+                        </div>
                     </div>
+                    <!-- //tag -->
 				</div>
+				<!-- //board_title -->
+				
+				
 				<div class="board_list_wrap">
 					<div class="board_list">
 						<div class="top">
@@ -71,7 +89,6 @@ function community_member(){
 							<div class="count">조회</div>
 						</div>
 						<!-- //table_header -->
-
 						<div>
 						<c:forEach var= "vo" items = "${list}">
 						<c:if test = "${vo.community_type eq '01' }">
@@ -91,16 +108,27 @@ function community_member(){
 					</div>
 					<!-- 페이지 넘버 -->
 					<div class="board_page">
-						<a href="#" class="bt first"></a> <a href="#" class="bt prev"></a>
-						<a href="#" class="num on">1</a> <a href="#" class="num">2</a> <a
-							href="#" class="num">3</a> <a href="#" class="num">4</a> <a
-							href="#" class="num">5</a> <a href="#" class="bt next">></a> <a
-							href="#" class="bt last">>></a>
-					</div>
+                        <a href="#" class="bt first">
+                            <i class="fa-solid fa-angle-left"></i>
+                        </a>
+                        <a href="#" class="bt prev">
+                            <i class="fa-solid fa-angles-left"></i>
+                        </a>
+                        <a href="#" class="num on">1</a>
+                        <a href="#" class="num">2</a>
+                        <a href="#" class="num">3</a>
+                        <a href="#" class="num">4</a>
+                        <a href="#" class="num">5</a>
+                        <a href="#" class="bt next">
+                            <i class="fa-solid fa-angle-right"></i>
+                        </a>
+                        <a href="#" class="bt last">
+                            <i class="fa-solid fa-angles-right"></i>
+                        </a>
+                    </div>
+                    
 					<div class="bt_wrap">
-                     
                         <button type = "button" onclick="community_member()">등록</button>
-                   
                     </div>
 				</div>
 			</div>
@@ -112,9 +140,15 @@ function community_member(){
 <jsp:include page="footer.jsp" flush="true"/>
 
 	<!-- script -->	
+	<!-- 슬릭 -->
 	<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 	<script src="${cpath}/js/slick.min.js"></script>
+	
+	<!-- js -->
+	<script src="${cpath}/js/common.js"></script>
 	<script src="${cpath}/js/nav.js"></script>
+	<script src="${cpath}/js/shop.js"></script>
 
 	<script>
     $('table').DataTable();

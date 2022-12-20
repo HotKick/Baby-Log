@@ -102,6 +102,9 @@
 <body>
 
 	<%@ include file="header.jsp" %>
+	
+	<div class="banner"></div>
+<!-- //공백  -->
 
 	  <main class="container">
           
@@ -125,25 +128,47 @@
                 <div class="pro_edit">
                 s
               <!--  <input onclick ="updateform()" id = "profBtn" type="button" value="프로필 수정"/> -->
-               <button type="button" onclick = "updateform('${mvo.mem_id}')" id ="profBtn">프로필 수정</button></div>
+               <button type="button" onclick = "updateform('${mvo.mem_id}')" id ="profBtn" class="pro_edit">프로필 수정</button></div>
                 </div></div>
                 
                 <div class="tag">
-                    <div class="tag_icon">
-                      <div class="tag1"><button>감정1</button></div>
-                      <div class="tag2"><button>감정2</button></div>
-                      <div class="tag3"><button>감정3</button></div>
-                      <div class="tag4"><button>감정4</button></div>
+                  <div class="tag_icon">
+                    <div class="tag1">
+                      <button>
+                      <div><img src="icon/normal.png" alt="편안"></div>
+                      <p>편안</p>
+                      </button>
                     </div>
-                    <div class="bt_wrap">
-                        <button type="button" onclick="location.href='${cpath}/diaryWriteForm.do'">글쓰기</button>
+                    <div class="tag2">
+                      <button>
+                      <div><img src="icon/happy.png" alt="행복"></div>
+                      <p>행복</p>
+                      </button>
+                    </div>
+                    <div class="tag3">
+                      <button>
+                      <div><img src="icon/sad.png" alt="슬픔"></div>
+                      <p>슬픔</p>
+                      </button>
+                    </div>
+                    <div class="tag4">
+                      <button>
+                      <div><img src="icon/angry.png" alt="화남"></div>
+                      <p>화남</p>
+                      </button>
                     </div>
                   </div>
+                  <div class="bt_wrap">
+                      <button type="button" onclick="location.href='diaryWrite.html'">
+                        <i class="fa-solid fa-pen-to-square"></i>글쓰기
+                      </button>
+                  </div>
+                </div>
                 <!-- //tag -->
             </div>
             
             
-        </div>
+       
         </form>
         <!-- //tag -->
 

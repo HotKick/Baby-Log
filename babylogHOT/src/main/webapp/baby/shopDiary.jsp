@@ -28,7 +28,8 @@
 </head>
 <body>
 	<%@ include file="header.jsp" %>
-	
+	<div class="banner"></div>
+<!-- //공백  -->
 	 <main>
         <section id=shop>
             <div class="container">

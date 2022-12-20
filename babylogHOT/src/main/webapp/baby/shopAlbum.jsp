@@ -29,7 +29,8 @@
 </head>
 <body>
 	<%@ include file="header.jsp" %>
-	
+	<div class="banner"></div>
+<!-- //공백  -->
 	 <main>
         <section id=shop>
             <div class="container">
@@ -125,14 +126,14 @@
                                     value='-'/>
                             </div>
                             <div class="keep">
-                                <div><a href="#">하트</a></div>
-                                <div><a href="#">공유</a></div>
+                           <div><i class="fa-solid fa-heart"></i></div>
+                                <div><i class="fa-solid fa-arrow-up-right-from-square"></i></div>
                             </div>
                         </div>
                         <!-- //count_wrap : 카운트 함수  -->
 
                         <div class="order">
-                            <button type="button" onclick="location.href='${cpath}/makeAlbum.do'">주문하기</button>
+                            <button type="button" onclick="location.href='${cpath}/makeAlbum.do'">   <i class="fa-solid fa-cart-shopping"></i> 주문하기</button>
                         </div>
 
                     </div>

@@ -103,31 +103,20 @@ $(document).ready(function(){
 <body>
 	<%@ include file="header.jsp" %>
 	
-<!-- //게시판 영역 -->
-</main>
+	<div class="banner"></div>
+<!-- //공백  -->
 	
 <form enctype = "multipart/form-data">
 
 <div class="container">
     <div class="board_wrap">
         <div class="board_title">
-            <strong>다이어리</strong>
+            <strong><i class="fa-solid fa-book"></i> 육아일기</strong>
             <p>일기를 작성해 주세요</p>
         </div>
         <!-- // board title  -->
         <div class="board_write">
             <div class="title">
-                <dl>
-                    <dt>목록</dt>
-                    <dd>
-                        <select name='diary_type'>
-                            <option selected>태그</option>
-                            <option value='01'>미정</option>
-                            <option value='02'>미정</option>
-                            <option value='03'>미정</option>
-                        </select>
-                    </dd>
-                </dl>
                 <dl>
                     <dt>제목</dt>
                     <dd><input type="text" placeholder="제목 입력" name ="diary_title" id = 'diary_title'></dd>
@@ -140,11 +129,13 @@ $(document).ready(function(){
                     <dd><input type="hidden" name = "mem_id" value = "${mvo.mem_id}" id = 'mem_id' readonly/></dd>
                     
                 </dl>
+               <div>
                 <dl>
                     <dt>첨부파일</dt>
                     <dd><input type="file" name = "diary_file" id = 'diary_file'></dd>
                 </dl>
-
+                </div>
+<!-- //emotion -->
                 
             </div>
             <div class="cont">

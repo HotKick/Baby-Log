@@ -120,27 +120,29 @@ var dw4 = document.getElementsByClassName('dw4');
 <body>
 	<%@ include file="header.jsp"%>
 
+<div class="banner"></div>
+<!-- //공백  -->   
 
 	<main id="main" class="container">
 		<div class="tag">
 			<div class="tag_icon">
 				<div class="tag1">
-					<button id=emo1 onclick="emo_happy()">행복</button>
+					<button id=emo1 onclick="emo_happy()"><div><img src ="${cpath}/icon/normal.png" alt=""></div><p>행복</p></button>
 				</div>
 				<div class="tag2">
-					<button id=emo2 onclick="emo_sad()">슬픔</button>
+					<button id=emo2 onclick="emo_sad()"><div><img src ="${cpath}/icon/normal.png" alt=""></div><p>슬픔</p></button>
 				</div>
 				<div class="tag3">
-					<button id=emo3 onclick="emo_angry()">화남</button>
+					<button id=emo3 onclick="emo_angry()"><div><img src ="${cpath}/icon/normal.png" alt=""></div><p>화남</p></button>
 				</div>
 				<div class="tag4">
-					<button id=emo4 onclick="emo_neu()">안정</button>
+					<button id=emo4 onclick="emo_neu()"><div><img src ="${cpath}/icon/normal.png" alt=""></div><p>안정</p></button>
 				</div>
 			</div>
 			<div class="bt_wrap">
 				<button type="button"
 					onclick="location.href='${cpath}/diaryWriteForm.do'">
-					글쓰기
+					<i class="fa-solid fa-pen-to-square"></i>글쓰기
 				</button>
 			</div>
 		</div>
@@ -159,16 +161,12 @@ var dw4 = document.getElementsByClassName('dw4');
 						value="280"></li>
 					<li class="show-grid active">
 						<button>
-							<img
-								src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/grid-view.svg"
-								alt="grid view">
+							<i class="fa-solid fa-border-all"></i>
 						</button>
 					</li>
 					<li class="show-list">
 						<button>
-							<img
-								src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/list-view.svg"
-								alt="list view">
+							<i class="fa-solid fa-list-ul"></i>
 						</button>
 					</li>
 				</ul>
@@ -205,7 +203,13 @@ var dw4 = document.getElementsByClassName('dw4');
 											<span>작성자 <a href="" target="_blank">${vo.mem_nick}</a></span>
 											<span>${vo.diary_date}</span>
 										</div>
-										<p class="emotion">#행복</p>
+										<div class="emotion">                
+                      <button class="happy">
+                      <div><img src="${cpath }/icon/hapyy.png" alt="행복"></div>
+                      <p>편안</p>
+                      </button>
+                    </div>
+										
 									</figcaption>
 								</figure>
 							</li>
@@ -235,7 +239,12 @@ var dw4 = document.getElementsByClassName('dw4');
 											<span>작성자 <a href="" target="_blank">${vo.mem_nick}</a></span>
 											<span>${vo.diary_date}</span>
 										</div>
-										<p class="emotion">#슬픔</p>
+										<div class="emotion">                
+                      <button class="sad">
+                      <div><img src="${cpath }/icon/sad.png" alt="슬픔"></div>
+                      <p>편안</p>
+                      </button>
+                    </div>
 									</figcaption>
 								</figure>
 							</li>
@@ -265,7 +274,12 @@ var dw4 = document.getElementsByClassName('dw4');
 											<span>작성자 <a href="" target="_blank">${vo.mem_nick}</a></span>
 											<span>${vo.diary_date}</span>
 										</div>
-										<p class="emotion">#화남</p>
+										<div class="emotion">                
+                      <button class="angry">
+                      <div><img src="${cpath }/icon/angry.png" alt="분노"></div>
+                      <p>편안</p>
+                      </button>
+                    </div>
 									</figcaption>
 								</figure>
 							</li>
@@ -295,7 +309,12 @@ var dw4 = document.getElementsByClassName('dw4');
 											<span>작성자 <a href="" target="_blank">${vo.mem_nick}</a></span>
 											<span>${vo.diary_date}</span>
 										</div>
-										<p class="emotion">#안정</p>
+										<div class="emotion">                
+                      <button class="normal">
+                      <div><img src="${cpath }/icon/normal.png" alt="편안"></div>
+                      <p>편안</p>
+                      </button>
+                    </div>
 									</figcaption>
 								</figure>
 							</li>

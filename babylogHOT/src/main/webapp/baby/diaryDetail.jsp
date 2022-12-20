@@ -84,12 +84,14 @@
 
 <main>
 	<%@ include file="header.jsp" %>
+	<div class="banner"></div>
+<!-- //공백  -->  
     <div class="container">
         <section class="feed">
         <div class="feed_wrap">
             <div class="profile">
                 <div class="profile_img">
-                    <a href="#">프로필로 이동</a>
+                    <a href="#"><img src="${cpath }/img/baby13.jpg" alt="프로필영역"></a>
                 </div>
                 <div class="profile_info">
                     <div class="info_inner">
@@ -141,11 +143,14 @@
                     </p>
                 </div>
                 <!-- //text_wrap -->
-                <div class="t_tag">
-                    <div class="tag1"><a href="#">#좋음</a></div>
-                    <div class="tag2"><a href="#">#싫음</a></div>
-                    <div class="tag3"><a href="#">#나쁨</a></div>
-                </div>
+                 <div class="tag_icon">
+                        <div class="tag1">
+                          <button>
+                          <div><img src="icon/normal.png" alt="편안"></div>
+                          <p>편안</p>
+                          </button>
+                        </div>
+                      </div>
                 <!-- //tag -->
                 <div class="day">
                     <span>December. 7. 2022</span>
@@ -156,13 +161,13 @@
                 
                  <div class="feed_btn">
                     <div class="edt_btn">
-                        <button type="button" onclick="goEdit(${vo.diary_seq})">수정</button>
+                        <button type="button" onclick="goEdit(${vo.diary_seq})"><i class="fa-solid fa-pen-to-square"></i> 수정</button>
                     </div>
                     <div class="del_btn">
-                       <button onclick = "goDel(${vo.diary_seq})">삭제</button>
+                       <button onclick = "goDel(${vo.diary_seq})"><i class="fa-solid fa-eraser"></i> 삭제</button>
                     </div>
                     <div class="list_btn">
-                        <button type="button" onclick="location.href='${cpath}/diary.do'">목록</button>
+                        <button type="button" onclick="location.href='${cpath}/diary.do'"><i class="fa-solid fa-list-ul"></i> 목록</button>
                     </div>
                 </div>
                 <!-- //feed_btn -->
@@ -192,7 +197,7 @@
 		
 		</div>
 		
-            <div class="feed_comment item">
+            <div class="feed_comment item" id = "coment">
                 <div class="comment_wrap">
         <c:forEach var = "cvo" items = "${list}">
 		<c:if test = "${cvo.diary_seq eq vo.diary_seq}">

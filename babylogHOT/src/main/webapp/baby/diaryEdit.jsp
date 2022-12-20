@@ -39,12 +39,10 @@
 <body>
 		<%@ include file="header.jsp" %>
 	<!-- //header -->
+	<div class="banner"></div>
+<!-- //공백  -->
 
-	<main>
-
-
-		<!-- //게시판 영역 -->
-	</main>
+	
 	 <form action="${cpath}/diaryEdit.do" method="post" enctype = "multipart/form-data">
 		
 		<input type="hidden" name="diary_seq" value="${vo.diary_seq}">
@@ -53,7 +51,7 @@
 
 			<div class="board_wrap">
 				<div class="board_title">
-					<strong>다이어리 수정 </strong>
+					<strong><i class="fa-solid fa-book"></i> 다이어리 수정 </strong>
 					<p>수정 페이지 </p>
 				</div>
 				<div class="board_write_wrap">

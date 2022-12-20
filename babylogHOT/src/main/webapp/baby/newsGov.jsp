@@ -32,66 +32,148 @@
 <body>
 		<%@ include file="header.jsp" %>
 
-	<main>
-
-
-		<!-- //게시판 영역 -->
-	</main>
+	<div class="banner"></div>
+<!-- //공백  -->
 	<form action = "${cpath}/newswriteform.do" enctype = "multipart/form-data">
 	
 	<section id="board">
-		<div class="container">
-			<div class="board_wrap">
-				<div class="board_title">
-					<strong>자유게시판</strong>
-					<ul class="tag">
-						<li><a href="news_gov.html">정부뉴스</a></li>
-						<li><a href="news_city.html">지자체</a></li>
-					</ul>
-				</div>
-				<div class="board_list_wrap">
-					<div class="board_list">
-						<div class="top">
-							<div class="num">번호</div>
-							<div class="title">제목</div>
-							<div class="writer">글쓴이</div>
-							<div class="date">작성일</div>
-							<div class="count">조회</div>
-						</div>
-						<!-- //table_header -->
-					<div>
-						<c:forEach var= "vo" items = "${list}">
-						
-						<div class="num">${vo.nn_seq}</div>
-							<div class="title">
-								<a href="${cpath}/newsDetail.do?nn_seq=${vo.nn_seq}">${vo.nn_title}</a>
-							</div>
-							<div class="writer">관리자</div>
-							<div class="date">${vo.nn_date}</div>
-							<div class = "count">1</div>
-							</c:forEach>
-						</div>
-						<button type = "submit">글쓰기</button>
-						</form>
-						
-						<!-- //1행 -->
-					
+    <div class="container">
+        <div class="board_wrap">
+            <div class="board_title">
+                <strong><i class="fa-solid fa-city"></i> 정부 게시판</strong>
+                <div class="tag tag_news">
+                    <div class="gov on">
+                        <a href="newsGov.html" class="free">
+                            <i class="fa-solid fa-city"></i>
+                            정부뉴스
+                        </a></div>
+                    <div class="city">
+                        <a href="newsCity.html" class="info">
+                            <i class="fa-solid fa-building"></i>
+                            지자체</a>
+                        </div>
+                </div>
+            </div>
+            <div class="board_list_wrap">
+                <div class="board_list">
+                    <div class="top">
+                        <div class="num">번호</div>
+                        <div class="title">제목</div>
+                        <div class="writer">글쓴이</div>
+                        <div class="date">작성일</div>
+                        <div class="count">조회</div>
+                    </div>
+                    <!-- //table_heade -->
 
-					</div>
-					<!-- 페이지 넘버 -->
-					<div class="board_page">
-						<a href="#" class="bt first"></a> <a href="#" class="bt prev"></a>
-						<a href="#" class="num on">1</a> <a href="#" class="num">2</a> <a
-							href="#" class="num">3</a> <a href="#" class="num">4</a> <a
-							href="#" class="num">5</a> <a href="#" class="bt next">></a> <a
-							href="#" class="bt last">>></a>
-					</div>
-				</div>
-			</div>
-			<!--  -->
-		</div>
-		<!-- //container -->
-	</section>
+                        <div>
+                            <div class="num">10</div>
+                            <div class="title"><a href="newsDetail.html"> 정부_뉴스게시판 ㅣ 글 제목이 들어갑니다</a></div>
+                            <div class="writer">지야누</div>
+                            <div class="date">2022.1128</div>
+                            <div class="count">33</div>
+                        </div>
+                        <!-- //1행 -->
+                        <div>
+                            <div class="num">9</div>
+                            <div class="title"><a href="newsDetail.html""> 정부_뉴스게시판 ㅣ 글 제목이 들어갑니다</a></div>
+                            <div class="writer">김대웅</div>
+                            <div class="date">2022.1128</div>
+                            <div class="count">33</div>
+                        </div>
+                        <!-- //2행 -->
+                        <div>
+                            <div class="num">8</div>
+                            <div class="title"><a href="newsDetail.html"> 정부_뉴스게시판 ㅣ 글 제목이 들어갑니다</a></div>
+                            <div class="writer">선경주</div>
+                            <div class="date">2022.1128</div>
+                            <div class="count">33</div>
+                        </div>
+                        <!-- //3행 -->
+                        <div>
+                            <div class="num">7</div>
+                            <div class="title"><a href="newsDetail.html"> 정부_뉴스게시판 ㅣ 글 제목이 들어갑니다</a></div>
+                            <div class="writer">김호전</div>
+                            <div class="date">2022.1128</div>
+                            <div class="count">33</div>
+                        </div>
+                        <!-- //4행 -->
+                        <div>
+                            <div class="num">6</div>
+                            <div class="title"><a href="newsDetail.html"> 정부_뉴스게시판 ㅣ 글 제목이 들어갑니다</a></div>
+                            <div class="writer">배미리칸</div>
+                            <div class="date">2022.1128</div>
+                            <div class="count">33</div>
+                        </div>
+                        <!-- //5행 -->
+                        <div>
+                            <div class="num">5</div>
+                            <div class="title"><a href="newsDetail.html"> 정부_뉴스게시판 ㅣ 글 제목이 들어갑니다</a></div>
+                            <div class="writer">박종규</div>
+                            <div class="date">2022.1128</div>
+                            <div class="count">33</div>
+                        </div>
+                        <!-- //6행 -->
+                        <div>
+                            <div class="num">4</div>
+                            <div class="title"><a href="newsDetail.html"> 정부_뉴스게시판 ㅣ 글 제목이 들어갑니다</a></div>
+                            <div class="writer">정연승</div>
+                            <div class="date">2022.1128</div>
+                            <div class="count">33</div>
+                        </div>
+                        <!-- //7행 -->
+                        <div>
+                            <div class="num">3</div>
+                            <div class="title"><a href="newsDetail.html"> 정부_뉴스게시판 ㅣ 글 제목이 들어갑니다</a></div>
+                            <div class="writer">장해라</div>
+                            <div class="date">2022.1128</div>
+                            <div class="count">33</div>
+                        </div>
+                        <!-- //8행 -->
+                        <div>
+                            <div class="num">2</div>
+                            <div class="title"><a href="newsDetail.html"> 정부_뉴스게시판 ㅣ 글 제목이 들어갑니다</a></div>
+                            <div class="writer">문짱</div>
+                            <div class="date">2022.1128</div>
+                            <div class="count">33</div>
+                        </div>
+                        <!-- //9행 -->
+                        <div>
+                            <div class="num">1</div>
+                            <div class="title"><a href="newsDetail.html"> 정부_뉴스게시판 ㅣ 글 제목이 들어갑니다</a></div>
+                            <div class="writer">김소정</div>
+                            <div class="date">2022.1128</div>
+                            <div class="count">33</div>
+                        </div>
+                        <!-- //10행 -->
+                     
+
+                    </div>
+                    <!-- 페이지 넘버 -->
+                    <div class="board_page">
+                        <a href="#" class="bt first">
+                            <i class="fa-solid fa-angle-left"></i>
+                        </a>
+                        <a href="#" class="bt prev">
+                            <i class="fa-solid fa-angles-left"></i>
+                        </a>
+                        <a href="#" class="num on">1</a>
+                        <a href="#" class="num">2</a>
+                        <a href="#" class="num">3</a>
+                        <a href="#" class="num">4</a>
+                        <a href="#" class="num">5</a>
+                        <a href="#" class="bt next">
+                            <i class="fa-solid fa-angle-right"></i>
+                        </a>
+                        <a href="#" class="bt last">
+                            <i class="fa-solid fa-angles-right"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <!--  //board wrap-->
+        </div>
+        <!-- //container -->
+    </section>
 
 <jsp:include page="footer.jsp" flush="true"/>
 
