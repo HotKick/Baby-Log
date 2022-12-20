@@ -39,7 +39,7 @@ $(function(){
 </head>
 <body>
 		<%@ include file="header.jsp" %>
-<div class="banner"></div>
+<div class="banner free"></div>
 <!-- //공백  -->
 
 	

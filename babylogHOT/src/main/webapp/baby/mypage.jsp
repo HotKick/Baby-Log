@@ -38,23 +38,16 @@
     let userData = ''
     
     function updateform(res){
-    	
     	$("#fileDiv").css("display","block");
-    	
     	console.log('update form function',res)
     	userData = res
-    	
     	console.log('mem id : ',mem_id)
     	var mem_id = $("#mem_id").text();
     	var temp = $("#ment").text();
     	var newMent = "<input type = 'text' id = 'ment2' class = 'form-control' value = '"+temp+"'/>";
     	$("#ment").html(newMent);
     	var newMentBtn = "<button onclick= 'updateprof()'>수정하기</button>";
-    
-    	console.log(newMentBtn)
     	$("#profBtn").html(newMentBtn);
-    	
-    	
     }
     
     function updateprof(){
@@ -62,15 +55,8 @@
     	var mem_id = $("#mem_id").text();
     	var mem_prof = $("#mem_prof").val();
        	var mem_ment = $("#ment2").val();
-       	
-       	
-       	$(document).ready(function() { 
-       	
-       		
-       	console.log('ajax 통신')
-       	
 
-       	
+       	$(document).ready(function() { 
     	 $("#updateform").ajaxSubmit({
     		url : "${cpath}/updateprof.do",
     		type : "POST",

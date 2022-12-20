@@ -47,7 +47,7 @@ function community_member(){
 <body>
 		<%@ include file="header.jsp" %>
 
-<div class="banner"></div>
+<div class="banner info"></div>
 <!-- //공백  -->
 
 
