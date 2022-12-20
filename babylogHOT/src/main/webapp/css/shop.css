@@ -151,7 +151,7 @@
 }
 
 .prodcut_wrap .p_left {
-    padding: 1rem;
+    padding: 1.2rem;
     height: auto;
 }
 
@@ -212,10 +212,10 @@
 .title_wrap .country {
     width: 100%;
     display: block;
-    font-size: 1.8rem;
+    font-size: 1.5rem;
     color: var(--black400);
     text-transform: uppercase;
-    padding: 0.2rem 0;
+    padding: 0.3rem 0;
 }
 
 /* rank */
@@ -326,8 +326,8 @@ background-color: #ffffff;
 box-shadow: 0 2px 7px rgba(0, 0, 0, 0.3);
 
 /* 임시 지정 */
-width: 280px;
-height: 280px;
+width: 400px;
+height: 400px;
 
 /* 초기에 약간 아래에 배치 */
 transform: translate(-50%, -40%);
@@ -341,15 +341,26 @@ transition: all .5s;
 .popup h2{
 font-size: 2rem;
 padding: 10px 0;
-
+font-family: 'Maple200';
+color: var(--pink400);
+}
+.popup span {
+    font-size: 2rem;
+    color: var(--blue400);
 }
 .popup p{
-padding: 70px 0;
 font-size: 1.2rem;
 }
-
+.popup img{
+    width: 13rem;
+    margin: 0 auto;
+}
+#close{
+    margin: 1rem;
+    padding:  0.6rem 1.2rem
+}
 #close:hover {
-background-color: #222;
+background-color: var(--blue400);
 color: #fff;
 }
 
@@ -444,7 +455,7 @@ color: var(--black600);
 .detail_wrap nav {
     margin-top: 5%;
     width: 100%;
-    border-top:1px solid var(--blue200);
+    border-top:2px solid var(--blue200);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -452,34 +463,39 @@ color: var(--black600);
 }
 
 .detail_wrap nav button {
-    font-size: 1.2rem;
+    font-size: 1.3rem;
     padding: 14px 20px;
+    color: var(--blue400);
 }
 .detail_wrap nav button:first-child{
-    border-right: 1px solid var(--blue200) ; 
+    border-right: 2px solid var(--blue200) ; 
 }
 
 .detail_wrap nav button:hover {
-    background-color: var(--blue400);
+    background-color: var(--blue500);
     color: var(--white);
     border-right: none ;
 }
 
 /* detail - 배송  */
 .detail_text{
-    border-top:1px solid var(--blue200);
+    border-top:2px solid var(--blue200);
     padding: 4%;
 }
 
 .d_title{
     font-size: 2rem;
-    padding-bottom: 2%;
+    padding-bottom: 1.3rem;
+    color: var(--blue400);
 }
 .d_text ul li {
-    padding-bottom: 2%;
+    padding-bottom: 1rem;
+    line-height: 1.4rem;
 }
+
 .d_text ul li strong{
     font-size: 1rem;
+    color: var(--pink300);
 }
 
 /* detail - 리뷰  */

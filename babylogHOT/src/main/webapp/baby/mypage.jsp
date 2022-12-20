@@ -31,11 +31,7 @@
     <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
 	
 	<!-- 파일 선택 가리기 -->
-	<style>
-        #my-input {
-            visibility: hidden;
-        }
-    </style>
+
     
     <script type = "text/javascript">
    
@@ -108,29 +104,20 @@
 
 	  <main class="container">
           
-		<form id = "updateform" method="post" enctype="multipart/form-data">
-		
+		<form action="">
         <div class="profile_wrap">
             <div class="pro_img">
-                <img src="${cpath}/img/${mvo.mem_prof}" alt="프로필이미지">
-               <input id = prof_btn type="button" onclick="onClickUpload();" value="+">
-       		
-
+                <img src="img/baby24.jpg" alt="프로필이미지">
+                <input type="button" value="+">
             </div>
             <div class="pro_info">
                 <div class="info_wrap">
-                <div class="pro_name"><input type="text" value="${mvo.mem_nick}"></div>
-                <div id = "mem_id" class="pro_id" >${mvo.mem_id}</div>
-                <input id="mem_prof" name = "mem_prof" type="file" value="mem_prof" />
-                <div class="pro_desc">
-                <p id = "ment" >${mvo.mem_ment}</p></div>
-                
-                <div class="pro_edit">
-                s
-              <!--  <input onclick ="updateform()" id = "profBtn" type="button" value="프로필 수정"/> -->
-               <button type="button" onclick = "updateform('${mvo.mem_id}')" id ="profBtn" class="pro_edit">프로필 수정</button></div>
-                </div></div>
-                
+                  <div class="pro_name"><input type="text" value="지야누"></div>
+                  <div class="pro_id">@yanoo</div>
+                  <div class="pro_desc">광주에사는 용용이 엄마입니다</div>
+                  <div class="pro_desc">소통 ㅣ 친목 ㅣ 아기자랑 모두 환영이요 ^^</div>
+                  <div class="pro_edit"><input type="button" value="프로필 수정"></div>
+                </div>
                 <div class="tag">
                   <div class="tag_icon">
                     <div class="tag1">
@@ -164,11 +151,10 @@
                       </button>
                   </div>
                 </div>
-                <!-- //tag -->
             </div>
             
             
-       
+        </div>
         </form>
         <!-- //tag -->
 

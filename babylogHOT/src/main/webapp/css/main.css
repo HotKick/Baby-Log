@@ -108,8 +108,13 @@ height: 100vh;
 
 
 /* con2------------------------------ */
-#con2{background-color: var(--pink200)}
-
+#con2{
+    background-color: var(--pink200);
+    background: url(../img/main_bg2.png);
+    background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
 .con2_wrap{
     padding: 12% 5% 10%;
     text-align: center;
@@ -189,15 +194,23 @@ height: 100vh;
 
 
 .slider { 
-    padding: 1%;
+    padding: 0.8rem;
 }
 .slider div {
+    padding: 0.2rem;
 }
-.slider div:last-child{
+.slider div img{
+    border-radius: 1rem;
+   box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
 
 /* con3---------------------------------- */
-#con3{background-color: var(--green100);
+#con3{
+    background-color: var(--green100);
+    background: url(../img/main_bg3.png);
+    background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
     display: flex;
     }
 
