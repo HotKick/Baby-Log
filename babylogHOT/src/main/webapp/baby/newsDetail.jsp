@@ -3,7 +3,7 @@
 	pageEncoding="UTF-8"%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core"%>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
-
+<c:set var="newLine" value="<%='\n' %>" />
 <c:set var="cpath" value="${pageContext.request.contextPath}" />
 <!DOCTYPE html>
 <html lang="ko">
@@ -50,11 +50,11 @@
 				</div>
 				<div class="board_view_wrap">
 					<div class="board_view">
-						<div class="title">글 제목이 들어갑니다.</div>
+						<div class="title">${vo.nn_title}</div>
 						<div class="info">
 							<dl>
 								<dt>번호</dt>
-								<dd>{vo.nn_seq}</dd>
+								<dd>${vo.nn_seq}</dd>
 							</dl>
 							<dl>
 								<dt>글쓴이</dt>
@@ -62,22 +62,29 @@
 							</dl>
 							<dl>
 								<dt>작성일</dt>
-								<dd>{vo.nn_date}</dd>
+								<dd>${vo.nn_date}</dd>
 							</dl>
-							
+								<dt>조회</dt>
+								<dd>${vo.nn_cnt}</dd>
 						</div>
 						<div class="cont">
-							{vo.nn_content}
-						</div>
+							${vo.nn_content}
+					
+						
+						<div class="cont">
+						<c:if test="${vo.nn_file != null}">
+                      		<img src="${cpath}/img/${vo.nn_file}" >
+                        </c:if>
+						
 						<div class="bt_wrap">
-                            <button type="button" onclick="location.href='newsGov.html'">목록</button>     
+                            <button type="button" onclick="location.href='${cpath}/newsGov.do'">목록</button>     
                         </div>
-					</div>
+				
 				</div>
 			</div>
 
 			<!--  -->
-		</div>
+		
 		<!-- //container -->
 	</section>
 	<jsp:include page="footer.jsp" flush="true"/>
