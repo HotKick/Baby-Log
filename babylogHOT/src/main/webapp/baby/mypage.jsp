@@ -106,68 +106,349 @@
 	<div class="banner"></div>
 <!-- //공백  -->
 
-	  <main class="container">
-          
-	iv>
+	 <!-- //공백  -->
+
+    <main class="container">
+
+        <form action="">
+        <div class="profile_wrap">
+            <div class="pro_img">
+                <img src="img/baby24.jpg" alt="프로필이미지">
+                <input type="button" value="+">
+            </div>
+            <div class="pro_info">
+                <div class="info_wrap">
+                  <div class="pro_name"><input type="text" value="지야누"></div>
+                  <div class="pro_id">@yanoo</div>
+                  <div class="pro_desc">광주에사는 용용이 엄마입니다</div>
+                  <div class="pro_desc">소통 ㅣ 친목 ㅣ 아기자랑 모두 환영이요 ^^</div>
+                  <div class="pro_edit"><input type="button" value="프로필 수정"></div>
+                </div>
+                <div class="tag">
+                  <div class="tag_icon">
+                    <div class="tag1">
+                      <button>
+                      <div><img src="icon/normal.png" alt="편안"></div>
+                      <p>편안</p>
+                      </button>
+                    </div>
+                    <div class="tag2">
+                      <button>
+                      <div><img src="icon/happy.png" alt="행복"></div>
+                      <p>행복</p>
+                      </button>
+                    </div>
+                    <div class="tag3">
+                      <button>
+                      <div><img src="icon/sad.png" alt="슬픔"></div>
+                      <p>슬픔</p>
+                      </button>
+                    </div>
+                    <div class="tag4">
+                      <button>
+                      <div><img src="icon/angry.png" alt="화남"></div>
+                      <p>화남</p>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="bt_wrap">
+                      <button type="button" onclick="location.href='diaryWrite.html'">
+                        <i class="fa-solid fa-pen-to-square"></i>글쓰기
+                      </button>
+                  </div>
+                </div>
+            </div>
+            
+            
+        </div>
         </form>
-        <!-- //tag -->
+
 
         <section class="gallery">
-              <div class="toolbar">
-                <div class="search-wrapper">
-                  <input type="search" placeholder="Search for photos">
-                  <div class="counter">
-                    Total photos: <span>0</span></div>
+          <div class="toolbar">
+            <div class="search-wrapper">
+              <input type="search" placeholder="Search for photos">
+              <div class="counter">
+                Total photos: <span>0</span></div>
+            </div>
+            <ul class="view-options">
+              <li class="zoom">
+                <input type="range" min="180" max="380" value="280">
+              </li>
+              <li class="show-grid active">
+                <button>
+                  <i class="fa-solid fa-border-all"></i>
+                </button>
+              </li>
+              <li class="show-list">
+                <button>
+                  <i class="fa-solid fa-list-ul"></i>
+                </button>
+              </li>
+            </ul>
+          </div>
+          <!-- //toolbar -->
+         
+          <ol class="image-list grid-view"> 
+            <li>
+              <figure>
+                <div class="fit">
+                <a class="item" href="diaryDetail.html"><img src="img/baby50.jpg" alt="다이어리"></a>
                 </div>
-                <ul class="view-options">
-                  <li class="zoom">
-                    <input type="range" min="180" max="380" value="280">
-                  </li>
-                  <li class="show-grid active">
-                    <button>
-                      <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/grid-view.svg" alt="grid view">
-                    </button>
-                  </li>
-                  <li class="show-list">
-                    <button>
-                      <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/162656/list-view.svg" alt="list view">
-                    </button>
-                  </li>
-                </ul>
-              </div>
-              <!-- //toolbar -->
-             
-             
-              <ol class="image-list grid-view"> 
-            
-              <c:forEach var="vo" items = "${list}">
-             
-                <li>
-                  <figure>
-                   
-                    <div class="fit">
-                    <c:if test = "${vo.mem_id==mvo.mem_id}">
-                      <c:choose>
-                      	<c:when test="${vo.diary_file != null}">
-                      	<a href="${cpath }/diaryDetail.do?diary_seq=${vo.diary_seq}" onclick = "reload();"><img src="${cpath }/img/${vo.diary_file}" alt="다이어리"></a>
-                       </c:when>
-                       <c:otherwise>
-                         <a href="${cpath }/diaryDetail.do?diary_seq=${vo.diary_seq}" onclick = "reload();"><img src="${cpath}/img/diary2.jpg" alt="1번 다이어리"></a>
-                       </c:otherwise>
-                       </c:choose>
+                <figcaption>
+                  <div class="title"><p>다이어리1</p></div>
+                  <div class="diary_info">
+                    <span>작성자 <a href="" target="_blank"><strong>야누</strong></a></span>
+                    <span>22.12.09</span>
+                  </div>
+                    <div class="emotion">                
+                      <button class="normal">
+                      <div><img src="icon/normal.png" alt="편안"></div>
+                      <p>편안</p>
+                      </button>
                     </div>
-                    <figcaption>
-                      <div class="title"><p>${vo.diary_title}</p></div>
-                      <div class="diary_info">
-                      <span>작성자 <a href="" target="_blank">${vo.mem_nick}</a></span>
-                      <span>22.12.09</span>
-                      </div>
-                      <p class="emotion">#중립</p>
-                    </figcaption>
-                    </c:if>
-                  </figure>
-                </li>
-				</c:forEach>
+                </figcaption>
+              </figure>
+            </li>
+            <!-- 1 -->
+            <li>
+              <figure>
+                <div class="fit">
+                <a class="item" href="diaryDetail.html"><img src="img/baby32.jpg" alt="다이어리"></a>
+                </div>
+                <figcaption>
+                  <div class="title"><p>다이어리2</p></div>
+                  <div class="diary_info">
+                    <span>작성자 <a href="" target="_blank"><strong>야누</strong></a></span>
+                    <span>22.12.09</span>
+                  </div>
+                    <div class="emotion">                
+                      <button class="happy">
+                      <div><img src="icon/happy.png" alt="행복"></div>
+                      <p>행복</p>
+                      </button>
+                    </div>
+                </figcaption>
+              </figure>
+            </li>
+            <!-- 2 -->
+            <li>
+              <figure>
+                <div class="fit">
+                <a class="item" href="diaryDetail.html"><img src="img/baby39.jpg" alt="다이어리"></a>
+                </div>
+                <figcaption>
+                  <div class="title"><p>다이어리3</p></div>
+                  <div class="diary_info">
+                    <span>작성자 <a href="" target="_blank"><strong>야누</strong></a></span>
+                    <span>22.12.09</span>
+                  </div>
+                    <div class="emotion">                
+                      <button class="sad">
+                      <div><img src="icon/sad.png" alt="슬픔"></div>
+                      <p>슬픔</p>
+                      </button>
+                    </div>
+                </figcaption>
+              </figure>
+            </li>
+            <!-- 3 -->
+            <li>
+              <figure>
+                <div class="fit">
+                <a class="item" href="diaryDetail.html"><img src="img/baby21.jpg" alt="다이어리"></a>
+                </div>
+                <figcaption>
+                  <div class="title"><p>다이어리4</p></div>
+                  <div class="diary_info">
+                    <span>작성자 <a href="" target="_blank"><strong>야누</strong></a></span>
+                    <span>22.12.09</span>
+                  </div>
+                    <div class="emotion">                
+                      <button class="angry">
+                      <div><img src="icon/angry.png" alt="분노"></div>
+                      <p>화남</p>
+                      </button>
+                    </div>
+                </figcaption>
+              </figure>
+            </li>
+            <!-- 4 -->
+            <li>
+              <figure>
+                <div class="fit">
+                <a class="item" href="diaryDetail.html"><img src="img/baby46.jpg" alt="다이어리"></a>
+                </div>
+                <figcaption>
+                  <div class="title"><p>다이어리1</p></div>
+                  <div class="diary_info">
+                    <span>작성자 <a href="" target="_blank"><strong>야누</strong></a></span>
+                    <span>22.12.09</span>
+                  </div>
+                    <div class="emotion">                
+                      <button class="sad">
+                      <div><img src="icon/sad.png" alt="슬픔"></div>
+                      <p>슬픔</p>
+                      </button>
+                    </div>
+                </figcaption>
+              </figure>
+            </li>
+            <!-- 5 -->
+            <li>
+              <figure>
+                <div class="fit">
+                <a class="item" href="diaryDetail.html"><img src="img/baby6.jpg" alt="다이어리"></a>
+                </div>
+                <figcaption>
+                  <div class="title"><p>다이어리1</p></div>
+                  <div class="diary_info">
+                    <span>작성자 <a href="" target="_blank"><strong>야누</strong></a></span>
+                    <span>22.12.09</span>
+                  </div>
+                    <div class="emotion">                
+                      <button class="happy">
+                      <div><img src="icon/happy.png" alt="행복"></div>
+                      <p>편안</p>
+                      </button>
+                    </div>
+                </figcaption>
+              </figure>
+            </li>
+            <!-- 6 -->
+            <li>
+              <figure>
+                <div class="fit">
+                <a class="item" href="diaryDetail.html"><img src="img/baby9.jpg" alt="다이어리"></a>
+                </div>
+                <figcaption>
+                  <div class="title"><p>다이어리7</p></div>
+                  <div class="diary_info">
+                    <span>작성자 <a href="" target="_blank"><strong>야누</strong></a></span>
+                    <span>22.12.09</span>
+                  </div>
+                    <div class="emotion">                
+                      <button class="normal">
+                      <div><img src="icon/normal.png" alt="편안"></div>
+                      <p>편안</p>
+                      </button>
+                    </div>
+                </figcaption>
+              </figure>
+            </li>
+            <!-- 7 -->
+            <li>
+              <figure>
+                <div class="fit">
+                <a class="item" href="diaryDetail.html"><img src="img/baby19.jpg" alt="다이어리"></a>
+                </div>
+                <figcaption>
+                  <div class="title"><p>다이어리8</p></div>
+                  <div class="diary_info">
+                    <span>작성자 <a href="" target="_blank"><strong>야누</strong></a></span>
+                    <span>22.12.09</span>
+                  </div>
+                    <div class="emotion">                
+                      <button class="sad">
+                      <div><img src="icon/sad.png" alt="편안"></div>
+                      <p>편안</p>
+                      </button>
+                    </div>
+                </figcaption>
+              </figure>
+            </li>
+            <!-- 8 -->
+            <li>
+              <figure>
+                <div class="fit">
+                <a class="item" href="diaryDetail.html"><img src="img/baby14.jpg" alt="다이어리"></a>
+                </div>
+                <figcaption>
+                  <div class="title"><p>다이어리9</p></div>
+                  <div class="diary_info">
+                    <span>작성자 <a href="" target="_blank"><strong>야누</strong></a></span>
+                    <span>22.12.09</span>
+                  </div>
+                    <div class="emotion">                
+                      <button class="happy">
+                      <div><img src="icon/happy.png" alt="happy"></div>
+                      <p>행복</p>
+                      </button>
+                    </div>
+                </figcaption>
+              </figure>
+            </li>
+            <!-- 9 -->
+            <li>
+              <figure>
+                <div class="fit">
+                <a class="item" href="diaryDetail.html"><img src="img/baby44.jpg" alt="다이어리"></a>
+                </div>
+                <figcaption>
+                  <div class="title"><p>다이어리10</p></div>
+                  <div class="diary_info">
+                    <span>작성자 <a href="" target="_blank"><strong>야누</strong></a></span>
+                    <span>22.12.09</span>
+                  </div>
+                    <div class="emotion">                
+                      <button class="sad">
+                      <div><img src="icon/sad.png" alt="슬픔"></div>
+                      <p>슬픔</p>
+                      </button>
+                    </div>
+                </figcaption>
+              </figure>
+            </li>
+            <!-- 10 -->
+            <li>
+              <figure>
+                <div class="fit">
+                <a class="item" href="diaryDetail.html"><img src="img/baby4.jpg" alt="다이어리"></a>
+                </div>
+                <figcaption>
+                  <div class="title"><p>다이어리11</p></div>
+                  <div class="diary_info">
+                    <span>작성자 <a href="" target="_blank"><strong>야누</strong></a></span>
+                    <span>22.12.09</span>
+                  </div>
+                    <div class="emotion">                
+                      <button class="normal">
+                      <div><img src="icon/normal.png" alt="편안"></div>
+                      <p>편안</p>
+                      </button>
+                    </div>
+                </figcaption>
+              </figure>
+            </li>
+            <!-- 11 -->
+            <li>
+              <figure>
+                <div class="fit">
+                <a class="item" href="diaryDetail.html"><img src="img/baby47.jpg" alt="다이어리"></a>
+                </div>
+                <figcaption>
+                  <div class="title"><p>다이어리1</p></div>
+                  <div class="diary_info">
+                    <span>작성자 <a href="" target="_blank"><strong>야누</strong></a></span>
+                    <span>22.12.09</span>
+                  </div>
+                    <div class="emotion">                
+                      <button class="angry">
+                      <div><img src="icon/angry.png" alt="화남"></div>
+                      <p>화남</p>
+                      </button>
+                    </div>
+                </figcaption>
+              </figure>
+            </li>
+            <!-- 12 -->
+          </ol>
+      </section>
+
+
+    </main>
+    <jsp:include page="footer.jsp" flush="true"/>
+    
 
 
 
