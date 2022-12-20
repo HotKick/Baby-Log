@@ -19,14 +19,30 @@
 <script src="https://kit.fontawesome.com/e76461f593.js"
 	crossorigin="anonymous"></script>
 <script src = "https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-	
+	<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<script src="sweetalert2.min.js"></script>
+<link rel="stylesheet" href="sweetalert2.min.css">
 	
 <!-- 비 로그인자 로그인 알림 다이어리 -->	
 <script type="text/javascript">
 function diary_member(){
 	 if(${empty mvo}){
-		 swal("로그인 필요! ","로그인 후 이용가능합니다.", warning);
-		 document.location.href= "${cpath}/loginform.do";
+		 console.log('swal')
+			Swal.fire({
+				  title: "로그인 후 이용가능합니다",
+				  icon: 'error',
+				  showCancelButton: false,
+				  confirmButtonColor: '#3085d6',
+				  cancelButtonColor: '#d33',
+				  confirmButtonText: '로그인',
+				  cancelButtonText: '취소'
+				}).then((result) => {
+				  if (result.value) {
+					  location.href="${cpath}/loginform.do";
+				  }
+				})
+			
 	 }else{
 		 location.href="${cpath}/diary.do";
 		 
@@ -35,12 +51,26 @@ function diary_member(){
 
 </script>
 
+
+
 <!-- 비 로그인자 로그인 알림 쇼핑몰 -->
 <script type="text/javascript">
 function shop_member(){
 	 if(${empty mvo}){
-		 swal("로그인 후 이용가능합니다.");
-		 document.location.href= "${cpath}/loginform.do";
+			Swal.fire({
+				  title: "로그인 후 이용가능합니다",
+				  icon: 'error',
+				  showCancelButton: false,
+				  confirmButtonColor: '#3085d6',
+				  cancelButtonColor: '#d33',
+				  confirmButtonText: '로그인',
+				  cancelButtonText: '취소'
+				}).then((result) => {
+				  if (result.value) {
+					  location.href="${cpath}/loginform.do";
+				  }
+				})
+			
 	 }else{
 		 location.href="${cpath}/shop.do";
 		 
@@ -48,6 +78,7 @@ function shop_member(){
 	 }
 
 </script>
+
 
 <!-- / 비 로그인자 로그인 알림  -->
 

@@ -32,12 +32,15 @@
 	
 	<!-- 파일 선택 가리기 -->
 
-    
+
     <script type = "text/javascript">
    
     let userData = ''
     
     function updateform(res){
+    	
+    	$("#fileDiv").css("display","block");
+    	
     	console.log('update form function',res)
     	userData = res
     	
@@ -47,6 +50,7 @@
     	var newMent = "<input type = 'text' id = 'ment2' class = 'form-control' value = '"+temp+"'/>";
     	$("#ment").html(newMent);
     	var newMentBtn = "<button onclick= 'updateprof()'>수정하기</button>";
+    
     	console.log(newMentBtn)
     	$("#profBtn").html(newMentBtn);
     	
@@ -104,57 +108,7 @@
 
 	  <main class="container">
           
-		<form action="">
-        <div class="profile_wrap">
-            <div class="pro_img">
-                <img src="img/baby24.jpg" alt="프로필이미지">
-                <input type="button" value="+">
-            </div>
-            <div class="pro_info">
-                <div class="info_wrap">
-                  <div class="pro_name"><input type="text" value="지야누"></div>
-                  <div class="pro_id">@yanoo</div>
-                  <div class="pro_desc">광주에사는 용용이 엄마입니다</div>
-                  <div class="pro_desc">소통 ㅣ 친목 ㅣ 아기자랑 모두 환영이요 ^^</div>
-                  <div class="pro_edit"><input type="button" value="프로필 수정"></div>
-                </div>
-                <div class="tag">
-                  <div class="tag_icon">
-                    <div class="tag1">
-                      <button>
-                      <div><img src="icon/normal.png" alt="편안"></div>
-                      <p>편안</p>
-                      </button>
-                    </div>
-                    <div class="tag2">
-                      <button>
-                      <div><img src="icon/happy.png" alt="행복"></div>
-                      <p>행복</p>
-                      </button>
-                    </div>
-                    <div class="tag3">
-                      <button>
-                      <div><img src="icon/sad.png" alt="슬픔"></div>
-                      <p>슬픔</p>
-                      </button>
-                    </div>
-                    <div class="tag4">
-                      <button>
-                      <div><img src="icon/angry.png" alt="화남"></div>
-                      <p>화남</p>
-                      </button>
-                    </div>
-                  </div>
-                  <div class="bt_wrap">
-                      <button type="button" onclick="location.href='diaryWrite.html'">
-                        <i class="fa-solid fa-pen-to-square"></i>글쓰기
-                      </button>
-                  </div>
-                </div>
-            </div>
-            
-            
-        </div>
+	iv>
         </form>
         <!-- //tag -->
 
@@ -190,7 +144,9 @@
              
                 <li>
                   <figure>
+                   
                     <div class="fit">
+                    <c:if test = "${vo.mem_id==mvo.mem_id}">
                       <c:choose>
                       	<c:when test="${vo.diary_file != null}">
                       	<a href="${cpath }/diaryDetail.do?diary_seq=${vo.diary_seq}" onclick = "reload();"><img src="${cpath }/img/${vo.diary_file}" alt="다이어리"></a>
@@ -208,6 +164,7 @@
                       </div>
                       <p class="emotion">#중립</p>
                     </figcaption>
+                    </c:if>
                   </figure>
                 </li>
 				</c:forEach>

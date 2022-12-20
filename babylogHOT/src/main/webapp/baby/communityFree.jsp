@@ -26,18 +26,36 @@
 <!-- 웹아이콘 -->
 <script src="https://kit.fontawesome.com/e76461f593.js"
 	crossorigin="anonymous"></script>
+	<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<script src="sweetalert2.min.js"></script>
+<link rel="stylesheet" href="sweetalert2.min.css">
+	
 	
 <script type="text/javascript">
 function community_member(){
 	 if(${empty mvo}){
-		 alert("로그인해 주세요");
-		 document.location.href= "${cpath}/loginform.do";
+			Swal.fire({
+			  title: "로그인 후 이용가능합니다",
+			  icon: 'error',
+			  showCancelButton: false,
+			  confirmButtonColor: '#3085d6',
+			  cancelButtonColor: '#d33',
+			  confirmButtonText: '로그인',
+			  cancelButtonText: '취소'
+			}).then((result) => {
+			  if (result.value) {
+				  location.href="${cpath}/loginform.do";
+			  }
+			})
+		
 	 }else{
 		 location.href="${cpath}/communityWriteForm.do";
 		 
 	 }
 	 }
 </script>
+
 
 
 

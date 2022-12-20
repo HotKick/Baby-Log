@@ -19,8 +19,10 @@ public class NewsDetailController implements Controller {
 		NewsVO vo = new NewsVO();
 		
 		int nn_seq = Integer.parseInt(request.getParameter("nn_seq"));
+		System.out.println("------------------"+nn_seq);
 		vo=dao.detailNews(nn_seq);
-		request.setAttribute("vo", vo);
+		dao.countNews(nn_seq); //조회수 누적 
+		request.setAttribute("vo", vo);		
 		
 	
 		return "newsDetail";

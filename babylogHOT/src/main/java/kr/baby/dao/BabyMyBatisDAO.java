@@ -96,7 +96,7 @@ public class BabyMyBatisDAO {
 	// 뉴스 게시판 조회수 증가 메소드
 	public void countNews(int nn_seq) {
 		SqlSession session = sqlSessionFactory.openSession();
-		session.update("countnews",nn_seq);
+		session.update("countNews",nn_seq);
 		session.commit();
 		session.close();
 	}
