@@ -17,7 +17,7 @@
 <!-- style -->
 <link rel="stylesheet" href="${cpath}/css/reset.css">
 <link rel="stylesheet" href="${cpath}/css/common.css">
-<link rel="stylesheet" href="${cpath}/css/community.css">
+<link rel="stylesheet" href="${cpath}/css/news.css">
 <link rel="stylesheet" href="${cpath}/css/communityMedia.css">
 
 <!-- 슬릭 -->
@@ -32,11 +32,7 @@
 <body>
 		<%@ include file="header.jsp" %>
 
-	<main>
-
-
-		<!-- //게시판 영역 -->
-	</main>
+	<div class="banner city"></div>
 	<section id="board">
         <div class="container">
             <div class="board_wrap">

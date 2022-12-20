@@ -57,13 +57,13 @@ function community_member(){
 				<div class="board_title">
 					<strong><i class="fa-solid fa-comment-dots"></i> 자유게시판</strong>
                     <div class="tag">
-                        <div class="free on">
+                        <div class="free">
                             <a href="${cpath}/communityFree.do" class="free">
                                 <i class="fa-solid fa-comment-dots"></i> 
                             자유게시판
                             </a>
                         </div>
-                        <div class="info">
+                        <div class="info on">
                             <a href="${cpath}/communityInfo.do" class="info">
                                 <i class="fa-solid fa-folder-plus"></i>
                                 정보게시판

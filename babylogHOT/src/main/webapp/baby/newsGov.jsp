@@ -32,7 +32,7 @@
 <body>
 		<%@ include file="header.jsp" %>
 
-	<div class="banner"></div>
+	<div class="banner gov"></div>
 <!-- //공백  -->
 	<form action = "${cpath}/newswriteform.do" enctype = "multipart/form-data">
 	
