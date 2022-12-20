@@ -31,17 +31,16 @@
     <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
 	
 	<!-- 파일 선택 가리기 -->
-	<style>
-        #my-input {
-            visibility: hidden;
-        }
-    </style>
-    
+
+
     <script type = "text/javascript">
    
     let userData = ''
     
     function updateform(res){
+    	
+    	$("#fileDiv").css("display","block");
+    	
     	console.log('update form function',res)
     	userData = res
     	
@@ -51,6 +50,7 @@
     	var newMent = "<input type = 'text' id = 'ment2' class = 'form-control' value = '"+temp+"'/>";
     	$("#ment").html(newMent);
     	var newMentBtn = "<button onclick= 'updateprof()'>수정하기</button>";
+    
     	console.log(newMentBtn)
     	$("#profBtn").html(newMentBtn);
     	
@@ -108,67 +108,7 @@
 
 	  <main class="container">
           
-		<form id = "updateform" method="post" enctype="multipart/form-data">
-		
-        <div class="profile_wrap">
-            <div class="pro_img">
-                <img src="${cpath}/img/${mvo.mem_prof}" alt="프로필이미지">
-               <input id = prof_btn type="button" onclick="onClickUpload();" value="+">
-       		
-
-            </div>
-            <div class="pro_info">
-                <div class="info_wrap">
-                <div class="pro_name"><input type="text" value="${mvo.mem_nick}"></div>
-                <div id = "mem_id" class="pro_id" >${mvo.mem_id}</div>
-                <input id="mem_prof" name = "mem_prof" type="file" value="mem_prof" />
-                <div class="pro_desc">
-                <p id = "ment" >${mvo.mem_ment}</p></div>
-                
-                <div class="pro_edit">
-                s
-              <!--  <input onclick ="updateform()" id = "profBtn" type="button" value="프로필 수정"/> -->
-               <button type="button" onclick = "updateform('${mvo.mem_id}')" id ="profBtn" class="pro_edit">프로필 수정</button></div>
-                </div></div>
-                
-                <div class="tag">
-                  <div class="tag_icon">
-                    <div class="tag1">
-                      <button>
-                      <div><img src="icon/normal.png" alt="편안"></div>
-                      <p>편안</p>
-                      </button>
-                    </div>
-                    <div class="tag2">
-                      <button>
-                      <div><img src="icon/happy.png" alt="행복"></div>
-                      <p>행복</p>
-                      </button>
-                    </div>
-                    <div class="tag3">
-                      <button>
-                      <div><img src="icon/sad.png" alt="슬픔"></div>
-                      <p>슬픔</p>
-                      </button>
-                    </div>
-                    <div class="tag4">
-                      <button>
-                      <div><img src="icon/angry.png" alt="화남"></div>
-                      <p>화남</p>
-                      </button>
-                    </div>
-                  </div>
-                  <div class="bt_wrap">
-                      <button type="button" onclick="location.href='diaryWrite.html'">
-                        <i class="fa-solid fa-pen-to-square"></i>글쓰기
-                      </button>
-                  </div>
-                </div>
-                <!-- //tag -->
-            </div>
-            
-            
-       
+	iv>
         </form>
         <!-- //tag -->
 
@@ -204,7 +144,9 @@
              
                 <li>
                   <figure>
+                   
                     <div class="fit">
+                    <c:if test = "${vo.mem_id==mvo.mem_id}">
                       <c:choose>
                       	<c:when test="${vo.diary_file != null}">
                       	<a href="${cpath }/diaryDetail.do?diary_seq=${vo.diary_seq}" onclick = "reload();"><img src="${cpath }/img/${vo.diary_file}" alt="다이어리"></a>
@@ -222,6 +164,7 @@
                       </div>
                       <p class="emotion">#중립</p>
                     </figcaption>
+                    </c:if>
                   </figure>
                 </li>
 				</c:forEach>

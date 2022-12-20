@@ -91,7 +91,7 @@
         <div class="feed_wrap">
             <div class="profile">
                 <div class="profile_img">
-                    <a href="#"><img src="${cpath }/img/baby13.jpg" alt="프로필영역"></a>
+                    <a href="#"><img src="${cpath }/img/${mvo.mem_prof}" alt="프로필영역"></a>
                 </div>
                 <div class="profile_info">
                     <div class="info_inner">

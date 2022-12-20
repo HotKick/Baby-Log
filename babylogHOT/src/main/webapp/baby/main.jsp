@@ -77,7 +77,7 @@
                     </div>
                     <!-- //con1_title -->
                         <div class="con1_icon">
-                            <a href="diary.html">
+                            <a href="${cpath}/diaryWriteForm.do">
                                 <div><i class="fa-sharp fa-solid fa-pen-to-square"></i></div>
                                 <div><p>다이어리 작성하기</p></div>
                             </a>
@@ -107,7 +107,7 @@
                     </div>
                     <div class="con2_sub2">
                         <div class="con2_info"><p>한시도 눈을땔수없는 우리아이 순간들을 저장해 주세요</p></div>
-                        <div class="con2_icon"><a href="diary.html"><i class="fa-regular fa-image"></i></a></div>
+                        <div class="con2_icon"><a href="${cpath}/diaryWriteForm.do"><i class="fa-regular fa-image"></i></a></div>
                     </div>
                 </div>
                 <div class="slider">
@@ -134,7 +134,7 @@
                 <!-- //con3 -->
                 <article class="shop">
                     <section class="shop_diary">
-                        <a href="">
+                        <a href="${cpath}/shopDiary.do">
                         <div class="diary_icon">
                             <img src="icon/diary.png" alt="다이어리 아이콘">
                         </div>
@@ -154,7 +154,7 @@
                         </a>
                     </section>
                     <section class="shop_album">
-                        <a href="">
+                        <a href="${cpath}/shopAlbum.do">
                         <div class="album_icon">
                             <img src="icon/camera.png" alt="다이어리 아이콘">
                         </div>
