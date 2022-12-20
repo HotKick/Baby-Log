@@ -109,6 +109,7 @@ height: 100vh;
 
 /* con2------------------------------ */
 #con2{
+    background-color: var(--pink200);
     background: url(../img/main_bg2.png);
     background-size: cover;
 	background-position: center;
