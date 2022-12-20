@@ -71,16 +71,20 @@ function shop_member(){
 	          
 	          
 	          <ul class="navbar_icons">
+	          <!-- 비로그인자 일때 헤더 화면 -->
 	          <c:if test="${empty mvo}">
 		              <li><a href="${cpath}/loginform.do" class="login"><i class="fa-solid fa-right-to-bracket"></i></a></li>
 	              	  <li><a href="${cpath}/signupform.do" class="sign"><i class="fa-solid fa-user-plus"></i></a></li>
 			  </ul>
 	          </c:if>
+	          <!--  -->
+	          <!-- 로그인자 일때 헤더 화면  -->
 	          <c:if test="${!empty mvo}">
 					${mvo.mem_name}님 환영합니다.
 					<li><a href="${cpath}/mypage.do">마이페이지</a></li>
 					<li><a href="${cpath}/logout.do">로그아웃</a></li>
 			  </c:if>
+			  <!-- / 로그인자 일때 헤더화면  -->
 	          <a href="#" class="navbar_toggleBtn">
 	               <i class="fa-solid fa-burger"></i>
 	          </a>
