@@ -127,13 +127,13 @@ var dw4 = document.getElementsByClassName('dw4');
 		<div class="tag">
 			<div class="tag_icon">
 				<div class="tag1">
-					<button id=emo1 onclick="emo_happy()"><div><img src ="${cpath}/icon/normal.png" alt=""></div><p>행복</p></button>
+					<button id=emo1 onclick="emo_happy()"><div><img src ="${cpath}/icon/happy.png" alt=""></div><p>행복</p></button>
 				</div>
 				<div class="tag2">
-					<button id=emo2 onclick="emo_sad()"><div><img src ="${cpath}/icon/normal.png" alt=""></div><p>슬픔</p></button>
+					<button id=emo2 onclick="emo_sad()"><div><img src ="${cpath}/icon/sad.png" alt=""></div><p>슬픔</p></button>
 				</div>
 				<div class="tag3">
-					<button id=emo3 onclick="emo_angry()"><div><img src ="${cpath}/icon/normal.png" alt=""></div><p>화남</p></button>
+					<button id=emo3 onclick="emo_angry()"><div><img src ="${cpath}/icon/angry.png" alt=""></div><p>화남</p></button>
 				</div>
 				<div class="tag4">
 					<button id=emo4 onclick="emo_neu()"><div><img src ="${cpath}/icon/normal.png" alt=""></div><p>안정</p></button>
@@ -153,7 +153,7 @@ var dw4 = document.getElementsByClassName('dw4');
 				<div class="search-wrapper">
 					<input type="search" placeholder="Search for photos">
 					<div class="counter">
-						Total photos: <span>0</span>
+						Total photos: <span>12</span>
 					</div>
 				</div>
 				<ul class="view-options">
@@ -206,7 +206,7 @@ var dw4 = document.getElementsByClassName('dw4');
 										<div class="emotion">                
                       <button class="happy">
                       <div><img src="${cpath }/icon/hapyy.png" alt="행복"></div>
-                      <p>편안</p>
+                      <p>행복</p>
                       </button>
                     </div>
 										
@@ -242,7 +242,7 @@ var dw4 = document.getElementsByClassName('dw4');
 										<div class="emotion">                
                       <button class="sad">
                       <div><img src="${cpath }/icon/sad.png" alt="슬픔"></div>
-                      <p>편안</p>
+                      <p>슬픔</p>
                       </button>
                     </div>
 									</figcaption>
@@ -276,8 +276,8 @@ var dw4 = document.getElementsByClassName('dw4');
 										</div>
 										<div class="emotion">                
                       <button class="angry">
-                      <div><img src="${cpath }/icon/angry.png" alt="분노"></div>
-                      <p>편안</p>
+                      <div><img src="${cpath }/icon/angry.png" alt="화남"></div>
+                      <p>화남</p>
                       </button>
                     </div>
 									</figcaption>
@@ -311,8 +311,8 @@ var dw4 = document.getElementsByClassName('dw4');
 										</div>
 										<div class="emotion">                
                       <button class="normal">
-                      <div><img src="${cpath }/icon/normal.png" alt="편안"></div>
-                      <p>편안</p>
+                      <div><img src="${cpath }/icon/normal.png" alt="안정"></div>
+                      <p>안정</p>
                       </button>
                     </div>
 									</figcaption>

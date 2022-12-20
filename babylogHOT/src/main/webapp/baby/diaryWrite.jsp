@@ -81,16 +81,8 @@ $(document).ready(function(){
 				console.log("실패")
 			}
 		})
-		
-		
-		
 	})
-	
-	
-	
 })
-
- 
 
   function move_page(){
 	setTimeout("location.href='${cpath}/diary.do'", 1000); //2초후에 move_page함수실행

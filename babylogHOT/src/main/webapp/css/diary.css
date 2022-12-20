@@ -221,16 +221,16 @@
 
 /* 각 태그별 속성  */
 .emotion .normal{
-  background-color: var(--green400) ;
+  background-color: var(--yello400) ;
 }
 .emotion .happy{
-  background-color: var(--pink400) ;
+  background-color: var(--green400) ;
 }
 .emotion .sad{
-  background-color: var(--blue400) ;
+  background-color: var(--pink400) ;
 }
 .emotion .angry{
-  background-color: var(--yello400) ;
+  background-color: var(--blue400) ;
 }
 
 
