@@ -49,7 +49,7 @@ function shop_member(){
       <div class="container">
          <div class="foot_inner">
             <div class="foot_logo">
-               <a href="${cpath}/main.do"><img src="${cpath}/icon/logo_2_blue.png" alt="로고"></a>
+               <div><a href="${cpath}/main.do"><img src="${cpath}/icon/logo_2_blue.png" alt="로고"></a></div>
             </div>
             <div class="foot_nav">
             	<hr>
