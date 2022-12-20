@@ -49,6 +49,7 @@
     	var newMent = "<input type = 'text' id = 'ment2' class = 'form-control' value = '"+temp+"'/>";
     	$("#ment").html(newMent);
     	var newMentBtn = "<button onclick= 'updateprof()'>수정하기</button>";
+    
     	console.log(newMentBtn)
     	$("#profBtn").html(newMentBtn);
     	
@@ -110,7 +111,14 @@
 		
         <div class="profile_wrap">
             <div class="pro_img">
-                <img src="${cpath}/img/${mvo.mem_prof}" alt="프로필이미지">
+           <c:choose>
+				<c:when test="${mvo.mem_prof != null}">
+					<img src="${cpath }/img/${mvo.mem_prof}">
+				</c:when>
+				<c:otherwise>
+				<img src="${cpath}/img/diary33.jpg">
+				</c:otherwise>
+				</c:choose>
                <input id = prof_btn type="button" onclick="onClickUpload();" value="+">
        		
 
@@ -127,8 +135,7 @@
                 
                 <div class="pro_edit">
                 
-              <!--  <input onclick ="updateform()" id = "profBtn" type="button" value="프로필 수정"/> -->
-               <button type="button" onclick = "updateform('${mvo.mem_id}')" id ="profBtn" class="pro_edit">프로필 수정</button></div>
+           <button type="button" onclick = "updateform('${mvo.mem_id}')" id ="profBtn" class="pro_edit">프로필 수정</button></div>
                 </div></div>
                 
                 <div class="tag">

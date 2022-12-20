@@ -69,7 +69,7 @@
 							</c:forEach>
                         </div>
                   
-                        <button type="button" onclick="location.href='${cpath}/newswriteform.do'">글쓰기</button>
+                        <button style="display: none;" onclick="location.href='${cpath}/newswriteform.do'">글쓰기</button>
                     </div>
                     <!-- 페이지 넘버 -->
                     <div class="board_page">
