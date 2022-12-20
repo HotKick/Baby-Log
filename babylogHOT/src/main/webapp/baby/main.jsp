@@ -129,7 +129,7 @@
         <div class="container">
             <div class="con3_wrap">
                 <div class="con3_img">
-                    <img src="img/main3_baby.png" alt="#">
+                    <img src="${cpath}/img/main3_baby.png" alt="#">
                 </div>
                 <!-- //con3 -->
                 <article class="shop">
