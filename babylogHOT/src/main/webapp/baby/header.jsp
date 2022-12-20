@@ -86,48 +86,35 @@ function shop_member(){
 <body>
 
 	<!-- !!new header ------------------------------------------------->
-	<div id="nav">
-	  <div class="container">
-	      <nav class="navbar">
-	          <div class="navbar_logo">
-                <div><a href="${cpath}/main.do"><img src="${cpath}/icon/logo_1.png" alt="가로형로고"></a></div>
-             </div>
-            
-	          <ul class="navbar_menu">
-	          			<li><a onclick="diary_member()">육아일기</a></li>
-						<li><a href="${cpath}/communityFree.do">커뮤니티</a></li>
-						<li><a onclick="shop_member()">쇼핑몰</a></li>
-						<li><a href="${cpath}/newsGov.do">뉴스</a></li>
-	          </ul>
-	          
-	          
-	          <ul class="navbar_icons">
-	          <!-- 비로그인자 일때 헤더 화면 -->
-	          <c:if test="${empty mvo}">
-		              <li><a href="${cpath}/loginform.do" class="login"><i class="fa-solid fa-right-to-bracket"></i></a></li>
-	              	  <li><a href="${cpath}/signupform.do" class="sign"><i class="fa-solid fa-user-plus"></i></a></li>
-			  </ul>
-	          </c:if>
-	          <!--  -->
-	          <!-- 로그인자 일때 헤더 화면  -->
-	          <c:if test="${!empty mvo}">
-					${mvo.mem_name}님 환영합니다.
-					<li><a href="${cpath}/mypage.do">마이페이지</a></li>
-					<li><a href="${cpath}/logout.do">로그아웃</a></li>
-			  </c:if>
-			  <!-- / 로그인자 일때 헤더화면  -->
-	          <a href="#" class="navbar_toggleBtn">
-	               <i class="fa-solid fa-burger"></i>
-	          </a>
-	      </nav>
-	      <!-- //navbar -->
-	  
-	  </div>
-	  <!-- //container -->
-	  </div>
-	  <!-- //#nav -->
-	  
-	  <!--  // new header end ------------------------------------------------->
+<header id="header">
+    <div class="container">
+        <nav class="navbar">
+            <div class="navbar_logo">
+                <div><a href="main.html"><img src="icon/logo_1.png" alt="가로형로고"></a></div>
+            </div>
+            <ul class="navbar_menu">
+                <li><a href="diary.html">육아일기</a></li>
+                <li><a href="communityFree.html">커뮤니티</a></li>
+                <li><a href="shop.html">쇼핑몰</a></li>
+                <li><a href="newsGov.html">뉴스</a></li>
+                <li><a href="mypage.html">마이페이지</a></li>
+            </ul>
+            <ul class="navbar_icons">
+                <li><a href="login.html" class="login"><i class="fa-solid fa-right-to-bracket"></i></a></li>
+                <li><a href="signUp.html" class="sign"><i class="fa-solid fa-user-plus"></i></a></li>
+            </ul>
+    
+            <a href="#" class="navbar_toggleBtn">
+                <i class="fa-solid fa-burger"></i>
+            </a>
+        </nav>
+        <!-- //navbar -->
+    
+    </div>
+    <!-- //container -->
+</header>
+<!-- //#nav -->
+<!--  // new header end ------------------------------------------------->
 		
 </body>
 </html>
