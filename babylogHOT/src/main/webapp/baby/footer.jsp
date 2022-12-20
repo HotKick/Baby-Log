@@ -5,6 +5,11 @@
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
 
 <c:set var="cpath" value="${pageContext.request.contextPath}" />
+<script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+<script src="sweetalert2.min.js"></script>
+<link rel="stylesheet" href="sweetalert2.min.css">
+	
 	
 <!DOCTYPE html>
 <html>
@@ -12,12 +17,22 @@
 <meta charset="UTF-8">
 <title>푸터</title>
 
-<!-- 비 로그인자 로그인 알림 다이어리 -->	
 <script type="text/javascript">
 function diary_member(){
 	 if(${empty mvo}){
-		 alert("로그인해 주세요");
-		 document.location.href= "${cpath}/loginform.do";
+			Swal.fire({
+				  title: "로그인 후 이용가능합니다",
+				  icon: 'error',
+				  showCancelButton: false,
+				  confirmButtonColor: '#3085d6',
+				  cancelButtonColor: '#d33',
+				  confirmButtonText: '로그인',
+				  cancelButtonText: '취소'
+				}).then((result) => {
+				  if (result.value) {
+					  location.href="${cpath}/loginform.do";
+				  }
+				})
 	 }else{
 		 location.href="${cpath}/diary.do";
 		 
@@ -30,8 +45,19 @@ function diary_member(){
 <script type="text/javascript">
 function shop_member(){
 	 if(${empty mvo}){
-		 alert("로그인해 주세요");
-		 document.location.href= "${cpath}/loginform.do";
+			Swal.fire({
+				  title: "로그인 후 이용가능합니다",
+				  icon: 'error',
+				  showCancelButton: false,
+				  confirmButtonColor: '#3085d6',
+				  cancelButtonColor: '#d33',
+				  confirmButtonText: '로그인',
+				  cancelButtonText: '취소'
+				}).then((result) => {
+				  if (result.value) {
+					  location.href="${cpath}/loginform.do";
+				  }
+				})
 	 }else{
 		 location.href="${cpath}/shop.do";
 		 
@@ -39,7 +65,6 @@ function shop_member(){
 	 }
 
 </script>
-
 <!-- / 비 로그인자 로그인 알림  -->
 
 </head>

@@ -31,17 +31,15 @@
     <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
 	
 	<!-- 파일 선택 가리기 -->
-	<style>
-        #my-input {
-            visibility: hidden;
-        }
-    </style>
-    
+
     <script type = "text/javascript">
    
     let userData = ''
     
     function updateform(res){
+    	
+    	$("#fileDiv").css("display","block");
+    	
     	console.log('update form function',res)
     	userData = res
     	
@@ -121,12 +119,14 @@
                 <div class="info_wrap">
                 <div class="pro_name"><input type="text" value="${mvo.mem_nick}"></div>
                 <div id = "mem_id" class="pro_id" >${mvo.mem_id}</div>
-                <input id="mem_prof" name = "mem_prof" type="file" value="mem_prof" />
+                <div id="fileDiv" style="display: none;">
+                <input id="prof" name = "mem_prof" type="file" value="mem_prof" />
+                </div>
                 <div class="pro_desc">
                 <p id = "ment" >${mvo.mem_ment}</p></div>
                 
                 <div class="pro_edit">
-                s
+                
               <!--  <input onclick ="updateform()" id = "profBtn" type="button" value="프로필 수정"/> -->
                <button type="button" onclick = "updateform('${mvo.mem_id}')" id ="profBtn" class="pro_edit">프로필 수정</button></div>
                 </div></div>
@@ -159,7 +159,7 @@
                     </div>
                   </div>
                   <div class="bt_wrap">
-                      <button type="button" onclick="location.href='diaryWrite.html'">
+                      <button type="button" onclick="location.href='${cpath}/diaryWriteForm.do'">
                         <i class="fa-solid fa-pen-to-square"></i>글쓰기
                       </button>
                   </div>
@@ -204,7 +204,9 @@
              
                 <li>
                   <figure>
+                   
                     <div class="fit">
+                    <c:if test = "${vo.mem_id==mvo.mem_id}">
                       <c:choose>
                       	<c:when test="${vo.diary_file != null}">
                       	<a href="${cpath }/diaryDetail.do?diary_seq=${vo.diary_seq}" onclick = "reload();"><img src="${cpath }/img/${vo.diary_file}" alt="다이어리"></a>
@@ -222,6 +224,7 @@
                       </div>
                       <p class="emotion">#중립</p>
                     </figcaption>
+                    </c:if>
                   </figure>
                 </li>
 				</c:forEach>
