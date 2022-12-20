@@ -131,7 +131,7 @@ function mypage_member(){
             </ul>
             <ul class="navbar_icons">
                 <li><a href="${cpath }/loginform.do" class="login"><i class="fa-solid fa-right-to-bracket"></i></a></li>
-                <li><a href="${cpath }/signUp.do" class="sign"><i class="fa-solid fa-user-plus"></i></a></li>
+                <li><a href="${cpath }/signupform.do" class="sign"><i class="fa-solid fa-user-plus"></i></a></li>
             </ul>
     
             <a href="#" class="navbar_toggleBtn">
