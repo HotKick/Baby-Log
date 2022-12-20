@@ -32,10 +32,9 @@
                 <!-- Heading -->
                 <div class="item logo">
                   <div class="logo">
-                    <a href="main.html"></a>
+                    <a href="main.html"><img src="icon/logo_1.png" alt=""></a>
                   </div>
-                  <div class="item logo_title">
-                    <a href="${cpath}/main.do">BabyLog</a> </div>
+                  
                 </div>
                 
                 <!-- Form -->

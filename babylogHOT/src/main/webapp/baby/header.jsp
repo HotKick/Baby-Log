@@ -59,20 +59,21 @@ function shop_member(){
 	  <div class="container">
 	      <nav class="navbar">
 	          <div class="navbar_logo">
-	              <i class="fab fa-apple"></i>
-	              <a href="${cpath}/main.do">Baby LOG</a>
-	          </div>
+                <div><a href="${cpath}/main.do"><img src="${cpath}/icon/logo_1.png" alt="가로형로고"></a></div>
+             </div>
+            
 	          <ul class="navbar_menu">
 	          			<li><a onclick="diary_member()">육아일기</a></li>
 						<li><a href="${cpath}/communityFree.do">커뮤니티</a></li>
 						<li><a onclick="shop_member()">쇼핑몰</a></li>
 						<li><a href="${cpath}/newsGov.do">뉴스</a></li>
-						<li><a href="${cpath}/newsGov.do">고객센터</a></li>
 	          </ul>
+	          
+	          
 	          <ul class="navbar_icons">
 	          <c:if test="${empty mvo}">
-		              <li><a href="${cpath}/loginform.do"><i class="fab fa-facebook-square"></i></a></li>
-	              	  <li><a href="${cpath}/signupform.do"><i class="fab fa-instagram"></i></a></li>
+		              <li><a href="${cpath}/loginform.do" class="login"><i class="fa-solid fa-right-to-bracket"></i></a></li>
+	              	  <li><a href="${cpath}/signupform.do" class="sign"><i class="fa-solid fa-user-plus"></i></a></li>
 			  </ul>
 	          </c:if>
 	          <c:if test="${!empty mvo}">
@@ -81,7 +82,7 @@ function shop_member(){
 					<li><a href="${cpath}/logout.do">로그아웃</a></li>
 			  </c:if>
 	          <a href="#" class="navbar_toggleBtn">
-	              <i class="fas fa-bars"></i>
+	               <i class="fa-solid fa-burger"></i>
 	          </a>
 	      </nav>
 	      <!-- //navbar -->

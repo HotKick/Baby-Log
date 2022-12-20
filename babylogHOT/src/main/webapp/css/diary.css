@@ -1,62 +1,92 @@
-
-
-/* RESET RULES
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-:root {
-  --black: #1a1a1a;
-  --white: #fff;
-  --gray: #ccc;
-  --darkgreen: skyblue;
-  --lightbrown: antiquewhite;
-  --darkblack: rgba(0,0,0,0.8);
-  --minRangeValue: 280px;
-}
-
+/* 공통------------------------------------ */
 .d-none {
   display: none;
 }
 
+/* 배너영역 */
+.banner{
+  height: 5rem;
+}
 
+/* 공통------------------------------------ */
 
-/* 분류버튼
-–––––––––––––––––––––––––––––––––––––––––––––––––– */
-
-
+/* 태그 */
 .tag {
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 70px 0 40px;
   box-sizing: border-box;
-  border-bottom: solid 1px #eee;
+  border-bottom: solid 1px var(--blue200);
 }
-
 
 .tag > div {
   display: flex;
 }
 
 .tag_icon > div button{
+  display: flex;
+  align-items: center;
   padding: 0.8rem 2rem;
   margin-right: 0.6rem;
-  background-color: #ccc;
+  background-color: var(--blue200);
   border-radius: 10px;
+  color: var(--white);
 }
 
-.tag_icon > div button:hover{
-  background-color: #1a1a1a;
-  color: #fff;
+.tag_icon > div button img {
+  width: 1.2rem;
+  margin-right: 0.2rem;
+}
+.tag_icon > div button p {
+  font-size: 1rem;
+  line-height: 1.2rem;
+  text-shadow: 1px 1px 1px var(--black500);
+}
+
+/* 각 태그별 속성  */
+.tag_icon > .tag1 button{
+  background-color: var(--green400) ;
+}
+.tag_icon > .tag2 button{
+  background-color: var(--pink400) ;
+}
+.tag_icon > .tag3 button{
+  background-color: var(--blue400) ;
+}
+.tag_icon > .tag4 button{
+  background-color: var(--yello400) ;
+}
+/* 각 태그별 오버  */
+.tag_icon > .tag1 button:hover{
+  background-color: var(--green500) ;
+}
+.tag_icon > .tag2 button:hover{
+  background-color: var(--pink500) ;
+}
+.tag_icon > .tag3 button:hover{
+  background-color: var(--blue500) ;
+}
+.tag_icon > .tag4 button:hover{
+  background-color: var(--yello500) ;
 }
 
 .bt_wrap > button{
   padding: 0.8rem 2rem;
-  background-color: #ccc;
-  border-radius: 10px;
+  border-radius: 0.8rem;
+  border: 1px solid var(--blue400);
+  color: var(--blue400);
+  font-size: 1rem;
+  font-weight: 600;
+}
+.bt_wrap > button i {
+  margin-right: 0.2rem;
 }
 
 .bt_wrap > button:hover{
-  background-color: #1a1a1a;
-  color: #fff;
+  background-color: var(--blue400);
+  color: var(--white);
+  border: 1px solid var(--blue400);
 }
 
 /* TOOLBAR
@@ -77,32 +107,48 @@
   margin-right: 0.7rem;
 }
 
-.view-options li:not(:last-child){
-margin: right 1.2rem;
+/* 툴바 버튼 */
+.view-options button{
+  text-align: center;
+  font-size: 2rem;
+  padding: 0.2rem;
+  color: var(--blue300);
 
 }
 
-.view-options button{
-  padding: 2px;
-  border:3px solid transparent;
+.view-options button:hover{
+  font-size: 2rem;
+  padding: 0.2rem;
+  color: var(--blue400);
 
 }
 
 .view-options .active button{
-  border-color: var(--darkgreen);
+  border-color: var(--blue400);
 }
 
 .search-wrapper {
   display: flex;
   align-items: center;
+  color: var(--blue500);
 }
 .search-wrapper input {
   margin-right: 1rem;
   width: 24rem;
   padding: 10px;
   border-radius: 10px;
-  border: solid 1px #ccc;
+  border: solid 1px var(--blue300);
+  line-height: 2rem;
+  color: var(--blue300);
 }
+.search-wrapper input::placeholder {
+  color: var(--blue400);
+}
+.search-wrapper .counter{
+  color: var(--pink400);
+}
+
+
 
 /* IMAGE LIST
 –––––––––––––––––––––––––––––––––––––––––––––––––– */
@@ -111,15 +157,12 @@ margin: right 1.2rem;
 }
 
 .image-list li{
-  /* background : var(--lightbrown);
-  color: var(--darkblack); */
-  background-color: #fff;
-  color: #333;
-  border: 1px solid #ddd;
+  border: 1px solid var(--black200);
+  color: var(--black500);
 }
 .image-list li:hover{
-  box-shadow:5px 5px 15px rgba(0, 0, 0, 0.3);
-  border: 1px solid #fff;
+  border: 2px solid var(--pink300);
+  box-shadow: 5px 5px 10px rgba(0,0,0,0.1);
 }
 
 .image-list li > a {
@@ -134,18 +177,12 @@ margin: right 1.2rem;
 .image-list li figcaption .title p{
   font-size: 1.7rem;
 }
-/* .image-list li p:first-child{
-  font-weight: bold;
-  font-size: 1rem;
-} */
+
 .image-list li .emotion{
   font-weight: bold;
   font-size: 1rem;
 }
-/* .image-list li p:last-child{
-  margin-top: 0.5rem;
-  
-} */
+
 
 .image-list li span{
   margin-top: 0.5rem;
@@ -162,16 +199,40 @@ margin: right 1.2rem;
   color: #333;
 }
 
-.emotion {
-  text-align: center;
-  display: block;
-  background-color: #ccc;
-  color: #222;
-  display: inline-block;
-  padding: 2% 5%;
-  border-radius: 5px;
-  margin: 0.6rem 0;
+/* 감정태그 출력 */
+.emotion {}
+.emotion button {
+  display: flex;
+  padding: 0.8rem 2rem;
+  border-radius: 0.7rem;
+  color: var(--white); 
+  margin: 0.5rem 0;
 }
+
+.emotion button img {
+  width: 1.2rem;
+  margin-right: 0.2rem;
+}
+.emotion button p {
+  font-size: 1rem;
+  line-height: 1.2rem;
+  text-shadow: 1px 1px 1px var(--black500);
+}
+
+/* 각 태그별 속성  */
+.emotion .normal{
+  background-color: var(--green400) ;
+}
+.emotion .happy{
+  background-color: var(--pink400) ;
+}
+.emotion .sad{
+  background-color: var(--blue400) ;
+}
+.emotion .angry{
+  background-color: var(--yello400) ;
+}
+
 
 
 /* GRID VIEW
@@ -247,50 +308,56 @@ margin: right 1.2rem;
 }
 
 .off{
-  width: 50px;
-  height: 50px;
   display: block;
   display: flex;
   justify-content: center;
   align-items: center;
   border-radius: 50px;
   font-size: 20px;
-  color: white;
-  opacity: 0.5;
-  background-color: white;
+  opacity: 0.7;
+  background-position: 0px 0px;
+  width: 52px; height: 52px; 
+  background: url(../icon/select_1.png) no-repeat;
 }
 
 
 .on{
-  width: 50px;
-  height: 50px;
+  width: 52px;
+  height: 52px;
   display: block;
   display: flex;
   justify-content: center;
   align-items: center;
-  border-radius: 50px;
-  font-size: 20px;
-  background-color: red;
-  opacity: 0.5;
+  opacity: 1;
+  background-position: 52px -52px;
+  width: 52px; height: 52px; 
+  background: url(../icon/select_2.png) no-repeat;
 }
 
+/* 결제버튼 */
 
 .order {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 40px;
+  margin-bottom: 4rem;
 }
 .order a {
   padding: 2% 6%;
-  background-color: #ccc;
-  color: #222;
+  border:1px solid var(--black300);
+  color: var(--black00);
   border-radius: 14px;
+  font-size: 1.1rem;
 }
 .order a:hover {
-  background-color: #1a1a1a;
+  border:1px solid var(--pink400);
+  background-color:var(--pink400);
   color: #fff;
 }
+.order a i {
+  margin-right: 0.5rem;
+}
+
 
 
 

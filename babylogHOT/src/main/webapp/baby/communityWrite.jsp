@@ -39,20 +39,17 @@ $(function(){
 </head>
 <body>
 		<%@ include file="header.jsp" %>
+<div class="banner"></div>
+<!-- //공백  -->
 
-	<main>
-
-
-		<!-- //게시판 영역 -->
-</main>
 	
 <form action= "${cpath}/communityWrite.do" method="post" enctype = "multipart/form-data">
 
 <div class="container">
     <div class="board_wrap">
         <div class="board_title">
-            <strong>글쓰기 게시판</strong>
-            <p>게시판 선택 후 글쓰기 작성 부탁드립니다.</p>
+            <strong><i class="fa-solid fa-pen-to-square"></i> 글쓰기 게시판</strong>
+            <p>자유롭게 작성해 주세요</p>
         </div>
         <!-- // board title  -->
         <div class="board_write">
@@ -89,12 +86,16 @@ $(function(){
             <div class="cont">
                 <textarea placeholder="내용 입력" name = "community_content"></textarea>
             </div>
-        </div>
+        
+        <!-- //board_write -->
         <div class="bt_wrap">
             <button type="submit">등록</button>
             <button type="reset">취소</button>
         </div>
+        </div>
+        <!-- //bt_wrap -->
     </div>
+    <!-- board_wrap -->
 </div>
 <!-- //container -->
 </form>

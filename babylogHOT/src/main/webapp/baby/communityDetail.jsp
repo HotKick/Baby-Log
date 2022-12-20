@@ -41,18 +41,16 @@
 <body>
 		<%@ include file="header.jsp" %>
 	<!-- //header -->
-	<main>
 
+<div class="banner"></div>
+<!-- //공백  -->
 
-		<!-- //게시판 영역 -->
-	</main>
 	<section id="board">
 		<div class="container">
 			<div class="board_wrap">
 				<div class="board_title">
-					<strong> 글 상세 보기 
-					</strong>
-					<p></p>
+					<strong><i class="fa-solid fa-comment-dots"></i> 자유게시판</strong>
+                        <p>공지사항을 빠르고 정확하게 안내해드립니다.</p>
 				</div>
 				<div class="board_view_wrap">
 					<div class="board_view">
@@ -84,12 +82,9 @@
 						</div>
 					</div>
 					 <div class="bt_wrap">
-					 		<button onclick="location.href='${cpath}/communityFree.do'" class ="on">목록</button>
-                            <button onclick="location.href='${cpath}/communityEditForm.do'">수정</button>
-                            <button onclick = "goDel(${vo.community_seq})">삭제</button>
-                          
-                
-	}
+                            <button type="button" onclick="location.href='${cpath}/communityEditForm.do'">수정</button>
+					 		<button type="button" onclick="location.href='${cpath}/communityFree.do'">목록</button>
+                            <button type="button" onclick = "goDel(${vo.community_seq})">삭제</button>
                         </div>
 				</div>
 			</div> 

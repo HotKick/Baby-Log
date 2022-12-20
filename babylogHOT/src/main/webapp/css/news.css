@@ -1,4 +1,316 @@
-#header {
-	height: 300px;
-	background-color: #ccc;
-}
+
+/* 공통------------------------------------ */
+
+/* 배너영역 */
+.banner{
+    height: 20rem;
+    background-color: var(--black300);
+    }
+      
+    body{
+        font-weight: 400;
+        color: var(--black600);
+    }
+    .board_wrap {
+        width: 100%;
+        padding: 50px 0;
+    }
+    
+    .bt_wrap {
+        margin-top: 30px;
+        text-align: center;
+        font-size: 0;
+        overflow: hidden;
+        display: flex;
+        flex-direction: row-reverse;
+        gap: 1%;
+    }
+    
+    
+    
+    
+    /* 보드 - 분류버튼 */
+    .board_title div {
+        display: flex;
+        flex-direction: row;
+        gap: 5%; /* flex의 주변 여분 의 공간 */
+        width: 50%;
+    }
+    .board_title .tag_news{
+        width: 40%
+    }
+    .board_title div.tag {
+        margin : 20px 0;
+    }
+    .board_title div > div{
+        width: 100%;
+        height: 100%;
+        text-align: center;
+    }
+    
+    .board_title div > div > a {
+        display: block;
+        padding: 14px 6px;
+        border-radius: 10px;
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        font-size: 1rem;
+        font-weight: 900;
+        background-color: var(--green100);
+        color: var(--green500);
+        border: 1px solid var(--green400);
+    }
+    .board_title strong{
+        color: var(--green500);
+    }
+    
+    .board_title div > div > a:hover{
+        background-color: var(--green400);
+        color: var(--white);
+    }
+    
+    /* 각게시판 on 주기 */
+    .board_title .tag .gov.on a{
+        background-color: var(--green400);
+        color: var(--white);
+    }
+    .board_title .tag .city.on a{
+        background-color: var(--green400);
+        color: var(--white);
+    }
+
+    
+    
+    .board_title {
+        margin-bottom: 30px;
+    }
+    
+    .board_title strong {
+        font-size: 40px;
+    }
+    
+    .board_title p {
+        padding: 10px 0;
+        font-size: 1.2rem;
+    }
+    
+    
+    /* 보드 - 리스트 ======================= */
+    
+    .board_list .title a:hover {
+        color: var(--black400);
+        font-weight: 600;
+    }
+    
+    /* 게시판 - 라인 */
+    .board_list > div {
+        border-bottom: 1px var(--green300);
+        font-size: 0rem;
+        background-color: var(--white);
+    }
+    
+    .board_list > div.top {
+        background-color: var(--green400);
+        color: var(--white);
+    }
+    
+    
+    /* 게시판 간격 */
+    .board_list > div > div {
+        display: inline-block;
+        padding: 0.8rem 0;
+        text-align: center;
+        font-size: 18px;
+        border-bottom: solid 1px var(--green200);
+    }
+    
+    .board_list > div.top > div {
+        font-weight: 600;
+    }
+    
+    .board_list .num {
+        width: 10%;
+    }
+    
+    .board_list .title {
+        width: 60%;
+        text-align: center;
+    }
+    .board_list .title a{
+        color: var(--blakc600);
+    }
+    
+    .board_list .top .title {
+        text-align: center;
+    }
+    
+    .board_list .writer {
+        width: 10%;
+    }
+    
+    .board_list .date {
+        width: 10%;
+    }
+    
+    .board_list .count {
+        width: 10%;
+    }
+    
+    /* 보드 - 넘버 */
+    .board_page {
+        margin-top: 30px;
+        text-align: center;
+        font-size: 0;
+    }
+    
+    .board_page a {
+        display: inline-block;
+        margin: 0 3px;
+    }
+    
+    /* 보드 - 버튼 */
+    .board_page a.bt {
+        text-align: center;
+        padding: 0.8rem;
+        font-size: 0.8rem;
+        letter-spacing: -1px;
+        background-color: var(--green600);
+        color: var(--white);
+        width: 1.5rem;
+        height: 1.5rem;
+        border-radius: 50%;
+        box-sizing: border-box;
+        vertical-align: middle;
+        position: relative;
+    }
+    .board_page a.bt i{
+        position: absolute;
+        top: 0.4rem;
+        left: 0.4rem;
+    }
+    
+    .board_page a:hover.bt {
+        background-color: var(--green400);
+        color: #fff;
+    }
+    
+    /* 보드- 버튼숫자 */
+    .board_page a.num {
+        padding-top: 9px;
+        font-size: 0.8rem;
+        width: 32px;
+        height: 32px;
+        box-sizing: border-box;
+        vertical-align: middle;
+        border-left: 0;
+        line-height: 100%;
+        background: var(--green300);
+        color: var(--white);
+        border-radius: 5px;
+    }
+    
+    .board_page a:hover.num {
+        background:var(--green500);
+        color: var(--white);
+    }
+    
+    .board_page a.num.on {
+        background: var(--green500);
+        color: var(--white);
+    }
+    
+    /* board-view ============================ */
+    .board_view {
+        width: 100%;
+    }
+    
+    .board_view .title {
+        padding: 20px 15px;
+        font-size: 1.5rem;
+        background-color: var(--green400);
+        color: var(--white);
+    }
+    
+    .board_view .info {
+        padding: 15px;
+        background-color: var(--green200);
+        font-size: 0;
+    }
+    
+    .board_view .info dl {
+        position: relative;
+        display: inline-block;
+        padding: 0 20px;
+    }
+    
+    .board_view .info dl:first-child {
+        padding-left: 0;
+    }
+    
+  
+    /* 바 */
+    .board_view .info dl::before {
+        content: "";
+        position: absolute;
+        top: 0.2rem;
+        left: 0;
+        display: block;
+        width: 2px;
+        height: 20px;
+        background: var(--green100);
+    }
+    
+    .board_view .info dl:first-child::before {
+        display: none;
+    }
+    
+    .board_view .info dl dt, .board_view .info dl dd {
+        display: inline-block;
+        font-size: 1.4rem;
+    }
+    
+    .board_view .info dl dt {
+        
+    }
+    
+    .board_view .info dl dd {
+        margin-left: 10px;
+        color: var(--black800);
+    }
+    
+    .board_view .cont {
+        padding: 60px 20px;
+        border-bottom: 1px solid var(--green300);
+        line-height: 160%;
+        font-size: 1.2rem;
+    }
+    
+    /* boardWrite 버튼  */
+.bt_wrap button {
+    padding: 1rem 4rem;
+    border-radius: 2px;
+    font-size: 1rem;
+    border-radius: 10px;
+ }
+ 
+ /* 에디트-리스트 각버튼에 컬러주기  */
+ .bt_wrap button:nth-child(1) {
+     border:1px solid var(--pink400);
+     color: var(--pink500);
+     margin-left: 0;
+ }
+ .bt_wrap button:nth-child(2){
+     border:1px solid var(--green400);
+     color: var(--green500);
+ } 
+ 
+ /* 에디트-리스트 각 버튼 마우스 오버  */
+ .bt_wrap button:nth-child(1):hover {
+     background-color:var(--pink400);
+     color: var(--white);
+ }
+ .bt_wrap button:nth-child(2):hover{
+     background-color: var(--green400);
+     color: var(--white);
+ } 

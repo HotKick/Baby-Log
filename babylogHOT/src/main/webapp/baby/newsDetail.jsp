@@ -35,6 +35,9 @@
 
 	<main>
 	<%@ include file = "header.jsp" %>
+	
+	<div class="banner"></div>
+<!-- //공백  -->
 
 		<!-- //게시판 영역 -->
 	</main>
@@ -66,6 +69,9 @@
 						<div class="cont">
 							{vo.nn_content}
 						</div>
+						<div class="bt_wrap">
+                            <button type="button" onclick="location.href='newsGov.html'">목록</button>     
+                        </div>
 					</div>
 				</div>
 			</div>

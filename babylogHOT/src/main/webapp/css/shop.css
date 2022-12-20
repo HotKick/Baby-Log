@@ -1,46 +1,63 @@
-#header{
-    height: 300px;
-    background-color: #ccc;
-}
+/* 공통------------------------------------ */
+.d-none {
+    display: none;
+  }
+  
+  /* 배너영역 */
+  .banner{
+    height: 5rem;
+  }
+  
+  /* 공통------------------------------------ */
 .shop {
     overflow: hidden; 
-    padding: 7% 5% 10% 5%}
+    padding: 7% 5% 10% 5%;
+}
 
 
 .shop h2 {
     font-size: 3rem;
     font-weight: 900;
     display: block;
-    margin-top: 400px;
+    font-family: 'Maple200';
+    margin-top: 2.4rem;
+}
+.shop_icon{
+    width: 16rem;
+    margin: 0 auto;
 }
 
 .shop .shop_diary {
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
     text-align: center;
-    justify-items: center;
     float: left; width: 48%; 
     height: 600px; 
-    margin: 1%; 
     border-radius: 30px; 
-    background-color: #ccc;
-}
-.shop .shop_diary:hover {
-    background-color: pink;
-    color: #fff;
+    background:var(--pink100);
+    color: var(--pink400);
+    margin: 1%;
 }
 
 .shop .shop_photo {
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
     text-align: center;
-    justify-items: center;
     float: left; width: 48%; 
     height: 600px; 
-    margin: 1%; 
     border-radius: 30px; 
-    background-color: #ccc;
+    background:var(--blue100);
+    color: var(--blue400);
+    margin: 1%;
 }
 
+.shop .shop_diary:hover{
+    border: 3px solid var(--pink300);
+}
 .shop .shop_photo:hover {
-    background-color: pink;
-    color: #fff;
+    border: 3px solid var(--blue300);
 }
 
 .shop .shop_diary a {
@@ -50,35 +67,49 @@
 
 
 /* 버튼 디자이  */
-.shop_diary .btn, .shop_photo .btn {
+.shop_diary .btn{
     font-size: 1.2rem;
     font-weight: 500;
     border-radius: 50px;
     text-align: center;
-    background-color: #222;
+    background-color: var(--pink400);
     width: 30%;
     margin: 2% 35%;
-    height: 40px;
-    line-height: 40px;
+    height: 3.4rem;
+    line-height: 3.4rem;
+    display: block;
+}
+.shop_photo .btn {
+    font-size: 1.2rem;
+    font-weight: 500;
+    border-radius: 50px;
+    text-align: center;
+    background-color: var(--blue400);
+    width: 30%;
+    margin: 2% 35%;
+    height: 3.4rem;
+    line-height: 3.4rem;
     display: block;
 }
 
-.shop_diary .btn:hover {
-    background-color: blue;
-}
 
 .shop_diary .btn a, .shop_photo .btn a {
     display: block;
     width: 100%;
     height: 100%;
     color: #fff;
+    border-radius: 50px;
+}
+.shop_diary .btn:hover a{
+    background-color: var(--pink500)
 }
 
 .shop_photo .btn:hover {
-    background-color: blue;
+    background-color: var(--blue500)
 }
 
-/*  쇼핑 - 다이어리 ======================================= */
+
+/*  쇼핑 - 다이어리 ------------------------------------ */
 .root {
     display: flex;
     padding: 16px 0;
@@ -107,8 +138,7 @@
 
 }
 
-/* 쇼핑- 오더 */
-
+/* 쇼핑- 오더 ------------------------------------*/
 /* 상품 */
 .prodcut_wrap {
     display: flex;
@@ -120,110 +150,80 @@
     width: 50%;
 }
 
-.prodcut_wrap .p_left {}
-.prodcut_wrap .p_left figure {
-    width: 100%;
+.prodcut_wrap .p_left {
+    padding: 1rem;
     height: auto;
-    margin-bottom: 5%;
 }
+
 .product1 img {
-    object-fit: cover;
-    /* height: 100%; */
-    /* top: 50%;
-    left: 50%; */
-    /* transform: translate(-50%, -50%); */
-}
-.s_img{
-    display: flex;
-    justify-content: space-between;
-    gap: 2%;
-}
-.s_img > div {
-    width: 100%;
-    height: 150px;
-    overflow: hidden;
-    background-color: #ccc;
-}
-.s_img > div img {
     object-fit: cover;
 }
 
-.s_img > div a{
-    display: block;
-    width: 100%;
-    height: 100%;
-}
 
 
 /* 오른쪽 ================================== */
 .p_right {
-    width: 50%;
+    padding: 1rem;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
 }
 
 /* 오른쪽 - 상품로고 */
 .p_right .p_logo {
-    font-size: 1.4rem;
-    padding-bottom: 2%;
-    /* padding-bottom: 10px; */
+    width: 100%;
+    padding: 1.2rem 0;
     text-transform: uppercase;
     display: flex;
     gap: 1%;
     align-items: center;
-    border-bottom: 1px solid #ddd;
+    border-bottom: 1px solid var(--black300);
     
 }
-
-.p_right .p_logo .simbole {
-    width: 24px;
-    background-color: #ccc;
-    height: 24px;
-    border-radius: 12px;
-}
-.p_right .p_logo .logo a {
-    width: 100%;
-    height: 100%;
+.p_right .p_logo img{
+    width: 14rem;
 }
 
+/* 상품명 */
 .title_wrap {
-    padding: 3% 0;
+    padding: 0.5rem 0;
     display: flex;
     flex-direction: column;
+    border-bottom: 1px solid var(--black300);
 }
+
 .title_wrap .p_titl{
-    font-size: 2.3rem;
-    /* padding: 16px 0 5px; */
-    align-items: center;
     display: flex;
-    gap: 2%;
+    font-size: 2.3rem;
+    align-items: center;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
 }
-.title_wrap div {
-    margin-bottom: 1%;
-}
+
 .title_wrap .p_titl span{
     display: inline-block;
-    /* padding: 5px 10px; */
-    background-color: pink;
+    background-color: var(--pink400);
+    padding: 0.4rem 2rem;
+    margin-right: 0.5rem;
     font-size: 1.2rem;
-    align-items: center;
-    border-radius: 10px;
-    color: #fff;
+    border-radius: 0.8rem;
+    color: var(--white);
 }
+
 .title_wrap .country {
     width: 100%;
     display: block;
-    font-size: 1.6rem;
-    color: #888;
+    font-size: 1.8rem;
+    color: var(--black400);
     text-transform: uppercase;
+    padding: 0.2rem 0;
 }
 
 /* rank */
 .rank_wrap {
     display: flex;
-    color: #888;
+    color: var(--yello400);
     font-size: 0.8rem;
+    padding-bottom: 0.8rem ;
     
 }
 
@@ -232,169 +232,206 @@
     letter-spacing: -0.5px;
 }
 
-.price_wrap {
-    /* padding: 30px 0; */
-}
+
 .price_wrap .price1{
     font-size: 2rem;
-    margin-right: 2%;
+    margin-right: 0.5rem;
 }
 
 .price_wrap .price2{
     font-size: 1.4rem;
     text-decoration:line-through;
-    color: #bbb;
+    color: var(--black400);
 }
 
 
-/*  쿠폰  */
+/*  쿠폰  --------------------------------*/
 .cupon_wrap{
+    padding: 1.2rem 0;
+}
+.cupon1{
+    width: 100%;
+    padding: 1rem;
     display: flex;
-    padding: 2% 4%;
-    /* padding: 16px 30px; */
-    border: 1px solid #ddd;
+    border: 1px solid var(--pink400);
+    background-color: var(--pink100);
     justify-content: space-between;
     align-items: center;
-    margin-bottom: 2%;
+    margin-bottom: 0.5rem;
   }
 
-  .cupon_wrap span {
-    font-size: 1rem;
-  }
-  .cupon_wrap span strong {
-    color: red;
-  }
-  .cupon button{
-    background-color: #888;
-    padding: 5px 20px;
-    color: #fff;
-    border-radius: 5px;
-  }
+.cupon1.other{
+    border: 1px solid var(--blue300);
+    background-color: var(--blue100);
+}
 
-  /* 모달팝업 =====================*/
-  .background {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    background-color: rgba(0, 0, 0, 0.3);
-    z-index: 1000;
-    
-    /* 숨기기 */
-    z-index: -1;
-    opacity: 0;
-  }
-  
-  .show {
-    opacity: 1;
-    z-index: 1000;
-    transition: all .5s;
-  }
-  
-  .window {
-    position: relative;
-    width: 100%;
-    height: 100%;
 
-  }
-  
-  .popup {
-    padding: 20px;
-    border-radius: 20px;
-    text-align: center;
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: #ffffff;
-    box-shadow: 0 2px 7px rgba(0, 0, 0, 0.3);
-    
-    /* 임시 지정 */
-    width: 280px;
-    height: 280px;
-    
-    /* 초기에 약간 아래에 배치 */
-    transform: translate(-50%, -40%);
-  }
+.cupon1 span {
+font-size: 1rem;
+}
+.cupon1 span strong {
+color: var(--pink500);
+font-weight: 900;
+}
 
-  .show .popup {
-    transform: translate(-50%, -50%);
-    transition: all .5s;
-  }
+.cupon1.other span strong {
+    color: var(--blue500);
+    font-weight: 900;
+    }
 
-  .popup h2{
-    font-size: 2rem;
-    padding: 10px 0;
+.cupon button{
+background-color: var(--pink400);
+padding: 5px 20px;
+color: #fff;
+border-radius: 5px;
+}
 
-  }
-  .popup p{
-    padding: 70px 0;
-    font-size: 1.2rem;
-  }
+/* 모달팝업 =====================*/
+.background {
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100vh;
+background-color: rgba(0, 0, 0, 0.3);
+z-index: 1000;
 
-  #close:hover {
-    background-color: #222;
-    color: #fff;
-  }
+/* 숨기기 */
+z-index: -1;
+opacity: 0;
+}
+
+.show {
+opacity: 1;
+z-index: 1000;
+transition: all .5s;
+}
+
+.window {
+position: relative;
+width: 100%;
+height: 100%;
+
+}
+
+.popup {
+padding: 20px;
+border-radius: 20px;
+text-align: center;
+position: absolute;
+top: 50%;
+left: 50%;
+transform: translate(-50%, -50%);
+background-color: #ffffff;
+box-shadow: 0 2px 7px rgba(0, 0, 0, 0.3);
+
+/* 임시 지정 */
+width: 280px;
+height: 280px;
+
+/* 초기에 약간 아래에 배치 */
+transform: translate(-50%, -40%);
+}
+
+.show .popup {
+transform: translate(-50%, -50%);
+transition: all .5s;
+}
+
+.popup h2{
+font-size: 2rem;
+padding: 10px 0;
+
+}
+.popup p{
+padding: 70px 0;
+font-size: 1.2rem;
+}
+
+#close:hover {
+background-color: #222;
+color: #fff;
+}
 
 
 /* 카운트  */
 #count {
     display: flex;
-    background-color: #fff;
     align-items: center;
-    padding: 3% 0;
-    border-top: solid 1px #ddd;
-    gap: 5%;
-    
+    padding: 0.5rem 0 1.5rem;
+    justify-content: space-between;
 }
 
 .count_wrap{
 display: flex;
 font-size: 1.3rem;
-background-color: #ccc;
+background-color: var(--white);
 align-items: center;
 
 }
-
 .count_wrap input {
-padding: 0 24px;
+padding: 0.5rem 2rem;
 font-size: 1.6rem;
 border-style: none;
-}
-#result {
-    padding: 0 14px;
+color: var(--black600);
 }
 
+#result {
+    padding: 0 1rem;
+}
+
+
+
+/* 하트 공유 */
 .keep{
     display: flex;
 
-
 }
 
-.keep div a {
+.keep div {
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
     width: 3rem;
     height: 3rem;
-    display: block;
-    background-color: #ccc;
+    background-color: var(--black100);
     border-radius: 100%;
-    margin-left: 8px;
+    margin-right: 0.5rem;
+    cursor: pointer;
+}
+.keep div:nth-child(1):hover{
+    border: 2px solid var(--pink400);
+    background-color: var(--pink100);
+}
+.keep div:nth-child(2):hover{
+    border: 2px solid var(--blue400);
+    background-color: var(--blue100);
+}
+
+.keep div:nth-child(1):hover i{
+    color: var(--pink400);
+}
+.keep div:nth-child(2):hover i{
+    color: var(--blue400);
 }
 
 .order {
     width: 100%;
     height: auto;
-    justify-items: end;
-    
-
 
 }
 .order button{
     width: 100%;
-    height: 50px;
-    background-color: #ccc;
+    height: 3rem;
+    background-color: var(--pink400);
+    color: var(--white);
+    font-weight: 600;
+    font-size: 1rem;
     text-align: center;
+}
+.order button:hover{
+    background-color: var(--blue400);
 }
 
 /* 디테일 -> 목록 */
@@ -407,28 +444,30 @@ border-style: none;
 .detail_wrap nav {
     margin-top: 5%;
     width: 100%;
-    background-color: #ccc;
+    border-top:1px solid var(--blue200);
     display: flex;
     justify-content: center;
     align-items: center;
+    padding: 1rem 0;
 }
 
 .detail_wrap nav button {
     font-size: 1.2rem;
     padding: 14px 20px;
-    background-color: #fff;
-    border-right: 1px solid #ddd ;
-    
 }
+.detail_wrap nav button:first-child{
+    border-right: 1px solid var(--blue200) ; 
+}
+
 .detail_wrap nav button:hover {
-    background-color: #222;
-    color: #fff;
+    background-color: var(--blue400);
+    color: var(--white);
     border-right: none ;
 }
 
 /* detail - 배송  */
 .detail_text{
-    background-color: antiquewhite;
+    border-top:1px solid var(--blue200);
     padding: 4%;
 }
 
@@ -508,9 +547,11 @@ border-style: none;
 #comment button {
     width: 10%;
     height: 40px;
-    background-color: #ccc;
+    color: var(--pink400);
+    background-color: var(--pink100);
+    border: 1px solid var(--pink400);
 }
 #comment button:hover {
-    background-color: #222;
+    background-color: var(--pink400);
     color: #fff;
 }
