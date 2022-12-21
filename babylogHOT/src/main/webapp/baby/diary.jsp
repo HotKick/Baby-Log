@@ -205,11 +205,7 @@ var dw4 = document.getElementsByClassName('dw4');
 										</div>
 										<div class="emotion">                
                       <button class="happy">
-<<<<<<< HEAD
-                      <div><img src="${cpath }/icon/hapyy.png" alt="행복"></div>
-=======
                       <div><img src="${cpath }/icon/happy.png" alt="행복"></div>
->>>>>>> branch 'master' of https://github.com/HotKick/HotKick.git
                       <p>행복</p>
                       </button>
                     </div>
@@ -280,11 +276,7 @@ var dw4 = document.getElementsByClassName('dw4');
 										</div>
 										<div class="emotion">                
                       <button class="angry">
-<<<<<<< HEAD
-                      <div><img src="${cpath }/icon/angry.png" alt="분노"></div>
-=======
                       <div><img src="${cpath }/icon/angry.png" alt="화남"></div>
->>>>>>> branch 'master' of https://github.com/HotKick/HotKick.git
                       <p>화남</p>
                       </button>
                     </div>
@@ -320,7 +312,7 @@ var dw4 = document.getElementsByClassName('dw4');
 										<div class="emotion">                
                       <button class="normal">
                       <div><img src="${cpath }/icon/normal.png" alt="편안"></div>
-                      <p>안정</p>
+                      <p>편안</p>
                       </button>
                     </div>
 									</figcaption>
