@@ -17,7 +17,7 @@
 <!-- style -->
 <link rel="stylesheet" href="${cpath}/css/reset.css">
 <link rel="stylesheet" href="${cpath}/css/common.css">
-<link rel="stylesheet" href="${cpath}/css/community.css">
+<link rel="stylesheet" href="${cpath}/css/news.css">
 <link rel="stylesheet" href="${cpath}/css/communityMedia.css">
 
 <!-- 슬릭 -->
@@ -36,7 +36,7 @@
 	<main>
 	<%@ include file = "header.jsp" %>
 	
-	<div class="banner"></div>
+	<div class="banner gov"></div>
 <!-- //공백  -->
 
 		<!-- //게시판 영역 -->
@@ -67,7 +67,7 @@
 								<dt>조회</dt>
 								<dd>${vo.nn_cnt}</dd>
 						</div>
-						<div class="cont">
+						<div class="news_cont">
 							${vo.nn_content}
 					
 						
