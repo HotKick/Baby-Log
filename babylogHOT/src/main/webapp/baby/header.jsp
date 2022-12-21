@@ -125,9 +125,8 @@ function mypage_member(){
             <ul class="navbar_menu">
                 <li><a onclick = "diary_member()">육아일기</a></li>
                 <li><a href="${cpath }/communityFree.do">커뮤니티</a></li>
-                <li><a onclick = "shop_member()">쇼핑몰</a></li>
+                <li><a onclick ="shop_member()">쇼핑몰</a></li>
                 <li><a href="${cpath }/newsGov.do">뉴스</a></li>
-                <li><a onclick = "mypage_member()">마이페이지</a></li>
             </ul>
             <ul class="navbar_icons">
             <c:if test="${empty mvo}">

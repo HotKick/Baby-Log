@@ -206,34 +206,33 @@ var dw4 = document.getElementsByClassName('dw4');
             <div class="pro_info">
                 <div class="info_wrap">
                   <div class="pro_name"><input type="text" value="지야누"></div>
-                  <div class="pro_id">용용맘</div>
-                  <div class="pro_desc">광주에 사는 용용이 엄마예요 </div>
-                  <div class="pro_desc">소통 ㅣ 친목 ㅣ 아기자랑 모두 환영이요 ^^</div>
+                  <div class="pro_id">${mvo.mem_nick }</div>
+                  <div class="pro_desc">${mvo.mem_ment }</div>
                   <div class="pro_edit"><input type="button" value="프로필 수정"></div>
                 </div>
                 <div class="tag">
                   <div class="tag_icon">
                     <div class="tag1">
-                      <button>
+                      <button onclick="emo_happy()">
                       <div><img src="${cpath }/icon/happy.png" alt="행복"></div>
                       <p>행복</p>
                       </button>
                     </div>
                     <div class="tag2">
-                      <button>
+                      <button onclick="emo_sad()">
                       <div><img src="${cpath }/icon/sad.png" alt="슬픔"></div>
                       <p>슬픔</p>
                       </button>
                     </div>
                     <div class="tag3">
-                      <button>
+                      <button onclick="emo_angry()">
                       <div><img src="${cpath }/icon/angry.png" alt="화남"></div>
                       <p>화남</p>
                       </button>
                     </div>
                     <div class="tag4">
-                      <button>
-                      <div><img src="${cpath }/icon/normal.png" alt="안정"></div>
+                      <button onclick="emo_normal()">
+                      <div><img src="${cpath }/icon/normal.png" alt="편안"></div>
                       <p>편안</p>
                       </button>
                     </div>
@@ -280,6 +279,7 @@ var dw4 = document.getElementsByClassName('dw4');
 			<ol class="image-list grid-view">
 
 				<c:forEach var="vo" items="${list}">
+				
 					<c:choose>
 						<c:when test="${vo.diary_emo==0}">
 							<li class="dw1">
@@ -425,8 +425,8 @@ var dw4 = document.getElementsByClassName('dw4');
 					</c:choose>
 
 
-
-				</c:forEach>
+</c:forEach>
+	
 			</ol>
 
 		</section>
