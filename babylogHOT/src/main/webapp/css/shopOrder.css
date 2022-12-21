@@ -448,9 +448,21 @@ background: var(--blue400);
 }
 
 
-/* 대웅 야매용 */
+/* 대웅 야매용 ---------------------*/
 
+.shopOrder{
+	font-size:0.8rem;
+}
 
+.shopOrder .input__block {
+	padding: 0.5rem;
+}
+
+.shopOrder hr {
+	border-bottom: 1px solid #ddd;
+	width:80%;
+	margin:1rem auto 0;
+}
 
 
 
