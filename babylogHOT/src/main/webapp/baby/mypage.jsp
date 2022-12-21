@@ -293,168 +293,165 @@ var dw4 = document.getElementsByClassName('dw4');
 			<ol class="image-list grid-view">
 
 				<c:forEach var="vo" items="${list}">
-						<c:choose>
-							<c:when test="${vo.diary_emo==0}">
-								<li class="dw1">
-									<figure>
-										<div class="fit">
-											<c:choose>
-												<c:when test="${vo.diary_file != null}">
-													<a
-														href="${cpath }/diaryDetail.do?diary_seq=${vo.diary_seq}"
-														onclick="reload();"><img
-														src="${cpath }/img/${vo.diary_file}" alt="다이어리"></a>
-												</c:when>
-												<c:otherwise>
-													<a
-														href="${cpath }/diaryDetail.do?diary_seq=${vo.diary_seq}"
-														onclick="reload();"><img src="${cpath}/img/diary2.jpg"
-														alt="1번 다이어리"></a>
-												</c:otherwise>
-											</c:choose>
-										</div>
-										<figcaption id="fig">
-											<div class="title">
-												<p>${vo.diary_title}</p>
-											</div>
-											<div class="diary_info">
-												<span>작성자 <a href="" target="_blank">${vo.mem_nick}</a></span>
-												<span>${vo.diary_date}</span>
-											</div>
-											<div class="emotion">
-												<button class="happy">
-													<div>
-														<img src="${cpath }/icon/happy.png" alt="행복">
-													</div>
-													<p>행복</p>
-												</button>
-											</div>
 
-										</figcaption>
-									</figure>
-								</li>
-							</c:when>
-							<c:when test="${vo.diary_emo==1}">
-								<li class="dw2">
-									<figure>
-										<div class="fit">
-											<c:choose>
-												<c:when test="${vo.diary_file != null}">
-													<a
-														href="${cpath }/diaryDetail.do?diary_seq=${vo.diary_seq}"
-														onclick="reload();"><img
-														src="${cpath }/img/${vo.diary_file}" alt="다이어리"></a>
-												</c:when>
-												<c:otherwise>
-													<a
-														href="${cpath }/diaryDetail.do?diary_seq=${vo.diary_seq}"
-														onclick="reload();"><img src="${cpath}/img/diary2.jpg"
-														alt="1번 다이어리"></a>
-												</c:otherwise>
-											</c:choose>
+					<c:choose>
+						<c:when test="${vo.diary_emo==0}">
+							<li class="dw1">
+								<figure>
+									<div class="fit">
+										<c:choose>
+											<c:when test="${vo.diary_file != null}">
+												<a href="${cpath }/diaryDetail.do?diary_seq=${vo.diary_seq}"
+													onclick="reload();"><img
+													src="${cpath }/img/${vo.diary_file}" alt="다이어리"></a>
+											</c:when>
+											<c:otherwise>
+												<a href="${cpath }/diaryDetail.do?diary_seq=${vo.diary_seq}"
+													onclick="reload();"><img src="${cpath}/img/diary2.jpg"
+													alt="1번 다이어리"></a>
+											</c:otherwise>
+										</c:choose>
+
+									</div>
+									<figcaption id="fig">
+										<div class="title">
+											<p>${vo.diary_title}</p>
 										</div>
-										<figcaption id="fig">
-											<div class="title">
-												<p>${vo.diary_title}</p>
-											</div>
-											<div class="diary_info">
-												<span>작성자 <a href="" target="_blank">${vo.mem_nick}</a></span>
-												<span>${vo.diary_date}</span>
-											</div>
-											<div class="emotion">
-												<button class="sad">
-													<div>
-														<img src="${cpath }/icon/sad.png" alt="슬픔">
-													</div>
-													<p>슬픔</p>
-												</button>
-											</div>
-										</figcaption>
-									</figure>
-								</li>
-							</c:when>
-							<c:when test="${vo.diary_emo==2}">
-								<li class="dw3">
-									<figure>
-										<div class="fit">
-											<c:choose>
-												<c:when test="${vo.diary_file != null}">
-													<a
-														href="${cpath }/diaryDetail.do?diary_seq=${vo.diary_seq}"
-														onclick="reload();"><img
-														src="${cpath }/img/${vo.diary_file}" alt="다이어리"></a>
-												</c:when>
-												<c:otherwise>
-													<a
-														href="${cpath }/diaryDetail.do?diary_seq=${vo.diary_seq}"
-														onclick="reload();"><img src="${cpath}/img/diary2.jpg"
-														alt="1번 다이어리"></a>
-												</c:otherwise>
-											</c:choose>
+										<div class="diary_info">
+											<span>작성자 <a href="" target="_blank">${vo.mem_nick}</a></span>
+											<span>${vo.diary_date}</span>
 										</div>
-										<figcaption id="fig">
-											<div class="title">
-												<p>${vo.diary_title}</p>
-											</div>
-											<div class="diary_info">
-												<span>작성자 <a href="" target="_blank">${vo.mem_nick}</a></span>
-												<span>${vo.diary_date}</span>
-											</div>
-											<div class="emotion">
-												<button class="angry">
-													<div>
-														<img src="${cpath }/icon/angry.png" alt="화남">
-													</div>
-													<p>화남</p>
-												</button>
-											</div>
-										</figcaption>
-									</figure>
-								</li>
-							</c:when>
-							<c:otherwise>
-								<li class="dw4">
-									<figure>
-										<div class="fit">
-											<c:choose>
-												<c:when test="${vo.diary_file != null}">
-													<a
-														href="${cpath }/diaryDetail.do?diary_seq=${vo.diary_seq}"
-														onclick="reload();"><img
-														src="${cpath }/img/${vo.diary_file}" alt="다이어리"></a>
-												</c:when>
-												<c:otherwise>
-													<a
-														href="${cpath }/diaryDetail.do?diary_seq=${vo.diary_seq}"
-														onclick="reload();"><img src="${cpath}/img/diary2.jpg"
-														alt="1번 다이어리"></a>
-												</c:otherwise>
-											</c:choose>
+										<div class="emotion">
+											<button class="happy">
+												<div>
+													<img src="${cpath }/icon/happy.png" alt="행복">
+												</div>
+												<p>행복</p>
+											</button>
 										</div>
-										<figcaption id="fig">
-											<div class="title">
-												<p>${vo.diary_title}</p>
-											</div>
-											<div class="diary_info">
-												<span>작성자 <a href="" target="_blank">${vo.mem_nick}</a></span>
-												<span>${vo.diary_date}</span>
-											</div>
-											<div class="emotion">
-												<button class="normal">
-													<div>
-														<img src="${cpath }/icon/normal.png" alt="편안">
-													</div>
-													<p>편안</p>
-												</button>
-											</div>
-										</figcaption>
-									</figure>
-								</li>
-							</c:otherwise>
-						</c:choose>
+
+									</figcaption>
+								</figure>
+							</li>
+						</c:when>
+						<c:when test="${vo.diary_emo==1}">
+							<li class="dw2">
+								<figure>
+									<div class="fit">
+										<c:choose>
+											<c:when test="${vo.diary_file != null}">
+												<a href="${cpath }/diaryDetail.do?diary_seq=${vo.diary_seq}"
+													onclick="reload();"><img
+													src="${cpath }/img/${vo.diary_file}" alt="다이어리"></a>
+											</c:when>
+											<c:otherwise>
+												<a href="${cpath }/diaryDetail.do?diary_seq=${vo.diary_seq}"
+													onclick="reload();"><img src="${cpath}/img/diary2.jpg"
+													alt="1번 다이어리"></a>
+											</c:otherwise>
+										</c:choose>
+									</div>
+									<figcaption id="fig">
+										<div class="title">
+											<p>${vo.diary_title}</p>
+										</div>
+										<div class="diary_info">
+											<span>작성자 <a href="" target="_blank">${vo.mem_nick}</a></span>
+											<span>${vo.diary_date}</span>
+										</div>
+										<div class="emotion">
+											<button class="sad">
+												<div>
+													<img src="${cpath }/icon/sad.png" alt="슬픔">
+												</div>
+												<p>슬픔</p>
+											</button>
+										</div>
+									</figcaption>
+								</figure>
+							</li>
+						</c:when>
+						<c:when test="${vo.diary_emo==2}">
+							<li class="dw3">
+								<figure>
+									<div class="fit">
+										<c:choose>
+											<c:when test="${vo.diary_file != null}">
+												<a href="${cpath }/diaryDetail.do?diary_seq=${vo.diary_seq}"
+													onclick="reload();"><img
+													src="${cpath }/img/${vo.diary_file}" alt="다이어리"></a>
+											</c:when>
+											<c:otherwise>
+												<a href="${cpath }/diaryDetail.do?diary_seq=${vo.diary_seq}"
+													onclick="reload();"><img src="${cpath}/img/diary2.jpg"
+													alt="1번 다이어리"></a>
+											</c:otherwise>
+										</c:choose>
+									</div>
+									<figcaption id="fig">
+										<div class="title">
+											<p>${vo.diary_title}</p>
+										</div>
+										<div class="diary_info">
+											<span>작성자 <a href="" target="_blank">${vo.mem_nick}</a></span>
+											<span>${vo.diary_date}</span>
+										</div>
+										<div class="emotion">
+											<button class="angry">
+												<div>
+													<img src="${cpath }/icon/angry.png" alt="화남">
+												</div>
+												<p>화남</p>
+											</button>
+										</div>
+									</figcaption>
+								</figure>
+							</li>
+						</c:when>
+						<c:otherwise>
+							<li class="dw4">
+								<figure>
+									<div class="fit">
+										<c:choose>
+											<c:when test="${vo.diary_file != null}">
+												<a href="${cpath }/diaryDetail.do?diary_seq=${vo.diary_seq}"
+													onclick="reload();"><img
+													src="${cpath }/img/${vo.diary_file}" alt="다이어리"></a>
+											</c:when>
+											<c:otherwise>
+												<a href="${cpath }/diaryDetail.do?diary_seq=${vo.diary_seq}"
+													onclick="reload();"><img src="${cpath}/img/diary2.jpg"
+													alt="1번 다이어리"></a>
+											</c:otherwise>
+										</c:choose>
+									</div>
+									<figcaption id="fig">
+										<div class="title">
+											<p>${vo.diary_title}</p>
+										</div>
+										<div class="diary_info">
+											<span>작성자 <a href="" target="_blank">${vo.mem_nick}</a></span>
+											<span>${vo.diary_date}</span>
+										</div>
+										<div class="emotion">
+											<button class="normal">
+												<div>
+													<img src="${cpath }/icon/normal.png" alt="편안">
+												</div>
+												<p>편안</p>
+											</button>
+										</div>
+									</figcaption>
+								</figure>
+							</li>
+						</c:otherwise>
+					</c:choose>
+
 				</c:forEach>
 
+
 			</ol>
+
 
 		</section>
 

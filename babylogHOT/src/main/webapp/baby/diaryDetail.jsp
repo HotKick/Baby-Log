@@ -177,53 +177,69 @@
             <!-- // #feed_text -->
             
            <!-- //댓글입력창 영역------------------------->
-            	<c:if test="${!empty mvo}">
-				<form action="${cpath}/diaryComment.do" class="form-horizontal"
-					method="post">
-					<input type="hidden" name="diary_seq" value="${vo.diary_seq}">
+            	<section id="tab-section-2" class="tab-section">
 
-					<div class="input-group flex-nowrap">
-						<input type="hidden" name="mem_id" value="${mvo.mem_id}">
-						<input type="hidden" name="mem_nick" value="${mvo.mem_nick}">
-						<span class="input-group-text" id="addon-wrapping">${mvo.mem_nick}</span>
-						<input type="text" class="form-control" placeholder="댓글 입력"
-							name="diary_cmt_content" aria-label="title"
-							aria-describedby="addon-wrapping">
-						<button type="submit" class="btn btn-sm btn-primary">등록</button>	
-				   </div>
-				</form>
-				</c:if>
-	
-		<!-- //댓글입력창 영역END------------------------->
-            
-           <!-- 댓글입력받은 리스트 -------------------------> 
-            <div id="coment" class="feed_comment item">
-                <div class="comment_wrap">
-                    <div class="coment1">
-                        <div class="co_profile">
-                            <img src="${cpath}/img/baby14.jpg" alt="프로필사진">
-                        </div>
-                            <div class="co_text">
-                                <p>좋은 댓글만 달아주세요</p>
-                            </div>
-                        <div class="co_time">
-                            <span>5:30 pm</span>
-                        </div>
-                    </div>
-                    <div class="coment1">
-                        <div class="co_profile">
-                            <img src="${cpath}/img/baby14.jpg" alt="프로필사진">
-                        </div>
-                            <div class="co_text">
-                                <p>좋은 댓글만 달아주세요</p>
-                            </div>
-                        <div class="co_time">
-                            <span>5:30 pm</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- //feed_comment -->
+								<!-- 가져온 소스 -->
+								<div class="feeds-commit">
+									<div class="coment">
+										<img src="${cpath }/img/baby5.jpg" alt="#">
+										<div class="info">
+											<p>
+												<a href='#' class="name"><strong>야누</strong></a>
+											</p>
+										
+										</div>
+										<p>우리 용용이랑 친구해요!</p>
+										<p class="date">22.12.07</p>
+									</div>
+
+									<div class="coment">
+										<img src="${cpath }/img/baby10.jpg" alt="#">
+										<div class="info">
+											<p>
+												<a href='#' class="name"><strong>종규</strong></a>
+											</p>
+					
+										</div>
+										<p>아기들은 역시 웃을때가 가장 예쁘죠?</p>
+										<p class="date">22.12.07</p>
+									</div>
+
+									<div class="coment">
+										<img src="${cpath }/img/baby14.jpg" alt="#">
+										<div class="info">
+											<p>
+												<a href='#' class="name"><strong>경주</strong></a>
+											</p>
+										
+										</div>
+										<p>아기가 너무 예뻐요! 사랑스러워요! 예쁜 아기대회 나가도 될듯?!</p>
+										<p class="date">22.12.07</p>
+									</div>
+
+									<div class="coment">
+										<img src="${cpath }/img/baby19.jpg" alt="#">
+										<div class="info">
+											<p>
+												<a href='#' class="name"><strong>호전</strong></a>
+											</p>
+										
+										</div>
+										<p>저희 조카도 정말 귀여운데 저희 조카 생각나네요!</p>
+										<p class="date">22.12.07</p>
+									</div>
+
+									<!-- 작성한 댓글이 들어오는 창  -->
+									<ul id="comment-wrapper">
+									</ul>
+								</div>
+
+								<form id="comment">
+									<input type="text" placeholder="댓글 달기..." id="commentInput">
+									<button id="submit">게시</button>
+								</form>
+
+							</section>
             <!-- //댓글입력받은 리스트END -------------------------> 
             
            
@@ -242,6 +258,7 @@
 <script src="${cpath}/js/slick.min.js"></script>
 <script src="${cpath}/js/diary.js"></script>
 <script src="${cpath}/js/nav.js"></script>
+<script src="${cpath }/js/diaryDetail.js"></script>
 
 
 </body>

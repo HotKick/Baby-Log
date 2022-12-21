@@ -15,11 +15,11 @@ public class MakeDiaryController implements Controller {
 	@Override
 	public String requestHandler(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
-		 
-			BabyMyBatisDAO dao = new BabyMyBatisDAO();
-			List<DiaryVO> list =dao.listMyDiary();
-			request.setAttribute("list",list);
-				
+
+		BabyMyBatisDAO dao = new BabyMyBatisDAO();
+		List<DiaryVO> list = dao.listMyDiary();
+		request.setAttribute("list", list);
+
 		return "makeDiary";
 	}
 

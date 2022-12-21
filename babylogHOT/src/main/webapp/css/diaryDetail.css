@@ -214,7 +214,7 @@ main {
 
 /* 코멘트 영역 ========================= */
 
-.comment_wrap{
+/* .comment_wrap{
     padding: 1rem 1.8
 }
 .comment_wrap > div{
@@ -257,6 +257,81 @@ main {
     display: flex;
     align-items:flex-end;
     justify-content: flex-start;
+} */
+
+
+/* detail - 리뷰  */
+.coment{
+    display: flex;
+    font-size: 1rem;
+    align-items: center;
+    background-color: #fff;
+    padding: 2% 0;
+    border-bottom: 1px solid #ddd ;
+     
+}
+
+.coment img{
+    width: 60px;
+    height: 70px;
+    background-color: #ccc;
+    color: #fff;
+    margin-right: 2%;
+}
+.coment .info{
+    margin-right: 2%;
+}
+
+.coment .info p{
+    font-size: 1.2rem;
+}
+.coment .info ul{
+    display: flex;
+    font-size: 0.8rem;
+    color: rgb(255, 179, 0);
+    letter-spacing: -1.6%;
+}
+
+.date{
+    font-size: 0.8rem;
+    color: #bbb;
+    margin-left: 1%;
+}
+.delete {
+    margin-left: 1%;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    padding: 0 7px;
+    border-radius: 3px;
+}
+.delete:hover {
+    background-color: #222;
+    color: #fff;
+}
+
+/* 댓글 작성 창 */
+#comment{
+    display: flex;
+    justify-content: space-between;
+    padding-top: 5%;
+    background-color: #fff;
+    align-items: center;
+
+}
+#comment input{
+    width: 88%;
+    height: 40px;
+}
+#comment button {
+    width: 10%;
+    height: 40px;
+    color: var(--pink400);
+    background-color: var(--pink100);
+    border: 1px solid var(--pink400);
+}
+#comment button:hover {
+    background-color: var(--pink400);
+    color: #fff;
 }
 
 

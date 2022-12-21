@@ -19,7 +19,8 @@
 
 <!-- 슬릭 -->
 <link rel="stylesheet" type="text/css" href="${cpath}/css/slick.css" />
-<link rel="stylesheet" type="text/css" href="${cpath}/css/slick-theme.css" />
+<link rel="stylesheet" type="text/css"
+	href="${cpath}/css/slick-theme.css" />
 
 <!-- 웹아이콘 -->
 <script src="https://kit.fontawesome.com/e76461f593.js"
@@ -27,35 +28,54 @@
 
 
 <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
-<script type="text/javascript" src="https://cdn.iamport.kr/js/iamport.payment-1.1.5.js"></script>
+<script type="text/javascript"
+	src="https://cdn.iamport.kr/js/iamport.payment-1.1.5.js"></script>
 </head>
 <body>
 
 
-<%@ include file="header.jsp" %>
-<div class="banner"></div>
+	<%@ include file="header.jsp"%>
+	<div class="banner"></div>
 
 
 
-  <main id="main" class="container">
+	<main id="main" class="container">
 		<div class="tag">
 			<div class="tag_icon">
 				<div class="tag1">
-					<button id=emo1 onclick="emo_happy()"><div><img src ="${cpath}/icon/happy.png" alt=""></div><p>행복</p></button>
+					<button id=emo1 onclick="emo_happy()">
+						<div>
+							<img src="${cpath}/icon/happy.png" alt="">
+						</div>
+						<p>행복</p>
+					</button>
 				</div>
 				<div class="tag2">
-					<button id=emo2 onclick="emo_sad()"><div><img src ="${cpath}/icon/normal.png" alt=""></div><p>슬픔</p></button>
+					<button id=emo2 onclick="emo_sad()">
+						<div>
+							<img src="${cpath}/icon/normal.png" alt="">
+						</div>
+						<p>슬픔</p>
+					</button>
 				</div>
 				<div class="tag3">
-					<button id=emo3 onclick="emo_angry()"><div><img src ="${cpath}/icon/normal.png" alt=""></div><p>화남</p></button>
+					<button id=emo3 onclick="emo_angry()">
+						<div>
+							<img src="${cpath}/icon/normal.png" alt="">
+						</div>
+						<p>화남</p>
+					</button>
 				</div>
 				<div class="tag4">
-					<button id=emo4 onclick="emo_neu()"><div><img src ="${cpath}/icon/normal.png" alt=""></div><p>편안</p></button>
+					<button id=emo4 onclick="emo_neu()">
+						<div>
+							<img src="${cpath}/icon/normal.png" alt="">
+						</div>
+						<p>편안</p>
+					</button>
 				</div>
 			</div>
-			<div class="bt_wrap">
-				
-			</div>
+			<div class="bt_wrap"></div>
 		</div>
 		<!-- //tag -->
 
@@ -99,8 +119,8 @@
 													src="${cpath }/img/${vo.diary_file}" alt="다이어리"></a>
 											</c:when>
 											<c:otherwise>
-												<a class="item" class="disable"><img src="${cpath}/img/diary2.jpg"
-													alt="1번 다이어리"></a>
+												<a class="item" class="disable"><img
+													src="${cpath}/img/diary2.jpg" alt="1번 다이어리"></a>
 											</c:otherwise>
 										</c:choose>
 									</div>
@@ -112,31 +132,33 @@
 											<span>작성자 <a href="" target="_blank"><strong>${vo.mem_nick}</strong></a></span>
 											<span>${vo.diary_date}</span>
 										</div>
-										<div class="emotion">                
-                      <button class="happy">
-                      <div><img src="${cpath }/icon/hapyy.png" alt="행복"></div>
-                      <p>행복</p>
-                      </button>
-                    </div>
-										
+										<div class="emotion">
+											<button class="happy">
+												<div>
+													<img src="${cpath }/icon/hapyy.png" alt="행복">
+												</div>
+												<p>행복</p>
+											</button>
+										</div>
+
 									</figcaption>
 									<div class="off"></div>
 								</figure>
 							</li>
 						</c:when>
-						
+
 						<c:when test="${vo.diary_emo==1}">
 							<li class="dw2">
 								<figure>
 									<div class="fit">
 										<c:choose>
 											<c:when test="${vo.diary_file != null}">
-												<a class="item" class = "disable"><img
+												<a class="item" class="disable"><img
 													src="${cpath }/img/${vo.diary_file}" alt="다이어리"></a>
 											</c:when>
 											<c:otherwise>
-												<a class="item" class = "disable"><img src="${cpath}/img/diary2.jpg"
-													alt="1번 다이어리"></a>
+												<a class="item" class="disable"><img
+													src="${cpath}/img/diary2.jpg" alt="1번 다이어리"></a>
 											</c:otherwise>
 										</c:choose>
 									</div>
@@ -148,12 +170,14 @@
 											<span>작성자 <a href="" target="_blank"><strong>${vo.mem_nick}</strong></a></span>
 											<span>${vo.diary_date}</span>
 										</div>
-										<div class="emotion">                
-                      <button class="sad">
-                      <div><img src="${cpath }/icon/sad.png" alt="슬픔"></div>
-                      <p>슬픔</p>
-                      </button>
-                    </div>
+										<div class="emotion">
+											<button class="sad">
+												<div>
+													<img src="${cpath }/icon/sad.png" alt="슬픔">
+												</div>
+												<p>슬픔</p>
+											</button>
+										</div>
 									</figcaption>
 									<div class="off"></div>
 								</figure>
@@ -165,12 +189,12 @@
 									<div class="fit">
 										<c:choose>
 											<c:when test="${vo.diary_file != null}">
-												<a class="item" class = "disable"><img
+												<a class="item" class="disable"><img
 													src="${cpath }/img/${vo.diary_file}" alt="다이어리"></a>
 											</c:when>
 											<c:otherwise>
-												<a class="item" class = "disable"><img src="${cpath}/img/diary2.jpg"
-													alt="1번 다이어리"></a>
+												<a class="item" class="disable"><img
+													src="${cpath}/img/diary2.jpg" alt="1번 다이어리"></a>
 											</c:otherwise>
 										</c:choose>
 									</div>
@@ -182,12 +206,14 @@
 											<span>작성자 <a href="" target="_blank"><strong>${vo.mem_nick}</strong></a></span>
 											<span>${vo.diary_date}</span>
 										</div>
-										<div class="emotion">                
-                      <button class="angry">
-                      <div><img src="${cpath }/icon/angry.png" alt="화남"></div>
-                      <p>화남</p>
-                      </button>
-                    </div>
+										<div class="emotion">
+											<button class="angry">
+												<div>
+													<img src="${cpath }/icon/angry.png" alt="화남">
+												</div>
+												<p>화남</p>
+											</button>
+										</div>
 									</figcaption>
 									<div class="off"></div>
 								</figure>
@@ -199,12 +225,12 @@
 									<div class="fit">
 										<c:choose>
 											<c:when test="${vo.diary_file != null}">
-												<a class="item" class = "disable"><img
+												<a class="item" class="disable"><img
 													src="${cpath }/img/${vo.diary_file}" alt="다이어리"></a>
 											</c:when>
 											<c:otherwise>
-												<a class="item" class = "disable"><img src="${cpath}/img/diary2.jpg"
-													alt="1번 다이어리"></a>
+												<a class="item" class="disable"><img
+													src="${cpath}/img/diary2.jpg" alt="1번 다이어리"></a>
 											</c:otherwise>
 										</c:choose>
 									</div>
@@ -216,12 +242,14 @@
 											<span>작성자 <a href="" target="_blank"><strong>${vo.mem_nick}</strong></a></span>
 											<span>${vo.diary_date}</span>
 										</div>
-										<div class="emotion">                
-                      <button class="normal">
-                      <div><img src="${cpath }/icon/normal.png" alt="편안"></div>
-                      <p>편안</p>
-                      </button>
-                    </div>
+										<div class="emotion">
+											<button class="normal">
+												<div>
+													<img src="${cpath }/icon/normal.png" alt="편안">
+												</div>
+												<p>편안</p>
+											</button>
+										</div>
 									</figcaption>
 									<div class="off"></div>
 								</figure>
@@ -233,20 +261,21 @@
 			</ol>
 
 		</section>
-  
-          <div class="order">
-            <a href="${cpath }/shopOrder.do">
-              <i class="fa-solid fa-circle-check"></i>선택완료
-            </a>
-          </div>
+
+		<div class="order">
+			<a href="${cpath }/shopOrder.do"> <i
+				class="fa-solid fa-circle-check"></i>선택완료
+			</a>
+		</div>
 
 	</main>
-    
-<!-- script -->
-<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
-<script src="js/slick.min.js"></script>
-<script src="js/diary.js"></script>
-<script src="js/nav.js"></script>
+
+	<!-- script -->
+	<script type="text/javascript"
+		src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script src="js/slick.min.js"></script>
+	<script src="js/diary.js"></script>
+	<script src="js/nav.js"></script>
 
 </body>
 </html>
