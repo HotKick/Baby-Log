@@ -293,34 +293,8 @@ var dw4 = document.getElementsByClassName('dw4');
 			<ol class="image-list grid-view">
 
 				<c:forEach var="vo" items="${list}">
-<<<<<<< HEAD
-<<<<<<< HEAD
-				<c:if test = "${vo.mem_id==mvo.mem_id}">
-=======
-				
->>>>>>> branch 'master' of https://github.com/HotKick/HotKick.git
-					<c:choose>
-						<c:when test="${vo.diary_emo==0}">
-							<li class="dw1">
-								<figure>
-									<div class="fit">
-										<c:choose>
-											<c:when test="${vo.diary_file != null}">
-												<a href="${cpath }/diaryDetail.do?diary_seq=${vo.diary_seq}"
-													onclick="reload();"><img
-													src="${cpath }/img/${vo.diary_file}" alt="다이어리"></a>
-											</c:when>
-											<c:otherwise>
-												<a href="${cpath }/diaryDetail.do?diary_seq=${vo.diary_seq}"
-													onclick="reload();"><img src="${cpath}/img/diary2.jpg"
-													alt="1번 다이어리"></a>
-											</c:otherwise>
-										</c:choose>
-									</div>
-									<figcaption id="fig">
-										<div class="title">
-											<p>${vo.diary_title}</p>
-=======
+
+			
 					<c:if test="${vo.mem_id == mvo.mem_id }">
 						<c:choose>
 							<c:when test="${vo.diary_emo==0}">
@@ -341,7 +315,7 @@ var dw4 = document.getElementsByClassName('dw4');
 														alt="1번 다이어리"></a>
 												</c:otherwise>
 											</c:choose>
->>>>>>> branch 'master' of https://github.com/HotKick/HotKick.git
+
 										</div>
 										<figcaption id="fig">
 											<div class="title">
