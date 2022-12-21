@@ -91,7 +91,7 @@
         <div class="feed_wrap">
             <div class="profile">
                 <div class="profile_img">
-                    <a href="#"><img src="${cpath }/img/${mvo.mem_prof}" alt="프로필영역"></a>
+                    <a href="#"><i class="fa-solid fa-face-smile"></i></a>
                 </div>
                 <div class="profile_info">
                     <div class="info_inner">
@@ -175,7 +175,8 @@
             <!-- //feed_text -->
         </div>
             <!-- // #feed_text -->
-            	<div class="container">
+            
+           <!-- //댓글입력창 영역------------------------->
             	<c:if test="${!empty mvo}">
 				<form action="${cpath}/diaryComment.do" class="form-horizontal"
 					method="post">
@@ -188,41 +189,44 @@
 						<input type="text" class="form-control" placeholder="댓글 입력"
 							name="diary_cmt_content" aria-label="title"
 							aria-describedby="addon-wrapping">
-						<button type="submit" class="btn btn-sm btn-primary">등록</button>
-					
-					
-				</div>
+						<button type="submit" class="btn btn-sm btn-primary">등록</button>	
+				   </div>
 				</form>
 				</c:if>
-		
-		</div>
-		
-            <div class="feed_comment item" id = "coment">
+	
+		<!-- //댓글입력창 영역END------------------------->
+            
+           <!-- 댓글입력받은 리스트 -------------------------> 
+            <div id="coment" class="feed_comment item">
                 <div class="comment_wrap">
-        <c:forEach var = "cvo" items = "${list}">
-		<c:if test = "${cvo.diary_seq eq vo.diary_seq}">
                     <div class="coment1">
-                    <input type="hidden" name="diary_cmt_seq" value="${cvo.diary_cmt_seq}">
-                        <div class="co_profile">${cvo.mem_nick}</div>
+                        <div class="co_profile">
+                            <img src="${cpath}/img/baby14.jpg" alt="프로필사진">
+                        </div>
                             <div class="co_text">
-                                 <p id= "ct${cvo.diary_cmt_seq}">${cvo.diary_cmt_content}</p>
+                                <p>좋은 댓글만 달아주세요</p>
                             </div>
                         <div class="co_time">
-                            <span>${cvo.diary_cmt_date}</span>
+                            <span>5:30 pm</span>
                         </div>
-                        
-                        <c:if test="${!empty mvo && cvo.mem_id eq mvo.mem_id}">
-                      
-							<button type="button" class="btn float-end" onclick="goCDel(${cvo.diary_cmt_seq},${vo.diary_seq})">삭제</button>
-							<span id = "b${cvo.diary_cmt_seq}"><button type="button" class="btn float-end" onclick="goCUpdteform(${cvo.diary_cmt_seq},${vo.diary_seq})">수정</button></span>
-                
                     </div>
-                    </c:if>
-                    </c:if>
-                    </c:forEach>
+                    <div class="coment1">
+                        <div class="co_profile">
+                            <img src="${cpath}/img/baby14.jpg" alt="프로필사진">
+                        </div>
+                            <div class="co_text">
+                                <p>좋은 댓글만 달아주세요</p>
+                            </div>
+                        <div class="co_time">
+                            <span>5:30 pm</span>
+                        </div>
+                    </div>
                 </div>
             </div>
             <!-- //feed_comment -->
+            <!-- //댓글입력받은 리스트END -------------------------> 
+            
+           
             
         </div>
     </div>
