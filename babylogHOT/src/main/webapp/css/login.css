@@ -1,7 +1,9 @@
 body {
     background: #ccc;
+    background: url('../img/main_bg1.png') center center / cover no-repeat;
+    align-items: center;
   }
-  
+    
   .login_wrap {
     display: block;
     max-width: 680px;
