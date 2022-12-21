@@ -137,8 +137,9 @@ function mypage_member(){
     		</c:if>
     		 <c:if test="${!empty mvo}">
     		 <!--여기가 로그인 후 보이는 아이콘 -->
-    		  <li><a href="${cpath }/logout.do" class="login"><i class="fa-solid fa-right-to-bracket"></i></a></li> 
-    		  <li><a href="${cpath }/mypage.do" class="sign"><i class="fa-solid fa-user-plus"></i></a></li>
+    		  <li class="mem"><a></a><strong>누구누구</strong>님 환영합니</a></li>
+    		  <li><a href="${cpath }/mypage.do" class="sign"><i class="fa-solid fa-user"></i></a></li>
+    		  <li><a href="${cpath }/logout.do" class="login"><i class="fa-solid fa-person-walking-arrow-right"></i></a></li> 
     		  <!-- 여기까지 -->
     		 </c:if>
             <a href="#" class="navbar_toggleBtn">
