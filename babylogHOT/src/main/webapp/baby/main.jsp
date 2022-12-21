@@ -46,10 +46,10 @@
             <div class="con1_wrap">
                 <div class="con1_txt">
                     <div class="con1_emo">
-                            <div><img src="icon/normal.png" alt="일상"></div>
-                            <div><img src="icon/happy.png" alt="행복"></div>
-                            <div><img src="icon/sad.png" alt="슬픔"></div>
-                            <div><img src="icon/angry.png" alt="분노"></div>
+                            <div><img src="${cpath}/icon/normal.png" alt="일상"></div>
+                            <div><img src="${cpath}/icon/happy.png" alt="행복"></div>
+                            <div><img src="${cpath}/icon/sad.png" alt="슬픔"></div>
+                            <div><img src="${cpath}/icon/angry.png" alt="분노"></div>
                     </div>
                   
                     <div class="con1_sub">
@@ -85,7 +85,7 @@
                 </div>
                 <!-- //con1_txt -->
                 <div class="con1_img">
-                    <img src="img/main_baby.png" alt="아기">
+                    <img src="${cpath}/img/main_baby.png" alt="아기">
                 </div>
             </div>
                 <!-- //con1_wrap -->
@@ -111,12 +111,12 @@
                     </div>
                 </div>
                 <div class="slider">
-                    <div><img src="img/baby18.jpg" alt="이미지2"></div>
-                    <div><img src="img/baby1.jpg" alt="이미지1"></div>
-                    <div><img src="img/baby52.jpg" alt="이미지6"></div>
-                    <div><img src="img/baby13.jpg" alt="이미지4"></div>
-                    <div><img src="img/baby35.jpg" alt="이미지3"></div>
-                    <div><img src="img/baby30.jpg" alt="이미지5"></div>
+                    <div><img src="${cpath}/img/baby18.jpg" alt="이미지2"></div>
+                    <div><img src="${cpath}/img/baby1.jpg" alt="이미지1"></div>
+                    <div><img src="${cpath}/img/baby52.jpg" alt="이미지6"></div>
+                    <div><img src="${cpath}/img/baby13.jpg" alt="이미지4"></div>
+                    <div><img src="${cpath}/img/baby35.jpg" alt="이미지3"></div>
+                    <div><img src="${cpath}/img/baby30.jpg" alt="이미지5"></div>
                 </div>
                 <!-- //slider -->
             </div>
@@ -129,14 +129,14 @@
         <div class="container">
             <div class="con3_wrap">
                 <div class="con3_img">
-                    <img src="img/main3_baby.png" alt="#">
+                    <img src="${cpath}/img/main3_baby.png" alt="#">
                 </div>
                 <!-- //con3 -->
                 <article class="shop">
                     <section class="shop_diary">
                         <a href="${cpath}/shopDiary.do">
                         <div class="diary_icon">
-                            <img src="icon/diary.png" alt="다이어리 아이콘">
+                            <img src="${cpath}/icon/diary.png" alt="다이어리 아이콘">
                         </div>
                         <div class="diary_txt">
                             <div class="shop_sub1_d">
@@ -156,7 +156,7 @@
                     <section class="shop_album">
                         <a href="${cpath}/shopAlbum.do">
                         <div class="album_icon">
-                            <img src="icon/camera.png" alt="다이어리 아이콘">
+                            <img src="${cpath}/icon/camera.png" alt="다이어리 아이콘">
                         </div>
                         <div class="album_txt">
                             <div class="shop_sub1_a">
@@ -187,13 +187,18 @@
 <jsp:include page="footer.jsp" flush="true"/>
 
 
-
-
-	<!-- script -->	
+	
+	
+	<!-- script -->
+	<!-- 슬릭 -->
 	<script type="text/javascript" src="//code.jquery.com/jquery-1.11.0.min.js"></script>
+	<script type="text/javascript" src="//code.jquery.com/jquery-migrate-1.2.1.min.js"></script>
 	<script src="${cpath}/js/slick.min.js"></script>
+	
+	
 	<script src="${cpath}/js/main.js"></script>
 	<script src="${cpath}/js/nav.js"></script>
+	
 
 
 </body>

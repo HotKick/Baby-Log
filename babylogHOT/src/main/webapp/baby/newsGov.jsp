@@ -17,7 +17,7 @@
 <!-- style -->
 <link rel="stylesheet" href="${cpath}/css/reset.css">
 <link rel="stylesheet" href="${cpath}/css/common.css">
-<link rel="stylesheet" href="${cpath}/css/community.css">
+<link rel="stylesheet" href="${cpath}/css/news.css">
 <link rel="stylesheet" href="${cpath}/css/communityMedia.css">
 
 <!-- 슬릭 -->
@@ -32,17 +32,26 @@
 <body>
 		<%@ include file="header.jsp" %>
 
-	<div class="banner"></div>
+	<div class="banner gov"></div>
 <!-- //공백  -->
 	<form action = "${cpath}/newswriteform.do" enctype = "multipart/form-data">
 	
 	<section id="board">
-    <div class="container">
+     <div class="container">
         <div class="board_wrap">
             <div class="board_title">
                 <strong><i class="fa-solid fa-city"></i> 정부 게시판</strong>
                 <div class="tag tag_news">
-                   
+                    <div class="gov on">
+                        <a href="${cpath }/newsGov.do" class="free">
+                            <i class="fa-solid fa-city"></i>
+                            정부뉴스
+                        </a></div>
+                    <div class="city">
+                        <a href="${cpath }/newsCity.do" class="info">
+                            <i class="fa-solid fa-building"></i>
+                            지자체</a>
+                        </div>
                 </div>
             </div>
           <div class="board_list_wrap">

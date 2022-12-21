@@ -79,7 +79,7 @@ function community_member(){
                             자유게시판
                             </a>
                         </div>
-                        <div class="info on">
+                        <div class="info">
                             <a href="${cpath}/communityInfo.do" class="info">
                                 <i class="fa-solid fa-folder-plus"></i>
                                 정보게시판

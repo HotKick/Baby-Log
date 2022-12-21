@@ -3,9 +3,18 @@
 
 /* 배너영역 */
 .banner{
-    height: 20rem;
-    background-color: var(--black300);
-    }
+	height: 24rem;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+.banner.gov{
+	background-image:url('../img/gov.png');
+}
+.banner.city{
+	background-image:url('../img/city.png');
+}
+
       
     body{
         font-weight: 400;

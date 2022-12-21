@@ -82,52 +82,77 @@ function shop_member(){
 
 <!-- / 비 로그인자 로그인 알림  -->
 
+<!-- 비 로그인자 로그인 알림 마이페이지 -->
+<script type="text/javascript">
+function mypage_member(){
+	 if(${empty mvo}){
+			Swal.fire({
+				  title: "로그인 후 이용가능합니다",
+				  icon: 'error',
+				  showCancelButton: false,
+				  confirmButtonColor: '#3085d6',
+				  cancelButtonColor: '#d33',
+				  confirmButtonText: '로그인',
+				  cancelButtonText: '취소'
+				}).then((result) => {
+				  if (result.value) {
+					  location.href="${cpath}/loginform.do";
+				  }
+				})
+			
+	 }else{
+		 location.href="${cpath}/mypage.do";
+		 
+	 }
+	 }
+
+</script>
+
+
+<!-- / 비 로그인자 로그인 알림  -->
+
+
 </head>
 <body>
 
 	<!-- !!new header ------------------------------------------------->
-	<div id="nav">
-	  <div class="container">
-	      <nav class="navbar">
-	          <div class="navbar_logo">
-                <div><a href="${cpath}/main.do"><img src="${cpath}/icon/logo_1.png" alt="가로형로고"></a></div>
-             </div>
-            
-	          <ul class="navbar_menu">
-	          			<li><a onclick="diary_member()">육아일기</a></li>
-						<li><a href="${cpath}/communityFree.do">커뮤니티</a></li>
-						<li><a onclick="shop_member()">쇼핑몰</a></li>
-						<li><a href="${cpath}/newsGov.do">뉴스</a></li>
-	          </ul>
-	          
-	          
-	          <ul class="navbar_icons">
-	          <!-- 비로그인자 일때 헤더 화면 -->
-	          <c:if test="${empty mvo}">
-		              <li><a href="${cpath}/loginform.do" class="login"><i class="fa-solid fa-right-to-bracket"></i></a></li>
-	              	  <li><a href="${cpath}/signupform.do" class="sign"><i class="fa-solid fa-user-plus"></i></a></li>
-			  </ul>
-	          </c:if>
-	          <!--  -->
-	          <!-- 로그인자 일때 헤더 화면  -->
-	          <c:if test="${!empty mvo}">
-					${mvo.mem_name}님 환영합니다.
-					<li><a href="${cpath}/mypage.do">마이페이지</a></li>
-					<li><a href="${cpath}/logout.do">로그아웃</a></li>
-			  </c:if>
-			  <!-- / 로그인자 일때 헤더화면  -->
-	          <a href="#" class="navbar_toggleBtn">
-	               <i class="fa-solid fa-burger"></i>
-	          </a>
-	      </nav>
-	      <!-- //navbar -->
-	  
-	  </div>
-	  <!-- //container -->
-	  </div>
-	  <!-- //#nav -->
-	  
-	  <!--  // new header end ------------------------------------------------->
+<header id="header">
+    <div class="container">
+        <nav class="navbar">
+            <div class="navbar_logo">
+                <div><a href="${cpath }/main.do"><img src="${cpath }/icon/logo_1.png" alt="가로형로고"></a></div>
+            </div>
+            <ul class="navbar_menu">
+                <li><a onclick = "diary_member()">육아일기</a></li>
+                <li><a href="${cpath }/communityFree.do">커뮤니티</a></li>
+                <li><a onclick = "shop_member()">쇼핑몰</a></li>
+                <li><a href="${cpath }/newsGov.do">뉴스</a></li>
+                <li><a onclick = "mypage_member()">마이페이지</a></li>
+            </ul>
+            <ul class="navbar_icons">
+            <c:if test="${empty mvo}">
+                <li><a href="${cpath }/loginform.do" class="login"><i class="fa-solid fa-right-to-bracket"></i></a></li>
+                <li><a href="${cpath }/signupform.do" class="sign"><i class="fa-solid fa-user-plus"></i></a></li>
+            </ul>
+    		</c:if>
+    		 <c:if test="${!empty mvo}">
+    		 <!--여기가 로그인 후 보이는 아이콘 -->
+    		  <li class="mem"><a></a><strong>누구누구</strong>님 환영합니</a></li>
+    		  <li><a href="${cpath }/mypage.do" class="sign"><i class="fa-solid fa-user"></i></a></li>
+    		  <li><a href="${cpath }/logout.do" class="login"><i class="fa-solid fa-person-walking-arrow-right"></i></a></li> 
+    		  <!-- 여기까지 -->
+    		 </c:if>
+            <a href="#" class="navbar_toggleBtn">
+                <i class="fa-solid fa-burger"></i>
+            </a>
+        </nav>
+        <!-- //navbar -->
+    
+    </div>
+    <!-- //container -->
+</header>
+<!-- //#nav -->
+<!--  // new header end ------------------------------------------------->
 		
 </body>
 </html>

@@ -37,7 +37,8 @@
                 <!-- Heading -->
                 <div class="item logo">
                   <div class="logo">
-                    <a href="${cpath}/main.do"><img src="icon/logo_1.png" alt=""></a>
+                    <a href="${cpath}/main.do"><img src="${cpath }/icon/logo_1.png" alt=""></a>
+                  </div>
                   </div>
                 
                 
@@ -65,17 +66,19 @@
 
  <!-- 로그인 api -->
                 <div class="api_wrap">
-                <!-- 네이버 버튼 -->
-                
-                <button class="naver_btn">
-                <i class="fa-solid fa-comment"></i>
-                 <div class="naver">NAVER로 로그인 하기</div>
-                </button>
+
                 <!-- 카카오버튼 -->
                 <button onclick = "location.href = 'javascript:kakaoLogin()' " class="kakao_btn">
                 <i class="fa-solid fa-comment"></i>
-                 <div class="kakao">KAKAO로 로그인 하기</div>
+                <div class="kakao">KAKAO로 로그인 하기</div>
                 </button>
+                
+                <!-- 네이버 버튼 -->
+                <button class="naver_btn">
+                <img src="${cpath }/icon/naver_icon.png" alt="네이버로고">
+                <div class="naver">NAVER로 로그인 하기</div>
+                </button>
+                
 </div>
                 <!-- Links -->
                 <ul class="links">
