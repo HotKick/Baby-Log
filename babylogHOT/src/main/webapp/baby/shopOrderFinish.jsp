@@ -30,7 +30,7 @@
 </head>
 <body>
     
-    <main>
+    <main class="shopOrder">
        <div id="login">
         <div class="container">
             <div class="login_wrap">
@@ -50,19 +50,22 @@
                   <div class="input__block">
                      <label class="name" style="font-weight: bold; font-size: 1.5em; line-height: 1.0em;"><strong>주문자 성함</strong></label>
                      <div class="print" style = "padding-left :60px; font-size: 1.5em; line-height: 1.0em;">김대웅 </div>
+                  	 <hr>
                   </div>
                   <!-- 전화번호 -->
                   <div class="input__block">
                     <label class="name" style="font-weight: bold; font-size: 1.5em; line-height: 1.0em;"><strong>전화번호</strong></label>
                     <div class= "print" style = "padding-left :60px; font-size: 1.5em; line-height: 1.0em;">01012345678</div>
+                    <hr>
                   </div>
                 
                   <div class="input__block">
                     <label class="name" style="font-weight: bold; font-size: 1.5em; line-height: 1.0em;"><strong>우편번호</strong></label>
                     <div class= "print" style = "padding-left :60px; font-size: 1.5em; line-height: 1.0em;">500-102</div>
+                    <hr>
                   </div>
                   
-                  <div class="input__block">
+                  <div class="input__block last">
                     <label class="name" style="font-weight: bold; font-size: 1.5em; line-height: 1.0em;"><strong>배송지</strong></label>
                     <div class= "print" style = "padding-left :60px; font-size: 1.5em; line-height: 1.0em;">광주광역시 북구 매곡동 대주피오레</div>
                     <div class= "print" style = "padding-left :60px; font-size: 1.5em; line-height: 1.0em;">105동 1902호</div>

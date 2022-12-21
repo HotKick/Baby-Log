@@ -32,7 +32,7 @@
                 <!-- Heading -->
                 <div class="item logo">
                   <div class="logo">
-                    <a href="main.html"><img src="icon/logo_1.png" alt=""></a>
+                    <a href="${cpath}main.html"><img src="icon/logo_1.png" alt=""></a>
                   </div>
                   
                 </div>
