@@ -30,6 +30,95 @@
 <script src="https://code.jquery.com/jquery-3.6.1.min.js"></script>
 <script type="text/javascript"
 	src="https://cdn.iamport.kr/js/iamport.payment-1.1.5.js"></script>
+
+<script type="text/javascript">
+
+var dw1 = document.getElementsByClassName('dw1');
+var dw2 = document.getElementsByClassName('dw2');
+var dw3 = document.getElementsByClassName('dw3');
+var dw4 = document.getElementsByClassName('dw4');
+
+
+    /* 행복 버튼 */
+	function emo_happy(){
+    	
+		for(var i =0; i<dw1.length;i++){
+			dw1[i].style.display = 'block';
+		}
+		for(var i =0; i<dw2.length;i++){
+			dw2[i].style.display = 'none';
+		}
+		for(var i =0; i<dw3.length;i++){
+			dw3[i].style.display = 'none';
+		}
+		for(var i =0; i<dw4.length;i++){
+			dw4[i].style.display = 'none';
+		}
+		
+	}
+    
+    /* 슬픔 버튼  */
+	function emo_sad(){
+    	
+		for(var i =0; i<dw1.length;i++){
+			dw1[i].style.display = 'none';
+		}
+		for(var i =0; i<dw2.length;i++){
+			dw2[i].style.display = 'block';
+		}
+		for(var i =0; i<dw3.length;i++){
+			dw3[i].style.display = 'none';
+		}
+		for(var i =0; i<dw4.length;i++){
+			dw4[i].style.display = 'none';
+		}
+		
+	}
+    
+    /* 화남 버튼 */
+	function emo_angry(){
+    	
+		for(var i =0; i<dw1.length;i++){
+			dw1[i].style.display = 'none';
+		}
+		for(var i =0; i<dw2.length;i++){
+			dw2[i].style.display = 'none';
+		}
+		for(var i =0; i<dw3.length;i++){
+			dw3[i].style.display = 'block';
+		}
+		for(var i =0; i<dw4.length;i++){
+			dw4[i].style.display = 'none';
+		}
+	
+	}
+    
+   
+    /* 안정 버튼 */
+	function emo_neu(){
+    	
+		for(var i =0; i<dw1.length;i++){
+			dw1[i].style.display = 'none';
+		}
+		for(var i =0; i<dw2.length;i++){
+			dw2[i].style.display = 'none';
+		}
+		for(var i =0; i<dw3.length;i++){
+			dw3[i].style.display = 'none';
+		}
+		for(var i =0; i<dw4.length;i++){
+			dw4[i].style.display = 'block';
+		}
+		
+	}
+	
+	
+	
+	
+	
+</script>
+
+
 </head>
 <body>
 
