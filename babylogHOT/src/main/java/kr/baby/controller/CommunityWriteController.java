@@ -21,20 +21,14 @@ public class CommunityWriteController implements Controller {
 		
 			
 			BabyMyBatisDAO dao = new BabyMyBatisDAO();
-			
-			 String realFolder= request.getServletContext().getRealPath("/img"); 
-			
-			// 내꺼 파일 저장경로로 설정 해보겠음
+			String realFolder= request.getServletContext().getRealPath("/img"); 
+
 			System.out.println("실제폴더"+realFolder);
-			//절대경로를 넣자 
 			
 			int maxSize = 5*1024*1024;
 			String encoding="UTF-8";
 			DefaultFileRenamePolicy policy = new DefaultFileRenamePolicy();
-
-
 			MultipartRequest multi = new MultipartRequest(request,realFolder,maxSize,encoding,policy);
-		
 
 			String mem_id= multi.getParameter("mem_id");
 			String mem_nick = multi.getParameter("mem_nick");
