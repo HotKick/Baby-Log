@@ -6,7 +6,6 @@ height: 100vh;
 }
 
 #con1{ 
-    /* background: url('../img/main1_bg.jpg') center center / cover no-repeat; */
     background: url('../img/main_bg1.png') center center / cover no-repeat;
     align-items: center;
 }

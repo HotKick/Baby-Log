@@ -26,6 +26,7 @@
 
 </head>
 <body>
+<<<<<<< HEAD
 	<main>
 		<div id="login">
 			<div class="container">
@@ -37,8 +38,10 @@
 								src="${cpath }/icon/logo_1.png" alt=""></a>
 						</div>
 
-					</div>
-
+                  
+                </div>
+                
+          
 					<!-- Form -->
 					<form class="validation-form" action="${cpath}/signup.do"
 						method="post">
