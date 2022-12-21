@@ -360,6 +360,7 @@ var dw4 = document.getElementsByClassName('dw4');
 							<li class="dw3">
 								<figure>
 									<div class="fit">
+									
 										<c:choose>
 											<c:when test="${vo.diary_file != null}">
 												<a href="${cpath }/diaryDetail.do?diary_seq=${vo.diary_seq}"
