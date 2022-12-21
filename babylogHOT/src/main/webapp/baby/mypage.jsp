@@ -34,7 +34,7 @@
 <!-- 파일 선택 가리기 -->
 
 
-<script type="text/javascript">
+<!-- <script type="text/javascript">
    
     let userData = ''
     
@@ -91,7 +91,7 @@
     
     };
     
-    </script>
+    </script> -->
 
 <script type="text/javascript">
 
@@ -175,16 +175,7 @@ var dw4 = document.getElementsByClassName('dw4');
 	}
 	
 	
-	
-	
-	
 </script>
-
-
-
-
-
-
 
 </head>
 <body>
@@ -195,10 +186,10 @@ var dw4 = document.getElementsByClassName('dw4');
 	<!-- //공백  -->
 	<main class="container">
 
-		<form action="">
+		
 			<div class="profile_wrap">
 				<div class="pro_img">
-					<img src="img/baby24.jpg" alt="프로필이미지"> <input type="button"
+					<img src="${cpath }/img/baby24.jpg" alt="프로필이미지"> <input type="button"
 						value="+">
 				</div>
 				<div class="pro_info">
@@ -258,7 +249,6 @@ var dw4 = document.getElementsByClassName('dw4');
 
 
 			</div>
-		</form>
 
 
 		<section class="gallery">

@@ -142,7 +142,7 @@ var dw4 = document.getElementsByClassName('dw4');
 				<div class="tag2">
 					<button id=emo2 onclick="emo_sad()">
 						<div>
-							<img src="${cpath}/icon/normal.png" alt="">
+							<img src="${cpath}/icon/sad.png" alt="">
 						</div>
 						<p>슬픔</p>
 					</button>
@@ -150,7 +150,7 @@ var dw4 = document.getElementsByClassName('dw4');
 				<div class="tag3">
 					<button id=emo3 onclick="emo_angry()">
 						<div>
-							<img src="${cpath}/icon/normal.png" alt="">
+							<img src="${cpath}/icon/angry.png" alt="">
 						</div>
 						<p>화남</p>
 					</button>
