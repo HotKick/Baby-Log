@@ -26,7 +26,6 @@
 
 </head>
 <body>
-<<<<<<< HEAD
 	<main>
 		<div id="login">
 			<div class="container">
