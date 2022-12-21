@@ -280,6 +280,7 @@ var dw4 = document.getElementsByClassName('dw4');
 			<ol class="image-list grid-view">
 
 				<c:forEach var="vo" items="${list}">
+				<c:if test = "${vo.mem_id==mvo.mem_id}">
 					<c:choose>
 						<c:when test="${vo.diary_emo==0}">
 							<li class="dw1">
@@ -425,7 +426,7 @@ var dw4 = document.getElementsByClassName('dw4');
 					</c:choose>
 
 
-
+					</c:if>
 				</c:forEach>
 			</ol>
 

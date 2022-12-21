@@ -208,7 +208,8 @@
                                  <p id= "ct${cvo.diary_cmt_seq}">${cvo.diary_cmt_content}</p>
                             </div>
                         <div class="co_time">
-                            <span>${cvo.diary_cmt_date}</span>
+                            <span>${fn:split(cvo.diary_cmt_date," ")[0]}</span>
+                           
                         </div>
                         
                         <c:if test="${!empty mvo && cvo.mem_id eq mvo.mem_id}">
