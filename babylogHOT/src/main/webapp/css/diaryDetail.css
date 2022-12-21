@@ -55,6 +55,8 @@ main {
     display: flex;
     justify-content: center;
     align-items: center;
+    color: var(--blue200);
+    font-size:5rem;
 }
 .profile .profile_img a:hover img{
     border: 3px solid var(--pink300);
@@ -212,8 +214,8 @@ main {
 
 /* 코멘트 영역 ========================= */
 
-.comment_wrap {
-    padding: 1rem 1.8rem;
+.comment_wrap{
+    padding: 1rem 1.8
 }
 .comment_wrap > div{
     display: flex;
@@ -241,7 +243,7 @@ main {
     border: 2px solid var(--pink300);
 }
 .comment_wrap > div .co_text{
-    width: 74%;
+	width:30rem;
     height: 50px;
     border-radius: 10px;
     border: 1px solid var(--blue200);
@@ -257,7 +259,21 @@ main {
     justify-content: flex-start;
 }
 
-/* 코멘트 */
+
+/* 입력창 */
+.input-group{
+	padding: 1rem 1.8rem;
+	display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 4%;
+}
+.input-group .form-control{
+	width:30rem;
+    height: 50px;
+    border-radius: 10px;
+    border: 1px solid var(--blue200);
+}
 
 
 /* 태그 -------------------------------------*/
