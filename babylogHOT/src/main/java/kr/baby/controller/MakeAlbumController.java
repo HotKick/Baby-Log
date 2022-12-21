@@ -17,7 +17,7 @@ public class MakeAlbumController implements Controller {
 			throws ServletException, IOException {
 		// 일기 목록 불러오기
 				BabyMyBatisDAO dao = new BabyMyBatisDAO();
-				List<DiaryVO> list =dao.listDiary();
+				List<DiaryVO> list =dao.listMyDiary();
 				request.setAttribute("list",list);
 				
 		return "makeAlbum";

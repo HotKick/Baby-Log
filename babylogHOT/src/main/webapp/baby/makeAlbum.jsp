@@ -24,7 +24,7 @@
 <html>
 <head>
 <meta charset="UTF-8">
-<title>다이어리 사진 선택하기</title>
+<title>앨범 사진 선택하기</title>
 
 
 <!-- style -->
@@ -48,6 +48,7 @@
 
 
 <%@ include file="header.jsp" %>
+<div class="banner"></div>
 
 
 
@@ -102,7 +103,6 @@
 			<ol class="image-list grid-view">
 
 				<c:forEach var="vo" items="${list}">
-				<c:if test="${vo.mem_id == mvo.mem_id }">
 					<c:choose>
 						<c:when test="${vo.diary_emo==0}">
 							<li class="dw1">
@@ -130,7 +130,7 @@
 										<div class="emotion">                
                       <button class="happy">
                       <div><img src="${cpath }/icon/hapyy.png" alt="행복"></div>
-                      <p>편안</p>
+                      <p>행복</p>
                       </button>
                     </div>
 										
@@ -166,7 +166,7 @@
 										<div class="emotion">                
                       <button class="sad">
                       <div><img src="${cpath }/icon/sad.png" alt="슬픔"></div>
-                      <p>편안</p>
+                      <p>슬픔</p>
                       </button>
                     </div>
 									</figcaption>
@@ -199,8 +199,8 @@
 										</div>
 										<div class="emotion">                
                       <button class="angry">
-                      <div><img src="${cpath }/icon/angry.png" alt="분노"></div>
-                      <p>편안</p>
+                      <div><img src="${cpath }/icon/angry.png" alt="화남"></div>
+                      <p>화남</p>
                       </button>
                     </div>
 									</figcaption>
@@ -245,7 +245,6 @@
 					</c:choose>
 
 
-</c:if>
 				</c:forEach>
 			</ol>
 
@@ -483,7 +482,6 @@
 					</c:choose>
 
 
-</c:if>
 				</c:forEach>
 			</ol>
 

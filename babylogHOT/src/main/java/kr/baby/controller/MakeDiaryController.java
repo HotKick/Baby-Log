@@ -17,7 +17,7 @@ public class MakeDiaryController implements Controller {
 			throws ServletException, IOException {
 		 
 			BabyMyBatisDAO dao = new BabyMyBatisDAO();
-			List<DiaryVO> list =dao.listDiary();
+			List<DiaryVO> list =dao.listMyDiary();
 			request.setAttribute("list",list);
 				
 		return "makeDiary";
