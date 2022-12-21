@@ -193,9 +193,6 @@ var dw4 = document.getElementsByClassName('dw4');
 
 	<div class="banner"></div>
 	<!-- //공백  -->
-
-	<!-- //공백  -->
-
 	<main class="container">
 
 		<form action="">
@@ -207,7 +204,7 @@ var dw4 = document.getElementsByClassName('dw4');
 				<div class="pro_info">
 					<div class="info_wrap">
 						<div class="pro_name">
-							<input type="text" value="지야누">
+							<input type="text" value="">
 						</div>
 						<div class="pro_id">${mvo.mem_nick }</div>
 						<div class="pro_desc">${mvo.mem_ment }</div>
@@ -293,7 +290,6 @@ var dw4 = document.getElementsByClassName('dw4');
 			<ol class="image-list grid-view">
 
 				<c:forEach var="vo" items="${list}">
-
 					<c:choose>
 						<c:when test="${vo.diary_emo==0}">
 							<li class="dw1">
@@ -311,7 +307,6 @@ var dw4 = document.getElementsByClassName('dw4');
 													alt="1번 다이어리"></a>
 											</c:otherwise>
 										</c:choose>
-
 									</div>
 									<figcaption id="fig">
 										<div class="title">

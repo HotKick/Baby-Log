@@ -120,23 +120,43 @@ var dw4 = document.getElementsByClassName('dw4');
 <body>
 	<%@ include file="header.jsp"%>
 
-<div class="banner"></div>
-<!-- //공백  -->   
+	<div class="banner"></div>
+	<!-- //공백  -->
 
 	<main id="main" class="container">
 		<div class="tag">
 			<div class="tag_icon">
 				<div class="tag1">
-					<button id=emo1 onclick="emo_happy()"><div><img src ="${cpath}/icon/happy.png" alt=""></div><p>행복</p></button>
+					<button id=emo1 onclick="emo_happy()">
+						<div>
+							<img src="${cpath}/icon/happy.png" alt="">
+						</div>
+						<p>행복</p>
+					</button>
 				</div>
 				<div class="tag2">
-					<button id=emo2 onclick="emo_sad()"><div><img src ="${cpath}/icon/sad.png" alt=""></div><p>슬픔</p></button>
+					<button id=emo2 onclick="emo_sad()">
+						<div>
+							<img src="${cpath}/icon/sad.png" alt="">
+						</div>
+						<p>슬픔</p>
+					</button>
 				</div>
 				<div class="tag3">
-					<button id=emo3 onclick="emo_angry()"><div><img src ="${cpath}/icon/angry.png" alt=""></div><p>화남</p></button>
+					<button id=emo3 onclick="emo_angry()">
+						<div>
+							<img src="${cpath}/icon/angry.png" alt="">
+						</div>
+						<p>화남</p>
+					</button>
 				</div>
 				<div class="tag4">
-					<button id=emo4 onclick="emo_neu()"><div><img src ="${cpath}/icon/normal.png" alt=""></div><p>안정</p></button>
+					<button id=emo4 onclick="emo_neu()">
+						<div>
+							<img src="${cpath}/icon/normal.png" alt="">
+						</div>
+						<p>안정</p>
+					</button>
 				</div>
 			</div>
 			<div class="bt_wrap">
@@ -203,13 +223,15 @@ var dw4 = document.getElementsByClassName('dw4');
 											<span>작성자 <a href="" target="_blank">${vo.mem_nick}</a></span>
 											<span>${vo.diary_date}</span>
 										</div>
-										<div class="emotion">                
-                      <button class="happy">
-                      <div><img src="${cpath }/icon/happy.png" alt="행복"></div>
-                      <p>행복</p>
-                      </button>
-                    </div>
-										
+										<div class="emotion">
+											<button class="happy">
+												<div>
+													<img src="${cpath }/icon/happy.png" alt="행복">
+												</div>
+												<p>행복</p>
+											</button>
+										</div>
+
 									</figcaption>
 								</figure>
 							</li>
@@ -239,12 +261,14 @@ var dw4 = document.getElementsByClassName('dw4');
 											<span>작성자 <a href="" target="_blank">${vo.mem_nick}</a></span>
 											<span>${vo.diary_date}</span>
 										</div>
-										<div class="emotion">                
-                      <button class="sad">
-                      <div><img src="${cpath }/icon/sad.png" alt="슬픔"></div>
-                      <p>슬픔</p>
-                      </button>
-                    </div>
+										<div class="emotion">
+											<button class="sad">
+												<div>
+													<img src="${cpath }/icon/sad.png" alt="슬픔">
+												</div>
+												<p>슬픔</p>
+											</button>
+										</div>
 									</figcaption>
 								</figure>
 							</li>
@@ -274,12 +298,14 @@ var dw4 = document.getElementsByClassName('dw4');
 											<span>작성자 <a href="" target="_blank">${vo.mem_nick}</a></span>
 											<span>${vo.diary_date}</span>
 										</div>
-										<div class="emotion">                
-                      <button class="angry">
-                      <div><img src="${cpath }/icon/angry.png" alt="화남"></div>
-                      <p>화남</p>
-                      </button>
-                    </div>
+										<div class="emotion">
+											<button class="angry">
+												<div>
+													<img src="${cpath }/icon/angry.png" alt="화남">
+												</div>
+												<p>화남</p>
+											</button>
+										</div>
 									</figcaption>
 								</figure>
 							</li>
@@ -309,12 +335,14 @@ var dw4 = document.getElementsByClassName('dw4');
 											<span>작성자 <a href="" target="_blank">${vo.mem_nick}</a></span>
 											<span>${vo.diary_date}</span>
 										</div>
-										<div class="emotion">                
-                      <button class="normal">
-                      <div><img src="${cpath }/icon/normal.png" alt="편안"></div>
-                      <p>편안</p>
-                      </button>
-                    </div>
+										<div class="emotion">
+											<button class="normal">
+												<div>
+													<img src="${cpath }/icon/normal.png" alt="편안">
+												</div>
+												<p>편안</p>
+											</button>
+										</div>
 									</figcaption>
 								</figure>
 							</li>
