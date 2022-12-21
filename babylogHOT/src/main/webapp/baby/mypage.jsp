@@ -242,7 +242,7 @@ var dw4 = document.getElementsByClassName('dw4');
 								</button>
 							</div>
 							<div class="tag4">
-								<button onclick="emo_normal()">
+								<button onclick="emo_neu()">
 									<div>
 										<img src="${cpath }/icon/normal.png" alt="편안">
 									</div>
@@ -293,7 +293,6 @@ var dw4 = document.getElementsByClassName('dw4');
 			<ol class="image-list grid-view">
 
 				<c:forEach var="vo" items="${list}">
-					<c:if test="${vo.mem_id == mvo.mem_id }">
 						<c:choose>
 							<c:when test="${vo.diary_emo==0}">
 								<li class="dw1">
@@ -453,8 +452,6 @@ var dw4 = document.getElementsByClassName('dw4');
 								</li>
 							</c:otherwise>
 						</c:choose>
-
-					</c:if>
 				</c:forEach>
 
 			</ol>

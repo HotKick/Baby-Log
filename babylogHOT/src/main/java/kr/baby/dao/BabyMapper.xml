@@ -150,7 +150,7 @@
 
 <!-- Diary 1. 일기 게시판 전체 리스트  -->
 	<select id = "listDiary" resultType = "kr.baby.dao.DiaryVO">
-	select * from diary
+	select * from diary 
 	order by diary_seq desc
 	</select>
 
@@ -213,6 +213,15 @@
 	<select id = "getDiary_cmt_seq" parameterType="int" resultType="kr.baby.dao.DiaryCommentVO">
 		select * from diary_comment where diary_cmt_seq = #{diary_cmt_seq}
 	</select>
+	
+	
+<!-- Diary 12. 일기 게시판 마이 리스트  -->
+	<select id = "listMyDiary" resultType = "kr.baby.dao.DiaryVO">
+	select * from diary where mem_id = 'hotkick@naver.com'
+	order by diary_seq desc
+	</select>
+	
+	
 	<!-- Quesion 1. 질문 게시판 전체 리스트  -->
 	<select id = "listQuestion" resultType = "kr.baby.dao.QuestionVO">
 	select * from question

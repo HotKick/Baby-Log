@@ -40,7 +40,7 @@
 		<div class="tag">
 			<div class="tag_icon">
 				<div class="tag1">
-					<button id=emo1 onclick="emo_happy()"><div><img src ="${cpath}/icon/normal.png" alt=""></div><p>행복</p></button>
+					<button id=emo1 onclick="emo_happy()"><div><img src ="${cpath}/icon/happy.png" alt=""></div><p>행복</p></button>
 				</div>
 				<div class="tag2">
 					<button id=emo2 onclick="emo_sad()"><div><img src ="${cpath}/icon/normal.png" alt=""></div><p>슬픔</p></button>
@@ -49,14 +49,11 @@
 					<button id=emo3 onclick="emo_angry()"><div><img src ="${cpath}/icon/normal.png" alt=""></div><p>화남</p></button>
 				</div>
 				<div class="tag4">
-					<button id=emo4 onclick="emo_neu()"><div><img src ="${cpath}/icon/normal.png" alt=""></div><p>안정</p></button>
+					<button id=emo4 onclick="emo_neu()"><div><img src ="${cpath}/icon/normal.png" alt=""></div><p>편안</p></button>
 				</div>
 			</div>
 			<div class="bt_wrap">
-				<button type="button"
-					onclick="location.href='${cpath}/diaryWriteForm.do'">
-					<i class="fa-solid fa-pen-to-square"></i>글쓰기
-				</button>
+				
 			</div>
 		</div>
 		<!-- //tag -->
@@ -66,7 +63,7 @@
 				<div class="search-wrapper">
 					<input type="search" placeholder="Search for photos">
 					<div class="counter">
-						Total photos: <span>0</span>
+						Total photos: <span>12</span>
 					</div>
 				</div>
 				<ul class="view-options">
@@ -90,6 +87,7 @@
 			<ol class="image-list grid-view">
 
 				<c:forEach var="vo" items="${list}">
+				<c:if test="${vo.mem_id == mvo.mem_id }">
 					<c:choose>
 						<c:when test="${vo.diary_emo==0}">
 							<li class="dw1">
@@ -232,7 +230,7 @@
 					</c:choose>
 
 
-
+</c:if>
 				</c:forEach>
 			</ol>
 

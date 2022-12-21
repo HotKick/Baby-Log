@@ -18,15 +18,9 @@ public class MypageController implements Controller {
 	public String requestHandler(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		BabyMyBatisDAO dao = new BabyMyBatisDAO();
-		List<DiaryVO> list =dao.listDiary();
+		List<DiaryVO> list =dao.listMyDiary();
 		request.setAttribute("list",list);
-		HttpSession session=request.getSession();
-		MemberVO mvo=null; 
-		if(session.getAttribute("mvo")!=null) {
-			MemberVO vo=(MemberVO)session.getAttribute("mvo");
-			mvo=dao.getMember(vo.getMem_id());
-			session.setAttribute("mvo", mvo);
-		}
+		
 		return "mypage";
 	}
 
